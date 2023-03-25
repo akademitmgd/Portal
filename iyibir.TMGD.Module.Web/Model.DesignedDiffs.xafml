@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application CurrentUserDisplayMode="CaptionAndImage" PreferredLanguage="tr">
+  <BOModel>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.CustomDocument">
+      <OwnMembers>
+        <Member Name="Description" PropertyEditorType="DevExpress.ExpressApp.HtmlPropertyEditor.Web.ASPxHtmlPropertyEditor" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.Quote">
+      <OwnMembers>
+        <Member Name="Description" PropertyEditorType="DevExpress.ExpressApp.HtmlPropertyEditor.Web.ASPxHtmlPropertyEditor" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <Options CollectionsEditMode="Edit" />
+  <SchemaModules>
+    <SchemaModule Name="CloneObjectModule" Version="20.1.7.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerAspNetModule" Version="20.1.7.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerModuleBase" Version="20.1.7.0" IsNewNode="True" />
+    <SchemaModule Name="SystemAspNetModule" Version="20.1.7.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="20.1.7.0" IsNewNode="True" />
+  </SchemaModules>
+  <ViewItems>
+    <PropertyEditor Name="PropertyEditors">
+      <RegisteredPropertyEditor PropertyType="System.Drawing.Color" EditorType="DevExpress.ExpressApp.Web.Editors.ASPx.ASPxColorPickerPropertyEditor" />
+    </PropertyEditor>
+  </ViewItems>
+  <Views>
+    <ListView Id="AnnualWorkPlan_ListView" EditorTypeName="DevExpress.ExpressApp.Web.Editors.ASPx.ASPxGridListEditor">
+      <PivotSettings Settings="" />
+    </ListView>
+    <ListView Id="AnnualWorkPlan_Subjects_ListView" AllowEdit="True" />
+    <ListView Id="AnnualWorkPlanSubject_Transactions_ListView" AllowEdit="True" InlineEditMode="EditFormAndDisplayRow" />
+    <ListView Id="CustomFile_ListView" EditorTypeName="DevExpress.ExpressApp.TreeListEditors.Web.ASPxTreeListEditor" />
+    <DetailView Id="DefaultVehicleControlDocumentTransaction_DetailView">
+      <Items>
+        <PropertyEditor Id="Hint" PropertyEditorType="DevExpress.ExpressApp.HtmlPropertyEditor.Web.ASPxHtmlPropertyEditor" />
+      </Items>
+    </DetailView>
+    <DetailView Id="HazardousGoodsADRTankCode_DetailView">
+      <Items>
+        <PropertyEditor Id="Name" PropertyEditorType="DevExpress.ExpressApp.HtmlPropertyEditor.Web.ASPxHtmlPropertyEditor" />
+      </Items>
+    </DetailView>
+    <DetailView Id="HazardousGoodsADRTankSpecialProvision_DetailView">
+      <Items>
+        <PropertyEditor Id="Name" PropertyEditorType="DevExpress.ExpressApp.HtmlPropertyEditor.Web.ASPxHtmlPropertyEditor" />
+      </Items>
+    </DetailView>
+    <DetailView Id="HazardousGoodsLimitedExcept_DetailView">
+      <Items>
+        <PropertyEditor Id="Name" PropertyEditorType="DevExpress.ExpressApp.HtmlPropertyEditor.Web.ASPxHtmlPropertyEditor" />
+      </Items>
+    </DetailView>
+    <DetailView Id="HazardousGoodsLimitedQuantity_DetailView">
+      <Items>
+        <PropertyEditor Id="Name" PropertyEditorType="DevExpress.ExpressApp.HtmlPropertyEditor.Web.ASPxHtmlPropertyEditor" />
+      </Items>
+    </DetailView>
+    <DetailView Id="HazardousGoodsPackingInstruction_DetailView">
+      <Items>
+        <PropertyEditor Id="Name" PropertyEditorType="DevExpress.ExpressApp.HtmlPropertyEditor.Web.ASPxHtmlPropertyEditor" />
+      </Items>
+    </DetailView>
+    <DetailView Id="HazardousGoodsPortableTankContainerInstruction_DetailView">
+      <Items>
+        <PropertyEditor Id="Name" PropertyEditorType="DevExpress.ExpressApp.HtmlPropertyEditor.Web.ASPxHtmlPropertyEditor" />
+      </Items>
+    </DetailView>
+    <DetailView Id="HazardousGoodsSpecialPackingProvision_DetailView">
+      <Items>
+        <PropertyEditor Id="Name" PropertyEditorType="DevExpress.ExpressApp.HtmlPropertyEditor.Web.ASPxHtmlPropertyEditor" />
+      </Items>
+    </DetailView>
+    <ListView Id="iEvent_ListView" Criteria="[Employees][[EmployeeType] = ##Enum#iyibir.TMGD.Module.BusinessObjects.EmployeeType,Employee#]" />
+    <DetailView Id="NP_TransactionHint_DetailView">
+      <Items>
+        <PropertyEditor Id="Hint" PropertyEditorType="DevExpress.ExpressApp.HtmlPropertyEditor.Web.ASPxHtmlPropertyEditor" />
+      </Items>
+    </DetailView>
+    <ListView Id="NP_VoyageNotification_Transations_ListView" AllowEdit="True" InlineEditMode="Batch" />
+    <ListView Id="VehicleControlDocument_Transactions_ListView" InlineEditMode="Batch" AllowEdit="True" />
+  </Views>
+</Application>

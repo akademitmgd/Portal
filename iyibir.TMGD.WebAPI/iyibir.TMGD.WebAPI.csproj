@@ -1,0 +1,289 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7D9BEFBD-0742-4F2D-9C89-261A226A644F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>iyibir.TMGD.WebAPI</RootNamespace>
+    <AssemblyName>iyibir.TMGD.WebAPI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44355</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=3.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ActivityReportController.cs" />
+    <Compile Include="Controllers\ActivityReportTransactionController.cs" />
+    <Compile Include="Controllers\CityController.cs" />
+    <Compile Include="Controllers\ConsigneeController.cs" />
+    <Compile Include="Controllers\CountryController.cs" />
+    <Compile Include="Controllers\CountyController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Controllers\CustomerInventoryController.cs" />
+    <Compile Include="Controllers\CustomerWasteInventoryController.cs" />
+    <Compile Include="Controllers\DefaultLabelController.cs" />
+    <Compile Include="Controllers\DepartmentController.cs" />
+    <Compile Include="Controllers\EmployeeController.cs" />
+    <Compile Include="Controllers\FactoryDepartmentController.cs" />
+    <Compile Include="Controllers\HazardousGoodsClassController.cs" />
+    <Compile Include="Controllers\HazardousGoodsController.cs" />
+    <Compile Include="Controllers\HazardousGoodsLabelController.cs" />
+    <Compile Include="Controllers\PackagingTypesController.cs" />
+    <Compile Include="Controllers\PackingGroupController.cs" />
+    <Compile Include="Controllers\PositionController.cs" />
+    <Compile Include="Controllers\SectorController.cs" />
+    <Compile Include="Controllers\TransportDocumentController.cs" />
+    <Compile Include="Controllers\TransportDocumentOtherTransactionController.cs" />
+    <Compile Include="Controllers\TransportDocumentTransactionController.cs" />
+    <Compile Include="Controllers\UnitsetController.cs" />
+    <Compile Include="Controllers\VehicleController.cs" />
+    <Compile Include="Controllers\VehicleDriverController.cs" />
+    <Compile Include="Controllers\WastePhysicalStateController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ActivityReport.cs" />
+    <Compile Include="Models\ActivityReport.Designer.cs">
+      <DependentUpon>ActivityReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ActivityReportTransaction.cs" />
+    <Compile Include="Models\ActivityReportTransaction.Designer.cs">
+      <DependentUpon>ActivityReportTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\City.cs" />
+    <Compile Include="Models\City.Designer.cs">
+      <DependentUpon>City.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Consignee.cs" />
+    <Compile Include="Models\Consignee.Designer.cs">
+      <DependentUpon>Consignee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Country.cs" />
+    <Compile Include="Models\Country.Designer.cs">
+      <DependentUpon>Country.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\County.cs" />
+    <Compile Include="Models\County.Designer.cs">
+      <DependentUpon>County.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Customer.Designer.cs">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CustomerInventory.cs" />
+    <Compile Include="Models\CustomerInventory.Designer.cs">
+      <DependentUpon>CustomerInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CustomerWasteInventory.cs" />
+    <Compile Include="Models\CustomerWasteInventory.Designer.cs">
+      <DependentUpon>CustomerWasteInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataResult.cs" />
+    <Compile Include="Models\DefaultLabel.cs" />
+    <Compile Include="Models\DefaultLabel.Designer.cs">
+      <DependentUpon>DefaultLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Department.cs" />
+    <Compile Include="Models\Department.Designer.cs">
+      <DependentUpon>Department.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\Employee.Designer.cs">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FactoryDepartment.cs" />
+    <Compile Include="Models\FactoryDepartment.Designer.cs">
+      <DependentUpon>FactoryDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HazardousGoods.cs" />
+    <Compile Include="Models\HazardousGoods.Designer.cs">
+      <DependentUpon>HazardousGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HazardousGoodsClass.cs" />
+    <Compile Include="Models\HazardousGoodsClass.Designer.cs">
+      <DependentUpon>HazardousGoodsClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HazardousGoodsLabel.cs" />
+    <Compile Include="Models\HazardousGoodsLabel.Designer.cs">
+      <DependentUpon>HazardousGoodsLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PackagingTypes.cs" />
+    <Compile Include="Models\PackagingTypes.Designer.cs">
+      <DependentUpon>PackagingTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PackingGroup.cs" />
+    <Compile Include="Models\PackingGroup.Designer.cs">
+      <DependentUpon>PackingGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Position.cs" />
+    <Compile Include="Models\Position.Designer.cs">
+      <DependentUpon>Position.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sector.cs" />
+    <Compile Include="Models\Sector.Designer.cs">
+      <DependentUpon>Sector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TransportDocument.cs" />
+    <Compile Include="Models\TransportDocument.Designer.cs">
+      <DependentUpon>TransportDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TransportDocumentOtherTransaction.cs" />
+    <Compile Include="Models\TransportDocumentOtherTransaction.Designer.cs">
+      <DependentUpon>TransportDocumentOtherTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TransportDocumentTransaction.cs" />
+    <Compile Include="Models\TransportDocumentTransaction.Designer.cs">
+      <DependentUpon>TransportDocumentTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Unitset.cs" />
+    <Compile Include="Models\Unitset.Designer.cs">
+      <DependentUpon>Unitset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Vehicle.cs" />
+    <Compile Include="Models\Vehicle.Designer.cs">
+      <DependentUpon>Vehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VehicleDriver.cs" />
+    <Compile Include="Models\VehicleDriver.Designer.cs">
+      <DependentUpon>VehicleDriver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WasteList.cs" />
+    <Compile Include="Models\WasteList.Designer.cs">
+      <DependentUpon>WasteList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\WasteListController.cs" />
+    <Compile Include="Models\WastePhysicalState.cs" />
+    <Compile Include="Models\WastePhysicalState.Designer.cs">
+      <DependentUpon>WastePhysicalState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55629</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44355/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

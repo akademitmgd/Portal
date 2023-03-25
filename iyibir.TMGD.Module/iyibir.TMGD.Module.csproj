@@ -1,0 +1,1343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DABFC3D1-D050-46A5-BFCA-F993564E306E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>iyibir.TMGD.Module</RootNamespace>
+    <AssemblyName>iyibir.TMGD.Module</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'EasyTest|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\EasyTest\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;EASYTEST</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.ExpressApp.Scheduler.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v20.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Dashboard.v20.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Data.v20.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v20.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.AuditTrail.v20.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Chart.v20.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.CloneObject.v20.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.ConditionalAppearance.v20.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Dashboards.v20.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Notifications.v20.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Objects.v20.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.PivotChart.v20.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.PivotGrid.v20.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.ReportsV2.v20.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.ScriptRecorder.v20.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Security.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.TreeListEditors.v20.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.v20.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Validation.v20.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Xpo.v20.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Persistent.Base.v20.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Persistent.BaseImpl.v20.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v20.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v20.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Data.Desktop.v20.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v20.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v20.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v20.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v20.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.CodeParser.v20.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v20.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="IyibirDLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\İyibir DLL\IyibirDLL\bin\Debug\IyibirDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.11.7.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.11.7\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApiModel\DBResult.cs" />
+    <Compile Include="ApiModel\TokenClass.cs" />
+    <Compile Include="BusinessObjects\Activity.cs" />
+    <Compile Include="BusinessObjects\ActivityLine.cs" />
+    <Compile Include="BusinessObjects\ActivityReport.cs" />
+    <Compile Include="BusinessObjects\ActivityReportTransaction.cs" />
+    <Compile Include="BusinessObjects\ActivitySubject.cs" />
+    <Compile Include="BusinessObjects\ActivitySubjectDesc.cs" />
+    <Compile Include="BusinessObjects\Announcement.cs" />
+    <Compile Include="BusinessObjects\AnnouncementUser.cs" />
+    <Compile Include="BusinessObjects\AnnualWorkPlanSubject.cs" />
+    <Compile Include="BusinessObjects\AnnualWorkPlan.cs" />
+    <Compile Include="BusinessObjects\AnnualWorkPlanSubjectTransaction.cs" />
+    <Compile Include="BusinessObjects\AuditDeterminationForm.cs" />
+    <Compile Include="BusinessObjects\AuditDeterminationLegalStatute.cs" />
+    <Compile Include="BusinessObjects\AuditDeterminationLegalStatuteTransaction.cs" />
+    <Compile Include="BusinessObjects\CASNumber.cs" />
+    <Compile Include="BusinessObjects\City.cs" />
+    <Compile Include="BusinessObjects\Company.cs" />
+    <Compile Include="BusinessObjects\Consignee.cs" />
+    <Compile Include="BusinessObjects\Contract.cs" />
+    <Compile Include="BusinessObjects\Country.cs" />
+    <Compile Include="BusinessObjects\County.cs" />
+    <Compile Include="BusinessObjects\Currency.cs" />
+    <Compile Include="BusinessObjects\CustomDocument.cs" />
+    <Compile Include="BusinessObjects\Customer.cs" />
+    <Compile Include="BusinessObjects\CustomerContact.cs" />
+    <Compile Include="BusinessObjects\CustomerDocument.cs" />
+    <Compile Include="BusinessObjects\CustomerInventory.cs" />
+    <Compile Include="BusinessObjects\CustomerWasteInventory.cs" />
+    <Compile Include="BusinessObjects\CustomFile.cs" />
+    <Compile Include="BusinessObjects\DefaultAnnualWorkPlan.cs" />
+    <Compile Include="BusinessObjects\DefaultDistributionOfTaskSubject.cs" />
+    <Compile Include="BusinessObjects\DefaultDistributionOfTaskSubjectDesc.cs" />
+    <Compile Include="BusinessObjects\DefaultLabel.cs" />
+    <Compile Include="BusinessObjects\DefaultLegalLegislation.cs" />
+    <Compile Include="BusinessObjects\DefaultTransportDescription.cs" />
+    <Compile Include="BusinessObjects\DefaultVehicleDocumentControl.cs" />
+    <Compile Include="BusinessObjects\EMailSetting.cs" />
+    <Compile Include="BusinessObjects\EmployeeDocument.cs" />
+    <Compile Include="BusinessObjects\FactoryDepartment.cs" />
+    <Compile Include="BusinessObjects\HazardousGoodsADRTankCode.cs" />
+    <Compile Include="BusinessObjects\HazardousGoodsADRTankSpecialProvision.cs" />
+    <Compile Include="BusinessObjects\HazardousGoodsCategory.cs" />
+    <Compile Include="BusinessObjects\HazardousGoodsClass.cs" />
+    <Compile Include="BusinessObjects\DangerousGoodInvolved.cs" />
+    <Compile Include="BusinessObjects\DistributionOfTask.cs" />
+    <Compile Include="BusinessObjects\DistributionOfTaskSubject.cs" />
+    <Compile Include="BusinessObjects\DistributionOfTaskSubjectAuth.cs" />
+    <Compile Include="BusinessObjects\DistributionOfTaskSubjectDetail.cs" />
+    <Compile Include="BusinessObjects\DrillForm.cs" />
+    <Compile Include="BusinessObjects\DrillFormControlList.cs" />
+    <Compile Include="BusinessObjects\DrillType.cs" />
+    <Compile Include="BusinessObjects\DrillTypeControlList.cs" />
+    <Compile Include="BusinessObjects\EstimatedQuantityOfLossOfProduct.cs" />
+    <Compile Include="BusinessObjects\HazardousGoods.cs" />
+    <Compile Include="BusinessObjects\DefaultVehicleControlDocumentTransaction.cs" />
+    <Compile Include="BusinessObjects\Department.cs" />
+    <Compile Include="BusinessObjects\Education.cs" />
+    <Compile Include="BusinessObjects\Employee.cs" />
+    <Compile Include="BusinessObjects\EmployeeRole.cs" />
+    <Compile Include="BusinessObjects\HazardousGoodsClassCode.cs" />
+    <Compile Include="BusinessObjects\HazardousGoodsHazardIdentification.cs" />
+    <Compile Include="BusinessObjects\HazardousGoodsLabel.cs" />
+    <Compile Include="BusinessObjects\HazardousGoodsLabelController.cs" />
+    <Compile Include="BusinessObjects\HazardousGoodsLabelEquipment.cs" />
+    <Compile Include="BusinessObjects\HazardousGoodsLabelMixedLoading.cs" />
+    <Compile Include="BusinessObjects\HazardousGoodsLimitedExcept.cs" />
+    <Compile Include="BusinessObjects\HazardousGoodsLimitedQuantity.cs" />
+    <Compile Include="BusinessObjects\HazardousGoodsMixedPackingProvision.cs" />
+    <Compile Include="BusinessObjects\HazardousGoodsPackingInstruction.cs" />
+    <Compile Include="BusinessObjects\HazardousGoodsPortableTankContainerInstruction.cs" />
+    <Compile Include="BusinessObjects\HazardousGoodsPortableTankContainerSpecialProvision.cs" />
+    <Compile Include="BusinessObjects\HazardousGoodsProperty.cs" />
+    <Compile Include="BusinessObjects\HazardousGoodsPropertyValue.cs" />
+    <Compile Include="BusinessObjects\HazardousGoodsSpecialPackingProvision.cs" />
+    <Compile Include="BusinessObjects\HazardousGoodsSpecialProvision.cs" />
+    <Compile Include="BusinessObjects\HazardousGoodsSpecialProvisionForCarriageBulk.cs" />
+    <Compile Include="BusinessObjects\HazardousGoodsSpecialProvisionForCarriageLUH.cs" />
+    <Compile Include="BusinessObjects\HazardousGoodsSpecialProvisionForCarriageOperation.cs" />
+    <Compile Include="BusinessObjects\HazardousGoodsSpecialProvisionForCarriagePackage.cs" />
+    <Compile Include="BusinessObjects\HazardousGoodsTransaction.cs" />
+    <Compile Include="BusinessObjects\HazardousGoodsTransportCategory.cs" />
+    <Compile Include="BusinessObjects\HazardousGoodsTunnelCode.cs" />
+    <Compile Include="BusinessObjects\HazardousGoodsVehicleForTankCarriage.cs" />
+    <Compile Include="BusinessObjects\iEvent.cs" />
+    <Compile Include="BusinessObjects\LabelTransaction.cs" />
+    <Compile Include="BusinessObjects\Lead.cs" />
+    <Compile Include="BusinessObjects\LoadType.cs" />
+    <Compile Include="BusinessObjects\LOGOParameter.cs" />
+    <Compile Include="BusinessObjects\Note.cs" />
+    <Compile Include="BusinessObjects\PackagingTypes.cs" />
+    <Compile Include="BusinessObjects\PackingGroup.cs" />
+    <Compile Include="BusinessObjects\Participant.cs" />
+    <Compile Include="BusinessObjects\Position.cs" />
+    <Compile Include="BusinessObjects\Product.cs" />
+    <Compile Include="BusinessObjects\ProductCASNumber.cs" />
+    <Compile Include="BusinessObjects\ProductLabel.cs" />
+    <Compile Include="BusinessObjects\ProductSupplier.cs" />
+    <Compile Include="BusinessObjects\Quote.cs" />
+    <Compile Include="BusinessObjects\ReportOnOccurrence.cs" />
+    <Compile Include="BusinessObjects\Sector.cs" />
+    <Compile Include="BusinessObjects\SharedFile.cs" />
+    <Compile Include="BusinessObjects\TMGDEnum.cs" />
+    <Compile Include="BusinessObjects\TransportDocument.cs" />
+    <Compile Include="BusinessObjects\TransportDocumentDescription.cs" />
+    <Compile Include="BusinessObjects\TransportDocumentOtherTransaction.cs" />
+    <Compile Include="BusinessObjects\TransportDocumentTransaction.cs" />
+    <Compile Include="BusinessObjects\Unitset.cs" />
+    <Compile Include="BusinessObjects\Vehicle.cs" />
+    <Compile Include="BusinessObjects\VehicleControlDocument.cs" />
+    <Compile Include="BusinessObjects\VehicleControlDocumentEMailList.cs" />
+    <Compile Include="BusinessObjects\VehicleControlDocumentHazardousGoods.cs" />
+    <Compile Include="BusinessObjects\VehicleControlDocumentLabel.cs" />
+    <Compile Include="BusinessObjects\VehicleControlDocumentTransaction.cs" />
+    <Compile Include="BusinessObjects\VehicleDocument.cs" />
+    <Compile Include="BusinessObjects\VehicleDriver.cs" />
+    <Compile Include="BusinessObjects\VehicleDriverCompetenceCertificate.cs" />
+    <Compile Include="BusinessObjects\VehicleDriverDocument.cs" />
+    <Compile Include="BusinessObjects\VoyageNotification.cs" />
+    <Compile Include="BusinessObjects\VoyageNotificationHistory.cs" />
+    <Compile Include="BusinessObjects\VoyageNotificationTransaction.cs" />
+    <Compile Include="BusinessObjects\WasteList.cs" />
+    <Compile Include="BusinessObjects\WastePhysicalState.cs" />
+    <Compile Include="Connected Services\NewService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\UEDTSTestService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\UetdsService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\ActivityControllers\ActivityListViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\ActivityControllers\ActivityListViewController.Designer.cs">
+      <DependentUpon>ActivityListViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\ActivityReportControllers\ActivityReportListViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\ActivityReportControllers\ActivityReportListViewController.Designer.cs">
+      <DependentUpon>ActivityReportListViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\AllViewControllers\AllViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\AllViewControllers\AllViewController.Designer.cs">
+      <DependentUpon>AllViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\AllViewControllers\AllWindowController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\AllViewControllers\AllWindowController.Designer.cs">
+      <DependentUpon>AllWindowController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\AllViewControllers\CustomerControllers\CustomerViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\AllViewControllers\CustomerControllers\CustomerViewController.Designer.cs">
+      <DependentUpon>CustomerViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\AnnouncementControllers\AnnouncementDetailViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\AnnouncementControllers\AnnouncementDetailViewController.Designer.cs">
+      <DependentUpon>AnnouncementDetailViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\AnnouncementControllers\AnnouncementListViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\AnnouncementControllers\AnnouncementListViewController.Designer.cs">
+      <DependentUpon>AnnouncementListViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\AnnualWorkPlanControllers\AnnualWorkPlanListViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\AnnualWorkPlanControllers\AnnualWorkPlanListViewController.Designer.cs">
+      <DependentUpon>AnnualWorkPlanListViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\AnnualWorkPlanSubjectControllers\AnnualWorkPlanSubjectListViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\AnnualWorkPlanSubjectControllers\AnnualWorkPlanSubjectListViewController.Designer.cs">
+      <DependentUpon>AnnualWorkPlanSubjectListViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\AuditDeterminationFormControllers\AuditDeterminationFormListViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\AuditDeterminationFormControllers\AuditDeterminationFormListViewController.Designer.cs">
+      <DependentUpon>AuditDeterminationFormListViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\ConsigneeControllers\ConsigneeListViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\ConsigneeControllers\ConsigneeListViewController.Designer.cs">
+      <DependentUpon>ConsigneeListViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\CustomControllers\MyDetailsWindowController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\CustomControllers\MyDetailsWindowController.Designer.cs">
+      <DependentUpon>MyDetailsWindowController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\CustomerControllers\CustomerListViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\CustomerControllers\CustomerListViewController.Designer.cs">
+      <DependentUpon>CustomerListViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\CustomerControllers\CustomerViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\CustomerControllers\CustomerViewController.Designer.cs">
+      <DependentUpon>CustomerViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\CustomerInventoryControllers\CustomerInventoryListViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\CustomerInventoryControllers\CustomerInventoryListViewController.Designer.cs">
+      <DependentUpon>CustomerInventoryListViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\CustomerWasteInventoryControllers\CustomerWasteInventoryListViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\CustomerWasteInventoryControllers\CustomerWasteInventoryListViewController.Designer.cs">
+      <DependentUpon>CustomerWasteInventoryListViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\CustomFileControllers\CustomFileListViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\CustomFileControllers\CustomFileListViewController.Designer.cs">
+      <DependentUpon>CustomFileListViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\DefaultVehicleControlDocumentTransactionControllers\DefaultVehicleControlDocumentTransactionListViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\DefaultVehicleControlDocumentTransactionControllers\DefaultVehicleControlDocumentTransactionListViewController.Designer.cs">
+      <DependentUpon>DefaultVehicleControlDocumentTransactionListViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\DistributionOfTaskControllers\DistributionOfTaskListViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\DistributionOfTaskControllers\DistributionOfTaskListViewController.Designer.cs">
+      <DependentUpon>DistributionOfTaskListViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\DrillFormControllers\DrillFormListViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\DrillFormControllers\DrillFormListViewController.Designer.cs">
+      <DependentUpon>DrillFormListViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\EducationControllers\EducationListViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\EducationControllers\EducationListViewController.Designer.cs">
+      <DependentUpon>EducationListViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\EmployeeControllers\EmployeeListViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\EmployeeControllers\EmployeeListViewController.Designer.cs">
+      <DependentUpon>EmployeeListViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\iEventControllers\iEventListViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\iEventControllers\iEventListViewController.Designer.cs">
+      <DependentUpon>iEventListViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\ProductControllers\ProductDetailViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\ProductControllers\ProductDetailViewController.Designer.cs">
+      <DependentUpon>ProductDetailViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\ProductControllers\ProductListViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\ProductControllers\ProductListViewController.Designer.cs">
+      <DependentUpon>ProductListViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\ReportOnOccurrenceControllers\ReportOnOccurrenceListViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\ReportOnOccurrenceControllers\ReportOnOccurrenceListViewController.Designer.cs">
+      <DependentUpon>ReportOnOccurrenceListViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\TransportDocumentControllers\TransportDocumentDetailViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\TransportDocumentControllers\TransportDocumentDetailViewController.Designer.cs">
+      <DependentUpon>TransportDocumentDetailViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\TransportDocumentControllers\TransportDocumentListViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\TransportDocumentControllers\TransportDocumentListViewController.Designer.cs">
+      <DependentUpon>TransportDocumentListViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\TransportDocumentOtherTransactionControllers\TransportDocumentOtherTransactionListViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\TransportDocumentOtherTransactionControllers\TransportDocumentOtherTransactionListViewController.Designer.cs">
+      <DependentUpon>TransportDocumentOtherTransactionListViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\UetdsTestControllers\UetdsTestListViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\UetdsTestControllers\UetdsTestListViewController.Designer.cs">
+      <DependentUpon>UetdsTestListViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\VehicleControlDocumentControllers\VehicleControlDocumentDetailViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\VehicleControlDocumentControllers\VehicleControlDocumentDetailViewController.Designer.cs">
+      <DependentUpon>VehicleControlDocumentDetailViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\VehicleControlDocumentControllers\VehicleControlDocumentListViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\VehicleControlDocumentControllers\VehicleControlDocumentListViewController.Designer.cs">
+      <DependentUpon>VehicleControlDocumentListViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\VehicleControlDocumentTransactionControllers\VehicleControlDocumentTransactionListViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\VehicleControlDocumentTransactionControllers\VehicleControlDocumentTransactionListViewController.Designer.cs">
+      <DependentUpon>VehicleControlDocumentTransactionListViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\VehicleControllers\VehicleListViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\VehicleControllers\VehicleListViewController.Designer.cs">
+      <DependentUpon>VehicleListViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\VehicleDriverControllers\VehicleDriverListViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\VehicleDriverControllers\VehicleDriverListViewController.Designer.cs">
+      <DependentUpon>VehicleDriverListViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\VoyageNotificationControllers\VoyageNotificationDetailViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\VoyageNotificationControllers\VoyageNotificationDetailViewController.Designer.cs">
+      <DependentUpon>VoyageNotificationDetailViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\VoyageNotificationControllers\VoyageNotificationListViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\VoyageNotificationControllers\VoyageNotificationListViewController.Designer.cs">
+      <DependentUpon>VoyageNotificationListViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\VoyageNotificationTransactionControllers\VoyageNotificationTransactionListViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\VoyageNotificationTransactionControllers\VoyageNotificationTransactionListViewController.Designer.cs">
+      <DependentUpon>VoyageNotificationTransactionListViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseUpdate\Updater.cs" />
+    <Compile Include="Helpers\Helper.cs" />
+    <Compile Include="Helpers\WebApiHelper.cs" />
+    <Compile Include="Module.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module.Designer.cs">
+      <DependentUpon>Module.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NonPersistentObjects\NP_CustomFile.cs" />
+    <Compile Include="NonPersistentObjects\NP_DateControl.cs" />
+    <Compile Include="NonPersistentObjects\NP_DateControlList.cs" />
+    <Compile Include="NonPersistentObjects\NP_DispatchLine.cs" />
+    <Compile Include="NonPersistentObjects\NP_DispatchList.cs" />
+    <Compile Include="NonPersistentObjects\NP_SeferDetay.cs" />
+    <Compile Include="NonPersistentObjects\NP_SeferDetayList.cs" />
+    <Compile Include="NonPersistentObjects\NP_TransactionHint.cs" />
+    <Compile Include="NonPersistentObjects\NP_VoyageNotification.cs" />
+    <Compile Include="NonPersistentObjects\NP_VoyageNotificationTransaction.cs" />
+    <Compile Include="NonPersistentObjects\NP_VoyageNotificationTransactionCancelled.cs" />
+    <Compile Include="NonPersistentObjects\NP_YeniSeferEkle.cs" />
+    <Compile Include="NPControllers\NP_DispatchListControllers\NP_DispatchListWindowController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NPControllers\NP_DispatchListControllers\NP_DispatchListWindowController.Designer.cs">
+      <DependentUpon>NP_DispatchListWindowController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="UETDSHelper\NewServiceHelper.cs" />
+    <Compile Include="UETDSHelper\SeferBilgileriInput.cs" />
+    <Compile Include="UETDSHelper\UETDSHelper.cs" />
+    <Compile Include="UETDSHelper\YukBilgileriInput.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controllers\ActivityControllers\ActivityListViewController.resx">
+      <DependentUpon>ActivityListViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\ActivityReportControllers\ActivityReportListViewController.resx">
+      <DependentUpon>ActivityReportListViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\AllViewControllers\AllViewController.resx">
+      <DependentUpon>AllViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\AllViewControllers\AllWindowController.resx">
+      <DependentUpon>AllWindowController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\AllViewControllers\CustomerControllers\CustomerViewController.resx">
+      <DependentUpon>CustomerViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\AnnouncementControllers\AnnouncementDetailViewController.resx">
+      <DependentUpon>AnnouncementDetailViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\AnnouncementControllers\AnnouncementListViewController.resx">
+      <DependentUpon>AnnouncementListViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\AnnualWorkPlanControllers\AnnualWorkPlanListViewController.resx">
+      <DependentUpon>AnnualWorkPlanListViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\AnnualWorkPlanSubjectControllers\AnnualWorkPlanSubjectListViewController.resx">
+      <DependentUpon>AnnualWorkPlanSubjectListViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\AuditDeterminationFormControllers\AuditDeterminationFormListViewController.resx">
+      <DependentUpon>AuditDeterminationFormListViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\ConsigneeControllers\ConsigneeListViewController.resx">
+      <DependentUpon>ConsigneeListViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\CustomerControllers\CustomerListViewController.resx">
+      <DependentUpon>CustomerListViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\CustomerControllers\CustomerViewController.resx">
+      <DependentUpon>CustomerViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\CustomerInventoryControllers\CustomerInventoryListViewController.resx">
+      <DependentUpon>CustomerInventoryListViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\CustomerWasteInventoryControllers\CustomerWasteInventoryListViewController.resx">
+      <DependentUpon>CustomerWasteInventoryListViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\CustomFileControllers\CustomFileListViewController.resx">
+      <DependentUpon>CustomFileListViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\DefaultVehicleControlDocumentTransactionControllers\DefaultVehicleControlDocumentTransactionListViewController.resx">
+      <DependentUpon>DefaultVehicleControlDocumentTransactionListViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\DistributionOfTaskControllers\DistributionOfTaskListViewController.resx">
+      <DependentUpon>DistributionOfTaskListViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\DrillFormControllers\DrillFormListViewController.resx">
+      <DependentUpon>DrillFormListViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\EducationControllers\EducationListViewController.resx">
+      <DependentUpon>EducationListViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\EmployeeControllers\EmployeeListViewController.resx">
+      <DependentUpon>EmployeeListViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\ProductControllers\ProductDetailViewController.resx">
+      <DependentUpon>ProductDetailViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\ProductControllers\ProductListViewController.resx">
+      <DependentUpon>ProductListViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\ReportOnOccurrenceControllers\ReportOnOccurrenceListViewController.resx">
+      <DependentUpon>ReportOnOccurrenceListViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\TransportDocumentControllers\TransportDocumentDetailViewController.resx">
+      <DependentUpon>TransportDocumentDetailViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\TransportDocumentControllers\TransportDocumentListViewController.resx">
+      <DependentUpon>TransportDocumentListViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\TransportDocumentOtherTransactionControllers\TransportDocumentOtherTransactionListViewController.resx">
+      <DependentUpon>TransportDocumentOtherTransactionListViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\UetdsTestControllers\UetdsTestListViewController.resx">
+      <DependentUpon>UetdsTestListViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\VehicleControlDocumentControllers\VehicleControlDocumentDetailViewController.resx">
+      <DependentUpon>VehicleControlDocumentDetailViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\VehicleControlDocumentControllers\VehicleControlDocumentListViewController.resx">
+      <DependentUpon>VehicleControlDocumentListViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\VehicleControlDocumentTransactionControllers\VehicleControlDocumentTransactionListViewController.resx">
+      <DependentUpon>VehicleControlDocumentTransactionListViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\VehicleControllers\VehicleListViewController.resx">
+      <DependentUpon>VehicleListViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\VehicleDriverControllers\VehicleDriverListViewController.resx">
+      <DependentUpon>VehicleDriverListViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\VoyageNotificationControllers\VoyageNotificationDetailViewController.resx">
+      <DependentUpon>VoyageNotificationDetailViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\VoyageNotificationControllers\VoyageNotificationListViewController.resx">
+      <DependentUpon>VoyageNotificationListViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\VoyageNotificationTransactionControllers\VoyageNotificationTransactionListViewController.resx">
+      <DependentUpon>VoyageNotificationTransactionListViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module.resx">
+      <DependentUpon>Module.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="BusinessObjects\ReadMe.txt" />
+    <None Include="Connected Services\NewService\esyaservisi.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.aracMuayeneSorgulaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.firmaCezaSorgulaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.firmaUyarmaSorgulaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.ipListeleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.ipSilResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.iptalTurleriResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.ipTanimlaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.meslekiYeterlilikSorgulaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.paramTasimaTurleriResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.paramTehlikeliMaddeTasimaSekliResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.paramTehlikeMaddeMuafiyetTurleriResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.paramYukBirimiResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.paramYukTuruBozulabilirGidaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.paramYukTuruResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.seferAktifEtV3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.seferDetayiV3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.seferDuzenleV3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.sefereYukEkleV3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.seferIptalEtV3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.seferIptalTurleriResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.seferListesiV3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.seferRaporuV3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.servisTestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsEsyaIPListeleSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsEsyaParamBozulabilirGidaTurSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsEsyaParamEsyaTurSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsEsyaParamIptalTuruSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsEsyaParamMuafiyetTuruSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsEsyaParamTasimaTuruSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsEsyaParamTehlikeliMaddeTasimaSekliSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsEsyaParamYukBirimiSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsEsyaSeferDetayiSonucV3.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsEsyaSeferEkleSonucV3.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsEsyaSeferListesiSonucV3.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsEsyaYeniYukEkleSonucV3.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsEsyaYukDetayiSonucV3.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsFirmaCezaListeSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsFirmaSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsFirmaUyarmaListeSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsGenelIslemSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsGenelPdfSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsMesSorguSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsMuayeneSorguSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsSurucuVizeBasvuruSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsVizeBasvuruDetaySonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsVizeBasvuruListeSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsVizeSurucuEkleSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsWSVersiyonSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.vizeOnBasvuruDetayResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.vizeOnBasvuruIptalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.vizeOnBasvuruListeleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.vizeOnBasvuruResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.vizeOnBasvuruSurucuEkleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.webServisVersiyonResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.yeniSeferEkleV3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.yetkiBelgesiKontrolResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.yukAktifEtV3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.yukDetayiV3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.yukDuzenleV3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\iyibir.TMGD.Module.NewService.yukIptalEtV3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NewService\UdhbUetdsEsyaWsService.wsdl" />
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.aracMuayeneSorgulaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.ipListeleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.ipSilResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.iptalTurleriResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.ipTanimlaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.meslekiYeterlilikSorgulaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.paramTasimaTurleriResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.paramTehlikeliMaddeTasimaSekliResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.paramTehlikeMaddeMuafiyetTurleriResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.paramYukBirimiResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.paramYukTuruResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.seferAktifEtV3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.seferDetayiV3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.seferDuzenleV3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.sefereYukEkleV3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.seferIptalEtV3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.seferIptalTurleriResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.seferListesiV3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.seferRaporuV3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.servisTestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.uetdsEsyaIPListeleSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.uetdsEsyaParamEsyaTurSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.uetdsEsyaParamIptalTuruSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.uetdsEsyaParamMuafiyetTuruSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.uetdsEsyaParamTasimaTuruSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.uetdsEsyaParamTehlikeliMaddeTasimaSekliSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.uetdsEsyaParamYukBirimiSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.uetdsEsyaSeferDetayiSonucV3.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.uetdsEsyaSeferEkleSonucV3.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.uetdsEsyaSeferListesiSonucV3.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.uetdsEsyaYeniYukEkleSonucV3.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.uetdsEsyaYukDetayiSonucV3.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.uetdsFirmaSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.uetdsGenelIslemSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.uetdsGenelPdfSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.uetdsMesSorguSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.uetdsMuayeneSorguSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.uetdsSurucuVizeBasvuruSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.uetdsVizeBasvuruDetaySonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.uetdsVizeBasvuruListeSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.uetdsVizeSurucuEkleSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.vizeOnBasvuruDetayResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.vizeOnBasvuruIptalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.vizeOnBasvuruListeleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.vizeOnBasvuruResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.vizeOnBasvuruSurucuEkleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.yeniSeferEkleV3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.yetkiBelgesiKontrolResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.yukAktifEtV3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.yukDetayiV3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.yukDuzenleV3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.yukIptalEtV3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\testesyaservisi.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UEDTSTestService\UdhbUetdsEsyaWsService.wsdl" />
+    <None Include="Connected Services\UetdsService\esyaservisi.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.aracMuayeneSorgulaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.ipListeleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.ipSilResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.iptalTurleriResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.ipTanimlaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.meslekiYeterlilikSorgulaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.paramTasimaTurleriResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.paramTehlikeliMaddeTasimaSekliResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.paramTehlikeMaddeMuafiyetTurleriResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.paramYukBirimiResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.paramYukTuruResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.seferAktifEtV3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.seferDetayiV3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.seferDuzenleV3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.sefereYukEkleV3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.seferIptalEtV3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.seferIptalTurleriResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.seferListesiV3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.seferRaporuV3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.servisTestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.uetdsEsyaIPListeleSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.uetdsEsyaParamEsyaTurSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.uetdsEsyaParamIptalTuruSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.uetdsEsyaParamMuafiyetTuruSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.uetdsEsyaParamTasimaTuruSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.uetdsEsyaParamTehlikeliMaddeTasimaSekliSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.uetdsEsyaParamYukBirimiSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.uetdsEsyaSeferDetayiSonucV3.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.uetdsEsyaSeferEkleSonucV3.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.uetdsEsyaSeferListesiSonucV3.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.uetdsEsyaYeniYukEkleSonucV3.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.uetdsEsyaYukDetayiSonucV3.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.uetdsFirmaSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.uetdsGenelIslemSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.uetdsGenelPdfSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.uetdsMesSorguSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.uetdsMuayeneSorguSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.uetdsSurucuVizeBasvuruSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.uetdsVizeBasvuruDetaySonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.uetdsVizeBasvuruListeSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.uetdsVizeSurucuEkleSonuc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.vizeOnBasvuruDetayResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.vizeOnBasvuruIptalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.vizeOnBasvuruListeleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.vizeOnBasvuruResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.vizeOnBasvuruSurucuEkleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.yeniSeferEkleV3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.yetkiBelgesiKontrolResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.yukAktifEtV3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.yukDetayiV3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.yukDuzenleV3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.yukIptalEtV3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UetdsService\UdhbUetdsEsyaWsService.wsdl" />
+    <None Include="Controllers\ReadMe.txt" />
+    <None Include="DatabaseUpdate\ReadMe.txt" />
+    <None Include="Images\ReadMe.txt" />
+    <EmbeddedResource Include="Model.DesignedDiffs.Localization.tr.xafml" />
+    <EmbeddedResource Include="Model.DesignedDiffs.xafml" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FunctionalTests\config.xml" />
+    <None Include="FunctionalTests\sample.ets" />
+    <None Include="FunctionalTests\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Welcome.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\tmgd_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\TransportDocumentTransactionControllers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\NewService\" />
+    <WCFMetadataStorage Include="Connected Services\UEDTSTestService\" />
+    <WCFMetadataStorage Include="Connected Services\UetdsService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\UEDTSTestService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\UEDTSTestService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\UEDTSTestService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\UetdsService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\UetdsService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\UetdsService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\e_tmgd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes1.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes2.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes3.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes4.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes5.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes_tr.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes6.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\NewService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\NewService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\NewService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

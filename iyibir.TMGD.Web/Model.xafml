@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application PreferredLanguage="(User language)">
+  <NavigationItems ShowImages="True" />
+  <SchemaModules>
+    <SchemaModule Name="CloneObjectModule" Version="20.1.7.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerAspNetModule" Version="20.1.7.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerModuleBase" Version="20.1.7.0" IsNewNode="True" />
+    <SchemaModule Name="SystemAspNetModule" Version="20.1.7.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="20.1.7.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <ListView Id="CustomFile_ListView" MasterDetailMode="ListViewAndDetailView" />
+  </Views>
+</Application>

@@ -1,0 +1,922 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{72041299-EB3A-4F51-A4D1-BEAD720004D0}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>iyibir.TMGD.WebAPI.OData</RootNamespace>
+    <AssemblyName>iyibir.TMGD.WebAPI.OData</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44304</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.AspNet.OData, Version=7.5.8.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.OData.7.5.8\lib\net45\Microsoft.AspNet.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.1.0.0\lib\netstandard1.1\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.1.0.0\lib\netstandard1.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.OData.Core, Version=7.8.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.OData.Core.7.8.2\lib\net45\Microsoft.OData.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.OData.Edm, Version=7.8.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.OData.Edm.7.8.2\lib\net45\Microsoft.OData.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=4.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.4.2.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=4.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.4.2.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=4.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.4.2.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=4.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.4.2.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Spatial, Version=7.8.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Spatial.7.8.2\lib\net45\Microsoft.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Linq.4.1.0\lib\net463\System.Linq.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Linq.Expressions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Linq.Expressions.4.1.0\lib\net463\System.Linq.Expressions.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reflection.4.1.0\lib\net462\System.Reflection.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.6.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Extensions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.Extensions.4.1.0\lib\net462\System.Runtime.Extensions.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=4.0.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.4.6.0\lib\netstandard2.0\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.4.6.0\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http.Owin, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Owin.5.2.7\lib\net45\System.Web.Http.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\SimpleAuthorizationServerProvider.cs" />
+    <Compile Include="App_Start\Startup.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ActivityReportTransactionController.cs" />
+    <Compile Include="Controllers\CityController.cs" />
+    <Compile Include="Controllers\ConsigneeController.cs" />
+    <Compile Include="Controllers\CountryController.cs" />
+    <Compile Include="Controllers\CountyController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Controllers\CustomerInventoryController.cs" />
+    <Compile Include="Controllers\CustomerWasteInventoryController.cs" />
+    <Compile Include="Controllers\DefaultLabelController.cs" />
+    <Compile Include="Controllers\DepartmentController.cs" />
+    <Compile Include="Controllers\EmployeeController.cs" />
+    <Compile Include="Controllers\FactoryDepartmentController.cs" />
+    <Compile Include="Controllers\HazardousGoodsClassController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\ProductLabelController.cs" />
+    <Compile Include="Controllers\ActivityReportController.cs" />
+    <Compile Include="Controllers\HazardousGoodsController.cs" />
+    <Compile Include="Controllers\HazardousGoodsLabelController.cs" />
+    <Compile Include="Controllers\HazardousGoodsTransactionController.cs" />
+    <Compile Include="Controllers\PackagingTypesController.cs" />
+    <Compile Include="Controllers\PackingGroupController.cs" />
+    <Compile Include="Controllers\PositionController.cs" />
+    <Compile Include="Controllers\SectorController.cs" />
+    <Compile Include="Controllers\TransportDocumentController.cs" />
+    <Compile Include="Controllers\TransportDocumentOtherTransactionController.cs" />
+    <Compile Include="Controllers\TransportDocumentTransactionController.cs" />
+    <Compile Include="Controllers\UnitsetController.cs" />
+    <Compile Include="Controllers\VehicleController.cs" />
+    <Compile Include="Controllers\VehicleDriverController.cs" />
+    <Compile Include="Controllers\WasteListController.cs" />
+    <Compile Include="Controllers\WastePhysicalStateController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\ApiHelper.cs" />
+    <Compile Include="Helpers\UriHelper.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\Activity.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\Activity.Designer.cs">
+      <DependentUpon>Activity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\ActivityLine.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\ActivityLine.Designer.cs">
+      <DependentUpon>ActivityLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\ActivityReport.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\ActivityReport.Designer.cs">
+      <DependentUpon>ActivityReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\ActivityReportTransaction.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\ActivityReportTransaction.Designer.cs">
+      <DependentUpon>ActivityReportTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\ActivitySubject.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\ActivitySubject.Designer.cs">
+      <DependentUpon>ActivitySubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\ActivitySubjectDesc.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\ActivitySubjectDesc.Designer.cs">
+      <DependentUpon>ActivitySubjectDesc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\Analysis.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\Analysis.Designer.cs">
+      <DependentUpon>Analysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\Announcement.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\Announcement.Designer.cs">
+      <DependentUpon>Announcement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\AnnouncementUser.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\AnnouncementUser.Designer.cs">
+      <DependentUpon>AnnouncementUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\AnnualWorkPlan.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\AnnualWorkPlan.Designer.cs">
+      <DependentUpon>AnnualWorkPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\AnnualWorkPlanSubject.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\AnnualWorkPlanSubject.Designer.cs">
+      <DependentUpon>AnnualWorkPlanSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\AnnualWorkPlanSubjectTransaction.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\AnnualWorkPlanSubjectTransaction.Designer.cs">
+      <DependentUpon>AnnualWorkPlanSubjectTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\AuditDataItemPersistent.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\AuditDataItemPersistent.Designer.cs">
+      <DependentUpon>AuditDataItemPersistent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\AuditDeterminationForm.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\AuditDeterminationForm.Designer.cs">
+      <DependentUpon>AuditDeterminationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\AuditDeterminationLegalStatute.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\AuditDeterminationLegalStatute.Designer.cs">
+      <DependentUpon>AuditDeterminationLegalStatute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\AuditDeterminationLegalStatuteTransaction.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\AuditDeterminationLegalStatuteTransaction.Designer.cs">
+      <DependentUpon>AuditDeterminationLegalStatuteTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\AuditedObjectWeakReference.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\AuditedObjectWeakReference.Designer.cs">
+      <DependentUpon>AuditedObjectWeakReference.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\CASNumber.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\CASNumber.Designer.cs">
+      <DependentUpon>CASNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\City.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\City.Designer.cs">
+      <DependentUpon>City.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\Company.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\Company.Designer.cs">
+      <DependentUpon>Company.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\ConnectionHelper.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\Consignee.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\Consignee.Designer.cs">
+      <DependentUpon>Consignee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\Contract.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\Contract.Designer.cs">
+      <DependentUpon>Contract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\Country.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\Country.Designer.cs">
+      <DependentUpon>Country.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\County.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\County.Designer.cs">
+      <DependentUpon>County.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\Currency.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\Currency.Designer.cs">
+      <DependentUpon>Currency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\CustomDocument.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\CustomDocument.Designer.cs">
+      <DependentUpon>CustomDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\Customer.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\Customer.Designer.cs">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\CustomerContact.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\CustomerContact.Designer.cs">
+      <DependentUpon>CustomerContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\CustomerDocument.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\CustomerDocument.Designer.cs">
+      <DependentUpon>CustomerDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\CustomerInventory.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\CustomerInventory.Designer.cs">
+      <DependentUpon>CustomerInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\CustomerWasteInventory.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\CustomerWasteInventory.Designer.cs">
+      <DependentUpon>CustomerWasteInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\CustomFile.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\CustomFile.Designer.cs">
+      <DependentUpon>CustomFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\DangerousGoodInvolved.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\DangerousGoodInvolved.Designer.cs">
+      <DependentUpon>DangerousGoodInvolved.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\DashboardData.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\DashboardData.Designer.cs">
+      <DependentUpon>DashboardData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\DefaultAnnualWorkPlan.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\DefaultAnnualWorkPlan.Designer.cs">
+      <DependentUpon>DefaultAnnualWorkPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\DefaultDistributionOfTaskSubject.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\DefaultDistributionOfTaskSubject.Designer.cs">
+      <DependentUpon>DefaultDistributionOfTaskSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\DefaultDistributionOfTaskSubjectDesc.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\DefaultDistributionOfTaskSubjectDesc.Designer.cs">
+      <DependentUpon>DefaultDistributionOfTaskSubjectDesc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\DefaultLabel.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\DefaultLabel.Designer.cs">
+      <DependentUpon>DefaultLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\DefaultLegalLegislation.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\DefaultLegalLegislation.Designer.cs">
+      <DependentUpon>DefaultLegalLegislation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\DefaultTransportDescription.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\DefaultTransportDescription.Designer.cs">
+      <DependentUpon>DefaultTransportDescription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\DefaultVehicleControlDocumentTransaction.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\DefaultVehicleControlDocumentTransaction.Designer.cs">
+      <DependentUpon>DefaultVehicleControlDocumentTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\DefaultVehicleDocumentControl.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\DefaultVehicleDocumentControl.Designer.cs">
+      <DependentUpon>DefaultVehicleDocumentControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\Department.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\Department.Designer.cs">
+      <DependentUpon>Department.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\DistributionOfTask.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\DistributionOfTask.Designer.cs">
+      <DependentUpon>DistributionOfTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\DistributionOfTaskSubject.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\DistributionOfTaskSubject.Designer.cs">
+      <DependentUpon>DistributionOfTaskSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\DistributionOfTaskSubjectAuth.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\DistributionOfTaskSubjectAuth.Designer.cs">
+      <DependentUpon>DistributionOfTaskSubjectAuth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\DistributionOfTaskSubjectDetail.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\DistributionOfTaskSubjectDetail.Designer.cs">
+      <DependentUpon>DistributionOfTaskSubjectDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\DrillForm.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\DrillForm.Designer.cs">
+      <DependentUpon>DrillForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\DrillFormControlList.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\DrillFormControlList.Designer.cs">
+      <DependentUpon>DrillFormControlList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\DrillType.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\DrillType.Designer.cs">
+      <DependentUpon>DrillType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\DrillTypeControlList.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\DrillTypeControlList.Designer.cs">
+      <DependentUpon>DrillTypeControlList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\Education.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\Education.Designer.cs">
+      <DependentUpon>Education.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\EMailSetting.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\EMailSetting.Designer.cs">
+      <DependentUpon>EMailSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\Employee.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\Employee.Designer.cs">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\EmployeeDocument.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\EmployeeDocument.Designer.cs">
+      <DependentUpon>EmployeeDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\EmployeeEmployees_AnnouncementAnnouncements.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\EmployeeEmployees_AnnouncementAnnouncements.Designer.cs">
+      <DependentUpon>EmployeeEmployees_AnnouncementAnnouncements.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\EmployeeRole.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\EmployeeRole.Designer.cs">
+      <DependentUpon>EmployeeRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\EmployeeRoleEmployeeRoles_EmployeeEmployees.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\EmployeeRoleEmployeeRoles_EmployeeEmployees.Designer.cs">
+      <DependentUpon>EmployeeRoleEmployeeRoles_EmployeeEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\EstimatedQuantityOfLossOfProduct.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\EstimatedQuantityOfLossOfProduct.Designer.cs">
+      <DependentUpon>EstimatedQuantityOfLossOfProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\FactoryDepartment.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\FactoryDepartment.Designer.cs">
+      <DependentUpon>FactoryDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\FileData.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\FileData.Designer.cs">
+      <DependentUpon>FileData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoods.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoods.Designer.cs">
+      <DependentUpon>HazardousGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsADRTankCode.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsADRTankCode.Designer.cs">
+      <DependentUpon>HazardousGoodsADRTankCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsADRTankSpecialProvision.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsADRTankSpecialProvision.Designer.cs">
+      <DependentUpon>HazardousGoodsADRTankSpecialProvision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsCategory.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsCategory.Designer.cs">
+      <DependentUpon>HazardousGoodsCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsClass.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsClass.Designer.cs">
+      <DependentUpon>HazardousGoodsClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsClassCode.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsClassCode.Designer.cs">
+      <DependentUpon>HazardousGoodsClassCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsHazardIdentification.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsHazardIdentification.Designer.cs">
+      <DependentUpon>HazardousGoodsHazardIdentification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsHazardousGoods_HazardousGoodsADRTankCodeADRTankCodes.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsHazardousGoods_HazardousGoodsADRTankCodeADRTankCodes.Designer.cs">
+      <DependentUpon>HazardousGoodsHazardousGoods_HazardousGoodsADRTankCodeADRTankCodes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsHazardousGoods_HazardousGoodsADRTankSpecialProvisionADRTankSpecialProvisions.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsHazardousGoods_HazardousGoodsADRTankSpecialProvisionADRTankSpecialProvisions.Designer.cs">
+      <DependentUpon>HazardousGoodsHazardousGoods_HazardousGoodsADRTankSpecialProvisionADRTankSpecialProvisions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsHazardousGoods_HazardousGoodsClassClasses.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsHazardousGoods_HazardousGoodsClassClasses.Designer.cs">
+      <DependentUpon>HazardousGoodsHazardousGoods_HazardousGoodsClassClasses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsHazardousGoods_HazardousGoodsClassCodeClassCodes.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsHazardousGoods_HazardousGoodsClassCodeClassCodes.Designer.cs">
+      <DependentUpon>HazardousGoodsHazardousGoods_HazardousGoodsClassCodeClassCodes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsHazardousGoods_HazardousGoodsHazardIdentificationHazardIdentificationNo.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsHazardousGoods_HazardousGoodsHazardIdentificationHazardIdentificationNo.Designer.cs">
+      <DependentUpon>HazardousGoodsHazardousGoods_HazardousGoodsHazardIdentificationHazardIdentificationNo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsLabel.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsLabel.Designer.cs">
+      <DependentUpon>HazardousGoodsLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsLabelController.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsLabelController.Designer.cs">
+      <DependentUpon>HazardousGoodsLabelController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsLabelEquipment.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsLabelEquipment.Designer.cs">
+      <DependentUpon>HazardousGoodsLabelEquipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsLabelLabels_HazardousGoodsHazardousGoods.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsLabelLabels_HazardousGoodsHazardousGoods.Designer.cs">
+      <DependentUpon>HazardousGoodsLabelLabels_HazardousGoodsHazardousGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsLabelMixedLoading.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsLabelMixedLoading.Designer.cs">
+      <DependentUpon>HazardousGoodsLabelMixedLoading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsLimitedExcept.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsLimitedExcept.Designer.cs">
+      <DependentUpon>HazardousGoodsLimitedExcept.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsLimitedExceptLimitedExcepted_HazardousGoodsHazardousGoods.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsLimitedExceptLimitedExcepted_HazardousGoodsHazardousGoods.Designer.cs">
+      <DependentUpon>HazardousGoodsLimitedExceptLimitedExcepted_HazardousGoodsHazardousGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsLimitedQuantity.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsLimitedQuantity.Designer.cs">
+      <DependentUpon>HazardousGoodsLimitedQuantity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsLimitedQuantityLimitedQuantities_HazardousGoodsHazardousGoods.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsLimitedQuantityLimitedQuantities_HazardousGoodsHazardousGoods.Designer.cs">
+      <DependentUpon>HazardousGoodsLimitedQuantityLimitedQuantities_HazardousGoodsHazardousGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsMixedPackingProvision.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsMixedPackingProvision.Designer.cs">
+      <DependentUpon>HazardousGoodsMixedPackingProvision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsMixedPackingProvisionMixedPackingProvisions_HazardousGoodsHazardousGoods.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsMixedPackingProvisionMixedPackingProvisions_HazardousGoodsHazardousGoods.Designer.cs">
+      <DependentUpon>HazardousGoodsMixedPackingProvisionMixedPackingProvisions_HazardousGoodsHazardousGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsPackingInstruction.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsPackingInstruction.Designer.cs">
+      <DependentUpon>HazardousGoodsPackingInstruction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsPackingInstructionPackingInstructions_HazardousGoodsHazardousGoods.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsPackingInstructionPackingInstructions_HazardousGoodsHazardousGoods.Designer.cs">
+      <DependentUpon>HazardousGoodsPackingInstructionPackingInstructions_HazardousGoodsHazardousGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsPortableTankContainerInstruction.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsPortableTankContainerInstruction.Designer.cs">
+      <DependentUpon>HazardousGoodsPortableTankContainerInstruction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsPortableTankContainerInstructionPortableTankAndBulkContainerInstructions_HazardousGoodsHazardousGoods.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsPortableTankContainerInstructionPortableTankAndBulkContainerInstructions_HazardousGoodsHazardousGoods.Designer.cs">
+      <DependentUpon>HazardousGoodsPortableTankContainerInstructionPortableTankAndBulkContainerInstructions_HazardousGoodsHazardousGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsPortableTankContainerSpecialProvision.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsPortableTankContainerSpecialProvision.Designer.cs">
+      <DependentUpon>HazardousGoodsPortableTankContainerSpecialProvision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsPortableTankContainerSpecialProvisionPortableTankContainerAndBulkSpecialProvisions_HazardousGoodsHazardousGoods.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsPortableTankContainerSpecialProvisionPortableTankContainerAndBulkSpecialProvisions_HazardousGoodsHazardousGoods.Designer.cs">
+      <DependentUpon>HazardousGoodsPortableTankContainerSpecialProvisionPortableTankContainerAndBulkSpecialProvisions_HazardousGoodsHazardousGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsProperty.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsProperty.Designer.cs">
+      <DependentUpon>HazardousGoodsProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsPropertyValue.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsPropertyValue.Designer.cs">
+      <DependentUpon>HazardousGoodsPropertyValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsSpecialPackingProvision.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsSpecialPackingProvision.Designer.cs">
+      <DependentUpon>HazardousGoodsSpecialPackingProvision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsSpecialPackingProvisionSpecialPackingProvisions_HazardousGoodsHazardousGoods.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsSpecialPackingProvisionSpecialPackingProvisions_HazardousGoodsHazardousGoods.Designer.cs">
+      <DependentUpon>HazardousGoodsSpecialPackingProvisionSpecialPackingProvisions_HazardousGoodsHazardousGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsSpecialProvision.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsSpecialProvision.Designer.cs">
+      <DependentUpon>HazardousGoodsSpecialProvision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsSpecialProvisionForCarriageBulk.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsSpecialProvisionForCarriageBulk.Designer.cs">
+      <DependentUpon>HazardousGoodsSpecialProvisionForCarriageBulk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsSpecialProvisionForCarriageBulkSpecialProvisionForCarriageBulk_HazardousGoodsHazardousGoods.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsSpecialProvisionForCarriageBulkSpecialProvisionForCarriageBulk_HazardousGoodsHazardousGoods.Designer.cs">
+      <DependentUpon>HazardousGoodsSpecialProvisionForCarriageBulkSpecialProvisionForCarriageBulk_HazardousGoodsHazardousGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsSpecialProvisionForCarriageLUH.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsSpecialProvisionForCarriageLUH.Designer.cs">
+      <DependentUpon>HazardousGoodsSpecialProvisionForCarriageLUH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsSpecialProvisionForCarriageLUHSpecialProvisionForCarriageLoadingUnloadingAndHandling_HazardousGoodsHazardousGoods.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsSpecialProvisionForCarriageLUHSpecialProvisionForCarriageLoadingUnloadingAndHandling_HazardousGoodsHazardousGoods.Designer.cs">
+      <DependentUpon>HazardousGoodsSpecialProvisionForCarriageLUHSpecialProvisionForCarriageLoadingUnloadingAndHandling_HazardousGoodsHazardousGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsSpecialProvisionForCarriageOperation.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsSpecialProvisionForCarriageOperation.Designer.cs">
+      <DependentUpon>HazardousGoodsSpecialProvisionForCarriageOperation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsSpecialProvisionForCarriageOperationSpecialProvisionForCarriageOperation_HazardousGoodsHazardousGoods.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsSpecialProvisionForCarriageOperationSpecialProvisionForCarriageOperation_HazardousGoodsHazardousGoods.Designer.cs">
+      <DependentUpon>HazardousGoodsSpecialProvisionForCarriageOperationSpecialProvisionForCarriageOperation_HazardousGoodsHazardousGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsSpecialProvisionForCarriagePackage.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsSpecialProvisionForCarriagePackage.Designer.cs">
+      <DependentUpon>HazardousGoodsSpecialProvisionForCarriagePackage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsSpecialProvisionForCarriagePackageSpecialProvisionForCarriagePackage_HazardousGoodsHazardousGoods.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsSpecialProvisionForCarriagePackageSpecialProvisionForCarriagePackage_HazardousGoodsHazardousGoods.Designer.cs">
+      <DependentUpon>HazardousGoodsSpecialProvisionForCarriagePackageSpecialProvisionForCarriagePackage_HazardousGoodsHazardousGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsSpecialProvisionSpecialProvisions_HazardousGoodsHazardousGoods.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsSpecialProvisionSpecialProvisions_HazardousGoodsHazardousGoods.Designer.cs">
+      <DependentUpon>HazardousGoodsSpecialProvisionSpecialProvisions_HazardousGoodsHazardousGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsTransaction.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsTransaction.Designer.cs">
+      <DependentUpon>HazardousGoodsTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsTransportCategory.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsTransportCategory.Designer.cs">
+      <DependentUpon>HazardousGoodsTransportCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsTransportCategoryTransportCategory_HazardousGoodsHazardousGoods.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsTransportCategoryTransportCategory_HazardousGoodsHazardousGoods.Designer.cs">
+      <DependentUpon>HazardousGoodsTransportCategoryTransportCategory_HazardousGoodsHazardousGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsTunnelCode.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsTunnelCode.Designer.cs">
+      <DependentUpon>HazardousGoodsTunnelCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsTunnelCodeTunnelCodes_HazardousGoodsHazardousGoods.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsTunnelCodeTunnelCodes_HazardousGoodsHazardousGoods.Designer.cs">
+      <DependentUpon>HazardousGoodsTunnelCodeTunnelCodes_HazardousGoodsHazardousGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsVehicleForTankCarriage.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsVehicleForTankCarriage.Designer.cs">
+      <DependentUpon>HazardousGoodsVehicleForTankCarriage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsVehicleForTankCarriageVehicleForTankCarriage_HazardousGoodsHazardousGoods.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HazardousGoodsVehicleForTankCarriageVehicleForTankCarriage_HazardousGoodsHazardousGoods.Designer.cs">
+      <DependentUpon>HazardousGoodsVehicleForTankCarriageVehicleForTankCarriage_HazardousGoodsHazardousGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\HCategory.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\HCategory.Designer.cs">
+      <DependentUpon>HCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\iEvent.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\iEvent.Designer.cs">
+      <DependentUpon>iEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\iEvent_Employees.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\iEvent_Employees.Designer.cs">
+      <DependentUpon>iEvent_Employees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\LabelTransaction.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\LabelTransaction.Designer.cs">
+      <DependentUpon>LabelTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\Lead.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\Lead.Designer.cs">
+      <DependentUpon>Lead.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\LoadType.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\LoadType.Designer.cs">
+      <DependentUpon>LoadType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\LOGOParameter.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\LOGOParameter.Designer.cs">
+      <DependentUpon>LOGOParameter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\MediaDataObject.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\MediaDataObject.Designer.cs">
+      <DependentUpon>MediaDataObject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\Note.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\Note.Designer.cs">
+      <DependentUpon>Note.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\PackagingTypes.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\PackagingTypes.Designer.cs">
+      <DependentUpon>PackagingTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\PackingGroup.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\PackingGroup.Designer.cs">
+      <DependentUpon>PackingGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\PackingGroupPackingGroups_HazardousGoodsHazardousGoods.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\PackingGroupPackingGroups_HazardousGoodsHazardousGoods.Designer.cs">
+      <DependentUpon>PackingGroupPackingGroups_HazardousGoodsHazardousGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\Participant.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\Participant.Designer.cs">
+      <DependentUpon>Participant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\PermissionPolicyActionPermissionObject.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\PermissionPolicyActionPermissionObject.Designer.cs">
+      <DependentUpon>PermissionPolicyActionPermissionObject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\PermissionPolicyMemberPermissionsObject.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\PermissionPolicyMemberPermissionsObject.Designer.cs">
+      <DependentUpon>PermissionPolicyMemberPermissionsObject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\PermissionPolicyNavigationPermissionsObject.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\PermissionPolicyNavigationPermissionsObject.Designer.cs">
+      <DependentUpon>PermissionPolicyNavigationPermissionsObject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\PermissionPolicyObjectPermissionsObject.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\PermissionPolicyObjectPermissionsObject.Designer.cs">
+      <DependentUpon>PermissionPolicyObjectPermissionsObject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\PermissionPolicyRole.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\PermissionPolicyRole.Designer.cs">
+      <DependentUpon>PermissionPolicyRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\PermissionPolicyTypePermissionsObject.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\PermissionPolicyTypePermissionsObject.Designer.cs">
+      <DependentUpon>PermissionPolicyTypePermissionsObject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\Position.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\Position.Designer.cs">
+      <DependentUpon>Position.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\Product.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\Product.Designer.cs">
+      <DependentUpon>Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\ProductCASNumber.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\ProductCASNumber.Designer.cs">
+      <DependentUpon>ProductCASNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\ProductLabel.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\ProductLabel.Designer.cs">
+      <DependentUpon>ProductLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\ProductSupplier.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\ProductSupplier.Designer.cs">
+      <DependentUpon>ProductSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\Quote.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\Quote.Designer.cs">
+      <DependentUpon>Quote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\ReportDataV2.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\ReportDataV2.Designer.cs">
+      <DependentUpon>ReportDataV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\ReportOnOccurrence.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\ReportOnOccurrence.Designer.cs">
+      <DependentUpon>ReportOnOccurrence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\Sector.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\Sector.Designer.cs">
+      <DependentUpon>Sector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\SharedFile.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\SharedFile.Designer.cs">
+      <DependentUpon>SharedFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\TransportDocument.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\TransportDocument.Designer.cs">
+      <DependentUpon>TransportDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\TransportDocumentDescription.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\TransportDocumentDescription.Designer.cs">
+      <DependentUpon>TransportDocumentDescription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\TransportDocumentOtherTransaction.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\TransportDocumentOtherTransaction.Designer.cs">
+      <DependentUpon>TransportDocumentOtherTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\TransportDocumentTransaction.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\TransportDocumentTransaction.Designer.cs">
+      <DependentUpon>TransportDocumentTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\Unitset.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\Unitset.Designer.cs">
+      <DependentUpon>Unitset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\Vehicle.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\Vehicle.Designer.cs">
+      <DependentUpon>Vehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\VehicleControlDocument.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\VehicleControlDocument.Designer.cs">
+      <DependentUpon>VehicleControlDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\VehicleControlDocumentEMailList.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\VehicleControlDocumentEMailList.Designer.cs">
+      <DependentUpon>VehicleControlDocumentEMailList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\VehicleControlDocumentHazardousGoods.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\VehicleControlDocumentHazardousGoods.Designer.cs">
+      <DependentUpon>VehicleControlDocumentHazardousGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\VehicleControlDocumentLabel.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\VehicleControlDocumentLabel.Designer.cs">
+      <DependentUpon>VehicleControlDocumentLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\VehicleControlDocumentTransaction.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\VehicleControlDocumentTransaction.Designer.cs">
+      <DependentUpon>VehicleControlDocumentTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\VehicleDocument.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\VehicleDocument.Designer.cs">
+      <DependentUpon>VehicleDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\VehicleDriver.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\VehicleDriver.Designer.cs">
+      <DependentUpon>VehicleDriver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\VehicleDriverCompetenceCertificate.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\VehicleDriverCompetenceCertificate.Designer.cs">
+      <DependentUpon>VehicleDriverCompetenceCertificate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\VehicleDriverDocument.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\VehicleDriverDocument.Designer.cs">
+      <DependentUpon>VehicleDriverDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\VoyageNotification.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\VoyageNotification.Designer.cs">
+      <DependentUpon>VoyageNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\VoyageNotificationHistory.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\VoyageNotificationHistory.Designer.cs">
+      <DependentUpon>VoyageNotificationHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\VoyageNotificationTransaction.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\VoyageNotificationTransaction.Designer.cs">
+      <DependentUpon>VoyageNotificationTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\WasteList.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\WasteList.Designer.cs">
+      <DependentUpon>WasteList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TMGDORMDataModelCode\WastePhysicalState.cs" />
+    <Compile Include="Models\TMGDORMDataModelCode\WastePhysicalState.Designer.cs">
+      <DependentUpon>WastePhysicalState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Models\TMGDORMDataModel.xpo" />
+    <None Include="Models\TMGDORMDataModel.xpo.diagram">
+      <DependentUpon>TMGDORMDataModel.xpo</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61511</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44304/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
