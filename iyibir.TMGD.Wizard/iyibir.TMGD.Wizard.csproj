@@ -1,233 +1,65 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <TargetFramework>net7.0-windows</TargetFramework>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{75E360E5-6AED-4A05-959A-831A3D4B5B40}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>iyibir.TMGD.Wizard</RootNamespace>
-    <AssemblyName>iyibir.TMGD.Wizard</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>
     <SccLocalPath>SAK</SccLocalPath>
     <SccAuxPath>SAK</SccAuxPath>
     <SccProvider>SAK</SccProvider>
-    <TargetFrameworkProfile />
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.Data.Desktop.v22.2" />
-    <Reference Include="DevExpress.Drawing.v22.2" />
-    <Reference Include="DevExpress.Data.v22.2" />
-    <Reference Include="DevExpress.Printing.v22.2.Core" />
-    <Reference Include="DevExpress.Utils.v22.2" />
-    <Reference Include="DevExpress.XtraEditors.v22.2" />
-    <Reference Include="DevExpress.XtraBars.v22.2" />
-    <Reference Include="DevExpress.Images.v22.2" />
-    <Reference Include="DevExpress.XtraGrid.v22.2, Version=22.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraLayout.v22.2" />
-    <Reference Include="DevExpress.XtraPrinting.v22.2, Version=22.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="IyibirDLL">
       <HintPath>..\..\..\Workspaces\İyibir DLL\IyibirDLL\bin\Debug\IyibirDLL.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interfaces.cs" />
-    <Compile Include="MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModels\ConnectionParameterViewModel.cs" />
-    <Compile Include="ViewModels\CustomerInformationViewModel.cs" />
-    <Compile Include="ViewModels\CustomerValidationViewModel.cs" />
-    <Compile Include="ViewModels\FinishPageViewModel.cs" />
-    <Compile Include="ViewModels\InstallPageViewModel.cs" />
-    <Compile Include="ViewModels\OptionsPageViewModel.cs" />
-    <Compile Include="ViewModels\ProductInstallationViewModel.cs" />
-    <Compile Include="ViewModels\ProductListViewModel.cs" />
-    <Compile Include="ViewModels\StartPageViewModel.cs" />
-    <Compile Include="ViewModels\SupplierInstallationViewModel.cs" />
-    <Compile Include="ViewModels\SupplierListViewModel.cs" />
-    <Compile Include="ViewModels\WizardViewModel.cs" />
-    <Compile Include="Views\ucCustomerInformationPage.cs">
+    <Compile Update="Views\ucCustomerInformationPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\ucCustomerInformationPage.Designer.cs">
-      <DependentUpon>ucCustomerInformationPage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ucConnectionParameterPage.cs">
+    <Compile Update="Views\ucConnectionParameterPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\ucConnectionParameterPage.Designer.cs">
-      <DependentUpon>ucConnectionParameterPage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ucFinishPage.cs">
+    <Compile Update="Views\ucFinishPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\ucFinishPage.Designer.cs">
-      <DependentUpon>ucFinishPage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ucCustomerValidationPage.cs">
+    <Compile Update="Views\ucCustomerValidationPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\ucCustomerValidationPage.Designer.cs">
-      <DependentUpon>ucCustomerValidationPage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ucSupplierListInstallPage.cs">
+    <Compile Update="Views\ucSupplierListInstallPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\ucSupplierListInstallPage.Designer.cs">
-      <DependentUpon>ucSupplierListInstallPage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ucProductListInstallPage.cs">
+    <Compile Update="Views\ucProductListInstallPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\ucProductListInstallPage.Designer.cs">
-      <DependentUpon>ucProductListInstallPage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ucSupplierListPage.cs">
+    <Compile Update="Views\ucSupplierListPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\ucSupplierListPage.Designer.cs">
-      <DependentUpon>ucSupplierListPage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ucProductListPage.cs">
+    <Compile Update="Views\ucProductListPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\ucProductListPage.Designer.cs">
-      <DependentUpon>ucProductListPage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ucOptionsPage.cs">
+    <Compile Update="Views\ucOptionsPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\ucOptionsPage.Designer.cs">
-      <DependentUpon>ucOptionsPage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ucInstallPage.cs">
+    <Compile Update="Views\ucInstallPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\ucInstallPage.Designer.cs">
-      <DependentUpon>ucInstallPage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ucStartPage.cs">
+    <Compile Update="Views\ucStartPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\ucStartPage.Designer.cs">
-      <DependentUpon>ucStartPage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\BaseWizardPage.cs">
+    <Compile Update="Views\BaseWizardPage.cs">
       <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Views\BaseWizardPage.Designer.cs">
-      <DependentUpon>BaseWizardPage.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Views\BaseWizardPage.resx">
-      <DependentUpon>BaseWizardPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\ucCustomerInformationPage.resx">
-      <DependentUpon>ucCustomerInformationPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\ucConnectionParameterPage.resx">
-      <DependentUpon>ucConnectionParameterPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\ucFinishPage.resx">
-      <DependentUpon>ucFinishPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\ucCustomerValidationPage.resx">
-      <DependentUpon>ucCustomerValidationPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\ucSupplierListInstallPage.resx">
-      <DependentUpon>ucSupplierListInstallPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\ucProductListInstallPage.resx">
-      <DependentUpon>ucProductListInstallPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\ucSupplierListPage.resx">
-      <DependentUpon>ucSupplierListPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\ucProductListPage.resx">
-      <DependentUpon>ucProductListPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\ucOptionsPage.resx">
-      <DependentUpon>ucOptionsPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\ucInstallPage.resx">
-      <DependentUpon>ucInstallPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\ucStartPage.resx">
-      <DependentUpon>ucStartPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <None Include="packages.config" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+    <PackageReference Include="DevExpress.Images" Version="22.2.*-*" />
+    <PackageReference Include="DevExpress.Win.Grid" Version="22.2.*-*" />
+    <PackageReference Include="DevExpress.Win.Design" Version="22.2.*-*" />
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>
