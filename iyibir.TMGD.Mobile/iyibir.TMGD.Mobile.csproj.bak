@@ -260,11 +260,14 @@
       <SpecificVersion>False</SpecificVersion>
       <Private>False</Private>
     </Reference>
+    <Reference Include="System.Core">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System.Data">
       <SpecificVersion>False</SpecificVersion>
       <Private>False</Private>
     </Reference>
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing">
       <SpecificVersion>False</SpecificVersion>
       <Private>False</Private>
@@ -284,7 +287,10 @@
       <SpecificVersion>False</SpecificVersion>
       <Private>False</Private>
     </Reference>
-    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System">
       <Private>False</Private>
     </Reference>
@@ -292,6 +298,9 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="System.Data">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
       <Private>False</Private>
     </Reference>
     <Reference Include="System.Drawing">
@@ -315,6 +324,9 @@
     <Reference Include="System.Web.Entity">
       <Private>False</Private>
     </Reference>
+    <Reference Include="System.Web.Extensions">
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System.Web.Mobile">
       <Private>False</Private>
     </Reference>
@@ -327,7 +339,6 @@
     <Reference Include="System.Xml.Linq">
       <Private>False</Private>
     </Reference>
-    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CorsSupport.cs" />

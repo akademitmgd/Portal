@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1FB7F06F-19CC-4C13-AADA-BA403ECACFC7}</ProjectGuid>
+    <ProjectGuid>{151B173C-498C-4627-A1A9-99CE8396D3E7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>iyibir.TMGD.Module.Mobile</RootNamespace>
-    <AssemblyName>iyibir.TMGD.Module.Mobile</AssemblyName>
+    <RootNamespace>iyibir.TMGD.Module.Win</RootNamespace>
+    <AssemblyName>iyibir.TMGD.Module.Win</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>
@@ -43,139 +43,174 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.Sparkline.v22.2.Core">
+    <Reference Include="DevExpress.Sparkline.v20.2.Core">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.Dashboard.v22.2.Core">
+    <Reference Include="DevExpress.Dashboard.v20.2.Core">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.Drawing.v22.2">
+    <Reference Include="DevExpress.Dashboard.v20.2.Win">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.Data.v22.2">
+    <Reference Include="DevExpress.Data.v20.2">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.DataAccess.v22.2">
+    <Reference Include="DevExpress.DataAccess.v20.2">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.AuditTrail.Xpo.v22.2">
+    <Reference Include="DevExpress.DataAccess.v20.2.UI">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.Chart.v22.2">
+    <Reference Include="DevExpress.ExpressApp.AuditTrail.v20.2">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.CloneObject.Mobile.v22.2">
+    <Reference Include="DevExpress.ExpressApp.Chart.v20.2">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.CloneObject.Xpo.v22.2">
+    <Reference Include="DevExpress.ExpressApp.Chart.Win.v20.2">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.ConditionalAppearance.Mobile.v22.2">
+    <Reference Include="DevExpress.ExpressApp.CloneObject.v20.2">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.ConditionalAppearance.v22.2">
+    <Reference Include="DevExpress.ExpressApp.ConditionalAppearance.v20.2">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.Dashboards.v22.2">
+    <Reference Include="DevExpress.ExpressApp.Dashboards.v20.2">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.DataService.v22.2">
+    <Reference Include="DevExpress.ExpressApp.Dashboards.Win.v20.2">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.FileAttachment.Mobile.v22.2">
+    <Reference Include="DevExpress.ExpressApp.FileAttachment.Win.v20.2">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.Mobile.v22.2">
+    <Reference Include="DevExpress.ExpressApp.Notifications.v20.2">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.Notifications.v22.2">
+    <Reference Include="DevExpress.ExpressApp.Notifications.Win.v20.2">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.Objects.v22.2">
+    <Reference Include="DevExpress.ExpressApp.Objects.v20.2">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.PivotChart.v22.2">
+    <Reference Include="DevExpress.ExpressApp.PivotChart.v20.2">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.PivotGrid.v22.2">
+    <Reference Include="DevExpress.ExpressApp.PivotChart.Win.v20.2">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.ReportsV2.Mobile.v22.2">
+    <Reference Include="DevExpress.ExpressApp.PivotGrid.v20.2">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.ReportsV2.v22.2">
+    <Reference Include="DevExpress.ExpressApp.PivotGrid.Win.v20.2">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.ScriptRecorder.v22.2">
+    <Reference Include="DevExpress.ExpressApp.ReportsV2.v20.2">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.TreeListEditors.v22.2">
+    <Reference Include="DevExpress.ExpressApp.ReportsV2.Win.v20.2">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.v22.2">
+    <Reference Include="DevExpress.ExpressApp.Scheduler.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.ExpressApp.Scheduler.Win.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.ScriptRecorder.v20.2">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.Validation.Mobile.v22.2">
+    <Reference Include="DevExpress.ExpressApp.ScriptRecorder.Win.v20.2">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.Validation.v22.2">
+    <Reference Include="DevExpress.ExpressApp.TreeListEditors.v20.2">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.Xpo.v22.2">
+    <Reference Include="DevExpress.ExpressApp.TreeListEditors.Win.v20.2">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.Persistent.Base.v22.2">
+    <Reference Include="DevExpress.ExpressApp.v20.2">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.Persistent.BaseImpl.Xpo.v22.2">
+    <Reference Include="DevExpress.ExpressApp.Validation.v20.2">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.PivotGrid.v22.2.Core">
+    <Reference Include="DevExpress.ExpressApp.Validation.Win.v20.2">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.Printing.v22.2.Core">
+    <Reference Include="DevExpress.ExpressApp.Win.v20.2">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.Data.Desktop.v22.2">
+    <Reference Include="DevExpress.ExpressApp.Xpo.v20.2">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.Utils.v22.2">
+    <Reference Include="DevExpress.Persistent.Base.v20.2">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.Web.Resources.v22.2">
+    <Reference Include="DevExpress.Persistent.BaseImpl.v20.2">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.Office.v22.2.Core">
+    <Reference Include="DevExpress.PivotGrid.v20.2.Core">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.RichEdit.v22.2.Core">
+    <Reference Include="DevExpress.Printing.v20.2.Core">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.Web.v22.2">
+    <Reference Include="DevExpress.Data.Desktop.v20.2">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.Xpo.v22.2">
+    <Reference Include="DevExpress.Utils.v20.2">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.Charts.v22.2.Core">
+    <Reference Include="DevExpress.Utils.v20.2.UI">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.XtraCharts.v22.2">
+    <Reference Include="DevExpress.Xpo.v20.2">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.CodeParser.v22.2">
+    <Reference Include="DevExpress.XtraBars.v20.2">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.XtraReports.v22.2">
+    <Reference Include="DevExpress.Charts.v20.2.Core">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.XtraReports.v22.2.Web">
+    <Reference Include="DevExpress.XtraCharts.v20.2">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.XtraReports.v22.2.Web.WebForms">
+    <Reference Include="DevExpress.XtraCharts.v20.2.UI">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="Microsoft.CSharp">
+    <Reference Include="DevExpress.XtraCharts.v20.2.Wizard">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v20.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v20.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v20.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v20.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v20.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v20.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.CodeParser.v20.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v20.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v20.2.Extensions">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v20.2.Core.Desktop, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v20.2.Core, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v20.2">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="mscorlib">
@@ -193,48 +228,70 @@
     <Reference Include="System.Data">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
+    <Reference Include="System.Design">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
     <Reference Include="System.Drawing">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="System.ServiceModel">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="System.ServiceModel.Web">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="System.Web">
+    <Reference Include="System.Windows.Forms">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="System.Xml.Linq">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="System">
+      <Name>System</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.configuration">
       <Private>False</Private>
     </Reference>
     <Reference Include="System.Data">
+      <Name>System.Data</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
       <Private>False</Private>
     </Reference>
     <Reference Include="System.Xml">
+      <Name>System.XML</Name>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MobileModule.cs">
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WinModule.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="MobileModule.Designer.cs">
-      <DependentUpon>MobileModule.cs</DependentUpon>
+    <Compile Include="WinModule.Designer.cs">
+      <DependentUpon>WinModule.cs</DependentUpon>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Model.DesignedDiffs.xafml" />
+    <EmbeddedResource Include="WinModule.resx">
+      <DependentUpon>WinModule.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
+    <EmbeddedResource Include="Images\ExpressAppLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Controllers\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Editors\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Images\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="packages.config" />
     <None Include="ReadMe.txt" />
   </ItemGroup>
