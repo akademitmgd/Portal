@@ -12,11 +12,6 @@
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="IyibirDLL">
-      <HintPath>..\..\..\Workspaces\İyibir DLL\IyibirDLL\bin\Debug\IyibirDLL.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Update="Views\ucCustomerInformationPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -61,5 +56,10 @@
     <PackageReference Include="DevExpress.Images" Version="22.2.*-*" />
     <PackageReference Include="DevExpress.Win.Grid" Version="22.2.*-*" />
     <PackageReference Include="DevExpress.Win.Design" Version="22.2.*-*" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="IyibirDLL">
+      <HintPath>..\..\..\iyibir Yazılım\iyibirDLL\IyibirDLL\bin\Debug\IyibirDLL.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>

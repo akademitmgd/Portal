@@ -39,10 +39,10 @@ namespace iyibir.TMGD.Module.Controllers.iEventControllers
 
         void schedulerEditor_ExceptionEventCreated(object sender, ExceptionEventCreatedEventArgs e)
         {
-            if (e.PatternEvent is iEvent && e.ExceptionEvent is iEvent)
-            {
-                ((iEvent)e.ExceptionEvent).Description = ((iEvent)e.PatternEvent).Description;
-            }
+            //if (e.PatternEvent is iEvent && e.ExceptionEvent is iEvent)
+            //{
+            //    ((iEvent)e.ExceptionEvent).Description = ((iEvent)e.PatternEvent).Description;
+            //}
         }
 
         protected override void OnViewControlsCreated()

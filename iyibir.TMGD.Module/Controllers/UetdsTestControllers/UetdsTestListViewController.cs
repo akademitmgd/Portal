@@ -61,7 +61,7 @@ namespace iyibir.TMGD.Module.Controllers.UetdsTestControllers
             client.ClientCredentials.UserName.UserName = "859272";
             client.ClientCredentials.UserName.Password = "FREPP1B73K";
 
-            client.Open();
+            //client.Open();
 
             UEDTSTestService.uetdsYtsUser wsuser = SettingYtsUser();
 

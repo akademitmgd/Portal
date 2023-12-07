@@ -15,13 +15,9 @@
     <ApplicationIcon>original_on_transparent_logo_7Yb_icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="IyibirDLL">
-      <HintPath>..\..\..\Workspaces\İyibir DLL\IyibirDLL\bin\Debug\IyibirDLL.dll</HintPath>
-    </Reference>
     <Reference Update="System">
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Configuration" />
     <Reference Update="System.Core">
       <Private>True</Private>
     </Reference>
@@ -52,5 +48,10 @@
     <PackageReference Include="DevExpress.Win.BonusSkins" Version="22.2.*-*" />
     <PackageReference Include="DevExpress.Win" Version="22.2.*-*" />
     <PackageReference Include="DevExpress.Win.Design" Version="22.2.*-*" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="IyibirDLL">
+      <HintPath>..\..\..\iyibir Yazılım\iyibirDLL\IyibirDLL\bin\Debug\IyibirDLL.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>

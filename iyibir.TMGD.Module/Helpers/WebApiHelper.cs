@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,14 +16,22 @@ namespace iyibir.TMGD.Module.Helpers
 
         public string GetToken(string customerUrl,string username,string password)
         {
-            var client = new RestClient(string.Format("{0}/token", customerUrl));
-            client.Timeout = -1;
-            var request = new RestRequest(Method.POST);
+            var options = new RestClientOptions(customerUrl)
+            {
+                MaxTimeout = -1,
+            };
+            var client = new RestClient(options);
+            //var client = new RestClient(string.Format("{0}/token", customerUrl));
+           
+            //var request = new RestRequest(Method.POST);
+            var request = new RestRequest("/token", Method.Post);
             request.AddHeader("Content-Type", "application/x-www-form-urlencoded");
             request.AddParameter("grant_type", "password");
             request.AddParameter("username", username);
             request.AddParameter("password", password);
-            IRestResponse response = client.Execute(request);
+
+            RestResponse response = client.Post(request);
+            //IRestResponse response = client.Execute(request);
 
             var json = Newtonsoft.Json.JsonConvert.DeserializeObject<TokenClass>(response.Content);
 
@@ -36,14 +45,21 @@ namespace iyibir.TMGD.Module.Helpers
 
             try
             {
-                var client = new RestClient(string.Format("{0}/api/STFICHE/GetObjects", customerUrl));
-                client.Timeout = -1;
-                var request = new RestRequest(Method.GET);
+                var options = new RestClientOptions(customerUrl)
+                {
+                    MaxTimeout = -1,
+                };
+                var client = new RestClient(options);
+                //var client = new RestClient(string.Format("{0}/api/STFICHE/GetObjects", customerUrl));
+               
+                //var request = new RestRequest(Method.GET);
+                var request = new RestRequest("/api/STFICHE/GetObjects", Method.Get);
+
                 request.AddHeader("Authorization", string.Format("Bearer {0}", token));
                 request.AddParameter("FirmNumber", FirmNumber, ParameterType.QueryString);
                 request.AddParameter("PeriodNumber", PeriodNumber, ParameterType.QueryString);
 
-                IRestResponse response = client.Execute(request);
+                RestResponse response = client.Execute(request);
 
                 var json = Newtonsoft.Json.JsonConvert.DeserializeObject<DBResult>(response.Content);
 
@@ -70,15 +86,22 @@ namespace iyibir.TMGD.Module.Helpers
 
             try
             {
-                var client = new RestClient(string.Format("{0}/api/STFICHE/GetObjects", customerUrl));
-                client.Timeout = -1;
-                var request = new RestRequest(Method.GET);
+                var options = new RestClientOptions(customerUrl)
+                {
+                    MaxTimeout = -1,
+                };
+                var client = new RestClient(options);
+                //var client = new RestClient(string.Format("{0}/api/STFICHE/GetObjects", customerUrl));
+               
+                //var request = new RestRequest(Method.GET);
+                var request = new RestRequest("/api/STFICHE/GetObjects", Method.Get);
+
                 request.AddHeader("Authorization", string.Format("Bearer {0}", token));
                 request.AddParameter("FirmNumber", FirmNumber, ParameterType.QueryString);
                 request.AddParameter("PeriodNumber", PeriodNumber, ParameterType.QueryString);
                 request.AddParameter("ProductCode", ProductCode, ParameterType.QueryString);
 
-                IRestResponse response = client.Execute(request);
+                RestResponse response = client.Execute(request);
 
                 var json = Newtonsoft.Json.JsonConvert.DeserializeObject<DBResult>(response.Content);
 

@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
-    <TargetFramework>net7.0-windows</TargetFramework>
+    <TargetFramework>net8.0-windows</TargetFramework>
     <OutputType>Library</OutputType>
     <SccProjectName>SAK</SccProjectName>
     <SccLocalPath>SAK</SccLocalPath>
@@ -16,68 +16,6 @@
     <DefineConstants>TRACE;DEBUG;EASYTEST</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.Dashboard.v22.2.Web.WebForms">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="DevExpress.ExpressApp.Chart.Web.v22.2">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="DevExpress.ExpressApp.Dashboards.Web.v22.2">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="DevExpress.ExpressApp.FileAttachment.Web.v22.2">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="DevExpress.ExpressApp.HtmlPropertyEditor.Web.v22.2">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="DevExpress.ExpressApp.Notifications.Web.v22.2">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="DevExpress.ExpressApp.PivotChart.Web.v22.2">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="DevExpress.ExpressApp.PivotGrid.Web.v22.2">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="DevExpress.ExpressApp.ReportsV2.Web.v22.2">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="DevExpress.ExpressApp.Scheduler.Web.v22.2, Version=22.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.ExpressApp.ScriptRecorder.Web.v22.2">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="DevExpress.ExpressApp.TreeListEditors.Web.v22.2">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="DevExpress.ExpressApp.Validation.Web.v22.2">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="DevExpress.ExpressApp.Web.v22.2">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="DevExpress.Web.ASPxHtmlEditor.v22.2">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="DevExpress.Web.ASPxPivotGrid.v22.2">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="DevExpress.Web.ASPxScheduler.v22.2, Version=22.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Web.ASPxSpellChecker.v22.2">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="DevExpress.Web.ASPxTreeList.v22.2">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="DevExpress.Web.v22.2">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="DevExpress.XtraCharts.v22.2.Web">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="DevExpress.XtraReports.v22.2.Web.WebForms">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
     <Reference Update="System">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
@@ -113,9 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Controllers\CustomControllers\CustomWebShowStartupNavigationItemController.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Update="Controllers\CustomControllers\CustomWebShowStartupNavigationItemController.cs" />
     <Compile Update="Controllers\iEventControllers\iEventListViewController.cs" />
     <Compile Update="UserControllers\uc_VehicleControlTransaction.cs">
       <SubType>UserControl</SubType>
@@ -135,7 +71,6 @@
     <ProjectReference Include="..\iyibir.TMGD.Module\iyibir.TMGD.Module.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="DevExpress.Web.Dashboard.Common" Version="22.2.*-*" />
     <PackageReference Include="DevExpress.ExpressApp.AuditTrail.Xpo" Version="22.2.*-*" />
     <PackageReference Include="DevExpress.ExpressApp.Chart" Version="22.2.*-*" />
@@ -156,5 +91,6 @@
     <PackageReference Include="DevExpress.Win.Navigation" Version="22.2.*-*" />
     <PackageReference Include="DevExpress.Web.Reporting.Common" Version="22.2.*-*" />
     <PackageReference Include="DevExpress.Win.Design" Version="22.2.*-*" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 </Project>

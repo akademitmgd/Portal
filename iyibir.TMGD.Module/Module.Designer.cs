@@ -49,7 +49,7 @@
             this.RequiredModuleTypes.Add(typeof(DevExpress.ExpressApp.Validation.ValidationModule));
             this.RequiredModuleTypes.Add(typeof(DevExpress.ExpressApp.Security.SecurityModule));
             this.ResourcesExportedToModel.Add(typeof(DevExpress.ExpressApp.Localization.PreviewControlLocalizer));
-            this.ResourcesExportedToModel.Add(typeof(DevExpress.ExpressApp.Localization.XafFilterUIElementResXLocalizer));
+            //this.ResourcesExportedToModel.Add(typeof(DevExpress.ExpressApp.Localization.XafFilterUIElementResXLocalizer));
             this.ResourcesExportedToModel.Add(typeof(DevExpress.ExpressApp.PivotChart.PivotGridLocalizer));
             this.ResourcesExportedToModel.Add(typeof(DevExpress.ExpressApp.PivotChart.ChartLocalizer));
             this.ResourcesExportedToModel.Add(typeof(DevExpress.ExpressApp.PivotChart.AnalysisControlLocalizer));

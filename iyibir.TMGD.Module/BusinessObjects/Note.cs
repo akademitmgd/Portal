@@ -1,25 +1,20 @@
-﻿using System;
-using System.Linq;
-using System.Text;
-using DevExpress.Xpo;
-using DevExpress.ExpressApp;
-using System.ComponentModel;
-using DevExpress.ExpressApp.DC;
-using DevExpress.Data.Filtering;
-using DevExpress.Persistent.Base;
-using System.Collections.Generic;
+﻿using DevExpress.ExpressApp;
+using DevExpress.ExpressApp.ConditionalAppearance;
 using DevExpress.ExpressApp.Model;
+using DevExpress.ExpressApp.SystemModule;
+using DevExpress.Persistent.Base;
 using DevExpress.Persistent.BaseImpl;
 using DevExpress.Persistent.Validation;
-using DevExpress.ExpressApp.ConditionalAppearance;
-using DevExpress.ExpressApp.SystemModule;
+using DevExpress.Xpo;
+using System;
+using System.ComponentModel;
 
 namespace iyibir.TMGD.Module.BusinessObjects
 {
     [DefaultClassOptions]
     [ImageName("BO_Note")]
     [DefaultProperty("Topic")]
-    [Appearance("Appearance Opportunity Quote", Criteria = "IsActive = 0", Context = "ListView", TargetItems = "*", Enabled = false, FontStyle = System.Drawing.FontStyle.Strikeout)]
+    [Appearance("Appearance Note Strikeout", Criteria = "IsActive = 0", Context = "ListView", TargetItems = "*", Enabled = false, FontStyle = System.Drawing.FontStyle.Strikeout)]
     [ListViewFilter("MyNoteList", "Owner.Oid = CurrentUserId()", "Benim Notlarım", Index = 0)]
     [ListViewFilter("ActiveNoteList", "IsActive = 1", "Aktif Notlar", Index = 0)]
     [ListViewFilter("DeactiveNoteList", "IsActive = 0", "Kapanan Notlar", Index = 1)]

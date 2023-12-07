@@ -210,11 +210,11 @@ namespace iyibir.TMGD.Module.BusinessObjects
             get { return GetCollection<EmployeeRole>("EmployeeRoles"); }
         }
 
-        [Association("iEvent-Employees", UseAssociationNameAsIntermediateTableName = true)]
-        public XPCollection<iEvent> MyAgenda
-        {
-            get { return GetCollection<iEvent>("MyAgenda"); }
-        }
+        //[Association("iEvent-Employees", UseAssociationNameAsIntermediateTableName = true)]
+        //public XPCollection<iEvent> MyAgenda
+        //{
+        //    get { return GetCollection<iEvent>("MyAgenda"); }
+        //}
 
         [Association("Employee-Notes"),DevExpress.Xpo.Aggregated]
         public XPCollection<Note> MyNotes => GetCollection<Note>(nameof(MyNotes));

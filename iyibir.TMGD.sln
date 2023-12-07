@@ -1,31 +1,35 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30320.27
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34316.72
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iyibir.TMGD.Module", "iyibir.TMGD.Module\iyibir.TMGD.Module.csproj", "{DABFC3D1-D050-46A5-BFCA-F993564E306E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iyibir.TMGD.Module", "iyibir.TMGD.Module\iyibir.TMGD.Module.csproj", "{DABFC3D1-D050-46A5-BFCA-F993564E306E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iyibir.TMGD.Module.Mobile", "iyibir.TMGD.Module.Mobile\iyibir.TMGD.Module.Mobile.csproj", "{1FB7F06F-19CC-4C13-AADA-BA403ECACFC7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iyibir.TMGD.Mobile", "iyibir.TMGD.Mobile\iyibir.TMGD.Mobile.csproj", "{E9B51C3E-60CE-4778-BFAE-1FBBA14EF3DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iyibir.TMGD.Module.Web", "iyibir.TMGD.Module.Web\iyibir.TMGD.Module.Web.csproj", "{8669637C-8B7B-4C8B-8762-64EE625CCC48}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iyibir.TMGD.Module.Web", "iyibir.TMGD.Module.Web\iyibir.TMGD.Module.Web.csproj", "{8669637C-8B7B-4C8B-8762-64EE625CCC48}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iyibir.TMGD.Web", "iyibir.TMGD.Web\iyibir.TMGD.Web.csproj", "{2472BE95-8A4E-4610-B215-C7CF649C332B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iyibir.TMGD.Module.Win", "iyibir.TMGD.Module.Win\iyibir.TMGD.Module.Win.csproj", "{151B173C-498C-4627-A1A9-99CE8396D3E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iyibir.TMGD.Module.Win", "iyibir.TMGD.Module.Win\iyibir.TMGD.Module.Win.csproj", "{151B173C-498C-4627-A1A9-99CE8396D3E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iyibir.TMGD.Win", "iyibir.TMGD.Win\iyibir.TMGD.Win.csproj", "{F6559086-647C-4806-86DC-6C0F5232BC72}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iyibir.TMGD.Win", "iyibir.TMGD.Win\iyibir.TMGD.Win.csproj", "{F6559086-647C-4806-86DC-6C0F5232BC72}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iyibir.TMGD.WebAPI", "iyibir.TMGD.WebAPI\iyibir.TMGD.WebAPI.csproj", "{7D9BEFBD-0742-4F2D-9C89-261A226A644F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iyibir.TMGD.Wizard", "iyibir.TMGD.Wizard\iyibir.TMGD.Wizard.csproj", "{75E360E5-6AED-4A05-959A-831A3D4B5B40}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iyibir.TMGD.Wizard", "iyibir.TMGD.Wizard\iyibir.TMGD.Wizard.csproj", "{75E360E5-6AED-4A05-959A-831A3D4B5B40}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iyibir.TMGD.WizardControl", "iyibir.TMGD.WizardControl\iyibir.TMGD.WizardControl.csproj", "{476CC156-A26B-4925-98F2-1E14383E8AD6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iyibir.TMGD.WizardControl", "iyibir.TMGD.WizardControl\iyibir.TMGD.WizardControl.csproj", "{476CC156-A26B-4925-98F2-1E14383E8AD6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iyibir.TMGD.WebAPIV2", "iyibir.TMGD.WebAPIV2\iyibir.TMGD.WebAPIV2.csproj", "{2BE35F1D-F1FE-4A9E-AB4E-911F10E995A7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iyibir.TMGD.WebAPI.OData", "iyibir.TMGD.WebAPI.OData\iyibir.TMGD.WebAPI.OData.csproj", "{72041299-EB3A-4F51-A4D1-BEAD720004D0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iyibir.TMGD.Blazor.Server", "iyibir.TMGD.Blazor.Server\iyibir.TMGD.Blazor.Server.csproj", "{5C9AC879-4BF5-49E3-9595-B3B308270DFD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iyibir.TMGD.Module.Blazor", "iyibir.TMGD.Module.Blazor\iyibir.TMGD.Module.Blazor.csproj", "{4632D62F-65E9-4DF4-851E-980B1A2B3879}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -106,53 +110,23 @@ Global
 		{72041299-EB3A-4F51-A4D1-BEAD720004D0}.EasyTest|Any CPU.Build.0 = Debug|Any CPU
 		{72041299-EB3A-4F51-A4D1-BEAD720004D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72041299-EB3A-4F51-A4D1-BEAD720004D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C9AC879-4BF5-49E3-9595-B3B308270DFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C9AC879-4BF5-49E3-9595-B3B308270DFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C9AC879-4BF5-49E3-9595-B3B308270DFD}.EasyTest|Any CPU.ActiveCfg = EasyTest|Any CPU
+		{5C9AC879-4BF5-49E3-9595-B3B308270DFD}.EasyTest|Any CPU.Build.0 = EasyTest|Any CPU
+		{5C9AC879-4BF5-49E3-9595-B3B308270DFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C9AC879-4BF5-49E3-9595-B3B308270DFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4632D62F-65E9-4DF4-851E-980B1A2B3879}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4632D62F-65E9-4DF4-851E-980B1A2B3879}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4632D62F-65E9-4DF4-851E-980B1A2B3879}.EasyTest|Any CPU.ActiveCfg = EasyTest|Any CPU
+		{4632D62F-65E9-4DF4-851E-980B1A2B3879}.EasyTest|Any CPU.Build.0 = EasyTest|Any CPU
+		{4632D62F-65E9-4DF4-851E-980B1A2B3879}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4632D62F-65E9-4DF4-851E-980B1A2B3879}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8786AC71-A49B-4377-A73F-94BE8CA24E73}
-	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 13
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://dev.azure.com/iyibiryazilim
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = iyibir.TMGD.Mobile\\iyibir.TMGD.Mobile.csproj
-		SccProjectName1 = iyibir.TMGD.Mobile
-		SccLocalPath1 = iyibir.TMGD.Mobile
-		SccProjectUniqueName2 = iyibir.TMGD.Module.Mobile\\iyibir.TMGD.Module.Mobile.csproj
-		SccProjectName2 = iyibir.TMGD.Module.Mobile
-		SccLocalPath2 = iyibir.TMGD.Module.Mobile
-		SccProjectUniqueName3 = iyibir.TMGD.Module.Web\\iyibir.TMGD.Module.Web.csproj
-		SccProjectName3 = iyibir.TMGD.Module.Web
-		SccLocalPath3 = iyibir.TMGD.Module.Web
-		SccProjectUniqueName4 = iyibir.TMGD.Module.Win\\iyibir.TMGD.Module.Win.csproj
-		SccProjectName4 = iyibir.TMGD.Module.Win
-		SccLocalPath4 = iyibir.TMGD.Module.Win
-		SccProjectUniqueName5 = iyibir.TMGD.Module\\iyibir.TMGD.Module.csproj
-		SccProjectName5 = iyibir.TMGD.Module
-		SccLocalPath5 = iyibir.TMGD.Module
-		SccProjectUniqueName6 = iyibir.TMGD.Web\\iyibir.TMGD.Web.csproj
-		SccProjectName6 = iyibir.TMGD.Web
-		SccLocalPath6 = iyibir.TMGD.Web
-		SccProjectUniqueName7 = iyibir.TMGD.Win\\iyibir.TMGD.Win.csproj
-		SccProjectName7 = iyibir.TMGD.Win
-		SccLocalPath7 = iyibir.TMGD.Win
-		SccProjectUniqueName8 = iyibir.TMGD.WebAPI\\iyibir.TMGD.WebAPI.csproj
-		SccProjectName8 = iyibir.TMGD.WebAPI
-		SccLocalPath8 = iyibir.TMGD.WebAPI
-		SccProjectUniqueName9 = iyibir.TMGD.Wizard\\iyibir.TMGD.Wizard.csproj
-		SccProjectName9 = iyibir.TMGD.Wizard
-		SccLocalPath9 = iyibir.TMGD.Wizard
-		SccProjectUniqueName10 = iyibir.TMGD.WizardControl\\iyibir.TMGD.WizardControl.csproj
-		SccProjectName10 = iyibir.TMGD.WizardControl
-		SccLocalPath10 = iyibir.TMGD.WizardControl
-		SccProjectUniqueName11 = iyibir.TMGD.WebAPIV2\\iyibir.TMGD.WebAPIV2.csproj
-		SccProjectName11 = iyibir.TMGD.WebAPIV2
-		SccLocalPath11 = iyibir.TMGD.WebAPIV2
-		SccProjectUniqueName12 = iyibir.TMGD.WebAPI.OData\\iyibir.TMGD.WebAPI.OData.csproj
-		SccProjectName12 = iyibir.TMGD.WebAPI.OData
-		SccLocalPath12 = iyibir.TMGD.WebAPI.OData
 	EndGlobalSection
 EndGlobal

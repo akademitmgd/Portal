@@ -15,15 +15,10 @@
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="IyibirDLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\İyibir DLL\IyibirDLL\bin\Debug\IyibirDLL.dll</HintPath>
-    </Reference>
     <Reference Update="System">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Configuration" />
     <Reference Update="System.Core">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
@@ -32,9 +27,9 @@
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.IdentityModel" />
-    <Reference Include="System.ServiceModel" />
-    <Reference Include="System.Transactions" />
+    <Reference Include="IyibirDLL">
+      <HintPath>..\..\..\iyibir Yazılım\iyibirDLL\IyibirDLL\bin\Debug\IyibirDLL.dll</HintPath>
+    </Reference>
     <Reference Update="System.Xml.Linq">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
@@ -847,7 +842,6 @@
     <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.yukIptalEtV3Response.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <EmbeddedResource Include="Model.DesignedDiffs.Localization.tr.xafml" />
     <EmbeddedResource Include="Model.DesignedDiffs.xafml" />
     <None Update="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -932,9 +926,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
-    <PackageReference Include="RestSharp" Version="106.11.7" />
-    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.2" />
+    <PackageReference Include="RestSharp" Version="110.2.0" />
     <PackageReference Include="DevExpress.ExpressApp.Scheduler" Version="22.2.*-*" />
     <PackageReference Include="DevExpress.ExpressApp.AuditTrail.Xpo" Version="22.2.*-*" />
     <PackageReference Include="DevExpress.ExpressApp.Chart" Version="22.2.*-*" />
@@ -950,9 +943,8 @@
     <PackageReference Include="DevExpress.ExpressApp.Security" Version="22.2.*-*" />
     <PackageReference Include="DevExpress.ExpressApp.TreeListEditors" Version="22.2.*-*" />
     <PackageReference Include="DevExpress.ExpressApp.Validation" Version="22.2.*-*" />
-    <PackageReference Include="DevExpress.Utils" Version="22.2.*-*" />
     <PackageReference Include="DevExpress.CodeParser" Version="22.2.*-*" />
-    <PackageReference Include="DevExpress.Win.Design" Version="22.2.*-*" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Connected Services\NewUetdsService\Reference.cs" />

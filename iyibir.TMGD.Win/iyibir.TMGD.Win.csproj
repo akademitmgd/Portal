@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net7.0-windows</TargetFramework>
+    <TargetFramework>net7.0-windows10.0.22621.0</TargetFramework>
     <OutputType>WinExe</OutputType>
     <ApplicationIcon>ExpressApp.ico</ApplicationIcon>
     <SccProjectName>SAK</SccProjectName>
@@ -29,10 +29,6 @@
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Design">
-      <SpecificVersion>False</SpecificVersion>
-      <Private>True</Private>
-    </Reference>
     <Reference Update="System.Drawing">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
@@ -44,9 +40,6 @@
     <Reference Update="System">
       <Name>System</Name>
       <Private>False</Private>
-    </Reference>
-    <Reference Include="System.configuration">
-      <Private>True</Private>
     </Reference>
     <Reference Update="System.Data">
       <Name>System.Data</Name>
@@ -71,16 +64,15 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="WinApplication.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Update="WinApplication.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\iyibir.TMGD.Module.Win\iyibir.TMGD.Module.Win.csproj" />
     <ProjectReference Include="..\iyibir.TMGD.Module\iyibir.TMGD.Module.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="DevExpress.Win.BonusSkins" Version="22.2.*-*" />
     <PackageReference Include="DevExpress.ExpressApp.AuditTrail.Xpo" Version="22.2.*-*" />
     <PackageReference Include="DevExpress.ExpressApp.Chart.Win" Version="22.2.*-*" />
@@ -102,5 +94,9 @@
     <PackageReference Include="DevExpress.Win" Version="22.2.*-*" />
     <PackageReference Include="DevExpress.CodeParser" Version="22.2.*-*" />
     <PackageReference Include="DevExpress.Win.Design" Version="22.2.*-*" />
+    <PackageReference Include="System.ComponentModel.Primitives" Version="4.3.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
   </ItemGroup>
 </Project>
