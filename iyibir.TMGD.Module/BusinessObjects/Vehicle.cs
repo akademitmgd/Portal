@@ -54,19 +54,18 @@ namespace iyibir.TMGD.Module.BusinessObjects
 
         public VehicleType VehicleType { get=> _vehicleType; set=> SetPropertyValue(nameof(VehicleType),ref _vehicleType,value); }
 
-        [RuleRequiredField("RuleRequiredField for Vehicle.Code", DefaultContexts.Save)]
+
         public string Code { get=> _plate; set=> SetPropertyValue(nameof(Code),ref _code,value); }
 
-        [RuleRequiredField("RuleRequiredField for Vehicle.Name", DefaultContexts.Save)]
+
         public string Name { get=> _name; set=> SetPropertyValue(nameof(Name),ref _name,value); }
 
         [RuleRequiredField("RuleRequiredField for Vehicle.Plate", DefaultContexts.Save)]
         public string Plate { get=> _plate; set=> SetPropertyValue(nameof(Plate),ref _plate,value); }
 
-        [RuleRequiredField("RuleRequiredField for Vehicle.InsurancePolicy", DefaultContexts.Save)]
+        
         public DateTime InsurancePolicy { get => _insurancePolicy; set => SetPropertyValue(nameof(InsurancePolicy), ref _insurancePolicy, value); }
 
-        [RuleRequiredField]
         public DateTime TmgdInsurancePolicy { get=> _tmgdInsurancePolicy; set=> SetPropertyValue(nameof(TmgdInsurancePolicy),ref _tmgdInsurancePolicy,value); }
         public DateTime AdrInspectionDate { get=> _adrInspectionDate; set=> SetPropertyValue(nameof(AdrInspectionDate),ref _adrInspectionDate,value); }
         public DateTime AdrInspectionThreeYearly { get=> _adrInspectionThreeYearly; set=> SetPropertyValue(nameof(AdrInspectionThreeYearly),ref _adrInspectionThreeYearly,value); }

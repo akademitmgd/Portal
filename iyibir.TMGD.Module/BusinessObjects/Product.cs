@@ -202,7 +202,7 @@ namespace iyibir.TMGD.Module.BusinessObjects
 
         public bool IsActive { get=> _isActive; set=> SetPropertyValue(nameof(IsActive),ref _isActive,value); }
 
-        [RuleRequiredField("RuleRequiredField for Product.MSDSDateOfValidity", DefaultContexts.Save, TargetCriteria = "ProductGroupType = 0")]
+        //[RuleRequiredField("RuleRequiredField for Product.MSDSDateOfValidity", DefaultContexts.Save, TargetCriteria = "ProductGroupType = 0")]
         [Appearance("Product MSDSDateOfValidity Hide", Criteria = "ProductGroupType = 1", Context = "DetailView", Visibility = ViewItemVisibility.Hide)]
         public DateTime MSDSDateOfValidity { get=> _msdsDateOfValidity; set=> SetPropertyValue(nameof(MSDSDateOfValidity),ref _msdsDateOfValidity,value); }
 

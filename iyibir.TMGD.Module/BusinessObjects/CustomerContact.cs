@@ -74,6 +74,8 @@ namespace iyibir.TMGD.Module.BusinessObjects
         [Size(11)]
         public string TCKN { get=> _tckn; set=> SetPropertyValue(nameof(TCKN),ref _tckn,value); }
         public string RegistrationNumber { get=> _registrationNumber; set=> SetPropertyValue(nameof(RegistrationNumber),ref _registrationNumber,value); }
+
+        [Browsable(false)]
         public string eGovernmentAuthorized { get=> _eGovernmentAuthorized; set=> SetPropertyValue(nameof(eGovernmentAuthorized),ref _eGovernmentAuthorized,value); }
     }
 }

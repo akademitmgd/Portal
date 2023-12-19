@@ -1,0 +1,51 @@
+﻿@using DevExpress.Blazor
+@using iyibir.TMGD.Module.BusinessObjects;
+
+
+
+<DxScheduler StartDate="@DateTime.Today"
+             DataStorage="@DataStorage"
+             AppointmentInserted=@(async (e) => await AppointmentInserted.InvokeAsync(e))
+             AppointmentUpdated=@(async (e) => await AppointmentUpdated.InvokeAsync(e))
+             AppointmentInserting=@(async (e) => await AppointmentInserting.InvokeAsync(e))
+             AppointmentRemoved=@(async (e) => await AppointmentRemoved.InvokeAsync(e))>
+    <DxSchedulerMonthView ShowWorkDaysOnly="true" />
+    <DxSchedulerWeekView ShowWorkTimeOnly="true"
+                         DayCount="5"
+                         TimeScale="@(new TimeSpan(1,0,0))"
+                         WorkTime="new DxSchedulerTimeSpanRange(TimeSpan.FromHours(9), TimeSpan.FromHours(18))"
+                         VisibleTime="new DxSchedulerTimeSpanRange(TimeSpan.FromHours(9), TimeSpan.FromHours(18))"
+                         TimeIndicatorVisibility="SchedulerTimeIndicatorVisibility.Never" />
+    <DxSchedulerDayView ShowWorkTimeOnly="true"
+                        DayCount="1"
+                        TimeScale="@(new TimeSpan(1,0,0))"
+                        WorkTime="new DxSchedulerTimeSpanRange(TimeSpan.FromHours(9), TimeSpan.FromHours(18))"
+                        VisibleTime="new DxSchedulerTimeSpanRange(TimeSpan.FromHours(9), TimeSpan.FromHours(18))"
+                        TimeIndicatorVisibility="SchedulerTimeIndicatorVisibility.Never" />
+    <DxSchedulerWorkWeekView ShowWorkTimeOnly="true"
+                             DayCount="5"
+                             TimeScale="@(new TimeSpan(1,0,0))"
+                             WorkTime="new DxSchedulerTimeSpanRange(TimeSpan.FromHours(9), TimeSpan.FromHours(18))"
+                             VisibleTime="new DxSchedulerTimeSpanRange(TimeSpan.FromHours(9), TimeSpan.FromHours(18))"
+                             TimeIndicatorVisibility="SchedulerTimeIndicatorVisibility.Never" />
+</DxScheduler>
+
+@code {
+    [Parameter]
+    public IEnumerable<ActivityEvent> Data { get; set; }
+
+    [Parameter]
+    public DxSchedulerDataStorage DataStorage { get; set; }
+
+    [Parameter]
+    public EventCallback<DxSchedulerAppointmentItem> AppointmentInserted { get; set; }
+
+    [Parameter]
+    public EventCallback<DxSchedulerAppointmentItem> AppointmentUpdated { get; set; }
+
+    [Parameter]
+    public EventCallback<SchedulerAppointmentOperationEventArgs> AppointmentInserting { get; set; }
+
+    [Parameter]
+    public EventCallback<DxSchedulerAppointmentItem> AppointmentRemoved { get; set; }
+}

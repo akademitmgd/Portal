@@ -7,6 +7,10 @@ app {
     height: 100%;
 }
 
+.header {
+    background-color: #e7bf0d
+}
+
 .header-logo {
     flex-shrink: 0;
     background-color: currentColor;

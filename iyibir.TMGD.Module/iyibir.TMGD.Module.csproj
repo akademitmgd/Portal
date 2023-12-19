@@ -852,6 +852,7 @@
     <EmbeddedResource Include="Images\tmgd_logo.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Controllers\ActivityLineControllers\" />
     <Folder Include="Controllers\TransportDocumentTransactionControllers\" />
   </ItemGroup>
   <ItemGroup>
@@ -882,8 +883,6 @@
       <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
       <SubType>Designer</SubType>
     </None>
-  </ItemGroup>
-  <ItemGroup>
     <None Update="UnusableNodes2.xml">
       <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
       <SubType>Designer</SubType>
@@ -948,5 +947,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Connected Services\NewUetdsService\Reference.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Model.DesignedDiffs.Localization.tr.xafml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Model.DesignedDiffs.Localization.tr.xafml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

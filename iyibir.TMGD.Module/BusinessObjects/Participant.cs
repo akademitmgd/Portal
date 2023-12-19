@@ -65,8 +65,10 @@ namespace iyibir.TMGD.Module.BusinessObjects
         [RuleRequiredField("RuleRequiredField for Participant.Name", DefaultContexts.Save)]
         public string Name { get=> _name; set=> SetPropertyValue(nameof(Name),ref _name,value); }
 
-        [Size(11)]
+        [Size(11),Browsable(false)]
         public string TCKN { get=> _tckn; set=> SetPropertyValue(nameof(TCKN),ref _tckn,value); }
+
+        [Browsable(false)]
         public double Degree { get=> _degree; set=> SetPropertyValue(nameof(Degree),ref _degree,value); }
     }
 }

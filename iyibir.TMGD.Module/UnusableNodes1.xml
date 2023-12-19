@@ -1,14 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Application>
   <Views Id="Views">
-    <DetailView Id="Customer_DetailView">
+    <ListView Id="Activity_Lines_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="SubjectDescription" Width="147" Index="-1" />
+      </Columns>
+    </ListView>
+    <DetailView Id="ActivityLine_DetailView">
       <Layout Id="Layout">
         <LayoutGroup Id="Main">
-          <TabbedGroup Id="Tabs">
-            <LayoutGroup Id="ActivityReports" Index="8" RelativeSize="100">
-              <LayoutItem Id="ActivityReports" RelativeSize="100" />
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ActivityLine">
+              <LayoutGroup Id="ActivityLine_col1" RelativeSize="100">
+                <LayoutItem Id="LineNumber" RelativeSize="23.529411764705884" />
+                <LayoutItem Id="Subject" RelativeSize="17.647058823529413" />
+                <LayoutItem Id="SubjectDescription" RelativeSize="17.647058823529413" />
+                <LayoutItem Id="Owner" ViewItem="Owner" Index="3" RelativeSize="17.647058823529413" />
+                <LayoutItem Id="DueDate" ViewItem="DueDate" Index="4" RelativeSize="23.529411764705884" />
+                <LayoutItem Id="AnnualWorkPlanSubject" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="ActivityLine_col2" RelativeSize="50" Removed="True">
+                <LayoutItem Id="DueDate" Index="0" RelativeSize="100" Removed="True" />
+                <LayoutItem Id="Owner" Removed="True" />
+              </LayoutGroup>
             </LayoutGroup>
-          </TabbedGroup>
+          </LayoutGroup>
         </LayoutGroup>
       </Layout>
     </DetailView>

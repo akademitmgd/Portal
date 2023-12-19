@@ -10,9 +10,14 @@
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Model.xafml" />
+    <None Remove="Model_tr.xafml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Model.xafml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Model_tr.xafml">
+      <DependentUpon>Model.xafml</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
@@ -29,9 +34,12 @@
     <PackageReference Include="DevExpress.ExpressApp.Xpo" Version="22.2.4" />
     <PackageReference Include="DevExpress.Persistent.Base" Version="22.2.4" />
     <PackageReference Include="DevExpress.Persistent.BaseImpl.Xpo" Version="22.2.4" />
+    <PackageReference Include="DevExpress.ExpressApp.WebApi" Version="22.2.4" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.14" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BlazorComponents\BlazorComponents.csproj" />
     <ProjectReference Include="..\iyibir.TMGD.Module.Blazor\iyibir.TMGD.Module.Blazor.csproj" />
     <ProjectReference Include="..\iyibir.TMGD.Module\iyibir.TMGD.Module.csproj" />
   </ItemGroup>

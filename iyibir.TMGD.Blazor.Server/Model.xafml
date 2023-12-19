@@ -1,2 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Application />
+<Application>
+  <SchemaModules>
+    <SchemaModule Name="CloneObjectModule" Version="22.2.4.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="22.2.4.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <ListView Id="ActivitySubject_ListView">
+      <Sorting>
+        <SortProperty Id="CodeByAsc" PropertyName="Code" IsNewNode="True" />
+      </Sorting>
+    </ListView>
+    <ListView Id="ActivitySubject_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Code" PropertyName="Code" SortOrder="Ascending" SortIndex="0" Index="0" IsNewNode="True" />
+        <ColumnInfo Id="Fullname" SortOrder="Descending" SortIndex="1" Index="1" />
+      </Columns>
+      <Sorting>
+        <SortProperty Id="CodeByAsc" PropertyName="Fullname" />
+      </Sorting>
+    </ListView>
+    <ListView Id="DistributionOfTaskSubject_Details_ListView">
+      <Columns>
+        <ColumnInfo Id="Description" Width="80" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

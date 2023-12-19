@@ -22,11 +22,45 @@ namespace iyibir.TMGD.Module.Controllers.TransportDocumentControllers
     // For more typical usage scenarios, be sure to check out https://documentation.devexpress.com/eXpressAppFramework/clsDevExpressExpressAppViewControllertopic.aspx.
     public partial class TransportDocumentListViewController : ViewController
     {
+        private SimpleAction CalcPoint;
         public TransportDocumentListViewController()
         {
             InitializeComponent();
-            // Target required Views (via the TargetXXX properties) and create their Actions.
+            TargetObjectType = typeof(TransportDocument);
+
+            #region Delete Substitution Vehicle
+            CalcPoint = new SimpleAction(this, "CalcPoint", PredefinedCategory.View);
+            CalcPoint.TypeOfView = typeof(TransportDocument);
+            CalcPoint.TargetViewType = ViewType.ListView;
+            CalcPoint.TargetObjectsCriteriaMode = TargetObjectsCriteriaMode.TrueForAll;
+            CalcPoint.ImageName = "BO_Transition";
+            CalcPoint.Execute += CalcPoint_Execute;
+            #endregion
+
         }
+
+        private void CalcPoint_Execute(object sender, SimpleActionExecuteEventArgs e)
+        {
+
+            var selectedItems = View.SelectedObjects;
+            if (selectedItems.Count > 0)
+            {
+                double totalPoint = default;
+                foreach ( TransportDocument item in selectedItems )
+                    totalPoint += item.ScoreQuantity;
+
+                if (totalPoint > 1000)
+                {
+                    Application.ShowViewStrategy.ShowMessage($"Toplam Puan : {totalPoint} -> 1.1.3.6 muafiyet kapsamında taşıyamaz.",InformationType.Error,6000);
+                }
+                else
+                {
+                    Application.ShowViewStrategy.ShowMessage($"Toplam Puan : {totalPoint} -> 1.1.3.6 muafiyet kapsamında taşıyabiir.", InformationType.Success, 6000);
+                }
+                
+            }
+        }
+
         protected override void OnActivated()
         {
             base.OnActivated();

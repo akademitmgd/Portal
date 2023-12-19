@@ -17,12 +17,13 @@ using DevExpress.Persistent.Base.General;
 
 namespace iyibir.TMGD.Module.BusinessObjects
 {
+
     [DefaultClassOptions]
     [ImageName("BO_Folder")]
     [DefaultProperty("Name")]
     [DefaultListViewOptions(MasterDetailMode.ListViewAndDetailView, false, NewItemRowPosition.None)]
     [Appearance("EFile New", AppearanceItemType = "Action", TargetItems = "New", Visibility = ViewItemVisibility.Hide)]
-    public class CustomFile : BaseObject, ITreeNode
+    public class CustomFile : BaseObject
     {
         private string _name;
         private Employee _owner;
@@ -54,20 +55,20 @@ namespace iyibir.TMGD.Module.BusinessObjects
         [ModelDefault("AllowEdit", "False")]
         public DateTime CreatedOn { get => _createdOn; set => SetPropertyValue("CreatedOn", ref _createdOn, value); }
 
-        #region ITreeNode
-        [Association("CustomFile-CustomFileChild")]
-        public XPCollection<CustomFile> Children => GetCollection<CustomFile>(nameof(Children));
+        //#region ITreeNode
+        //[Association("CustomFile-CustomFileChild")]
+        //public XPCollection<CustomFile> Children => GetCollection<CustomFile>(nameof(Children));
 
-        [Association("CustomFile-CustomFileChild")]
-        [Persistent]
-        public CustomFile ParentFile { get => _parentFile; set => SetPropertyValue(nameof(ParentFile), ref _parentFile, value); }
+        //[Association("CustomFile-CustomFileChild")]
+        //[Persistent]
+        //public CustomFile ParentFile { get => _parentFile; set => SetPropertyValue(nameof(ParentFile), ref _parentFile, value); }
 
-        [VisibleInDetailView(false)]
-        public ITreeNode Parent => _parentFile;
+        //[VisibleInDetailView(false)]
+        //public ITreeNode Parent => _parentFile;
 
-        IBindingList ITreeNode.Children => Children;
+        //IBindingList ITreeNode.Children => Children;
 
-        #endregion
+        //#endregion
 
         [Association("CustomFile-Documents"),DevExpress.Xpo.Aggregated]
         public XPCollection<CustomDocument> Documents => GetCollection<CustomDocument>(nameof(Documents));

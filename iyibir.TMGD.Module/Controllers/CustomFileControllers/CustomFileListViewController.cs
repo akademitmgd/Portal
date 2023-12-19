@@ -66,7 +66,7 @@ namespace iyibir.TMGD.Module.Controllers.CustomFileControllers
                 IObjectSpace os = Application.CreateObjectSpace();
 
                 CustomFile file = os.CreateObject<CustomFile>();
-                file.ParentFile = os.GetObjectByKey<CustomFile>(selectedFile.Oid);
+                //file.ParentFile = os.GetObjectByKey<CustomFile>(selectedFile.Oid);
                 file.Name = newFile.FileName;
 
                 os.CommitChanges();

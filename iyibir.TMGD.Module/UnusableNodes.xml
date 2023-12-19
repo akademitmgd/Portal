@@ -1,34 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Application>
   <Views Id="Views">
-    <DetailView Id="CustomerInventory_DetailView">
+    <ListView Id="Customer_Contacts_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="eGovernmentAuthorized" Index="-1" />
+      </Columns>
+    </ListView>
+    <DetailView Id="CustomerContact_DetailView">
       <Layout Id="Layout">
         <LayoutGroup Id="Main">
           <LayoutGroup Id="SimpleEditors">
-            <LayoutGroup Id="CustomerInventory">
-              <LayoutGroup Id="CustomerInventory_col1">
-                <LayoutGroup Id="Item5">
-                  <LayoutGroup Id="Item3">
-                    <LayoutItem Id="DefaultLabel3" ViewItem="DefaultLabel3" />
-                  </LayoutGroup>
-                  <LayoutGroup Id="Item2">
-                    <LayoutItem Id="DefaultLabel2" ViewItem="DefaultLabel2" />
-                  </LayoutGroup>
-                  <LayoutGroup Id="Item1">
-                    <LayoutItem Id="DefaultLabel1" ViewItem="DefaultLabel1" />
-                  </LayoutGroup>
-                </LayoutGroup>
+            <LayoutGroup Id="CustomerContact">
+              <LayoutGroup Id="CustomerContact_col2">
+                <LayoutItem Id="eGovernmentAuthorized" Index="5" RelativeSize="84.17799752781211" />
               </LayoutGroup>
             </LayoutGroup>
           </LayoutGroup>
         </LayoutGroup>
       </Layout>
     </DetailView>
-    <ListView Id="CustomerInventory_ListView">
+    <DetailView Id="CustomFile_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="Tabs" RelativeSize="100" Index="0">
+            <LayoutGroup Id="Documents" RelativeSize="100" Index="0">
+              <LayoutItem Id="Documents" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="Children" RelativeSize="100" Removed="True">
+              <LayoutItem Id="Children" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="CustomFile_ListView">
       <Columns Id="Columns">
-        <ColumnInfo Id="DefaultLabel1" Width="92" Index="-1" />
-        <ColumnInfo Id="DefaultLabel2" Width="92" Index="-1" />
-        <ColumnInfo Id="DefaultLabel3" Width="92" Index="-1" />
+        <ColumnInfo Id="Parent" Index="-1" />
+        <ColumnInfo Id="ParentFile" Index="-1" />
       </Columns>
     </ListView>
   </Views>

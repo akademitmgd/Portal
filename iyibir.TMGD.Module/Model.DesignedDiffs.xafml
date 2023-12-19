@@ -289,7 +289,6 @@
         <ColumnInfo Id="Activity" Width="112" />
         <ColumnInfo Id="Description" Width="101" />
         <ColumnInfo Id="Oid" Width="112" />
-        <ColumnInfo Id="SubjectDescription" Width="147" Index="-1" />
         <ColumnInfo Id="Subject" Width="63" />
         <ColumnInfo Id="LineNumber" Width="88" />
         <ColumnInfo Id="Owner" Width="70" Index="2" />
@@ -321,20 +320,7 @@
       <Layout>
         <LayoutGroup Id="Main" RelativeSize="100">
           <LayoutGroup Id="SimpleEditors" RelativeSize="20.235294117647058">
-            <LayoutGroup Id="ActivityLine" RelativeSize="100" Direction="Vertical">
-              <LayoutGroup Id="ActivityLine_col1" RelativeSize="100">
-                <LayoutItem Id="LineNumber" RelativeSize="23.529411764705884" />
-                <LayoutItem Id="Subject" RelativeSize="17.647058823529413" />
-                <LayoutItem Id="SubjectDescription" RelativeSize="17.647058823529413" />
-                <LayoutItem Id="Owner" ViewItem="Owner" Index="3" RelativeSize="17.647058823529413" IsNewNode="True" />
-                <LayoutItem Id="DueDate" ViewItem="DueDate" Index="4" RelativeSize="23.529411764705884" IsNewNode="True" />
-                <LayoutItem Id="AnnualWorkPlanSubject" Removed="True" />
-              </LayoutGroup>
-              <LayoutGroup Id="ActivityLine_col2" RelativeSize="50" Removed="True">
-                <LayoutItem Id="DueDate" Index="0" RelativeSize="100" Removed="True" />
-                <LayoutItem Id="Owner" Removed="True" />
-              </LayoutGroup>
-            </LayoutGroup>
+            <LayoutGroup Id="ActivityLine" RelativeSize="100" Direction="Vertical" />
           </LayoutGroup>
           <LayoutGroup Id="SizeableEditors" RelativeSize="79.76470588235294">
             <LayoutItem Id="Description" RelativeSize="100" CaptionLocation="Top" />
@@ -478,11 +464,16 @@
         </LayoutGroup>
       </Layout>
     </DetailView>
+    <ListView Id="ActivitySubject_LookupListView">
+      <Sorting>
+        <SortProperty Id="CodeByAsc" PropertyName="Code" Index="0" IsNewNode="True" />
+      </Sorting>
+    </ListView>
     <ListView Id="AnnualWorkPlan_Subjects_ListView" MasterDetailMode="ListViewOnly" MasterDetailView="AnnualWorkPlanSubject_DetailView" DetailViewID="AnnualWorkPlanSubject_DetailView">
       <Columns>
         <ColumnInfo Id="Subject" Index="1" />
-        <ColumnInfo Id="SubjectStatus" Width="107" />
         <ColumnInfo Id="AuthorizedPerson" Width="120" Index="2" />
+        <ColumnInfo Id="SubjectStatus" Width="107" />
         <ColumnInfo Id="DueDate" Width="76" Index="3" />
       </Columns>
     </ListView>
@@ -796,11 +787,10 @@
         <ColumnInfo Id="City" Width="54" Index="-1" />
         <ColumnInfo Id="Country" Width="82" Index="-1" />
         <ColumnInfo Id="County" Width="59" Index="-1" />
-        <ColumnInfo Id="Customer" Width="82" />
-        <ColumnInfo Id="eGovernmentAuthorized" Index="-1" />
         <ColumnInfo Id="Oid" Width="82" />
         <ColumnInfo Id="OtherTelephone" Width="82" Index="-1" />
         <ColumnInfo Id="Name" Width="57" Index="0" />
+        <ColumnInfo Id="Customer" Width="82" />
         <ColumnInfo Id="TCKN" Index="1" />
         <ColumnInfo Id="RegistrationNumber" Index="2" />
         <ColumnInfo Id="Telephone" Width="80" Index="3" />
@@ -1067,7 +1057,6 @@
                 <LayoutItem Id="EMail" RelativeSize="2.9666254635352285" Index="3" />
                 <LayoutItem Id="RegistrationNumber" Index="3" RelativeSize="2.9666254635352285" Removed="True" />
                 <LayoutItem Id="Address" RelativeSize="2.9666254635352285" Index="4" />
-                <LayoutItem Id="eGovernmentAuthorized" Index="5" RelativeSize="84.17799752781211" />
                 <LayoutItem Id="IsActive" RelativeSize="2.9666254635352285" Index="5" Removed="True" />
                 <LayoutItem Id="TCKN" Removed="True" />
               </LayoutGroup>
@@ -1272,14 +1261,6 @@
     <DetailView Id="CustomFile_DetailView">
       <Layout>
         <LayoutGroup Id="Main" RelativeSize="100">
-          <TabbedGroup Id="Tabs" RelativeSize="100" Index="0">
-            <LayoutGroup Id="Documents" RelativeSize="100" Index="0">
-              <LayoutItem Id="Documents" RelativeSize="100" />
-            </LayoutGroup>
-            <LayoutGroup Id="Children" RelativeSize="100" Removed="True">
-              <LayoutItem Id="Children" RelativeSize="100" />
-            </LayoutGroup>
-          </TabbedGroup>
           <LayoutGroup Id="SimpleEditors" RelativeSize="7.294117647058823" Removed="True">
             <LayoutGroup Id="CustomFile" Caption="CustomFile" RelativeSize="100" Removed="True">
               <LayoutItem Id="Name" RelativeSize="100" Removed="True" />
@@ -1301,8 +1282,6 @@
       <Columns>
         <ColumnInfo Id="CreatedOn" Index="-1" />
         <ColumnInfo Id="Owner" Index="-1" />
-        <ColumnInfo Id="Parent" Index="-1" />
-        <ColumnInfo Id="ParentFile" Index="-1" />
         <ColumnInfo Id="Name" Width="142" />
       </Columns>
       <SplitLayout Direction="Vertical" />
@@ -1417,9 +1396,10 @@
         <ColumnInfo Id="Subject" Width="56" />
       </Columns>
     </ListView>
-    <ListView Id="DistributionOfTaskSubject_Details_ListView">
+    <ListView Id="DistributionOfTaskSubject_Details_ListView" PreviewColumnName="Description">
       <Columns>
-        <ColumnInfo Id="Description" Width="73" />
+        <ColumnInfo Id="DistributionOfTaskSubject" Index="-1" />
+        <ColumnInfo Id="Description" Width="80" Index="2" />
       </Columns>
     </ListView>
     <DetailView Id="Employee_DetailView">
@@ -2469,9 +2449,9 @@
         <ColumnInfo Id="Description" Width="87" Index="-1" />
         <ColumnInfo Id="HazardousGoodsLabel" Index="-1" />
         <ColumnInfo Id="Oid" Width="96" />
-        <ColumnInfo Id="VehicleControlDocument" Width="96" />
         <ColumnInfo Id="Question" Width="61" Index="0" />
         <ColumnInfo Id="Answer" Width="77" Index="1" />
+        <ColumnInfo Id="VehicleControlDocument" Width="96" />
       </Columns>
     </ListView>
     <DetailView Id="VoyageNotification_DetailView">
@@ -2583,8 +2563,8 @@
         <ColumnInfo Id="UpdatedDate" Width="103" Index="-1" />
         <ColumnInfo Id="Status" Width="57" />
         <ColumnInfo Id="ConsignerTitle" Width="101" Index="2" />
-        <ColumnInfo Id="TransportTypeCode" Width="105" />
         <ColumnInfo Id="ConsigneeTitle" Width="88" Index="3" />
+        <ColumnInfo Id="TransportTypeCode" Width="105" />
         <ColumnInfo Id="UnId" Width="48" Index="4" />
         <ColumnInfo Id="LadingDate" Width="88" Index="5" />
         <ColumnInfo Id="PouringDate" Width="92" Index="6" />

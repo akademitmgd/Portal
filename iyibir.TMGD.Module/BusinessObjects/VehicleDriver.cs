@@ -1,16 +1,9 @@
-﻿using System;
-using System.Linq;
-using System.Text;
-using DevExpress.Xpo;
-using DevExpress.ExpressApp;
-using System.ComponentModel;
-using DevExpress.ExpressApp.DC;
-using DevExpress.Data.Filtering;
-using DevExpress.Persistent.Base;
-using System.Collections.Generic;
-using DevExpress.ExpressApp.Model;
+﻿using DevExpress.Persistent.Base;
 using DevExpress.Persistent.BaseImpl;
 using DevExpress.Persistent.Validation;
+using DevExpress.Xpo;
+using System;
+using System.ComponentModel;
 
 namespace iyibir.TMGD.Module.BusinessObjects
 {
@@ -33,13 +26,13 @@ namespace iyibir.TMGD.Module.BusinessObjects
         public override void AfterConstruction()
         {
             base.AfterConstruction();
-            // Place your initialization code here (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112834.aspx).
         }
 
+        [RuleRequiredField]
         public string FirstName { get=> _firstName; set=> SetPropertyValue(nameof(FirstName),ref _firstName,value); }
-        public string LastName { get=> _lastName; set=> SetPropertyValue(nameof(LastName),ref _lastName,value); }
 
-        [RuleRequiredField("RuleRequiredField for VehicleDriver.TCKN", DefaultContexts.Save)]
+        [RuleRequiredField]
+        public string LastName { get=> _lastName; set=> SetPropertyValue(nameof(LastName),ref _lastName,value); }
         public string TCKN { get=>_tckn; set=>SetPropertyValue(nameof(TCKN),ref _tckn,value); }
 
         [NonPersistent]
@@ -56,7 +49,7 @@ namespace iyibir.TMGD.Module.BusinessObjects
         [Association("Customer-Drivers")]
         public Customer Customer { get=> _customer; set=> SetPropertyValue(nameof(Customer),ref _customer,value); }
 
-        [RuleRequiredField("RuleRequiredField for VehicleDriver.SRCDateOfValidity", DefaultContexts.Save)]
+
         public DateTime SRCDateOfValidity { get => _srcDateOfValidity; set => SetPropertyValue(nameof(SRCDateOfValidity), ref _srcDateOfValidity, value); }
 
         public string SRC5DocumentNo { get=> _src5DocumentNo; set=> SetPropertyValue(nameof(SRC5DocumentNo),ref _src5DocumentNo,value); }

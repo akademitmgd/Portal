@@ -9,11 +9,11 @@ using iyibir.TMGD.Blazor.Server.Services;
 
 namespace iyibir.TMGD.Blazor.Server;
 
-public class TMGDBlazorApplication : BlazorApplication {
+public partial class TMGDBlazorApplication : BlazorApplication {
+    
     public TMGDBlazorApplication() {
-        ApplicationName = "iyibir.TMGD";
-        CheckCompatibilityType = DevExpress.ExpressApp.CheckCompatibilityType.DatabaseSchema;
-        DatabaseVersionMismatch += TMGDBlazorApplication_DatabaseVersionMismatch;
+
+        InitializeComponent();
     }
     protected override void OnSetupStarted() {
         base.OnSetupStarted();
