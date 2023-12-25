@@ -16,6 +16,7 @@ namespace iyibir.TMGD.Module.BusinessObjects
 {
     [DefaultClassOptions]
     [ImageName("BO_Contract")]
+    [NavigationItem("SalesManagement")]
     [DefaultProperty("FicheNumber")]
     public class Contract : BaseObject
     {

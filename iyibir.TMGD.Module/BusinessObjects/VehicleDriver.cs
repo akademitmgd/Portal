@@ -10,6 +10,7 @@ namespace iyibir.TMGD.Module.BusinessObjects
     [DefaultClassOptions]
     [ImageName("BO_Employee")]
     [DefaultProperty("FullName")]
+    [NavigationItem("Settings")]
     public class VehicleDriver : BaseObject
     {
         private string _firstName;

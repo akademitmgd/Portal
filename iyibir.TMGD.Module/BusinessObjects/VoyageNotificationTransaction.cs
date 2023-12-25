@@ -20,6 +20,7 @@ namespace iyibir.TMGD.Module.BusinessObjects
     [Appearance("VoyageNotificationTransaction Delete", AppearanceItemType = "Action", TargetItems = "Delete", Visibility = ViewItemVisibility.Hide)]
     [Appearance("VoyageNotificationTransaction New", AppearanceItemType = "Action", TargetItems = "New", Visibility = ViewItemVisibility.Hide)]
     [Appearance("VoyageNotificationTransaction  Edit", Criteria = "Status = 1", Context = "DetailView", TargetItems = "*", Enabled = false)]
+    [NavigationItem(false)]
     public class VoyageNotificationTransaction : BaseObject
     {
         private TransportDocumentOtherTransaction _otherTransaction;

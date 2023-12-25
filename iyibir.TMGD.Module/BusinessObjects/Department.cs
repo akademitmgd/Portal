@@ -17,6 +17,7 @@ namespace iyibir.TMGD.Module.BusinessObjects
     [DefaultClassOptions]
     [ImageName("BO_Department")]
     [DefaultProperty("Name")]
+    [NavigationItem("Settings")]
     public class Department : BaseObject
     {
         private string _code;

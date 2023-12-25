@@ -17,6 +17,7 @@ namespace iyibir.TMGD.Module.BusinessObjects
 {
     [DefaultClassOptions]
     [ImageName("BO_Role")]
+    [NavigationItem("Settings")]
     public class EmployeeRole : PermissionPolicyRoleBase, IPermissionPolicyRoleWithUsers
     { // Inherit from a different class to provide a custom primary key, concurrency and deletion behavior, etc. (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument113146.aspx).
         public EmployeeRole(Session session)

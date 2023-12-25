@@ -13,6 +13,7 @@ using DevExpress.Xpo;
 namespace iyibir.TMGD.Module.BusinessObjects
 {
     [DefaultClassOptions]
+    [NavigationItem("Workspace")]
     [ImageName("BO_Scheduler")]
     [DefaultProperty("Title")]
     [Appearance("Announcement Closed", Criteria = "Users[Employee.Oid = CurrentUserId() and IsRead = True]", Context = "ListView", TargetItems = "*", FontStyle = System.Drawing.FontStyle.Strikeout)]

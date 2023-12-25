@@ -17,6 +17,7 @@ using System.Text;
 namespace iyibir.TMGD.Module.BusinessObjects
 {
     [DefaultClassOptions]
+    [NavigationItem("ProductManagement")]
     [ImageName("BO_Product")]
     [DefaultProperty("Name")]
     //[DefaultListViewOptions(MasterDetailMode.ListViewOnly, false, NewItemRowPosition.None)]

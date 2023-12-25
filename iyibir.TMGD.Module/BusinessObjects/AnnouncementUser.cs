@@ -17,6 +17,7 @@ using DevExpress.ExpressApp.Editors;
 namespace iyibir.TMGD.Module.BusinessObjects
 {
     [DefaultClassOptions]
+    [NavigationItem(false)]
     [Appearance("AnnouncementUser Delete", AppearanceItemType = "Action", TargetItems = "Delete", Visibility = ViewItemVisibility.Hide)]
     [Appearance("AnnouncementUser Edit", AppearanceItemType = "Action", TargetItems = "Edit", Visibility = ViewItemVisibility.Hide)]
     [Appearance("AnnouncementUser New", AppearanceItemType = "Action", TargetItems = "New", Visibility = ViewItemVisibility.Hide)]

@@ -15,6 +15,7 @@ using DevExpress.Persistent.Validation;
 namespace iyibir.TMGD.Module.BusinessObjects
 {
     [DefaultClassOptions]
+    [NavigationItem(false)]
     public class VehicleDriverCompetenceCertificate : BaseObject
     {
         private VehicleDriver _vehicleDriver;

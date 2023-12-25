@@ -19,7 +19,7 @@ namespace iyibir.TMGD.Module.BusinessObjects
     //[DefaultProperty("DisplayMemberNameForLookupEditorsOfThisType")]
     //[DefaultListViewOptions(MasterDetailMode.ListViewOnly, false, NewItemRowPosition.None)]
     //[Persistent("DatabaseTableName")]
-    // Specify more UI options using a declarative approach (https://documentation.devexpress.com/#eXpressAppFramework/CustomDocument112701).
+    [NavigationItem(false)]
     public class VehicleControlDocumentTransaction : BaseObject
     {
         private VehicleControlDocument _vehicleControlDocument;

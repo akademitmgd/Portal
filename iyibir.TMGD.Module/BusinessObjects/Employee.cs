@@ -24,6 +24,7 @@ namespace iyibir.TMGD.Module.BusinessObjects
     [ImageName("BO_Employee")]
     [DefaultProperty("FullName")]
     [CurrentUserDisplayImage(nameof(Image))]
+    [NavigationItem("Settings")]
     public class Employee : BaseObject, ISecurityUser, IAuthenticationStandardUser, ISecurityUserWithRoles, IPermissionPolicyUser, IResource
     {
         private Position _position;

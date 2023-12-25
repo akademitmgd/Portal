@@ -15,7 +15,8 @@ using DevExpress.Persistent.Validation;
 namespace iyibir.TMGD.Module.BusinessObjects
 {
     [DefaultClassOptions]
-    [ImageName("BO_User")]    
+    [ImageName("BO_User")]
+    [NavigationItem(false)]
     public class DistributionOfTaskSubjectAuth : BaseObject
     {
         private DistributionOfTaskSubject _distributionOfTaskSubject;

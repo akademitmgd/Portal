@@ -15,6 +15,7 @@ using System.Text;
 namespace iyibir.TMGD.Module.BusinessObjects
 {
     [DefaultClassOptions]
+    [NavigationItem("HazardousGoodsManagement")]
     //[ImageName("BO_Contact")]
     //[DefaultProperty("DisplayMemberNameForLookupEditorsOfThisType")]
     //[DefaultListViewOptions(MasterDetailMode.ListViewOnly, false, NewItemRowPosition.None)]

@@ -17,6 +17,7 @@ using DevExpress.ExpressApp.Editors;
 namespace iyibir.TMGD.Module.BusinessObjects
 {
     [DefaultClassOptions]
+    [NavigationItem("DocumentManagement")]
     [Appearance("VoyageNotification Delete", AppearanceItemType = "Action", TargetItems = "Delete", Visibility = ViewItemVisibility.Hide)]
     [Appearance("VoyageNotification New", AppearanceItemType = "Action", TargetItems = "New", Visibility = ViewItemVisibility.Hide)]
     [Appearance("VoyageNotification  Edit", Criteria = "Status = 1", Context = "DetailView", TargetItems = "TransportDocument,StartDate,StartTime,EndDate,EndTime,FirmVoyageNumber,Plate1,Plate2,Driver1TCKN,Driver2TCKN,UpdatedDate,ActivatedDate,CancelledType,CancelledDescription,CancelledDate", Enabled = false)]

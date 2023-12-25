@@ -18,6 +18,7 @@ namespace iyibir.TMGD.Module.BusinessObjects
 {
     [DefaultClassOptions]
     [ImageName("BO_List")]
+    [NavigationItem("DocumentManagement")]
     //[DefaultProperty("DisplayMemberNameForLookupEditorsOfThisType")]
     //[DefaultListViewOptions(MasterDetailMode.ListViewOnly, false, NewItemRowPosition.None)]
     //[Persistent("DatabaseTableName")]

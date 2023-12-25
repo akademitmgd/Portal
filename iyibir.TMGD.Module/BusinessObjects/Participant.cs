@@ -19,7 +19,7 @@ namespace iyibir.TMGD.Module.BusinessObjects
     //[DefaultProperty("DisplayMemberNameForLookupEditorsOfThisType")]
     [DefaultListViewOptions(MasterDetailMode.ListViewOnly, true, NewItemRowPosition.Top)]
     //[Persistent("DatabaseTableName")]
-    // Specify more UI options using a declarative approach (https://documentation.devexpress.com/#eXpressAppFramework/CustomDocument112701).
+    [NavigationItem(false)]
     public class Participant : BaseObject
     {
         private Education _education;

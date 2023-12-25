@@ -22,6 +22,7 @@ namespace iyibir.TMGD.Module.BusinessObjects
     [Appearance("County Delete", AppearanceItemType = "Action", TargetItems = "Delete", Visibility = ViewItemVisibility.Hide)]
     [Appearance("County Edit", AppearanceItemType = "Action", TargetItems = "Edit", Visibility = ViewItemVisibility.Hide)]
     [Appearance("County New", AppearanceItemType = "Action", TargetItems = "New", Visibility = ViewItemVisibility.Hide)]
+    [NavigationItem("Settings")]
     public class County : BaseObject
     {
         private City _city;

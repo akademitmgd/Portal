@@ -22,6 +22,7 @@ namespace iyibir.TMGD.Module.BusinessObjects
     [Appearance("Currency Delete", AppearanceItemType = "Action", TargetItems = "Delete", Visibility = ViewItemVisibility.Hide)]
     [Appearance("Currency Edit", AppearanceItemType = "Action", TargetItems = "Edit", Visibility = ViewItemVisibility.Hide)]
     [Appearance("Currency New", AppearanceItemType = "Action", TargetItems = "New", Visibility = ViewItemVisibility.Hide)]
+    [NavigationItem("Settings")]
     public class Currency : BaseObject
     {
         private int _referenceId;

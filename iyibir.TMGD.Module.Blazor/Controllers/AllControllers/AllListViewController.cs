@@ -42,14 +42,14 @@ namespace iyibir.TMGD.Module.Blazor.Controllers.AllControllers
                     //dataGridAdapter.DataGridModel.VerticalScrollBarMode = DevExpress.Blazor.ScrollBarMode.Auto;
                     //dataGridAdapter.DataGridModel.SelectionMode = DevExpress.Blazor.DataGridSelectionMode.MultipleSelectedDataRows;
 
-                    dataGridAdapter.DataGridModel.EditMode = DevExpress.Blazor.DataGridEditMode.PopupEditForm;
-                    dataGridAdapter.DataGridModel.ColumnResizeMode = DevExpress.Blazor.DataGridColumnResizeMode.Component;
-                    dataGridAdapter.DataGridModel.AllowSort = true;
-                    dataGridAdapter.DataGridModel.ShowFilterRow = true;
-                    dataGridAdapter.DataGridModel.ShowGroupPanel = true;
-                    dataGridAdapter.DataGridModel.AutoCollapseDetailRow = true;
-                    dataGridAdapter.DataGridModel.AllowColumnDragDrop = true;
-                    dataGridAdapter.DataGridSelectionColumnModel.ShowInColumnChooser = true;
+                    //dataGridAdapter.DataGridModel.EditMode = DevExpress.Blazor.DataGridEditMode.PopupEditForm;
+                    //dataGridAdapter.DataGridModel.ColumnResizeMode = DevExpress.Blazor.DataGridColumnResizeMode.Component;
+                    //dataGridAdapter.DataGridModel.AllowSort = true;
+                    //dataGridAdapter.DataGridModel.ShowFilterRow = true;
+                    //dataGridAdapter.DataGridModel.ShowGroupPanel = true;
+                    //dataGridAdapter.DataGridModel.AutoCollapseDetailRow = true;
+                    //dataGridAdapter.DataGridModel.AllowColumnDragDrop = true;
+                    //dataGridAdapter.DataGridSelectionColumnModel.ShowInColumnChooser = true;
                 }
 
             } 

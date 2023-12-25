@@ -19,6 +19,7 @@ namespace iyibir.TMGD.Module.BusinessObjects
 {
 
     [DefaultClassOptions]
+    [NavigationItem("Workspace")]
     [ImageName("BO_Folder")]
     [DefaultProperty("Name")]
     [DefaultListViewOptions(MasterDetailMode.ListViewAndDetailView, false, NewItemRowPosition.None)]

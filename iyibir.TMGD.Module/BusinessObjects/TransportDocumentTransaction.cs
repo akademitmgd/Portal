@@ -22,6 +22,7 @@ namespace iyibir.TMGD.Module.BusinessObjects
     //[DefaultListViewOptions(MasterDetailMode.ListViewOnly, false, NewItemRowPosition.None)]
     //[Persistent("DatabaseTableName")]
     [Appearance("TransportDocumentTransaction New", AppearanceItemType = "Action", TargetItems = "New", Visibility = ViewItemVisibility.Hide)]
+    [NavigationItem(false)]
     public class TransportDocumentTransaction : BaseObject
     {
         private TransportDocument _transportDocument;

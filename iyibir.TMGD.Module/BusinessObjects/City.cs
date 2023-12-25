@@ -22,6 +22,7 @@ namespace iyibir.TMGD.Module.BusinessObjects
     [Appearance("City Delete", AppearanceItemType = "Action", TargetItems = "Delete", Visibility = ViewItemVisibility.Hide)]
     [Appearance("City Edit", AppearanceItemType = "Action", TargetItems = "Edit", Visibility = ViewItemVisibility.Hide)]
     [Appearance("City New", AppearanceItemType = "Action", TargetItems = "New", Visibility = ViewItemVisibility.Hide)]
+    [NavigationItem("Settings")]
     public class City : BaseObject
     {
         private Country _country;

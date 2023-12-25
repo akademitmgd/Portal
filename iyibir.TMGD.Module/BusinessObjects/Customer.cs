@@ -17,6 +17,7 @@ using DevExpress.ExpressApp.Editors;
 namespace iyibir.TMGD.Module.BusinessObjects
 {
     [DefaultClassOptions]
+    [NavigationItem("CustomerManagement")]
     [ImageName("BO_Customer")]
     public class Customer : BaseObject
     {

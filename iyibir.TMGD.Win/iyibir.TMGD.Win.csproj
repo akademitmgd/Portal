@@ -17,6 +17,9 @@
     <DefineConstants>TRACE;DEBUG;EASYTEST</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="Model_tr.xafml" />
+  </ItemGroup>
+  <ItemGroup>
     <Reference Update="System">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
@@ -60,6 +63,10 @@
   <ItemGroup>
     <Content Include="ExpressApp.ico" />
     <Content Include="Model.xafml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Model_tr.xafml">
+      <DependentUpon>Model.xafml</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

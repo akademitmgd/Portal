@@ -17,6 +17,7 @@ namespace iyibir.TMGD.Module.BusinessObjects
     [DefaultClassOptions]
     [ImageName("BO_FileAttachment")]
     [DefaultProperty("Name")]
+    [NavigationItem(false)]
     public class CustomerDocument : BaseObject
     {
         private Customer _customer;

@@ -17,6 +17,7 @@ namespace iyibir.TMGD.Module.BusinessObjects
     [DefaultClassOptions]
     [ImageName("BO_List")]
     [DefaultProperty("HazardousGoodsLabel")]
+    [NavigationItem("HazardousGoodsManagement")]
     public class LabelTransaction : BaseObject
     {
         private int _lineNumber;

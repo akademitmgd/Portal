@@ -21,6 +21,7 @@ namespace iyibir.TMGD.Module.BusinessObjects
     [Appearance("LoadType Delete", AppearanceItemType = "Action", TargetItems = "Delete", Visibility = ViewItemVisibility.Hide)]
     [Appearance("LoadType Edit", AppearanceItemType = "Action", TargetItems = "Edit", Visibility = ViewItemVisibility.Hide)]
     [Appearance("LoadType New", AppearanceItemType = "Action", TargetItems = "New", Visibility = ViewItemVisibility.Hide)]
+    [NavigationItem("Settings")]
     public class LoadType : BaseObject
     {
         private LoadOfTheType _loadOfThe;

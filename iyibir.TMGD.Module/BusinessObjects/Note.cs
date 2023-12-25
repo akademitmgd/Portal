@@ -12,6 +12,7 @@ using System.ComponentModel;
 namespace iyibir.TMGD.Module.BusinessObjects
 {
     [DefaultClassOptions]
+    [NavigationItem("Workspace")]
     [ImageName("BO_Note")]
     [DefaultProperty("Topic")]
     [Appearance("Appearance Note Strikeout", Criteria = "IsActive = 0", Context = "ListView", TargetItems = "*", Enabled = false, FontStyle = System.Drawing.FontStyle.Strikeout)]

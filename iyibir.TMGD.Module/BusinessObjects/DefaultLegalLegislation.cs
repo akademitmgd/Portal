@@ -19,7 +19,7 @@ namespace iyibir.TMGD.Module.BusinessObjects
     [DefaultProperty("LegalLegislation")]
     //[DefaultListViewOptions(MasterDetailMode.ListViewOnly, false, NewItemRowPosition.None)]
     //[Persistent("DatabaseTableName")]
-    // Specify more UI options using a declarative approach (https://documentation.devexpress.com/#eXpressAppFramework/CustomDocument112701).
+    [NavigationItem("Settings")]
     public class DefaultLegalLegislation : BaseObject
     {
         private string _legalLegislation;

@@ -20,6 +20,7 @@ namespace iyibir.TMGD.Module.BusinessObjects
     [Appearance("VoyageNotificationHistory Delete", AppearanceItemType = "Action", TargetItems = "Delete", Visibility = ViewItemVisibility.Hide)]
     [Appearance("VoyageNotificationHistory Edit", AppearanceItemType = "Action", TargetItems = "Edit", Visibility = ViewItemVisibility.Hide)]
     [Appearance("VoyageNotificationHistory New", AppearanceItemType = "Action", TargetItems = "New", Visibility = ViewItemVisibility.Hide)]
+    [NavigationItem(false)]
     public class VoyageNotificationHistory : BaseObject
     {
         private VoyageNotification _voyageNotification;

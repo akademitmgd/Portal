@@ -78,7 +78,7 @@ namespace iyibir.TMGD.Module.Controllers.AllViewControllers
 
         private void showAnnouncement_Execute(object sender, SimpleActionExecuteEventArgs e)
         {
-            e.ShowViewParameters.CreatedView = Application.CreateListView(typeof(Announcement), true);
+            //e.ShowViewParameters.CreatedView = Application.CreateListView(typeof(Announcement), true);
         }
     }
 }

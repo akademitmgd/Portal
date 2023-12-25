@@ -1,10 +1,2 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Application>
-  <SchemaModules>
-    <SchemaModule Name="CloneObjectModule" Version="22.2.4.0" IsNewNode="True" />
-    <SchemaModule Name="SystemModule" Version="22.2.4.0" IsNewNode="True" />
-  </SchemaModules>
-  <Views>
-    <ListView Id="Vehicle_ListView" EditorTypeName="DevExpress.ExpressApp.Blazor.Editors.Grid.GridListEditor" />
-  </Views>
-</Application>
+<Application />

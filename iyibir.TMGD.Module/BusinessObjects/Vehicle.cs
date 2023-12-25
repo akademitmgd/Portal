@@ -17,6 +17,7 @@ namespace iyibir.TMGD.Module.BusinessObjects
     [DefaultClassOptions]
     [ImageName("BO_Vendor")]
     [DefaultProperty("Plate")]
+    [NavigationItem("Settings")]
     public class Vehicle : BaseObject
     {
         private string _code;

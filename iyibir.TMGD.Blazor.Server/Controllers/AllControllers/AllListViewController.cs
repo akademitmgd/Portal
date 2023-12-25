@@ -23,6 +23,7 @@ public partial class AllListViewController : ViewController<ListView>
             IDxGridAdapter dataGridAdapter = gridListEditor.GetGridAdapter();
             //Access grid component properties and specify how exactly a user can resize columns
             dataGridAdapter.GridModel.ColumnResizeMode = DevExpress.Blazor.GridColumnResizeMode.ColumnsContainer;
+           
         }
     }
     protected override void OnDeactivated()

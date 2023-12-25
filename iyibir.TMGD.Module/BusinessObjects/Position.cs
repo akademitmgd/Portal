@@ -17,6 +17,7 @@ namespace iyibir.TMGD.Module.BusinessObjects
     [DefaultClassOptions]
     [ImageName("BO_Position")]
     [DefaultProperty("Name")]
+    [NavigationItem("Settings")]
     public class Position : BaseObject
     {
         private string _code;

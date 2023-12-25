@@ -16,6 +16,7 @@ namespace iyibir.TMGD.Module.BusinessObjects
 {
     [DefaultClassOptions]
     [ImageName("BO_Contact")]
+    [NavigationItem(false)]
     public class CustomerContact : BaseObject
     {
         private Customer _customer;

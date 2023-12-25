@@ -16,6 +16,7 @@ namespace iyibir.TMGD.Module.BusinessObjects
 {
     [DefaultClassOptions]
     [ImageName("BO_FileAttachment")]
+    [NavigationItem("Workspace")]
     [DefaultProperty("Name")]
     public class SharedFile : BaseObject
     {
