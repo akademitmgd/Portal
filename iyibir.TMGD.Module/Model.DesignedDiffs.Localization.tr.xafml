@@ -1,2 +1,1926 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Application />
+<Application>
+  <ActionDesign>
+    <Actions>
+      <Action Id="aktivatedVoyageNotification" Caption="Sefer Aktif Et" />
+      <Action Id="cancelledVoyageNotification" Caption="Sefer İptal Et" />
+      <Action Id="createCustomFile" Caption="Yeni" />
+      <Action Id="Delete" Caption="Sil" />
+      <Action Id="DialogClose" Caption="Kapat" />
+      <Action Id="New" Caption="Yeni" />
+      <Action Id="Refresh" Caption="Yenile" />
+      <Action Id="RefreshAction" Caption="Yenile" />
+      <Action Id="RefreshNotifications" Caption="Yenile" />
+      <Action Id="ReportViewerDialogControllerV2_Close" Caption="Kapat" />
+      <Action Id="Save" Caption="Kaydet" />
+      <Action Id="SaveAndClose" Caption="Kaydet ve Kapat" />
+      <Action Id="SaveAndNew" Caption="Kaydet ve Yeni" />
+      <Action Id="updatedVoyageNotification" Caption="Sefer Güncelle" />
+    </Actions>
+  </ActionDesign>
+  <BOModel>
+    <Class Name="DevExpress.ExpressApp.Notifications.Notification">
+      <OwnMembers>
+        <Member Name="Subject" Caption="Konu" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Security.AuthenticationStandardLogonParameters">
+      <OwnMembers>
+        <Member Name="Password" Caption="Parola" />
+        <Member Name="UserName" Caption="Kullanıcı Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Security.ProceedMember">
+      <OwnMembers>
+        <Member Name="Caption" Caption="Başlık" />
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Security.ResetPasswordParameters">
+      <OwnMembers>
+        <Member Name="Password" Caption="Parola" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Security.SecurityDiagnosticInfoObject">
+      <OwnMembers>
+        <Member Name="Criteria" Caption="Kriter" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.SystemModule.AboutInfo">
+      <OwnMembers>
+        <Member Name="Description" Caption="Açıklama" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.SystemModule.DashboardCreationInfo">
+      <OwnMembers>
+        <Member Name="DashboardName" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.SystemModule.DashboardName">
+      <OwnMembers>
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.SystemModule.ViewDashboardOrganizationItem">
+      <OwnMembers>
+        <Member Name="Criteria" Caption="Kriter" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Base.SecuredActionDescriptor">
+      <OwnMembers>
+        <Member Name="Image" Caption="Resim" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.Analysis">
+      <OwnMembers>
+        <Member Name="Criteria" Caption="Kriter" />
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.AuditDataItemPersistent">
+      <OwnMembers>
+        <Member Name="Description" Caption="Açıklama" />
+        <Member Name="UserName" Caption="Kullanıcı Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.DashboardData">
+      <OwnMembers>
+        <Member Name="Title" Caption="Unvanı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.Event">
+      <OwnMembers>
+        <Member Name="AllDay" Caption="Tüm Gün" />
+        <Member Name="Description" Caption="Açıklama" />
+        <Member Name="EndOn" Caption="Bitiş Zamanı" />
+        <Member Name="Label" Caption="Etiket" />
+        <Member Name="Location" Caption="Konum" />
+        <Member Name="RecurrenceInfoXml" Caption="Tekrarlama" />
+        <Member Name="RecurrencePattern" Caption="Tekrarlama İlkesi" />
+        <Member Name="Resources" Caption="Kaynaklar" />
+        <Member Name="StartOn" Caption="Başlangıç Zamanı" />
+        <Member Name="Status" Caption="Durumu" />
+        <Member Name="Subject" Caption="Konu" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.HCategory">
+      <OwnMembers>
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.ModelDifference">
+      <OwnMembers>
+        <Member Name="UserName" Caption="Kullanıcı Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.ModelDifferenceAspect">
+      <OwnMembers>
+        <Member Name="Name" Caption="Adı" />
+        <Member Name="Owner" Caption="Oluşturan" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyActionPermissionObject">
+      <OwnMembers>
+        <Member Name="Image" Caption="Resim" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyMemberPermissionsObject">
+      <OwnMembers>
+        <Member Name="Criteria" Caption="Kriter" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyObjectPermissionsObject">
+      <OwnMembers>
+        <Member Name="Criteria" Caption="Kriter" />
+        <Member Name="DeleteState" Caption="Sil" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyRoleBase">
+      <OwnMembers>
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyTypePermissionObject">
+      <OwnMembers>
+        <Member Name="DeleteState" Caption="Sil" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.Resource">
+      <OwnMembers>
+        <Member Name="Caption" Caption="Başlık" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.IRuleBaseProperties">
+      <OwnMembers>
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.IRuleCriteriaProperties">
+      <OwnMembers>
+        <Member Name="Criteria" Caption="Kriter" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.IRuleObjectExistsProperties">
+      <OwnMembers>
+        <Member Name="Criteria" Caption="Kriter" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.RuleBaseProperties">
+      <OwnMembers>
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.RuleCriteriaProperties">
+      <OwnMembers>
+        <Member Name="Criteria" Caption="Kriter" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.RuleObjectExistsProperties">
+      <OwnMembers>
+        <Member Name="Criteria" Caption="Kriter" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.Activity">
+      <OwnMembers>
+        <Member Name="ActivityCertificate" Caption="Tehlikeli Madde Faaliyet Belgesi" />
+        <Member Name="Address" Caption="Adres" />
+        <Member Name="BeginDate" Caption="Başlangıç Tarihi" />
+        <Member Name="BeginTime" Caption="Başlangıç Saati" />
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="Consignee" Caption="Alıcı" />
+        <Member Name="Customer" Caption="Müşteri" />
+        <Member Name="CustomerContact" Caption="Müşteri Yetkilisi" />
+        <Member Name="DateOfValidity" Caption="Geçerlilik Tarihi" />
+        <Member Name="EndDate" Caption="Bitiş Tarihi" />
+        <Member Name="EndTime" Caption="Bitiş Saati" />
+        <Member Name="Lines" Caption="Satırlar" />
+        <Member Name="Owner" Caption="Oluşturan" />
+        <Member Name="Sector" Caption="Sektör" />
+        <Member Name="TMGDCertificate" Caption="TMGD Sertifika No" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.ActivityEvent" Caption="Ajanda" />
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.ActivityLine" Caption="Ziyaret Açıklaması">
+      <OwnMembers>
+        <Member Name="Description" Caption="Açıklama" />
+        <Member Name="DueDate" Caption="Termin Tarihi" />
+        <Member Name="LineNumber" Caption="Sıra No" />
+        <Member Name="Owner" Caption="İlgili Kişi" />
+        <Member Name="Subject" Caption="Konu" />
+        <Member Name="SubjectDescription" Caption="Konu Açıklamaları" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.ActivityReport">
+      <OwnMembers>
+        <Member Name="ActivityCertificateCode" Caption="Faaliyet Belgesi Kodu" />
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="CreatedOn" Caption="Oluşturma Zamanı" />
+        <Member Name="Customer" Caption="Müşteri" />
+        <Member Name="Description" Caption="Açıklama" />
+        <Member Name="TMGDCertificate" Caption="TMGD Sertifika No" />
+        <Member Name="Transactions" Caption="Hareketler" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.ActivityReportTransaction">
+      <OwnMembers>
+        <Member Name="Unitset" Caption="Birim" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.ActivitySubject">
+      <OwnMembers>
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="IsActive" Caption="Aktif" />
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.ActivitySubjectDesc">
+      <OwnMembers>
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.Announcement" Caption="Duyuru">
+      <OwnMembers>
+        <Member Name="CreatedBy" Caption="Oluşturan" />
+        <Member Name="CreatedOn" Caption="Oluşturma Zamanı" />
+        <Member Name="Description" Caption="Açıklama" />
+        <Member Name="Employees" Caption="İlgili Kullanıcılar" />
+        <Member Name="IsActive" Caption="Aktif" />
+        <Member Name="Title" Caption="Başlık" />
+        <Member Name="Users" Caption="Kullanıcılar" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.AnnouncementUser" Caption="Duyuru Kullanıcı">
+      <OwnMembers>
+        <Member Name="Announcement" Caption="Duyuru" />
+        <Member Name="Employee" Caption="Kullanıcı" />
+        <Member Name="IsRead" Caption="Okundu" />
+        <Member Name="ReadDate" Caption="Okunma Tarihi" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.AnnualWorkPlan">
+      <OwnMembers>
+        <Member Name="CreatedOn" Caption="Oluşturma Zamanı" />
+        <Member Name="Customer" Caption="Müşteri" />
+        <Member Name="CustomerContact" Caption="Müşteri Yetkilisi" />
+        <Member Name="Owner" Caption="Oluşturan" />
+        <Member Name="Subjects" Caption="Konular" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.AnnualWorkPlanSubject" Caption="Yıllık Çalışma Planı Konusu">
+      <OwnMembers>
+        <Member Name="AnnualWorkPlan" Caption="Yıllık Çalışma Planı" />
+        <Member Name="AuthorizedPerson" Caption="Yetkili Kişi" />
+        <Member Name="DueDate" Caption="Termin Tarihi" />
+        <Member Name="Subject" Caption="Konu" />
+        <Member Name="SubjectStatus" Caption="Durumu" />
+        <Member Name="Transactions" Caption="Hareketler" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.AnnualWorkPlanSubjectTransaction">
+      <OwnMembers>
+        <Member Name="AnnualWorkPlanSubject" Caption="Yıllık Çalışma Planı Konusu" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.AuditDeterminationForm" Caption="ADR Denetim Tespit Formu">
+      <OwnMembers>
+        <Member Name="ActivityDate" Caption="Ziyaret Tarihi" />
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="CreatedOn" Caption="Oluşturma Zamanı" />
+        <Member Name="Customer" Caption="Müşteri" />
+        <Member Name="CustomerAddress" Caption="Adres" />
+        <Member Name="CustomerContact" Caption="Müşteri Yetkilisi" />
+        <Member Name="LegalStatutes" Caption="İlgili Yasal Mevzuatlar" />
+        <Member Name="Owner" Caption="Oluşturan" />
+        <Member Name="Position" Caption="Pozisyon" />
+        <Member Name="ReportDate" Caption="Rapor Tarihi" />
+        <Member Name="ReportNo" Caption="Rapor No" />
+        <Member Name="ReportSubject" Caption="Rapor Konusu" />
+        <Member Name="TaskName" Caption="Görev Adı" />
+        <Member Name="TMGDCertificate" Caption="TMGD Sertifika No" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.AuditDeterminationLegalStatute" Caption="ADR Denetim Tespit - İlgili Yasal Mevzuat">
+      <OwnMembers>
+        <Member Name="AuditDeterminationForm" Caption="ADR Denetim Tespit Formu" />
+        <Member Name="DefaultLegalLegislation" Caption="Yasal Mevzuat" />
+        <Member Name="LegalStatute" Caption="İlgili Yasal Mevzuat" />
+        <Member Name="Transactions" Caption="Hareketler" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.AuditDeterminationLegalStatuteTransaction" Caption="ADR Denetim Tespit - İlgili Yasal Mevzuat">
+      <OwnMembers>
+        <Member Name="AuditDetermination" Caption="ADR Denetim Tespit" />
+        <Member Name="AuditDeterminationLegalStatute" Caption="ADR Denetim Tespit - İlgili Yasal Mevzuat" />
+        <Member Name="FileData" Caption="Belge" />
+        <Member Name="Image" Caption="Resim" />
+        <Member Name="Image1" Caption="Resim 1" />
+        <Member Name="Image2" Caption="Resim 2" />
+        <Member Name="Result" Caption="Öneri ve İlgili Mevzuatlar" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.CASNumber">
+      <OwnMembers>
+        <Member Name="CASType" Caption="CAS Türü" />
+        <Member Name="Code" Caption="Kodu" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.City" Caption="Şehir">
+      <OwnMembers>
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="Country" Caption="Ülke" />
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.Company">
+      <OwnMembers>
+        <Member Name="Address" Caption="Adres" />
+        <Member Name="City" Caption="Şehir" />
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="Country" Caption="Ülke" />
+        <Member Name="County" Caption="İlçe" />
+        <Member Name="EMail" Caption="E-Posta" />
+        <Member Name="IsActive" Caption="Aktif" />
+        <Member Name="OtherTelephone" Caption="Diğer Telefon" />
+        <Member Name="TaxNumber" Caption="Vergi Numarası" />
+        <Member Name="TaxOffice" Caption="Vergi Dairesi" />
+        <Member Name="Telephone" Caption="Telefon" />
+        <Member Name="Title" Caption="Unvanı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.Consignee">
+      <OwnMembers>
+        <Member Name="Address" Caption="Adres" />
+        <Member Name="City" Caption="Şehir" />
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="ConsigneeType" Caption="Müşteri Türü" />
+        <Member Name="Country" Caption="Ülke" />
+        <Member Name="County" Caption="İlçe" />
+        <Member Name="Customer" Caption="Müşteri" />
+        <Member Name="EMail" Caption="E-Posta" />
+        <Member Name="IsActive" Caption="Aktif" />
+        <Member Name="IsPerson" Caption="Şahıs Şirketi" />
+        <Member Name="LastName" Caption="Soyadı" />
+        <Member Name="OtherTelephone" Caption="Diğer Telefon" />
+        <Member Name="Owner" Caption="Oluşturan" />
+        <Member Name="ShortName" Caption="Kısa Adı" />
+        <Member Name="TaxNumber" Caption="Vergi Numarası" />
+        <Member Name="TaxOffice" Caption="Vergi Dairesi" />
+        <Member Name="TCKN" Caption="T.C. Kimlik No" />
+        <Member Name="Telephone" Caption="Telefon" />
+        <Member Name="Title" Caption="Unvan" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.Contract">
+      <OwnMembers>
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="CreatedOn" Caption="Oluşturma Zamanı" />
+        <Member Name="Customer" Caption="Müşteri" />
+        <Member Name="CustomerAddress" Caption="Adres" />
+        <Member Name="CustomerEmail" Caption="E-Posta" />
+        <Member Name="CustomerFax" Caption="Faks" />
+        <Member Name="CustomerTaxNumber" Caption="Vergi Numarası" />
+        <Member Name="CustomerTaxOffice" Caption="Vergi Dairesi" />
+        <Member Name="CustomerTelephone" Caption="Telefon" />
+        <Member Name="Description" Caption="Açıklama" />
+        <Member Name="Owner" Caption="Oluşturan" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.Country" Caption="Ülke">
+      <OwnMembers>
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.County" Caption="İlçe">
+      <OwnMembers>
+        <Member Name="City" Caption="Şehir" />
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.Currency">
+      <OwnMembers>
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.CustomDocument">
+      <OwnMembers>
+        <Member Name="CreatedOn" Caption="Oluşturma Zamanı" />
+        <Member Name="CustomFile" Caption="Belge" />
+        <Member Name="Description" Caption="Açıklama" />
+        <Member Name="FileData" Caption="Belge" />
+        <Member Name="Name" Caption="Adı" />
+        <Member Name="Owner" Caption="Oluşturan" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.Customer" Caption="Müşteri">
+      <OwnMembers>
+        <Member Name="ActivityCertificate" Caption="Faaliyet Belgesi" />
+        <Member Name="ActivityCertificateCode" Caption="Faaliyet Belgesi Kodu" />
+        <Member Name="ActivityCertificateDate" Caption="Faaliyet Belgesi Geçerlilik Tarihi" />
+        <Member Name="Address" Caption="Adres" />
+        <Member Name="Carrier" Caption="Taşımacı" />
+        <Member Name="City" Caption="Şehir" />
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="Consignee" Caption="Alıcı" />
+        <Member Name="Consignees" Caption="İlgili Firmalar" />
+        <Member Name="Consignor" Caption="Gönderen" />
+        <Member Name="Consultant" Caption="Danışman" />
+        <Member Name="Contacts" Caption="Yetkili Kişiler" />
+        <Member Name="Country" Caption="Ülke" />
+        <Member Name="County" Caption="İlçe" />
+        <Member Name="CustomerImage" Caption="Logo" />
+        <Member Name="DefaultVehicleDocumentTransactions" Caption="Varsayılan Araç Kontrolleri" />
+        <Member Name="Documents" Caption="Belgeler" />
+        <Member Name="Drivers" Caption="Şoförler" />
+        <Member Name="EMail" Caption="E-Posta" />
+        <Member Name="Filler" Caption="Dolduran" />
+        <Member Name="FirstName" Caption="Adı" />
+        <Member Name="Inventories" Caption="Envanterler" />
+        <Member Name="IsActive" Caption="Aktif" />
+        <Member Name="IsOnlineTransaction" Caption="UETDS Aktif" />
+        <Member Name="IsPerson" Caption="Şahıs Şirketi" />
+        <Member Name="LastName" Caption="Soyadı" />
+        <Member Name="Loader" Caption="Yükleyen" />
+        <Member Name="OtherTelephone" Caption="Diğer Telefon" />
+        <Member Name="Packer" Caption="Paketleyen" />
+        <Member Name="Sector" Caption="Sektör" />
+        <Member Name="ShortName" Caption="Kısa Adı" />
+        <Member Name="TankContainer" Caption="Tank Konteyner - Portatif Tank İşletmecisi" />
+        <Member Name="TaxNumber" Caption="Vergi Numarası" />
+        <Member Name="TaxOffice" Caption="Vergi Dairesi" />
+        <Member Name="TCKN" Caption="T.C. Kimlik No" />
+        <Member Name="Telephone" Caption="Telefon" />
+        <Member Name="Title" Caption="Unvanı" />
+        <Member Name="UETDSPassword" Caption="UETDS Şifre" />
+        <Member Name="UETDSUsername" Caption="UETDS Kullanıcı Adı" />
+        <Member Name="Unloader" Caption="Boşaltan" />
+        <Member Name="Vehicles" Caption="Araçlar" />
+        <Member Name="WasteInventories" Caption="Atık Envanter" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.CustomerContact" Caption="Müşteri Yetkilisi">
+      <OwnMembers>
+        <Member Name="Address" Caption="Adres" />
+        <Member Name="City" Caption="Şehir" />
+        <Member Name="Country" Caption="Ülke" />
+        <Member Name="County" Caption="İlçe" />
+        <Member Name="Customer" Caption="Müşteri" />
+        <Member Name="EMail" Caption="E-Posta" />
+        <Member Name="IsActive" Caption="Aktif" />
+        <Member Name="Name" Caption="Adı" />
+        <Member Name="OtherTelephone" Caption="Diğer Telefon" />
+        <Member Name="RegistrationNumber" Caption="SGK Sicil No" />
+        <Member Name="TCKN" Caption="T.C. Kimlik No" />
+        <Member Name="Telephone" Caption="Telefon" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.CustomerDocument" Caption="Müşteri Dokümanı">
+      <OwnMembers>
+        <Member Name="Customer" Caption="Müşteri" />
+        <Member Name="Document" Caption="Belge" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.CustomerInventory" Caption="Müşteri Envanter">
+      <OwnMembers>
+        <Member Name="Carrier" Caption="Taşımacı" />
+        <Member Name="Consignee" Caption="Alıcı" />
+        <Member Name="Consignor" Caption="Gönderen" />
+        <Member Name="Customer" Caption="Müşteri" />
+        <Member Name="DefaultLabel4" Caption="Etiket" />
+        <Member Name="FactoryDepartment" Caption="Kullanıldığı Bölüm" />
+        <Member Name="FileData" Caption="MSDS" />
+        <Member Name="Filler" Caption="Dolduran" />
+        <Member Name="HazardousGoods" Caption="Tehlikeli Madde" />
+        <Member Name="HazardousGoodsLabel1" Caption="Etiket" />
+        <Member Name="HazardousGoodsLabel2" Caption="Etiket" />
+        <Member Name="HazardousGoodsLabel3" Caption="Etiket" />
+        <Member Name="InventoryCode" Caption="Kodu" />
+        <Member Name="InventoryImage" Caption="Resmi" />
+        <Member Name="InventoryName" Caption="Adı" />
+        <Member Name="IsWaste" Caption="Atık" />
+        <Member Name="LabelImage1" Caption="Etiket" />
+        <Member Name="LabelImage2" Caption="Etiket" />
+        <Member Name="LabelImage3" Caption="Etiket" />
+        <Member Name="LabelImage4" Caption="Etiket" />
+        <Member Name="Loader" Caption="Yükleyen" />
+        <Member Name="MSDSName" Caption="MSDS Adı" />
+        <Member Name="MSDSStatus" Caption="MSDS Durumu" />
+        <Member Name="PackagingQuantity" Caption="Miktar" />
+        <Member Name="PackagingQuantityUnit" Caption="Birim" />
+        <Member Name="PackagingTypes" Caption="Paketleme Türü" />
+        <Member Name="Packer" Caption="Paketleyen" />
+        <Member Name="PackingGroup" Caption="Paketleme Grubu" />
+        <Member Name="Shipper" Caption="Shipper" />
+        <Member Name="Supplier" Caption="Tedarikçi" />
+        <Member Name="TankContainer" Caption="Tank Konteyner - Portatif Tank İşletmecisi" />
+        <Member Name="Unloader" Caption="Boşaltan" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.CustomerWasteInventory" Caption="Atık Envanter">
+      <OwnMembers>
+        <Member Name="ADRStatus" Caption="ADR Durumu" />
+        <Member Name="Customer" Caption="Müşteri" />
+        <Member Name="DefaultLabel1" Caption="Etiket" />
+        <Member Name="DefaultLabel2" Caption="Etiket" />
+        <Member Name="DefaultLabel3" Caption="Etiket" />
+        <Member Name="DefaultLabel4" Caption="Etiket" />
+        <Member Name="Description" Caption="Açıklama" />
+        <Member Name="DisposalFirm" Caption="Atık Firması" />
+        <Member Name="HazardousGoods" Caption="Tehlikeli Madde" />
+        <Member Name="LabelImage1" Caption="Etiket" />
+        <Member Name="LabelImage2" Caption="Etiket" />
+        <Member Name="LabelImage3" Caption="Etiket" />
+        <Member Name="LabelImage4" Caption="Etiket" />
+        <Member Name="MSDSName" Caption="MSDS Adı" />
+        <Member Name="PackagingTypes" Caption="Paketleme Türü" />
+        <Member Name="PackingGroup" Caption="Paketleme Grubu" />
+        <Member Name="Shipper" Caption="Shipper" />
+        <Member Name="WasteCode" Caption="Atık Kodu" />
+        <Member Name="WasteDescription" Caption="Atık Açıklaması" />
+        <Member Name="WasteInventoryImage" Caption="Atık Resmi" />
+        <Member Name="WasteName" Caption="Atık Adı" />
+        <Member Name="WastePhysicalState" Caption="Atık Fiziksel Durumu" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.CustomFile" Caption="Belge">
+      <OwnMembers>
+        <Member Name="CreatedOn" Caption="Oluşturma Zamanı" />
+        <Member Name="Documents" Caption="Belgeler" />
+        <Member Name="Name" Caption="Adı" />
+        <Member Name="Owner" Caption="Oluşturan" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.DangerousGoodInvolved">
+      <OwnMembers>
+        <Member Name="HazardousGoods" Caption="Tehlikeli Madde" />
+        <Member Name="ReportOnOccurrence" Caption="Kaza Raporu" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.DefaultAnnualWorkPlan">
+      <OwnMembers>
+        <Member Name="LineNumber" Caption="Sıra No" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.DefaultDistributionOfTaskSubject">
+      <OwnMembers>
+        <Member Name="Subject" Caption="Konu" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.DefaultDistributionOfTaskSubjectDesc">
+      <OwnMembers>
+        <Member Name="Description" Caption="Açıklama" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.DefaultLabel">
+      <OwnMembers>
+        <Member Name="LabelImage" Caption="Etiket Resmi" />
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.DefaultTransportDescription">
+      <OwnMembers>
+        <Member Name="Description" Caption="Açıklama" />
+        <Member Name="IsActive" Caption="Aktif" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.DefaultVehicleControlDocumentTransaction">
+      <OwnMembers>
+        <Member Name="Customer" Caption="Müşteri" />
+        <Member Name="Question" Caption="Sorular" />
+        <Member Name="VControlOption" Caption="Araç Kontrol Türü" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.DefaultVehicleDocumentControl">
+      <OwnMembers>
+        <Member Name="Question" Caption="Sorular" />
+        <Member Name="VControlOption" Caption="Araç Kontrol Türü" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.Department">
+      <OwnMembers>
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="Description" Caption="Açıklama" />
+        <Member Name="Name" Caption="Adı" />
+        <Member Name="Positions" Caption="Pozisyonlar" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.DistributionOfTask" Caption="Görev Dağılım Formu">
+      <OwnMembers>
+        <Member Name="ActivityCertificate" Caption="Tehlikeli Madde Faaliyet Belgesi" />
+        <Member Name="Address" Caption="Adres" />
+        <Member Name="BeginDate" Caption="Başlangıç Tarihi" />
+        <Member Name="BeginTime" Caption="Başlangıç Saati" />
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="Consignee" Caption="Alıcı" />
+        <Member Name="Customer" Caption="Müşteri" />
+        <Member Name="CustomerContact" Caption="Müşteri Yetkilisi" />
+        <Member Name="DateOfValidity" Caption="Geçerlilik Tarihi" />
+        <Member Name="EndDate" Caption="Bitiş Tarihi" />
+        <Member Name="EndTime" Caption="Bitiş Saati" />
+        <Member Name="Owner" Caption="Oluşturan" />
+        <Member Name="Sector" Caption="Sektör" />
+        <Member Name="Statute" Caption="Yasal Mevzuat" />
+        <Member Name="Subjects" Caption="Konular" />
+        <Member Name="TMGDCertificate" Caption="TMGD Sertifika No" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.DistributionOfTaskSubject">
+      <OwnMembers>
+        <Member Name="AuthorizedPersons" Caption="Yetkili Kişiler" />
+        <Member Name="DistributionOfTask" Caption="Görev Dağılım Formu" />
+        <Member Name="Subject" Caption="Konu" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.DistributionOfTaskSubjectAuth">
+      <OwnMembers>
+        <Member Name="AuthorizedPerson" Caption="Yetkili Kişi" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.DistributionOfTaskSubjectDetail">
+      <OwnMembers>
+        <Member Name="Description" Caption="Açıklama" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.DrillForm" Caption="Tatbikat Değerlendirme">
+      <OwnMembers>
+        <Member Name="Address" Caption="Adres" />
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="ControlLists" Caption="Kontrol Listesi" />
+        <Member Name="CreatedOn" Caption="Oluşturma Zamanı" />
+        <Member Name="Customer" Caption="Müşteri" />
+        <Member Name="DrillScenario" Caption="Senaryo" />
+        <Member Name="DrillStartDate" Caption="Tatbikat Tarihi" />
+        <Member Name="DrillStartTime" Caption="Tatbikat Saati" />
+        <Member Name="DrillType" Caption="Tatbikat Türü" />
+        <Member Name="Owner" Caption="Oluşturan" />
+        <Member Name="Subject" Caption="Konu" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.DrillFormControlList" Caption="Kontrol Listesi">
+      <OwnMembers>
+        <Member Name="ControlName" Caption="Kontrol Adı" />
+        <Member Name="DrillForm" Caption="Tatbikat Değerlendirme" />
+        <Member Name="IsControl" Caption="Kontrol Edildi" />
+        <Member Name="Result" Caption="Sonuç" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.DrillType">
+      <OwnMembers>
+        <Member Name="IsActive" Caption="Aktif" />
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.Education">
+      <OwnMembers>
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="CreatedOn" Caption="Oluşturma Zamanı" />
+        <Member Name="Customer" Caption="Müşteri" />
+        <Member Name="Description" Caption="Açıklama" />
+        <Member Name="Instructur" Caption="Eğitici" />
+        <Member Name="Location" Caption="Konum" />
+        <Member Name="Participants" Caption="Katılımcılar" />
+        <Member Name="Subject" Caption="Konu" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.EMailSetting" Caption="E-Posta Ayarları">
+      <OwnMembers>
+        <Member Name="IsActive" Caption="Aktif" />
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.Employee">
+      <OwnMembers>
+        <Member Name="Address" Caption="Adres" />
+        <Member Name="Announcements" Caption="Duyurular" />
+        <Member Name="Caption" Caption="Başlık" />
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="Customer" Caption="Müşteri" />
+        <Member Name="Customers" Caption="Müşteriler" />
+        <Member Name="Department" Caption="Departman" />
+        <Member Name="Documents" Caption="Belgeler" />
+        <Member Name="EMail" Caption="E-Posta" />
+        <Member Name="EmployeeRoles" Caption="Roller" />
+        <Member Name="EmployeeType" Caption="Kullanıcı Türü" />
+        <Member Name="Image" Caption="Resim" />
+        <Member Name="IsActive" Caption="Aktif" />
+        <Member Name="LastName" Caption="Soyadı" />
+        <Member Name="MyNotes" Caption="Notlarım" />
+        <Member Name="Position" Caption="Pozisyon" />
+        <Member Name="TCKN" Caption="T.C. Kimlik No" />
+        <Member Name="Telephone" Caption="Telefon" />
+        <Member Name="TMGDCertificate" Caption="TMGD Sertifika No" />
+        <Member Name="TMGDCertificateFile" Caption="TMGD Sertifikası" />
+        <Member Name="UserName" Caption="Kullanıcı Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.EmployeeDocument">
+      <OwnMembers>
+        <Member Name="Employee" Caption="Kullanıcı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.EmployeeRole">
+      <OwnMembers>
+        <Member Name="Employees" Caption="Kullanıcılar" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.EstimatedQuantityOfLossOfProduct">
+      <OwnMembers>
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.FactoryDepartment">
+      <OwnMembers>
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="Description" Caption="Açıklama" />
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.HazardousGoods">
+      <OwnMembers>
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="Image" Caption="Resim" />
+        <Member Name="Labels" Caption="Etiketler" />
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.HazardousGoodsADRTankCode">
+      <OwnMembers>
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="HazardousGoods" Caption="Tehlikeli Madde" />
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.HazardousGoodsADRTankSpecialProvision">
+      <OwnMembers>
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="HazardousGoods" Caption="Tehlikeli Madde" />
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.HazardousGoodsCategory">
+      <OwnMembers>
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.HazardousGoodsClass">
+      <OwnMembers>
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="HazardousGoods" Caption="Tehlikeli Madde" />
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.HazardousGoodsClassCode">
+      <OwnMembers>
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="HazardousGoods" Caption="Tehlikeli Madde" />
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.HazardousGoodsHazardIdentification">
+      <OwnMembers>
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="HazardousGoods" Caption="Tehlikeli Madde" />
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.HazardousGoodsLabel">
+      <OwnMembers>
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="HazardousGoods" Caption="Tehlikeli Madde" />
+        <Member Name="LabelImage" Caption="Etiket Resmi" />
+        <Member Name="LineNumber" Caption="Sıra No" />
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.HazardousGoodsLabelController">
+      <OwnMembers>
+        <Member Name="HazardousGoodsLabel" Caption="Tehlikeli Madde Etiket" />
+        <Member Name="Question" Caption="Sorular" />
+        <Member Name="VControlOption" Caption="Araç Kontrol Türü" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.HazardousGoodsLabelEquipment">
+      <OwnMembers>
+        <Member Name="HazardousGoodsLabel" Caption="Tehlikeli Madde Etiket" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.HazardousGoodsLabelMixedLoading">
+      <OwnMembers>
+        <Member Name="HazardousGoodsLabel" Caption="Tehlikeli Madde Etiket" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.HazardousGoodsLimitedExcept">
+      <OwnMembers>
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="HazardousGoods" Caption="Tehlikeli Madde" />
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.HazardousGoodsLimitedQuantity">
+      <OwnMembers>
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="HazardousGoods" Caption="Tehlikeli Madde" />
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.HazardousGoodsMixedPackingProvision">
+      <OwnMembers>
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="HazardousGoods" Caption="Tehlikeli Madde" />
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.HazardousGoodsPackingInstruction">
+      <OwnMembers>
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="HazardousGoods" Caption="Tehlikeli Madde" />
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.HazardousGoodsPortableTankContainerInstruction">
+      <OwnMembers>
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="HazardousGoods" Caption="Tehlikeli Madde" />
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.HazardousGoodsPortableTankContainerSpecialProvision">
+      <OwnMembers>
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="HazardousGoods" Caption="Tehlikeli Madde" />
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.HazardousGoodsProperty">
+      <OwnMembers>
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.HazardousGoodsPropertyValue">
+      <OwnMembers>
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="LabelImage" Caption="Etiket Resmi" />
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.HazardousGoodsSpecialPackingProvision">
+      <OwnMembers>
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="HazardousGoods" Caption="Tehlikeli Madde" />
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.HazardousGoodsSpecialProvision">
+      <OwnMembers>
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="HazardousGoods" Caption="Tehlikeli Madde" />
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.HazardousGoodsSpecialProvisionForCarriageBulk">
+      <OwnMembers>
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="HazardousGoods" Caption="Tehlikeli Madde" />
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.HazardousGoodsSpecialProvisionForCarriageLUH">
+      <OwnMembers>
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="HazardousGoods" Caption="Tehlikeli Madde" />
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.HazardousGoodsSpecialProvisionForCarriageOperation">
+      <OwnMembers>
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="HazardousGoods" Caption="Tehlikeli Madde" />
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.HazardousGoodsSpecialProvisionForCarriagePackage">
+      <OwnMembers>
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="HazardousGoods" Caption="Tehlikeli Madde" />
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.HazardousGoodsTransaction">
+      <OwnMembers>
+        <Member Name="Consignee" Caption="Alıcı" />
+        <Member Name="CreatedOn" Caption="Oluşturma Zamanı" />
+        <Member Name="Customer" Caption="Müşteri" />
+        <Member Name="Description" Caption="Açıklama" />
+        <Member Name="Owner" Caption="Oluşturan" />
+        <Member Name="Product" Caption="Ürün" />
+        <Member Name="Unitset" Caption="Birim" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.HazardousGoodsTransportCategory">
+      <OwnMembers>
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="HazardousGoods" Caption="Tehlikeli Madde" />
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.HazardousGoodsTunnelCode">
+      <OwnMembers>
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="HazardousGoods" Caption="Tehlikeli Madde" />
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.HazardousGoodsVehicleForTankCarriage">
+      <OwnMembers>
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="HazardousGoods" Caption="Tehlikeli Madde" />
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.LabelTransaction">
+      <OwnMembers>
+        <Member Name="HazardousGoods" Caption="Tehlikeli Madde" />
+        <Member Name="HazardousGoodsLabel" Caption="Tehlikeli Madde Etiket" />
+        <Member Name="LineNumber" Caption="Sıra No" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.Lead">
+      <OwnMembers>
+        <Member Name="Address" Caption="Adres" />
+        <Member Name="City" Caption="Şehir" />
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="Country" Caption="Ülke" />
+        <Member Name="County" Caption="İlçe" />
+        <Member Name="EMail" Caption="E-Posta" />
+        <Member Name="IsActive" Caption="Aktif" />
+        <Member Name="IsPerson" Caption="Şahıs Şirketi" />
+        <Member Name="LastName" Caption="Soyadı" />
+        <Member Name="OtherTelephone" Caption="Diğer Telefon" />
+        <Member Name="ShortName" Caption="Kısa Adı" />
+        <Member Name="TCKN" Caption="T.C. Kimlik No" />
+        <Member Name="Telephone" Caption="Telefon" />
+        <Member Name="Title" Caption="Unvanı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.LoadType">
+      <OwnMembers>
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.LOGOParameter">
+      <OwnMembers>
+        <Member Name="Employee" Caption="Kullanıcı" />
+        <Member Name="IsActive" Caption="Aktif" />
+        <Member Name="Password" Caption="Parola" />
+        <Member Name="Username" Caption="Kullanıcı Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.Note" Caption="Not">
+      <OwnMembers>
+        <Member Name="CreatedOn" Caption="Oluşturma Zamanı" />
+        <Member Name="Description" Caption="Açıklama" />
+        <Member Name="IsActive" Caption="Aktif" />
+        <Member Name="Owner" Caption="Oluşturan" />
+        <Member Name="Priority" Caption="Öncelik" />
+        <Member Name="Topic" Caption="Başlık" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.PackagingTypes">
+      <OwnMembers>
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.PackingGroup">
+      <OwnMembers>
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="HazardousGoods" Caption="Tehlikeli Madde" />
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.Participant" Caption="Katılımcı">
+      <OwnMembers>
+        <Member Name="Education" Caption="Eğitim" />
+        <Member Name="LineNumber" Caption="Sıra No" />
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.Position" Caption="Pozisyon">
+      <OwnMembers>
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="Department" Caption="Departman" />
+        <Member Name="Description" Caption="Açıklama" />
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.Product" Caption="Ürün">
+      <OwnMembers>
+        <Member Name="CASNumbers" Caption="CAS Numaraları" />
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="Customer" Caption="Müşteri" />
+        <Member Name="FileData" Caption="Belge" />
+        <Member Name="HazardousGoods" Caption="Tehlikeli Madde" />
+        <Member Name="Image" Caption="Resim" />
+        <Member Name="IsActive" Caption="Aktif" />
+        <Member Name="Labels" Caption="Etiketler" />
+        <Member Name="MSDSDateOfValidity" Caption="MSDS Geçerlilik Tarihi" />
+        <Member Name="MSDSName" Caption="MSDS Adı" />
+        <Member Name="MSDSStatus" Caption="MSDS Durumu" />
+        <Member Name="Name" Caption="Adı" />
+        <Member Name="Owner" Caption="Oluşturan" />
+        <Member Name="ProductGroupType" Caption="Ürün Grubu" />
+        <Member Name="ProductType" Caption="Ürün Türü" />
+        <Member Name="Transactions" Caption="Hareketler" />
+        <Member Name="Unitset" Caption="Birim" />
+        <Member Name="WasteCode" Caption="Atık Kodu" />
+        <Member Name="WasteName" Caption="Atık Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.ProductCASNumber">
+      <OwnMembers>
+        <Member Name="CASNumber" Caption="CAS Numarası" />
+        <Member Name="CASType" Caption="CAS Türü" />
+        <Member Name="Product" Caption="Ürün" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.ProductLabel">
+      <OwnMembers>
+        <Member Name="LabelImage" Caption="Etiket Resmi" />
+        <Member Name="Product" Caption="Ürün" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.ProductSupplier">
+      <OwnMembers>
+        <Member Name="Consignee" Caption="Alıcı" />
+        <Member Name="Product" Caption="Ürün" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.Quote">
+      <OwnMembers>
+        <Member Name="Address" Caption="Adres" />
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="CreatedOn" Caption="Oluşturma Zamanı" />
+        <Member Name="Customer" Caption="Müşteri" />
+        <Member Name="CustomerType" Caption="Müşteri Türü" />
+        <Member Name="DateOfValidity" Caption="Geçerlilik Tarihi" />
+        <Member Name="Description" Caption="Açıklama" />
+        <Member Name="EMail" Caption="E-Posta" />
+        <Member Name="Owner" Caption="Oluşturan" />
+        <Member Name="Telephone" Caption="Telefon" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.ReportOnOccurrence" Caption="Kaza Raporu">
+      <OwnMembers>
+        <Member Name="AdditionalDescription" Caption="Olayın Tarihi ile İlgili Ek Bilgi" />
+        <Member Name="Address" Caption="Adres" />
+        <Member Name="BridgeUnderpass" Caption="Köprü / Altgeçit" />
+        <Member Name="BuiltUpArea" Caption="Meskun Mahal" />
+        <Member Name="CarrierRailwayInsfrastructureOperator" Caption="Taşımacı / Demiryolu Altyapı İşletmecisi" />
+        <Member Name="CauseOfOccurrenceTechnicalFault" Caption="Teknik Arıza" />
+        <Member Name="ClosureOfPublic" Caption="Trafiğin Kapatılması (Min. 3 Saat)" />
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="Collision" Caption="Çarpışma" />
+        <Member Name="ContactName" Caption="İrtibat Kişisi" />
+        <Member Name="CreatedOn" Caption="Oluşturma Zamanı" />
+        <Member Name="Crossing" Caption="Geçit" />
+        <Member Name="Customer" Caption="Müşteri" />
+        <Member Name="DangerousGoodInvolveds" Caption="Olaya Dahil Olan Tehlikeli Maddeler" />
+        <Member Name="DateAndLocationOfOccurrence" Caption="Olayın Tarihi ve Yeri" />
+        <Member Name="Death" Caption="Ölü" />
+        <Member Name="DeathsNumber" Caption="Ölü Sayısı" />
+        <Member Name="DerailmentLeavingTheRoad" Caption="Derayman / Yoldan Ayrılma" />
+        <Member Name="DescriptionOfLineKilometers" Caption="Hattın Tanımı Kilometre" />
+        <Member Name="EstimatedLevelOfDamageGreater" Caption="Tahmini Zarar Düzeyi &gt; 50.000€" />
+        <Member Name="EstimatedLevelOfDamageLess" Caption="Tahmini Zarar Düzeyi &lt;= 50.000€" />
+        <Member Name="EvacuationOfPerson" Caption="İnsanların Olay Yerinden Uzaklaştırılması (Min. 3 Saat)" />
+        <Member Name="Explosion" Caption="Patlama" />
+        <Member Name="FaultLoadSecuring" Caption="Hatalı Yükleme" />
+        <Member Name="Fax" Caption="Faks" />
+        <Member Name="Fire" Caption="Yangın" />
+        <Member Name="Fog" Caption="Sisli" />
+        <Member Name="GradientIncline" Caption="Meyil / Yokuş" />
+        <Member Name="Ice" Caption="Buzlu" />
+        <Member Name="ImminentRiskOfLossOfProduct" Caption="Muhtemel Ürün Kaybı Riski" />
+        <Member Name="Injured" Caption="Yaralı" />
+        <Member Name="InjuredNumber" Caption="Yaralı Sayısı" />
+        <Member Name="InvolvementOfAuthoritiesNo" Caption="Hayır" />
+        <Member Name="InvolvementOfAuthoritiesYes" Caption="Evet" />
+        <Member Name="IsRail" Caption="Demiryolu" />
+        <Member Name="IsRoad" Caption="Karayolu" />
+        <Member Name="Loss" Caption="Kayıp" />
+        <Member Name="LossOfProductNo" Caption="Hayır" />
+        <Member Name="LossOfProductYes" Caption="Evet" />
+        <Member Name="OpenLine" Caption="Açık Hat" />
+        <Member Name="OpenRoad" Caption="Açık Yol" />
+        <Member Name="OperationalCause" Caption="Operasyonel Neden (Demiryolu Operasyonu)" />
+        <Member Name="OtherCauseOfOccurrence" Caption="Diğer" />
+        <Member Name="OtherCauseOfOccurrenceDescription" Caption="Açıklama" />
+        <Member Name="OverturningRollingOver" Caption="Devrilme / Yuvarlanma" />
+        <Member Name="Owner" Caption="Oluşturan" />
+        <Member Name="RailLoadingUnloadingTranshipmentSite" Caption="Yükleme / Boşaltma / Aktarma Yeri" />
+        <Member Name="RailLocationCountry" Caption="Yer / Ülke" />
+        <Member Name="Rain" Caption="Yağmurlu" />
+        <Member Name="RoadLoadingUnloadingTranshipmentSite" Caption="Yükleme / Boşaltma / Aktarma Yeri" />
+        <Member Name="RoadLocationCountry" Caption="Yer / Ülke" />
+        <Member Name="ShuntingMarshallingYard" Caption="Tren Manevra / Ayırma Garı" />
+        <Member Name="Snow" Caption="Karlı" />
+        <Member Name="Station" Caption="İstasyon" />
+        <Member Name="Storm" Caption="Fırtınalı" />
+        <Member Name="TechnicalFault" Caption="Teknik Arıza" />
+        <Member Name="Telephone" Caption="Telefon" />
+        <Member Name="Temperature" Caption="Sıcaklık" />
+        <Member Name="Thunderstorm" Caption="Gökgürültülü" />
+        <Member Name="TimeAndLocationOfOccurrence" Caption="Olayın Saati ve Yeri" />
+        <Member Name="Tunnel" Caption="Tünel" />
+        <Member Name="VehicleRegistration" Caption="Karayolu Araç Tescili" />
+        <Member Name="WagonNumber" Caption="Demiryolu Vagon Numarası" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.Sector" Caption="Sektör">
+      <OwnMembers>
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.SharedFile" Caption="Ortak Dosyalar">
+      <OwnMembers>
+        <Member Name="FileData" Caption="Dosya" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.TransportDocument" Caption="Taşıma Evrakı">
+      <OwnMembers>
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="Consignee" Caption="Alıcı" />
+        <Member Name="ConsigneeAddress" Caption="Adres" />
+        <Member Name="ConsigneeTaxNumber" Caption="Vergi Numarası" />
+        <Member Name="ConsigneeTaxOffice" Caption="Vergi Dairesi" />
+        <Member Name="Consigner" Caption="Gönderen" />
+        <Member Name="ConsignerAddress" Caption="Adresi" />
+        <Member Name="ConsignerTaxNumber" Caption="Vergi Numarası" />
+        <Member Name="ConsignerTaxOffice" Caption="Vergi Dairesi" />
+        <Member Name="CreatedDate" Caption="Oluşturma Tarihi" />
+        <Member Name="CreatedTime" Caption="Oluşturma Saati" />
+        <Member Name="Description" Caption="Açıklama" />
+        <Member Name="Descriptions" Caption="Açıklamalar" />
+        <Member Name="Driver" Caption="Şoför" />
+        <Member Name="IsSpecial" Caption="Özel Taşıyıcı" />
+        <Member Name="OtherTransactions" Caption="Hareketler" />
+        <Member Name="OtherVehicle" Caption="2. Plaka" />
+        <Member Name="Owner" Caption="Oluşturan" />
+        <Member Name="ScoreQuantity" Caption="1.1.3.6 Puan Miktarı" />
+        <Member Name="Shipper" Caption="Taşıyıcı" />
+        <Member Name="SpecialShipper" Caption="Özel Taşıyıcı" />
+        <Member Name="Status" Caption="Durumu" />
+        <Member Name="StatusMessage" Caption="Durumu" />
+        <Member Name="Transactions" Caption="Hareketler" />
+        <Member Name="TransportCategory" Caption="1.1.3.6 Taşıma Kategorisi" />
+        <Member Name="TransportDocumentType" Caption="Taşıma Evrakı Türü" />
+        <Member Name="TunnelCode" Caption="Tünel Kodu" />
+        <Member Name="Vehicle" Caption="Araç" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.TransportDocumentDescription" Caption="Taşıma Evrakı Açıklaması">
+      <OwnMembers>
+        <Member Name="Description" Caption="Açıklama" />
+        <Member Name="TransportDocument" Caption="Taşıma Evrakı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.TransportDocumentOtherTransaction">
+      <OwnMembers>
+        <Member Name="Description" Caption="Açıklama" />
+        <Member Name="HazardousGoods" Caption="Tehlikeli Madde" />
+        <Member Name="HazardousGoodsClass" Caption="Sınıfı" />
+        <Member Name="HazardousGoodsLabel" Caption="Tehlikeli Madde Etiket" />
+        <Member Name="NetWeigth" Caption="Net Ağırlık" />
+        <Member Name="PackagingTypes" Caption="Paketleme Türü" />
+        <Member Name="PackingGroup" Caption="Paketleme Grubu" />
+        <Member Name="Quantity" Caption="Miktar" />
+        <Member Name="TransportCategory" Caption="1.1.3.6 Taşıma Kategorisi" />
+        <Member Name="TransportDocument" Caption="Taşıma Evrakı" />
+        <Member Name="TunnelCode" Caption="Tünel Kodu" />
+        <Member Name="Unitset" Caption="Birim" />
+        <Member Name="WasteCode" Caption="Atık Kodu" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.TransportDocumentTransaction">
+      <OwnMembers>
+        <Member Name="Description" Caption="Açıklama" />
+        <Member Name="HazardousGoods" Caption="Tehlikeli Madde" />
+        <Member Name="HazardousGoodsClass" Caption="Sınıfı" />
+        <Member Name="HazardousGoodsLabel" Caption="Tehlikeli Madde Etiket" />
+        <Member Name="InventoryCode" Caption="Envanter Kodu" />
+        <Member Name="InventoryName" Caption="Envanter Adı" />
+        <Member Name="NetWeigth" Caption="Net Ağırlık" />
+        <Member Name="PackagingTypes" Caption="Paketleme Türü" />
+        <Member Name="PackingGroup" Caption="Paketleme Grubu" />
+        <Member Name="Quantity" Caption="Miktar" />
+        <Member Name="TransportCategory" Caption="1.1.3.6 Taşıma Kategorisi" />
+        <Member Name="TransportDocument" Caption="Taşıma Evrakı" />
+        <Member Name="TunnelCode" Caption="Tünel Kodu" />
+        <Member Name="Unitset" Caption="Birim" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.Unitset">
+      <OwnMembers>
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.Vehicle" Caption="Araç">
+      <OwnMembers>
+        <Member Name="AdrInspectionDate" Caption="ADR Muayene Yıllık Tarihi" />
+        <Member Name="AdrInspectionSixYearly" Caption="ADR 6 Yıllık Muayene Tarihi" />
+        <Member Name="AdrInspectionThreeYearly" Caption="ADR 3 Yıllık Muayene Tarihi" />
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="Customer" Caption="Müşteri" />
+        <Member Name="DocumentNumber" Caption="Belge No" />
+        <Member Name="Documents" Caption="Belgeler" />
+        <Member Name="DocumentType" Caption="Belge Türü" />
+        <Member Name="DocumentValidityDate" Caption="Belge Geçerlilk Tarihi" />
+        <Member Name="ExhaustInspectionDate" Caption="Egzoz Muayene Tarihi" />
+        <Member Name="ExtinguisherDate" Caption="Yangın Tüpü Geçerlilik Tarihi" />
+        <Member Name="InspectionValidityDate" Caption="Sigorta Poliçesi Geçerlilik Tarihi" />
+        <Member Name="InsurancePolicy" Caption="Sigorta Poliçesi" />
+        <Member Name="MaxWeight" Caption="Max Ağırlık" />
+        <Member Name="Name" Caption="Adı" />
+        <Member Name="Plate" Caption="Plaka" />
+        <Member Name="TmgdInsurancePolicy" Caption="Tehlikeli Madde Mali Zorunluluk Sigorta Poliçesi Tarihi" />
+        <Member Name="TuvTurkInpectionDate" Caption="TUV Türk Araç Muayene" />
+        <Member Name="VehicleType" Caption="Araç Türü" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.VehicleControlDocument">
+      <OwnMembers>
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="Consignee" Caption="Alıcı" />
+        <Member Name="Consigner" Caption="Gönderen" />
+        <Member Name="CreatedOn" Caption="Oluşturma Zamanı" />
+        <Member Name="DeliveryCompany" Caption="Nakliyeci Firma" />
+        <Member Name="Description" Caption="Açıklama" />
+        <Member Name="HazardousGoods" Caption="Tehlikeli Madde" />
+        <Member Name="InsurancePolicy" Caption="Sigorta Poliçesi" />
+        <Member Name="Labels" Caption="Etiketler" />
+        <Member Name="MaxWeight" Caption="Max Ağırlık" />
+        <Member Name="Owner" Caption="Oluşturan" />
+        <Member Name="SRCDateOfValidity" Caption="SRC 5 Geçerlilik Tarihi" />
+        <Member Name="Transactions" Caption="Hareketler" />
+        <Member Name="VControlOption" Caption="Araç Kontrol Türü" />
+        <Member Name="Vehicle" Caption="Araç" />
+        <Member Name="VehicleDriver" Caption="Şoför" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.VehicleControlDocumentEMailList">
+      <OwnMembers>
+        <Member Name="Customer" Caption="Müşteri" />
+        <Member Name="EMail" Caption="E-Posta" />
+        <Member Name="EMailSetting" Caption="E-Posta Ayarları" />
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.VehicleControlDocumentHazardousGoods" Caption="Tehlikeli Maddeler">
+      <OwnMembers>
+        <Member Name="HazardousGoods" Caption="Tehlikeli Madde" />
+        <Member Name="VehicleControlDocument" Caption="Araç Kontrol Formu" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.VehicleControlDocumentLabel">
+      <OwnMembers>
+        <Member Name="HazardousGoodsLabel" Caption="Tehlikeli Madde Etiket" />
+        <Member Name="VehicleControlDocument" Caption="Araç Kontrol Formu" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.VehicleControlDocumentTransaction">
+      <OwnMembers>
+        <Member Name="Answer" Caption="Yanıtlar" />
+        <Member Name="Description" Caption="Açıklama" />
+        <Member Name="HazardousGoodsLabel" Caption="Tehlikeli Madde Etiket" />
+        <Member Name="Question" Caption="Sorular" />
+        <Member Name="VehicleControlDocument" Caption="Araç Kontrol Formu" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.VehicleDocument" Caption="Araç Dokümanları">
+      <OwnMembers>
+        <Member Name="CreatedOn" Caption="Oluşturma Zamanı" />
+        <Member Name="Description" Caption="Açıklama" />
+        <Member Name="FileData" Caption="Belge" />
+        <Member Name="Owner" Caption="Oluşturan" />
+        <Member Name="Vehicle" Caption="Araç" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.VehicleDriver" Caption="Şoför">
+      <OwnMembers>
+        <Member Name="CompetenceCertificates" Caption="Mesleki Yeterlilik Belgeleri" />
+        <Member Name="Customer" Caption="Müşteri" />
+        <Member Name="Documents" Caption="Belgeler" />
+        <Member Name="FirstName" Caption="Adı" />
+        <Member Name="FullName" Caption="Tam Adı" />
+        <Member Name="LastName" Caption="Soyadı" />
+        <Member Name="PsychotechnicalExamination" Caption="Psikoteknik Muayene Tarihi" />
+        <Member Name="SRC5DocumentNo" Caption="SRC 5 Belge No" />
+        <Member Name="SRCDateOfValidity" Caption="SRC 5 Geçerlilik Tarihi" />
+        <Member Name="TCKN" Caption="T.C. Kimlik No" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.VehicleDriverCompetenceCertificate" Caption="Mesleki Yeterlilik Belgesi">
+      <OwnMembers>
+        <Member Name="CompetenceCertificate" Caption="Mesleki Yeterlilik Belgesi" />
+        <Member Name="VehicleDriver" Caption="Şoför" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.VehicleDriverDocument" Caption="Şoför Belge">
+      <OwnMembers>
+        <Member Name="CreatedOn" Caption="Oluşturma Zamanı" />
+        <Member Name="Description" Caption="Açıklama" />
+        <Member Name="FileData" Caption="Belge" />
+        <Member Name="Owner" Caption="Oluşturan" />
+        <Member Name="VehicleDriver" Caption="Şoför" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.VoyageNotification" Caption="UETDS Raporu">
+      <OwnMembers>
+        <Member Name="ActivatedDate" Caption="Aktif Etme Tarihi" />
+        <Member Name="CancelledDate" Caption="İptal Tarihi" />
+        <Member Name="CancelledDescription" Caption="İptal Açıklama" />
+        <Member Name="CancelledType" Caption="İptal Türü" />
+        <Member Name="Consignee" Caption="Alıcı" />
+        <Member Name="Driver1TCKN" Caption="Şoför T.C. Kimlik No" />
+        <Member Name="Driver2TCKN" Caption="2. Şoför T.C. Kimlik No" />
+        <Member Name="EndDate" Caption="Bitiş Tarihi" />
+        <Member Name="EndTime" Caption="Bitiş Saati" />
+        <Member Name="FirmVoyageNumber" Caption="Firma Sefer No" />
+        <Member Name="Histories" Caption="Geçmiş" />
+        <Member Name="Owner" Caption="Oluşturan" />
+        <Member Name="Plate1" Caption="Plaka 1" />
+        <Member Name="Plate2" Caption="Plaka 2" />
+        <Member Name="StartDate" Caption="Başlangıç Tarihi" />
+        <Member Name="StartTime" Caption="Başlangıç Saati" />
+        <Member Name="Status" Caption="Durumu" />
+        <Member Name="Transactions" Caption="Hareketler" />
+        <Member Name="UpdatedDate" Caption="Güncelleme Tarihi" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.VoyageNotificationHistory" Caption="UETDS Geçmişi">
+      <OwnMembers>
+        <Member Name="CreatedOn" Caption="Oluşturma Zamanı" />
+        <Member Name="Message" Caption="Mesaj" />
+        <Member Name="VoyageNotification" Caption="U-ETDS Raporları" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.VoyageNotificationTransaction">
+      <OwnMembers>
+        <Member Name="ActivatedDate" Caption="Aktif Etme Tarihi" />
+        <Member Name="CancelledDate" Caption="İptal Tarihi" />
+        <Member Name="CancelledDescription" Caption="İptal Açıklama" />
+        <Member Name="CancelledType" Caption="İptal Türü" />
+        <Member Name="ConsigneeCityMernisCode" Caption="Şehir Mernis Kodu" />
+        <Member Name="ConsigneeCountryCode" Caption="Ülke Mernis Kodu" />
+        <Member Name="ConsigneeCountyMernisCode" Caption="İlçe Mernis Kodu" />
+        <Member Name="ConsigneeTitle" Caption="Unvan" />
+        <Member Name="ConsigneeVKN" Caption="Vergi Numarası" />
+        <Member Name="ConsignerCityMernisCode" Caption="Şehir Mernis Kodu" />
+        <Member Name="ConsignerCountryCode" Caption="Ülke Mernis Kodu" />
+        <Member Name="ConsignerCountyMernisCode" Caption="İlçe Mernis Kodu" />
+        <Member Name="ConsignerTitle" Caption="Unvan" />
+        <Member Name="ConsignerVKN" Caption="Vergi Numarası" />
+        <Member Name="FirmLoadNumber" Caption="Firma Yük No" />
+        <Member Name="HazardousExemptionType" Caption="Muafiyet Türü" />
+        <Member Name="HazardousTransportType" Caption="Tehlikeli Madde Taşıma Türü" />
+        <Member Name="HazardousUnit" Caption="Birim" />
+        <Member Name="LadingDate" Caption="Boşaltma Tarihi" />
+        <Member Name="LadingTime" Caption="Boşaltma Saati" />
+        <Member Name="LoadOtherDescription" Caption="Yük Diğer Açıklama" />
+        <Member Name="LoadQuantity" Caption="Yük Miktarı" />
+        <Member Name="LoadType" Caption="Yük Türü" />
+        <Member Name="OtherUnit" Caption="Birim" />
+        <Member Name="PouringDate" Caption="Yükleme Tarihi" />
+        <Member Name="PouringTime" Caption="Yükleme Saati" />
+        <Member Name="Status" Caption="Durumu" />
+        <Member Name="TransportTypeCode" Caption="Taşıma Türü Kodu" />
+        <Member Name="UpdatedDate" Caption="Güncelleme Tarihi" />
+        <Member Name="VoyageNotification" Caption="U-ETDS Raporları" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.WasteList">
+      <OwnMembers>
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.BusinessObjects.WastePhysicalState">
+      <OwnMembers>
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.NonPersistentObjects.NP_CustomFile" Caption="Yeni Belge">
+      <OwnMembers>
+        <Member Name="FileName" Caption="Dosya Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.NonPersistentObjects.NP_DateControlList">
+      <OwnMembers>
+        <Member Name="Description" Caption="Açıklama" />
+        <Member Name="Name" Caption="Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.NonPersistentObjects.NP_DispatchList">
+      <OwnMembers>
+        <Member Name="CreatedOn" Caption="Oluşturma Zamanı" />
+        <Member Name="Lines" Caption="Satırlar" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.NonPersistentObjects.NP_VoyageNotification">
+      <OwnMembers>
+        <Member Name="Driver1TCKN" Caption="Şoför T.C. Kimlik No" />
+        <Member Name="Driver2TCKN" Caption="2. Şoför T.C. Kimlik No" />
+        <Member Name="EndDate" Caption="Bitiş Tarihi" />
+        <Member Name="EndTime" Caption="Bitiş Saati" />
+        <Member Name="FirmVoyageNumber" Caption="Firma Sefer No" />
+        <Member Name="Plate1" Caption="Plaka 1" />
+        <Member Name="Plate2" Caption="Plaka 2" />
+        <Member Name="StartDate" Caption="Başlangıç Tarihi" />
+        <Member Name="StartTime" Caption="Başlangıç Saati" />
+        <Member Name="Status" Caption="Durumu" />
+        <Member Name="Transations" Caption="Hareketler" />
+        <Member Name="UpdatedDate" Caption="Güncelleme Tarihi" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.NonPersistentObjects.NP_VoyageNotificationTransaction">
+      <OwnMembers>
+        <Member Name="ConsigneeCityMernisCode" Caption="Şehir Mernis Kodu" />
+        <Member Name="ConsigneeCountryCode" Caption="Ülke Mernis Kodu" />
+        <Member Name="ConsigneeCountyMernisCode" Caption="İlçe Mernis Kodu" />
+        <Member Name="ConsigneeTitle" Caption="Unvan" />
+        <Member Name="ConsigneeVKN" Caption="Vergi Numarası" />
+        <Member Name="ConsignerCityMernisCode" Caption="Şehir Mernis Kodu" />
+        <Member Name="ConsignerCountryCode" Caption="Ülke Mernis Kodu" />
+        <Member Name="ConsignerCountyMernisCode" Caption="İlçe Mernis Kodu" />
+        <Member Name="ConsignerTitle" Caption="Unvan" />
+        <Member Name="ConsignerVKN" Caption="Vergi Numarası" />
+        <Member Name="FirmLoadNumber" Caption="Firma Yük No" />
+        <Member Name="HazardousExemptionType" Caption="Muafiyet Türü" />
+        <Member Name="HazardousTransportType" Caption="Tehlikeli Madde Taşıma Türü" />
+        <Member Name="HazardousUnit" Caption="Birim" />
+        <Member Name="LadingDate" Caption="Boşaltma Tarihi" />
+        <Member Name="LadingTime" Caption="Boşaltma Saati" />
+        <Member Name="LoadOtherDescription" Caption="Yük Diğer Açıklama" />
+        <Member Name="LoadQuantity" Caption="Yük Miktarı" />
+        <Member Name="LoadType" Caption="Yük Türü" />
+        <Member Name="OtherUnit" Caption="Birim" />
+        <Member Name="PouringDate" Caption="Yükleme Tarihi" />
+        <Member Name="PouringTime" Caption="Yükleme Saati" />
+        <Member Name="Status" Caption="Durumu" />
+        <Member Name="TransportTypeCode" Caption="Taşıma Türü Kodu" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.NonPersistentObjects.NP_VoyageNotificationTransactionCancelled">
+      <OwnMembers>
+        <Member Name="CancelledDate" Caption="İptal Tarihi" />
+        <Member Name="CancelledDescription" Caption="İptal Açıklama" />
+        <Member Name="CancelledType" Caption="İptal Türü" />
+      </OwnMembers>
+    </Class>
+    <Class Name="iyibir.TMGD.Module.NonPersistentObjects.NP_YeniSeferEkle">
+      <OwnMembers>
+        <Member Name="EndDate" Caption="Bitiş Tarihi" />
+        <Member Name="EndTime" Caption="Bitiş Saati" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <CreatableItems>
+    <CreatableItem ClassName="iyibir.TMGD.Module.BusinessObjects.VehicleDriver" Caption="Şoför" />
+    <CreatableItem ClassName="iyibir.TMGD.Module.BusinessObjects.VehicleDriverDocument" Caption="Şoför Belge" />
+  </CreatableItems>
+  <Localization>
+    <LocalizationGroup Name="Controls">
+      <LocalizationGroup Name="DevExpress.Printing">
+        <LocalizationItem Name="EditingFieldEditors_Image" Value="Resim" />
+        <LocalizationItem Name="ExportOption_PdfSignatureOptions_Location" Value="Konum" />
+        <LocalizationItem Name="ReportDesignAnalyzer_GridColumn_Code" Value="Kodu" />
+        <LocalizationItem Name="ReportDesignAnalyzer_GridColumn_Description" Value="Açıklama" />
+        <LocalizationItem Name="RibbonPreview_ClosePreview_Caption" Value="Kapat" />
+        <LocalizationItem Name="RibbonPreview_PageGroup_Close" Value="Kapat" />
+        <LocalizationItem Name="RibbonPreview_Save_Caption" Value="Kaydet" />
+        <LocalizationItem Name="SaveDlg_Title" Value="Farklı Kaydet" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.XtraCharts">
+        <LocalizationItem Name="CloseValueMember" Value="Kapat" />
+        <LocalizationItem Name="MenuItemDelete" Value="Sil" />
+        <LocalizationItem Name="WizValueLevelClose" Value="Kapat" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.XtraPivotGrid">
+        <LocalizationItem Name="PrintDesignerCategoryLines" Value="Satırlar" />
+      </LocalizationGroup>
+    </LocalizationGroup>
+    <LocalizationGroup Name="DialogButtons">
+      <LocalizationItem Name="Close" Value="Kapat" />
+      <LocalizationItem Name="Delete" Value="Sil" />
+      <LocalizationItem Name="Edit" Value="Düzenle" />
+    </LocalizationGroup>
+    <LocalizationGroup Name="Enums">
+      <LocalizationGroup Name="DevExpress.ExpressApp.Editors.ViewItemVisibility">
+        <LocalizationItem Name="Show" Value="Göster" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.ExpressApp.Security.ObjectAccess">
+        <LocalizationItem Name="Delete" Value="Sil" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.ExpressApp.Security.SecurityRequestOperations">
+        <LocalizationItem Name="Delete" Value="Sil" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="iyibir.TMGD.Module.BusinessObjects.AnnualWorkPlanSubjectStatus" Value="Yıllık Çalışma Planı Konu Durumu" />
+      <LocalizationGroup Name="iyibir.TMGD.Module.BusinessObjects.ConsigneeType" Value="Müşteri Türü" />
+      <LocalizationGroup Name="iyibir.TMGD.Module.BusinessObjects.CustomerInventoryMSDSStatus" Value="MSDS Durumu">
+        <LocalizationItem Name="Guncel" Value="Güncel" />
+        <LocalizationItem Name="GuncelDegil" Value="Güncel Değil" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="iyibir.TMGD.Module.BusinessObjects.EmployeeType">
+        <LocalizationItem Name="Customer" Value="Müşteri" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="iyibir.TMGD.Module.BusinessObjects.NotePriority" Value="Öncelik">
+        <LocalizationItem Name="Critic" Value="Kritik" />
+        <LocalizationItem Name="High" Value="Yüksek" />
+        <LocalizationItem Name="Low" Value="Düşük" />
+        <LocalizationItem Name="Medium" Value="Orta" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="iyibir.TMGD.Module.BusinessObjects.ProductGroupType" Value="Ürün Grubu" />
+      <LocalizationGroup Name="iyibir.TMGD.Module.BusinessObjects.ProductType" Value="Ürün Türü" />
+      <LocalizationGroup Name="iyibir.TMGD.Module.BusinessObjects.QuoteCustomerType">
+        <LocalizationItem Name="Customer" Value="Müşteri" />
+        <LocalizationItem Name="Lead" Value="Aday Müşteri" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="iyibir.TMGD.Module.BusinessObjects.TransportDocumentType" Value="Taşıma Evrakı Türü">
+        <LocalizationItem Name="Product" Value="Ürün" />
+        <LocalizationItem Name="Waste" Value="Atık" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="iyibir.TMGD.Module.BusinessObjects.VehicleType" Value="Araç Türü" />
+      <LocalizationGroup Name="iyibir.TMGD.Module.BusinessObjects.VoyageNotificationStatus" Value="UETDS Durumu" />
+      <LocalizationGroup Name="iyibir.TMGD.Module.BusinessObjects.VoyageNotificationTransactionCancelledType" Value="UETDS Hareket İptal Türü" />
+    </LocalizationGroup>
+    <LocalizationGroup Name="Messages">
+      <LocalizationItem Name="Delete" Value="Sil" />
+    </LocalizationGroup>
+  </Localization>
+  <NavigationItems>
+    <Items>
+      <Item Id="Workspace" Caption="Çalışma Alanı">
+        <Items>
+          <Item Id="Note_ListView" Caption="Not" />
+          <Item Id="Announcement_ListView" Caption="Duyuru" />
+          <Item Id="CustomFile_ListView" Caption="Belgelerim" />
+          <Item Id="SharedFile_ListView" Caption="Ortak Dosyalar" />
+        </Items>
+      </Item>
+      <Item Id="CustomerManagement" Caption="Müşteri Yönetimi">
+        <Items>
+          <Item Id="Customer_ListView" Caption="Müşteri">
+            <Items>
+              <Item Id="Consignee_ListView" Caption="İlgili Firmalar" />
+            </Items>
+          </Item>
+        </Items>
+      </Item>
+      <Item Id="ProductManagement" Caption="Ürün Yönetimi">
+        <Items>
+          <Item Id="Product_ListView" Caption="Kimyasal Envanter" />
+        </Items>
+      </Item>
+      <Item Id="SalesManagement" Caption="Satış Yönetimi">
+        <Items>
+          <Item Id="Lead_ListView" Caption="Aday Müşteri" />
+          <Item Id="Quote_ListView" Caption="Teklif" />
+          <Item Id="Contract_ListView" Caption="Sözleşme" />
+        </Items>
+      </Item>
+      <Item Id="EducationManagement" Caption="Eğitim Yönetimi">
+        <Items>
+          <Item Id="Education_ListView" Caption="Eğitim" />
+        </Items>
+      </Item>
+      <Item Id="DocumentManagement" Caption="Doküman Yönetimi">
+        <Items>
+          <Item Id="Activity_ListView" Caption="Tesis Ziyaret Formu" />
+          <Item Id="ActivityReport_ListView" Caption="Yıllık Faaliyet Raporu" />
+          <Item Id="AnnualWorkPlan_ListView" Caption="Yıllık Çalışma Planı" />
+          <Item Id="AuditDeterminationForm_ListView" Caption="ADR Denetim Tespit" />
+          <Item Id="DistributionOfTask_ListView" Caption="Görev Dağılım Formu" />
+          <Item Id="DrillForm_ListView" Caption="Tatbikat Değerlendirme" />
+          <Item Id="ReportOnOccurrence_ListView" Caption="Kaza Raporu" />
+          <Item Id="TransportDocument_ListView" Caption="Taşıma Evrakı" />
+          <Item Id="VehicleControlDocument_ListView" Caption="Araç Kontrol Formu" />
+          <Item Id="VoyageNotification_ListView" Caption="U-ETDS Raporları" />
+        </Items>
+      </Item>
+      <Item Id="HazardousGoodsManagement" Caption="Tablo A TAnımları" />
+      <Item Id="Settings" Caption="Ayarlar" />
+    </Items>
+  </NavigationItems>
+  <Validation>
+    <Contexts>
+      <ValidationContext Id="Save" Caption="Kaydet" />
+    </Contexts>
+  </Validation>
+  <Views>
+    <DetailView Id="ActivityEvent_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Event" Caption="Ajanda" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ActivityLine_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ActivityLine" Caption="Ziyaret Açıklaması">
+              <LayoutGroup Id="ActivityLine_col2" Caption="ActivityLine_col2" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="AnnualWorkPlanSubjectTransaction_LookupListView">
+      <Columns>
+        <ColumnInfo Id="AnnualWorkPlanSubject.Subject" Caption="Konu" />
+      </Columns>
+    </ListView>
+    <DetailView Id="AuditDeterminationForm_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="AuditDeterminationForm" Caption="ADR Denetim Tespit Formu" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="City_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="City" Caption="Şehir" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Consignee_DetailView">
+      <Items>
+        <PropertyEditor Id="ConsigneeType" Caption="Müşteri Türü" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Consignee" Caption="Alıcı" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Consignee_ListView">
+      <Columns>
+        <ColumnInfo Id="ConsigneeType" Caption="Müşteri Türü" />
+      </Columns>
+    </ListView>
+    <ListView Id="Customer_Consignees_ListView">
+      <Columns>
+        <ColumnInfo Id="ConsigneeType" Caption="Müşteri Türü" />
+      </Columns>
+    </ListView>
+    <ListView Id="Customer_Contacts_ListView">
+      <Columns>
+        <ColumnInfo Id="RegistrationNumber" Caption="SGK Sicil No" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Customer_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <TabbedGroup Id="Item1">
+              <LayoutGroup Id="Customer">
+                <LayoutGroup Id="Customer_col1">
+                  <LayoutGroup Id="Item2" Caption="Yetkili Kişi" />
+                </LayoutGroup>
+                <LayoutGroup Id="Customer_col2">
+                  <LayoutGroup Id="Item4" Caption="Faaliyet Belgesi Bilgileri" />
+                  <LayoutGroup Id="Item3" Caption="Faaliyet Konusu" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="DefaultVehicleDocumentTransactions" Caption="Varsayılan Araç Kontrolü" />
+            </TabbedGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="CustomerContact_DetailView">
+      <Items>
+        <PropertyEditor Id="RegistrationNumber" Caption="SGK Sicil No" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="CustomerContact" Caption="Müşteri Yetkilisi" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="CustomerContact_ListView">
+      <Columns>
+        <ColumnInfo Id="RegistrationNumber" Caption="SGK Sicil No" />
+      </Columns>
+    </ListView>
+    <DetailView Id="CustomerInventory_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="CustomerInventory" Caption="Müşteri Envanter" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="CustomerWasteInventory_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="CustomerWasteInventory" Caption="Atık Envanter" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Department_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Department" Caption="Departman" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="DistributionOfTask_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="DistributionOfTask" Caption="Görev Dağılım Formu" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="DrillForm_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="DrillForm" Caption="Tatbikat Değerlendirme" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Education_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Education" Caption="Eğitim" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="EMailSetting_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="EMailSetting" Caption="E-Posta Ayarları" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Employee_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Employee" Caption="Kullanıcı" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="HazardousGoods_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="HazardousGoods" Caption="Tehlikeli Madde" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="ModelDifference_Aspects_ListView">
+      <Columns>
+        <ColumnInfo Id="DisplayName" Caption="Adı" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Product_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Product" Caption="Ürün" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ReportOnOccurrence_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="Item2">
+            <LayoutGroup Id="Autofac06514-1ae2-499f-bb50-3fbe9f27cbf8" Caption="Autofac06514-1ae2-499f-bb50-3fbe9f27cbf8(22)">
+              <LayoutGroup Id="Item3" Caption="Demiryolu" />
+              <LayoutGroup Id="Item4" Caption="Karayolu" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="Item9">
+            <LayoutGroup Id="Item10">
+              <LayoutGroup Id="Autod6f27349-aa25-4d16-b5c6-85e51a681a67" Caption="Autod6f27349-aa25-4d16-b5c6-85e51a681a67(67)" />
+              <LayoutGroup Id="Auto28b20ac3-0900-463c-afbc-6c305716b2c7" Caption="Auto28b20ac3-0900-463c-afbc-6c305716b2c7(70)" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="RuleSetValidationResultItem_ByTarget_ListView">
+      <Columns>
+        <ColumnInfo Id="ErrorMessage" Caption="Açıklama" />
+      </Columns>
+    </ListView>
+    <DetailView Id="TransportDocument_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Auto43dcf656-9a66-46ae-9c6c-e3400328ddb4">
+              <TabbedGroup Id="Item2">
+                <LayoutGroup Id="TransportDocument" Caption="Taşıma Evrakı" />
+              </TabbedGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Autoe6c0c0b9-0c46-491f-a385-a5fca3468e27">
+              <LayoutGroup Id="Autob895ec72-90ad-49a8-b3e4-9739a3c2210a">
+                <LayoutGroup Id="OtherTransactions" Caption="Hareketler" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Vehicle_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Vehicle" Caption="Araç" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="VehicleControlDocument_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="VehicleControlDocument" Caption="Araç Kontrol Formu" />
+            <LayoutGroup Id="Autocd350a37-cd35-4831-a7aa-68235eef5f01">
+              <LayoutGroup Id="HazardousGoods" Caption="Tehlikeli Madde" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="VehicleDriver_DetailView" Caption="Şoför">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="VehicleDriver" Caption="Şoför" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="VehicleDriver_Documents_ListView" Caption="Şoför Belge" />
+    <ListView Id="VehicleDriver_ListView" Caption="Şoför" />
+    <ListView Id="VehicleDriver_LookupListView" Caption="Şoför" />
+    <DetailView Id="VehicleDriverDocument_DetailView" Caption="Şoför Belge" />
+    <ListView Id="VehicleDriverDocument_ListView" Caption="Şoför Belge" />
+    <ListView Id="VehicleDriverDocument_LookupListView" Caption="Şoför Belge" />
+    <DetailView Id="VoyageNotification_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="VoyageNotification" Caption="U-ETDS Raporları" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="VoyageNotificationTransaction_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <TabbedGroup Id="Item5">
+              <LayoutGroup Id="VoyageNotificationTransaction" Caption="UETDS Hareketi" />
+            </TabbedGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

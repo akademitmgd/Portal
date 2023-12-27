@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Application>
+<Application Title="Akademi TMGD">
   <NavigationItems>
     <Items>
       <Item Id="Workspace" Index="0" ImageName="BO_Scheduler">
@@ -55,6 +55,90 @@
     <SchemaModule Name="SystemModule" Version="22.2.4.0" IsNewNode="True" />
   </SchemaModules>
   <Views>
+    <DetailView Id="Activity_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="24.257425742574256">
+            <LayoutGroup Id="Activity" RelativeSize="100">
+              <LayoutGroup Id="Activity_col1" RelativeSize="50">
+                <LayoutItem Id="Owner" ViewItem="Owner" Index="0" RelativeSize="20" IsNewNode="True" />
+                <LayoutItem Id="Code" Index="1" RelativeSize="15" />
+                <LayoutItem Id="ActivityCertificate" Index="2" RelativeSize="15" />
+                <LayoutGroup Id="Auto0581ea5f-2225-46fb-ab6f-9126d5e20fe3" ShowCaption="False" Caption="" Direction="Horizontal" Index="3" RelativeSize="50" IsNewNode="True">
+                  <LayoutGroup Id="Autob07214ab-a683-4c7d-8b5e-94aeac723024" ShowCaption="False" Caption="" Index="0" RelativeSize="50" IsNewNode="True">
+                    <LayoutItem Id="BeginDate" ViewItem="BeginDate" Index="0" RelativeSize="30" IsNewNode="True" />
+                    <LayoutItem Id="EndDate" ViewItem="EndDate" Index="1" RelativeSize="70" IsNewNode="True" />
+                  </LayoutGroup>
+                  <LayoutGroup Id="Auto1b8b8924-f18a-4c69-8bfb-e307eedcf5ec" ShowCaption="False" Caption="" Index="1" RelativeSize="50" IsNewNode="True">
+                    <LayoutItem Id="BeginTime" ViewItem="BeginTime" Index="0" RelativeSize="30" IsNewNode="True" />
+                    <LayoutItem Id="EndTime" ViewItem="EndTime" Index="1" RelativeSize="70" IsNewNode="True" />
+                  </LayoutGroup>
+                </LayoutGroup>
+                <LayoutItem Id="BeginDate" Index="3" RelativeSize="7.894736842105263" Removed="True" />
+                <LayoutItem Id="BeginTime" Index="4" RelativeSize="7.894736842105263" Removed="True" />
+                <LayoutItem Id="Consignor" Index="4" RelativeSize="7.317073170731708" Removed="True" />
+                <LayoutItem Id="DateOfValidity" Index="4" RelativeSize="6.818181818181818" Removed="True" />
+                <LayoutItem Id="Carrier" Index="5" RelativeSize="7.317073170731708" Removed="True" />
+                <LayoutItem Id="Sector" Index="5" RelativeSize="8.571428571428571" Removed="True" />
+                <LayoutItem Id="Consignee" Index="6" RelativeSize="7.317073170731708" Removed="True" />
+                <LayoutItem Id="Customer" Index="7" RelativeSize="7.894736842105263" Removed="True" />
+                <LayoutItem Id="CustomerContact" Index="7" RelativeSize="8.571428571428571" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Activity_col2" RelativeSize="50">
+                <LayoutItem Id="Customer" ViewItem="Customer" Index="0" RelativeSize="20" IsNewNode="True" />
+                <LayoutItem Id="CustomerContact" ViewItem="CustomerContact" Index="1" RelativeSize="15" IsNewNode="True" />
+                <LayoutItem Id="Sector" ViewItem="Sector" Index="2" RelativeSize="15" IsNewNode="True" />
+                <LayoutItem Id="Address" RelativeSize="15" Index="3" />
+                <LayoutItem Id="TMGDCertificate" RelativeSize="15" Index="4" />
+                <LayoutItem Id="DateOfValidity" ViewItem="DateOfValidity" Index="5" RelativeSize="20" IsNewNode="True" />
+                <LayoutItem Id="Filler" RelativeSize="7.894736842105263" Index="5" Removed="True" />
+                <LayoutItem Id="Loader" RelativeSize="9.375" Index="5" Removed="True" />
+                <LayoutItem Id="Packer" RelativeSize="8.571428571428571" Index="5" Removed="True" />
+                <LayoutItem Id="TankContainer" RelativeSize="60.97560975609756" Index="5" Removed="True" />
+                <LayoutItem Id="Unloader" RelativeSize="9.375" Index="5" Removed="True" />
+                <LayoutItem Id="EndDate" Index="10" RelativeSize="7.894736842105263" Removed="True" />
+                <LayoutItem Id="EndTime" Index="10" RelativeSize="11.428571428571429" Removed="True" />
+                <LayoutItem Id="Owner" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="Item1" ShowCaption="False" CaptionLocation="Top" Index="1" RelativeSize="7.054455445544554" Caption="Item1" Direction="Horizontal" IsNewNode="True">
+            <LayoutGroup Id="Auto9c17e9ce-788d-4aa0-9b1f-322542b54b12" ShowCaption="False" Caption="" Index="0" RelativeSize="24.954627949183305" IsNewNode="True">
+              <LayoutItem Id="Consignor" ViewItem="Consignor" Index="0" RelativeSize="47.36842105263158" IsNewNode="True" />
+              <LayoutItem Id="Loader" ViewItem="Loader" Index="1" RelativeSize="52.63157894736842" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="Auto3069355d-2011-45b0-a7f5-0d08473280bc" ShowCaption="False" Caption="" Direction="Horizontal" Index="1" RelativeSize="75.0453720508167" IsNewNode="True">
+              <LayoutGroup Id="Autoda2201de-f194-4690-912a-f57068053d86" ShowCaption="False" Caption="" Index="0" RelativeSize="33.37363966142684" IsNewNode="True">
+                <LayoutItem Id="Consignee" ViewItem="Consignee" Index="0" RelativeSize="47.36842105263158" IsNewNode="True" />
+                <LayoutItem Id="Filler" ViewItem="Filler" Index="1" RelativeSize="52.63157894736842" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Auto469853f7-decd-4ea7-9090-3b99a464c177" ShowCaption="False" Caption="" Direction="Horizontal" Index="1" RelativeSize="66.62636033857315" IsNewNode="True">
+                <LayoutGroup Id="Autoaad4e40c-b8f2-4b0a-8eb3-975502d29eac" ShowCaption="False" Caption="" Index="0" RelativeSize="49.90925589836661" IsNewNode="True">
+                  <LayoutItem Id="Carrier" ViewItem="Carrier" Index="0" RelativeSize="47.36842105263158" IsNewNode="True" />
+                  <LayoutItem Id="Packer" ViewItem="Packer" Index="1" RelativeSize="52.63157894736842" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutGroup Id="Auto2deb0cb6-d83b-4c39-bce1-3ff128da9b8a" ShowCaption="False" Caption="" Index="1" RelativeSize="50.09074410163339" IsNewNode="True">
+                  <LayoutItem Id="Unloader" ViewItem="Unloader" Index="0" RelativeSize="47.36842105263158" IsNewNode="True" />
+                  <LayoutItem Id="TankContainer" ViewItem="TankContainer" Index="1" RelativeSize="52.63157894736842" IsNewNode="True" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="Lines_Group" Direction="Vertical" RelativeSize="68.68811881188118" Index="2">
+            <LayoutItem Id="Lines" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Activity_Lines_ListView">
+      <Columns>
+        <ColumnInfo Id="DueDate" Width="89" Index="-1" />
+        <ColumnInfo Id="LineNumber" Width="84" Index="0" SortIndex="0" SortOrder="Ascending" />
+        <ColumnInfo Id="Subject" Width="57" Index="1" SortIndex="-1" SortOrder="None" />
+        <ColumnInfo Id="Description" Index="2" Width="78" />
+        <ColumnInfo Id="Owner" Width="72" Index="3" />
+      </Columns>
+    </ListView>
     <ListView Id="Activity_ListView">
       <Columns>
         <ColumnInfo Id="ActivityCertificate" Width="117" Index="-1" />
@@ -80,6 +164,55 @@
         <ColumnInfo Id="Owner" Width="55" Index="4" />
       </Columns>
     </ListView>
+    <DetailView Id="ActivityLine_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="18.339529120198264">
+            <LayoutGroup Id="ActivityLine" RelativeSize="100" Direction="Vertical">
+              <LayoutGroup Id="ActivityLine_col1" RelativeSize="100">
+                <LayoutItem Id="LineNumber" Index="0" RelativeSize="28.571428571428573" />
+                <LayoutItem Id="Subject" Index="1" RelativeSize="21.428571428571427" />
+                <LayoutItem Id="SubjectDescription" Index="2" RelativeSize="21.428571428571427" />
+                <LayoutItem Id="Owner" ViewItem="Owner" Index="3" RelativeSize="28.571428571428573" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="ActivityLine_col2" RelativeSize="50" Removed="True">
+                <LayoutItem Id="DueDate" Index="0" RelativeSize="100" Removed="True" />
+                <LayoutItem Id="Owner" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="81.66047087980174">
+            <LayoutItem Id="Description" CaptionLocation="Top" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ActivityReport_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="15.346534653465346">
+            <LayoutGroup Id="ActivityReport" RelativeSize="100">
+              <LayoutGroup Id="ActivityReport_col1" RelativeSize="50">
+                <LayoutItem Id="Code" RelativeSize="36.36363636363637" />
+                <LayoutItem Id="Colsultant" RelativeSize="27.272727272727273" />
+                <LayoutItem Id="TMGDCertificate" RelativeSize="36.36363636363637" />
+              </LayoutGroup>
+              <LayoutGroup Id="ActivityReport_col2" RelativeSize="50">
+                <LayoutItem Id="CreatedOn" RelativeSize="36.36363636363637" />
+                <LayoutItem Id="Customer" RelativeSize="27.272727272727273" />
+                <LayoutItem Id="ActivityCertificateCode" RelativeSize="36.36363636363637" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="42.32673267326733">
+            <LayoutItem Id="Description" CaptionLocation="Top" RelativeSize="100" />
+          </LayoutGroup>
+          <LayoutGroup Id="Transactions_Group" Direction="Vertical" RelativeSize="42.32673267326733">
+            <LayoutItem Id="Transactions" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
     <ListView Id="ActivityReport_ListView">
       <Columns>
         <ColumnInfo Id="ActivityCertificateCode" Width="148" Index="-1" />
@@ -91,12 +224,45 @@
         <ColumnInfo Id="Colsultant" Width="74" Index="3" />
       </Columns>
     </ListView>
+    <ListView Id="ActivitySubject_LookupListView">
+      <Sorting>
+        <SortProperty Id="CodeAsc" PropertyName="Code" IsNewNode="True" />
+      </Sorting>
+    </ListView>
+    <ListView Id="ActivitySubjectDesc_LookupListView">
+      <Sorting>
+        <SortProperty Id="CodeAsc" PropertyName="Code" IsNewNode="True" />
+      </Sorting>
+    </ListView>
+    <DetailView Id="Announcement_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="7.673267326732673">
+            <LayoutGroup Id="Announcement" RelativeSize="100">
+              <LayoutItem Id="Title" RelativeSize="51.61290322580645" />
+              <LayoutItem Id="IsActive" RelativeSize="48.38709677419355" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="46.163366336633665">
+            <LayoutItem Id="Description" CaptionLocation="Top" RelativeSize="100" />
+          </LayoutGroup>
+          <LayoutGroup Id="Users_Group" Direction="Vertical" RelativeSize="46.163366336633665">
+            <LayoutItem Id="Users" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
     <ListView Id="AnnualWorkPlan_ListView">
       <Columns>
         <ColumnInfo Id="Customer" Width="72" />
         <ColumnInfo Id="CustomerContact" Width="117" />
         <ColumnInfo Id="CreatedOn" Width="80" SortIndex="0" SortOrder="Descending" />
         <ColumnInfo Id="Owner" Width="55" />
+      </Columns>
+    </ListView>
+    <ListView Id="AuditDeterminationForm_LegalStatutes_ListView">
+      <Columns>
+        <ColumnInfo Id="DefaultLegalLegislation" Width="136" />
       </Columns>
     </ListView>
     <ListView Id="AuditDeterminationForm_ListView">
@@ -158,6 +324,154 @@
         <ColumnInfo Id="Company" Width="72" Index="3" />
       </Columns>
     </ListView>
+    <ListView Id="Customer_Consignees_ListView">
+      <Columns>
+        <ColumnInfo Id="City" Width="39" Index="-1" />
+        <ColumnInfo Id="Country" Width="59" Index="-1" />
+        <ColumnInfo Id="EMail" Width="44" Index="-1" />
+        <ColumnInfo Id="TaxNumber" Width="78" Index="-1" />
+        <ColumnInfo Id="TaxOffice" Index="-1" />
+        <ColumnInfo Id="Telephone" Index="-1" />
+        <ColumnInfo Id="Code" Width="45" Index="0" />
+        <ColumnInfo Id="ShortName" Width="89" Index="1" />
+        <ColumnInfo Id="ConsigneeType" Width="97" Index="2" />
+        <ColumnInfo Id="Owner" Width="52" Index="3" />
+      </Columns>
+    </ListView>
+    <ListView Id="Customer_Contacts_ListView">
+      <Columns>
+        <ColumnInfo Id="Address" Width="59" Index="-1" />
+        <ColumnInfo Id="City" Width="39" Index="-1" />
+        <ColumnInfo Id="Country" Width="59" Index="-1" />
+        <ColumnInfo Id="County" Width="55" Index="-1" />
+        <ColumnInfo Id="OtherTelephone" Width="101" Index="-1" />
+        <ColumnInfo Id="RegistrationNumber" Width="118" Index="-1" />
+        <ColumnInfo Id="TCKN" Width="46" Index="-1" />
+        <ColumnInfo Id="Name" Width="60" />
+        <ColumnInfo Id="Telephone" Index="1" />
+        <ColumnInfo Id="EMail" Width="44" Index="2" />
+        <ColumnInfo Id="IsActive" Width="62" Index="3" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Customer_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <TabbedGroup Id="Item1" CaptionLocation="Top" Index="0" RelativeSize="100" IsNewNode="True">
+              <LayoutGroup Id="Customer" ShowCaption="True" Direction="Horizontal" Index="0" RelativeSize="100" IsNewNode="True">
+                <LayoutGroup Id="Customer_col1" ShowCaption="False" Index="0" RelativeSize="49.907407407407405" IsNewNode="True">
+                  <LayoutItem Id="IsActive" ViewItem="IsActive" Index="0" RelativeSize="4.221635883905013" IsNewNode="True" />
+                  <LayoutItem Id="Code" ViewItem="Code" Index="1" RelativeSize="3.1662269129287597" IsNewNode="True" />
+                  <LayoutItem Id="Title" ViewItem="Title" Index="2" RelativeSize="3.1662269129287597" IsNewNode="True" />
+                  <LayoutItem Id="IsPerson" ViewItem="IsPerson" Index="3" RelativeSize="3.1662269129287597" IsNewNode="True" />
+                  <LayoutItem Id="TCKN" ViewItem="TCKN" Index="4" RelativeSize="3.1662269129287597" IsNewNode="True" />
+                  <LayoutItem Id="FirstName" ViewItem="FirstName" Index="5" RelativeSize="3.1662269129287597" IsNewNode="True" />
+                  <LayoutItem Id="LastName" ViewItem="LastName" Index="6" RelativeSize="3.1662269129287597" IsNewNode="True" />
+                  <LayoutItem Id="TaxOffice" ViewItem="TaxOffice" Index="7" RelativeSize="3.1662269129287597" IsNewNode="True" />
+                  <LayoutItem Id="TaxNumber" ViewItem="TaxNumber" Index="8" RelativeSize="3.1662269129287597" IsNewNode="True" />
+                  <LayoutItem Id="Sector" ViewItem="Sector" Index="9" RelativeSize="3.1662269129287597" IsNewNode="True" />
+                  <LayoutItem Id="Consultant" ViewItem="Consultant" Index="10" RelativeSize="3.1662269129287597" IsNewNode="True" />
+                  <LayoutItem Id="IsOnlineTransaction" ViewItem="IsOnlineTransaction" Index="11" RelativeSize="3.1662269129287597" IsNewNode="True" />
+                  <LayoutGroup Id="Item2" ShowCaption="True" Caption="Contact" CaptionLocation="Top" Index="12" RelativeSize="60.949868073878626" IsNewNode="True">
+                    <LayoutItem Id="Country" ViewItem="Country" Index="0" RelativeSize="7.459207459207459" IsNewNode="True" />
+                    <LayoutItem Id="City" ViewItem="City" Index="1" RelativeSize="5.594405594405594" IsNewNode="True" />
+                    <LayoutItem Id="County" ViewItem="County" Index="2" RelativeSize="5.594405594405594" IsNewNode="True" />
+                    <LayoutItem Id="Telephone" ViewItem="Telephone" Index="3" RelativeSize="5.594405594405594" IsNewNode="True" />
+                    <LayoutItem Id="OtherTelephone" ViewItem="OtherTelephone" Index="4" RelativeSize="5.594405594405594" IsNewNode="True" />
+                    <LayoutItem Id="EMail" ViewItem="EMail" Index="5" RelativeSize="5.594405594405594" IsNewNode="True" />
+                    <LayoutItem Id="Address" ViewItem="Address" Index="6" RelativeSize="64.56876456876456" IsNewNode="True" />
+                  </LayoutGroup>
+                </LayoutGroup>
+                <LayoutGroup Id="Customer_col2" ShowCaption="False" Index="1" RelativeSize="50.092592592592595" Caption="Customer_col2" IsNewNode="True">
+                  <LayoutItem Id="CustomerImage" ViewItem="CustomerImage" Index="0" RelativeSize="4.221635883905013" CaptionLocation="Top" ShowCaption="False" IsNewNode="True" />
+                  <LayoutGroup Id="Item4" ShowCaption="True" CaptionLocation="Top" Index="1" RelativeSize="14.907651715039577" Caption="Activity Document" IsNewNode="True">
+                    <LayoutItem Id="ActivityCertificate" ViewItem="ActivityCertificate" Index="0" RelativeSize="36.36363636363637" IsNewNode="True" />
+                    <LayoutItem Id="ActivityCertificateCode" ViewItem="ActivityCertificateCode" Index="1" RelativeSize="27.272727272727273" IsNewNode="True" />
+                    <LayoutItem Id="ActivityCertificateDate" ViewItem="ActivityCertificateDate" Index="2" RelativeSize="36.36363636363637" IsNewNode="True" />
+                  </LayoutGroup>
+                  <LayoutGroup Id="Item3" ShowCaption="True" Caption="Activity Subject" CaptionLocation="Top" Index="2" RelativeSize="80.87071240105541" IsNewNode="True">
+                    <LayoutItem Id="Carrier" ViewItem="Carrier" Index="0" RelativeSize="5.517241379310345" IsNewNode="True" />
+                    <LayoutItem Id="Consignee" ViewItem="Consignee" Index="1" RelativeSize="4.137931034482759" IsNewNode="True" />
+                    <LayoutItem Id="Loader" ViewItem="Loader" Index="2" RelativeSize="4.137931034482759" IsNewNode="True" />
+                    <LayoutItem Id="Unloader" ViewItem="Unloader" Index="3" RelativeSize="4.137931034482759" IsNewNode="True" />
+                    <LayoutItem Id="Packer" ViewItem="Packer" Index="4" RelativeSize="4.137931034482759" IsNewNode="True" />
+                    <LayoutItem Id="Filler" ViewItem="Filler" Index="5" RelativeSize="4.137931034482759" IsNewNode="True" />
+                    <LayoutItem Id="TankContainer" ViewItem="TankContainer" Index="6" RelativeSize="4.137931034482759" IsNewNode="True" />
+                    <LayoutItem Id="Consignor" ViewItem="Consignor" Index="7" RelativeSize="69.65517241379311" IsNewNode="True" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="Contacts" ShowCaption="True" Index="1" RelativeSize="100" IsNewNode="True">
+                <LayoutItem Id="Contacts" ViewItem="Contacts" Index="0" RelativeSize="100" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Consignees" ShowCaption="True" Index="2" RelativeSize="100" IsNewNode="True">
+                <LayoutItem Id="Consignees" ViewItem="Consignees" Index="0" RelativeSize="100" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Inventories" ShowCaption="True" Index="3" RelativeSize="100" IsNewNode="True">
+                <LayoutItem Id="Inventories" ViewItem="Inventories" Index="0" RelativeSize="100" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Vehicles" ShowCaption="True" Index="4" RelativeSize="100" IsNewNode="True">
+                <LayoutItem Id="Vehicles" ViewItem="Vehicles" Index="0" RelativeSize="100" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Drivers" ShowCaption="True" Index="5" RelativeSize="100" IsNewNode="True">
+                <LayoutItem Id="Drivers" ViewItem="Drivers" Index="0" RelativeSize="100" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="DefaultVehicleDocumentTransactions" ShowCaption="True" Caption="Default Vehicle Document Transactions" Index="6" RelativeSize="100" IsNewNode="True">
+                <LayoutItem Id="DefaultVehicleDocumentTransactions" ViewItem="DefaultVehicleDocumentTransactions" Index="0" RelativeSize="100" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Documents" ShowCaption="True" Index="7" RelativeSize="100" IsNewNode="True">
+                <LayoutItem Id="Documents" ViewItem="Documents" Index="0" RelativeSize="100" IsNewNode="True" />
+              </LayoutGroup>
+            </TabbedGroup>
+            <LayoutGroup Id="Customer" Removed="True" />
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="44.554455445544555" Removed="True">
+            <LayoutGroup Id="DefaultVehicleDocumentTransactions" RelativeSize="100" Index="0" Removed="True">
+              <LayoutItem Id="DefaultVehicleDocumentTransactions" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="Documents" RelativeSize="100" Index="0" Removed="True">
+              <LayoutItem Id="Documents" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="Drivers" RelativeSize="100" Index="0" Removed="True">
+              <LayoutItem Id="Drivers" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="Vehicles" RelativeSize="100" Index="0" Removed="True">
+              <LayoutItem Id="Vehicles" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="Consignees" RelativeSize="100" Index="4" Removed="True">
+              <LayoutItem Id="Consignees" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="Inventories" RelativeSize="100" Index="4" Removed="True">
+              <LayoutItem Id="Inventories" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="Contacts" RelativeSize="100" Removed="True">
+              <LayoutItem Id="Contacts" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Customer_Inventories_ListView">
+      <Columns>
+        <ColumnInfo Id="FactoryDepartment" Width="117" Index="-1" />
+        <ColumnInfo Id="Image" Width="40" Index="-1" />
+        <ColumnInfo Id="MSDSDateOfValidity" Width="122" Index="-1" />
+        <ColumnInfo Id="MSDSStatus" Width="78" Index="-1" />
+        <ColumnInfo Id="PackagingTypes" Width="100" Index="-1" />
+        <ColumnInfo Id="TotalPurchaseQuantity" Width="136" Index="-1" />
+        <ColumnInfo Id="TotalSalesQuantity" Width="117" Index="-1" />
+        <ColumnInfo Id="Unitset" Width="54" Index="-1" />
+        <ColumnInfo Id="WastePhysicalState" Width="121" Index="-1" />
+        <ColumnInfo Id="IsActive" Width="62" Index="0" />
+        <ColumnInfo Id="ProductType" Width="84" Index="1" />
+        <ColumnInfo Id="ProductGroupType" Width="116" Index="2" />
+        <ColumnInfo Id="Code" Width="45" Index="3" />
+        <ColumnInfo Id="WasteCode" Width="79" Index="4" />
+        <ColumnInfo Id="Name" Width="60" Index="5" />
+        <ColumnInfo Id="WasteName" Width="81" Index="6" />
+        <ColumnInfo Id="HazardousGoods" Width="104" Index="7" />
+      </Columns>
+    </ListView>
     <ListView Id="Customer_ListView">
       <Columns>
         <ColumnInfo Id="ActivityCertificate" Width="117" Index="-1" />
@@ -187,6 +501,27 @@
         <ColumnInfo Id="Consultant" Width="78" Index="4" />
       </Columns>
     </ListView>
+    <ListView Id="Customer_Vehicles_ListView">
+      <Columns>
+        <ColumnInfo Id="Code" Width="45" Index="0" />
+        <ColumnInfo Id="Plate" Width="57" Index="1" />
+        <ColumnInfo Id="VehicleType" Width="80" Index="2" />
+        <ColumnInfo Id="Name" Width="47" />
+        <ColumnInfo Id="InsurancePolicy" Width="98" />
+        <ColumnInfo Id="TmgdInsurancePolicy" Width="127" />
+        <ColumnInfo Id="AdrInspectionDate" Width="116" />
+        <ColumnInfo Id="AdrInspectionThreeYearly" Width="154" />
+        <ColumnInfo Id="AdrInspectionSixYearly" Width="140" />
+        <ColumnInfo Id="TuvTurkInpectionDate" Width="136" />
+        <ColumnInfo Id="ExhaustInspectionDate" Width="138" />
+        <ColumnInfo Id="MaxWeight" Width="77" />
+        <ColumnInfo Id="DocumentType" Width="95" />
+        <ColumnInfo Id="DocumentNumber" Width="108" />
+        <ColumnInfo Id="DocumentValidityDate" Width="131" />
+        <ColumnInfo Id="InspectionValidityDate" Width="133" />
+        <ColumnInfo Id="ExtinguisherDate" Width="105" />
+      </Columns>
+    </ListView>
     <ListView Id="CustomFile_ListView">
       <Columns>
         <ColumnInfo Id="Owner" Index="-1" />
@@ -194,6 +529,82 @@
         <ColumnInfo Id="CreatedOn" Index="1" Width="80" />
       </Columns>
     </ListView>
+    <DetailView Id="DistributionOfTask_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="27.22772277227723">
+            <LayoutGroup Id="DistributionOfTask" RelativeSize="87.72727272727273">
+              <LayoutGroup Id="DistributionOfTask_col1" RelativeSize="50">
+                <LayoutItem Id="Code" Index="0" RelativeSize="20" />
+                <LayoutItem Id="Owner" ViewItem="Owner" Index="1" RelativeSize="15" IsNewNode="True" />
+                <LayoutItem Id="ActivityCertificate" Index="2" RelativeSize="15" />
+                <LayoutItem Id="BeginDate" Index="3" RelativeSize="7.317073170731708" Removed="True" />
+                <LayoutItem Id="DateOfValidity" Index="3" RelativeSize="15" />
+                <LayoutGroup Id="Autoc902dd6d-edc4-466a-bd04-1197347ba301" ShowCaption="False" Caption="" Direction="Horizontal" Index="4" RelativeSize="35" IsNewNode="True">
+                  <LayoutGroup Id="Autof73fa4cc-fc71-4a86-ab01-9f9d4a3561ef" ShowCaption="False" Caption="" Index="0" RelativeSize="50" IsNewNode="True">
+                    <LayoutItem Id="BeginDate" ViewItem="BeginDate" Index="0" RelativeSize="42.857142857142854" IsNewNode="True" />
+                    <LayoutItem Id="EndDate" ViewItem="EndDate" Index="1" RelativeSize="57.142857142857146" IsNewNode="True" />
+                  </LayoutGroup>
+                  <LayoutGroup Id="Auto045cd78c-b070-4f5c-bada-0c3a57dbf911" ShowCaption="False" Caption="" Index="1" RelativeSize="50" IsNewNode="True">
+                    <LayoutItem Id="BeginTime" ViewItem="BeginTime" Index="0" RelativeSize="42.857142857142854" IsNewNode="True" />
+                    <LayoutItem Id="EndTime" ViewItem="EndTime" Index="1" RelativeSize="57.142857142857146" IsNewNode="True" />
+                  </LayoutGroup>
+                </LayoutGroup>
+                <LayoutItem Id="BeginTime" Index="4" RelativeSize="7.317073170731708" Removed="True" />
+                <LayoutItem Id="Carrier" Index="5" RelativeSize="6.956521739130435" Removed="True" />
+                <LayoutItem Id="Consignee" Index="5" RelativeSize="58.80758807588076" Removed="True" />
+                <LayoutItem Id="Consignor" Index="5" RelativeSize="7.4766355140186915" Removed="True" />
+                <LayoutItem Id="Sector" Index="5" RelativeSize="7.894736842105263" Removed="True" />
+                <LayoutItem Id="Customer" Index="7" RelativeSize="7.894736842105263" Removed="True" />
+                <LayoutItem Id="CustomerContact" Index="7" RelativeSize="8.571428571428571" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="DistributionOfTask_col2" RelativeSize="50">
+                <LayoutItem Id="Customer" ViewItem="Customer" Index="0" RelativeSize="20" IsNewNode="True" />
+                <LayoutItem Id="CustomerContact" ViewItem="CustomerContact" Index="1" RelativeSize="15" IsNewNode="True" />
+                <LayoutItem Id="Sector" ViewItem="Sector" Index="2" RelativeSize="15" IsNewNode="True" />
+                <LayoutItem Id="Address" RelativeSize="15" Index="3" />
+                <LayoutItem Id="TMGDCertificate" RelativeSize="35" Index="4" />
+                <LayoutItem Id="Loader" RelativeSize="8.571428571428571" Index="5" Removed="True" />
+                <LayoutItem Id="Statute" Index="5" RelativeSize="20" Removed="True" />
+                <LayoutItem Id="Unloader" RelativeSize="8.571428571428571" Index="6" Removed="True" />
+                <LayoutItem Id="Packer" RelativeSize="8.571428571428571" Index="7" Removed="True" />
+                <LayoutItem Id="Filler" RelativeSize="8.571428571428571" Index="8" Removed="True" />
+                <LayoutItem Id="TankContainer" RelativeSize="8.571428571428571" Index="9" Removed="True" />
+                <LayoutItem Id="EndDate" Index="10" RelativeSize="7.317073170731708" Removed="True" />
+                <LayoutItem Id="EndTime" Index="10" RelativeSize="7.894736842105263" Removed="True" />
+                <LayoutItem Id="Owner" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutItem Id="Statute" ViewItem="Statute" Index="1" RelativeSize="12.272727272727273" IsNewNode="True" />
+          </LayoutGroup>
+          <LayoutGroup Id="Item1" ShowCaption="False" CaptionLocation="Top" Index="1" RelativeSize="7.054455445544554" Caption="Item1" Direction="Horizontal" IsNewNode="True">
+            <LayoutGroup Id="Autobd077805-985b-4f52-ae55-0b5c5e82c5b0" ShowCaption="False" Caption="" Index="0" RelativeSize="24.954627949183305" IsNewNode="True">
+              <LayoutItem Id="Loader" ViewItem="Loader" Index="0" RelativeSize="47.36842105263158" IsNewNode="True" />
+              <LayoutItem Id="Carrier" ViewItem="Carrier" Index="1" RelativeSize="52.63157894736842" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="Autoe0259d90-76e3-4725-aa1d-7333ac879729" ShowCaption="False" Caption="" Direction="Horizontal" Index="1" RelativeSize="75.0453720508167" IsNewNode="True">
+              <LayoutGroup Id="Autob601f17e-5eb5-4cb4-87b5-2f919093fb55" ShowCaption="False" Caption="" Index="0" RelativeSize="33.37363966142684" IsNewNode="True">
+                <LayoutItem Id="Unloader" ViewItem="Unloader" Index="0" RelativeSize="47.36842105263158" IsNewNode="True" />
+                <LayoutItem Id="Packer" ViewItem="Packer" Index="1" RelativeSize="52.63157894736842" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Auto8a7af295-a727-4339-860d-baa797616e2c" ShowCaption="False" Caption="" Direction="Horizontal" Index="1" RelativeSize="66.62636033857315" IsNewNode="True">
+                <LayoutGroup Id="Auto2d26cb67-09a8-4f0b-9c60-9a7474e6841e" ShowCaption="False" Caption="" Index="0" RelativeSize="49.90925589836661" IsNewNode="True">
+                  <LayoutItem Id="Consignee" ViewItem="Consignee" Index="0" RelativeSize="47.36842105263158" IsNewNode="True" />
+                  <LayoutItem Id="Consignor" ViewItem="Consignor" Index="1" RelativeSize="52.63157894736842" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutGroup Id="Autocd7719ea-aa3f-491a-b50e-e61a47fcae0d" ShowCaption="False" Caption="" Index="1" RelativeSize="50.09074410163339" IsNewNode="True">
+                  <LayoutItem Id="Filler" ViewItem="Filler" Index="0" RelativeSize="47.36842105263158" IsNewNode="True" />
+                  <LayoutItem Id="TankContainer" ViewItem="TankContainer" Index="1" RelativeSize="52.63157894736842" IsNewNode="True" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="Subjects_Group" Direction="Vertical" RelativeSize="65.71782178217822" Index="2">
+            <LayoutItem Id="Subjects" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
     <ListView Id="DistributionOfTask_ListView">
       <Columns>
         <ColumnInfo Id="Address" Width="62" Index="-1" />
@@ -219,6 +630,42 @@
         <ColumnInfo Id="ActivityCertificate" Width="117" Index="4" />
       </Columns>
     </ListView>
+    <ListView Id="DistributionOfTask_Subjects_ListView" MasterDetailMode="ListViewAndDetailView" />
+    <ListView Id="DistributionOfTaskSubject_Details_ListView">
+      <Columns>
+        <ColumnInfo Id="DistributionOfTaskSubject" Index="-1" />
+        <ColumnInfo Id="Description" Index="0" Width="71" />
+      </Columns>
+    </ListView>
+    <DetailView Id="DrillForm_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="21.287128712871286">
+            <LayoutGroup Id="DrillForm" RelativeSize="100">
+              <LayoutGroup Id="DrillForm_col1" RelativeSize="50">
+                <LayoutItem Id="Code" RelativeSize="23.529411764705884" />
+                <LayoutItem Id="Owner" RelativeSize="17.647058823529413" />
+                <LayoutItem Id="Customer" RelativeSize="17.647058823529413" />
+                <LayoutItem Id="Address" RelativeSize="17.647058823529413" />
+                <LayoutItem Id="CreatedOn" RelativeSize="23.529411764705884" />
+              </LayoutGroup>
+              <LayoutGroup Id="DrillForm_col2" RelativeSize="50">
+                <LayoutItem Id="DrillType" RelativeSize="23.529411764705884" />
+                <LayoutItem Id="Subject" RelativeSize="17.647058823529413" />
+                <LayoutItem Id="DrillStartDate" RelativeSize="17.647058823529413" />
+                <LayoutItem Id="DrillStartTime" RelativeSize="41.1764705882353" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="39.35643564356435">
+            <LayoutItem Id="DrillScenario" CaptionLocation="Top" RelativeSize="100" />
+          </LayoutGroup>
+          <LayoutGroup Id="ControlLists_Group" Direction="Vertical" RelativeSize="39.35643564356435">
+            <LayoutItem Id="ControlLists" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
     <ListView Id="DrillForm_ListView">
       <Columns>
         <ColumnInfo Id="Address" Width="62" Index="-1" />
@@ -232,6 +679,32 @@
         <ColumnInfo Id="Owner" Width="55" Index="3" />
       </Columns>
     </ListView>
+    <DetailView Id="Education_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="15.346534653465346">
+            <LayoutGroup Id="Education" RelativeSize="100">
+              <LayoutGroup Id="Education_col1" RelativeSize="50">
+                <LayoutItem Id="Code" RelativeSize="36.36363636363637" />
+                <LayoutItem Id="CreatedOn" RelativeSize="27.272727272727273" />
+                <LayoutItem Id="Instructur" RelativeSize="36.36363636363637" />
+              </LayoutGroup>
+              <LayoutGroup Id="Education_col2" RelativeSize="50">
+                <LayoutItem Id="Customer" RelativeSize="36.36363636363637" />
+                <LayoutItem Id="Location" RelativeSize="27.272727272727273" />
+                <LayoutItem Id="Description" RelativeSize="36.36363636363637" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="42.32673267326733">
+            <LayoutItem Id="Subject" CaptionLocation="Top" RelativeSize="100" />
+          </LayoutGroup>
+          <LayoutGroup Id="Participants_Group" Direction="Vertical" RelativeSize="42.32673267326733">
+            <LayoutItem Id="Participants" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
     <ListView Id="Education_ListView">
       <Columns>
         <ColumnInfo Id="Description" Width="80" Index="-1" />
@@ -241,6 +714,12 @@
         <ColumnInfo Id="CreatedOn" Width="80" Index="1" SortIndex="0" SortOrder="Descending" />
         <ColumnInfo Id="Customer" Width="72" Index="2" />
         <ColumnInfo Id="Instructur" Width="71" Index="3" />
+      </Columns>
+    </ListView>
+    <ListView Id="Education_Participants_ListView">
+      <Columns>
+        <ColumnInfo Id="LineNumber" Index="0" Width="79" />
+        <ColumnInfo Id="Name" Index="1" Width="60" />
       </Columns>
     </ListView>
     <ListView Id="Lead_ListView">
@@ -253,6 +732,22 @@
         <ColumnInfo Id="EMail" Width="49" Index="3" />
       </Columns>
     </ListView>
+    <DetailView Id="Note_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="10.643564356435643">
+            <LayoutGroup Id="Note" RelativeSize="100">
+              <LayoutItem Id="Topic" RelativeSize="37.2093023255814" />
+              <LayoutItem Id="CreatedOn" RelativeSize="27.906976744186046" />
+              <LayoutItem Id="Priority" RelativeSize="34.883720930232556" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="89.35643564356435">
+            <LayoutItem Id="Description" CaptionLocation="Top" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
     <ListView Id="Product_ListView">
       <Columns>
         <ColumnInfo Id="Customer" Width="72" Index="-1" />
@@ -292,6 +787,172 @@
         <ColumnInfo Id="DateOfValidity" Width="102" Index="6" />
       </Columns>
     </ListView>
+    <DetailView Id="ReportOnOccurrence_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="13.382716049382717">
+            <LayoutGroup Id="ReportOnOccurrence" RelativeSize="100" Direction="Vertical" Caption="Kaza Raporu">
+              <LayoutGroup Id="ReportOnOccurrence_col1" RelativeSize="100">
+                <LayoutItem Id="Code" RelativeSize="13.793103448275861" />
+                <LayoutItem Id="CreatedOn" RelativeSize="10.344827586206897" />
+                <LayoutItem Id="Owner" ViewItem="Owner" Index="2" RelativeSize="10.344827586206897" IsNewNode="True" />
+                <LayoutItem Id="Customer" ViewItem="Customer" Index="3" RelativeSize="10.344827586206897" IsNewNode="True" />
+                <LayoutItem Id="CarrierRailwayInsfrastructureOperator" Index="4" RelativeSize="10.344827586206897" />
+                <LayoutItem Id="Address" Index="5" RelativeSize="10.344827586206897" />
+                <LayoutItem Id="ContactName" Index="6" RelativeSize="10.344827586206897" />
+                <LayoutItem Id="Telephone" Index="7" RelativeSize="10.344827586206897" />
+                <LayoutItem Id="Fax" Index="8" RelativeSize="13.793103448275861" />
+                <LayoutItem Id="IsRail" Index="9" RelativeSize="2.9702970297029703" Removed="True" />
+                <LayoutItem Id="DateAndLocationOfOccurrence" Index="10" RelativeSize="2.8268551236749118" Removed="True" />
+                <LayoutItem Id="IsRoad" Index="10" RelativeSize="2.8268551236749118" Removed="True" />
+                <LayoutItem Id="VehicleRegistration" Index="10" RelativeSize="2.8268551236749118" Removed="True" />
+                <LayoutItem Id="WagonNumber" Index="10" RelativeSize="2.8268551236749118" Removed="True" />
+                <LayoutItem Id="GradientIncline" Index="11" RelativeSize="2.874251497005988" Removed="True" />
+                <LayoutItem Id="OpenLine" Index="11" RelativeSize="2.874251497005988" Removed="True" />
+                <LayoutItem Id="RailLoadingUnloadingTranshipmentSite" Index="11" RelativeSize="2.696629213483146" Removed="True" />
+                <LayoutItem Id="RailLocationCountry" Index="11" RelativeSize="2.696629213483146" Removed="True" />
+                <LayoutItem Id="ShuntingMarshallingYard" Index="11" RelativeSize="2.696629213483146" Removed="True" />
+                <LayoutItem Id="Station" Index="11" RelativeSize="2.696629213483146" Removed="True" />
+                <LayoutItem Id="TimeAndLocationOfOccurrence" Index="11" RelativeSize="2.696629213483146" Removed="True" />
+                <LayoutItem Id="DescriptionOfLineKilometers" Index="12" RelativeSize="2.874251497005988" Removed="True" />
+                <LayoutItem Id="Rain" Index="12" RelativeSize="2.73972602739726" Removed="True" />
+                <LayoutItem Id="Tunnel" Index="12" RelativeSize="2.874251497005988" Removed="True" />
+                <LayoutItem Id="BridgeUnderpass" Index="13" RelativeSize="2.874251497005988" Removed="True" />
+                <LayoutItem Id="BuiltUpArea" Index="13" RelativeSize="2.577873254564984" Removed="True" />
+                <LayoutItem Id="OpenRoad" Index="13" RelativeSize="2.577873254564984" Removed="True" />
+                <LayoutItem Id="RoadLoadingUnloadingTranshipmentSite" Index="13" RelativeSize="2.577873254564984" Removed="True" />
+                <LayoutItem Id="RoadLocationCountry" Index="13" RelativeSize="2.7939464493597206" Removed="True" />
+                <LayoutItem Id="Snow" Index="13" RelativeSize="2.73972602739726" Removed="True" />
+                <LayoutItem Id="Crossing" Index="14" RelativeSize="2.874251497005988" Removed="True" />
+                <LayoutItem Id="Ice" Index="14" RelativeSize="2.73972602739726" Removed="True" />
+                <LayoutItem Id="Fog" Index="15" RelativeSize="3.65296803652968" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="ReportOnOccurrence_col2" RelativeSize="42.144873000940734" Removed="True">
+                <LayoutItem Id="CauseOfOccurrenceTechnicalFault" RelativeSize="2.618657937806874" Index="0" Removed="True" />
+                <LayoutItem Id="Death" RelativeSize="2.618657937806874" Index="0" Removed="True" />
+                <LayoutItem Id="DerailmentLeavingTheRoad" RelativeSize="3.235591506572295" Index="0" Removed="True" />
+                <LayoutItem Id="Storm" RelativeSize="3.4006376195536663" Index="0" Removed="True" />
+                <LayoutItem Id="Temperature" RelativeSize="3.316062176165803" Index="0" Removed="True" />
+                <LayoutItem Id="AdditionalDescription" RelativeSize="2.4266936299292214" Index="1" Removed="True" />
+                <LayoutItem Id="Collision" RelativeSize="2.4266936299292214" Index="1" Removed="True" />
+                <LayoutItem Id="DeathsNumber" RelativeSize="1.9639934533551555" Index="1" Removed="True" />
+                <LayoutItem Id="FaultLoadSecuring" RelativeSize="1.9639934533551555" Index="1" Removed="True" />
+                <LayoutItem Id="Injured" RelativeSize="1.9639934533551555" Index="2" Removed="True" />
+                <LayoutItem Id="OperationalCause" RelativeSize="1.9639934533551555" Index="2" Removed="True" />
+                <LayoutItem Id="OverturningRollingOver" RelativeSize="2.4266936299292214" Index="2" Removed="True" />
+                <LayoutItem Id="Fire" RelativeSize="2.4266936299292214" Index="3" Removed="True" />
+                <LayoutItem Id="InjuredNumber" RelativeSize="1.9639934533551555" Index="3" Removed="True" />
+                <LayoutItem Id="OtherCauseOfOccurrence" RelativeSize="1.9639934533551555" Index="3" Removed="True" />
+                <LayoutItem Id="Explosion" RelativeSize="2.4266936299292214" Index="4" Removed="True" />
+                <LayoutItem Id="LossOfProductYes" RelativeSize="1.9639934533551555" Index="4" Removed="True" />
+                <LayoutItem Id="OtherCauseOfOccurrenceDescription" RelativeSize="1.9639934533551555" Index="4" Removed="True" />
+                <LayoutItem Id="Loss" RelativeSize="2.4266936299292214" Index="5" Removed="True" />
+                <LayoutItem Id="LossOfProductNo" RelativeSize="1.9639934533551555" Index="5" Removed="True" />
+                <LayoutItem Id="ImminentRiskOfLossOfProduct" RelativeSize="1.9639934533551555" Index="6" Removed="True" />
+                <LayoutItem Id="TechnicalFault" RelativeSize="2.4266936299292214" Index="6" Removed="True" />
+                <LayoutItem Id="EstimatedLevelOfDamageLess" RelativeSize="1.9639934533551555" Index="7" Removed="True" />
+                <LayoutItem Id="EstimatedLevelOfDamageGreater" RelativeSize="1.9639934533551555" Index="8" Removed="True" />
+                <LayoutItem Id="InvolvementOfAuthoritiesYes" RelativeSize="1.9639934533551555" Index="9" Removed="True" />
+                <LayoutItem Id="EvacuationOfPerson" RelativeSize="1.9639934533551555" Index="10" Removed="True" />
+                <LayoutItem Id="InvolvementOfAuthoritiesNo" RelativeSize="1.9639934533551555" Index="11" Removed="True" />
+                <LayoutItem Id="ClosureOfPublic" RelativeSize="75.77741407528642" Index="12" Removed="True" />
+                <LayoutItem Id="Customer" Index="29" RelativeSize="10.204081632653061" Removed="True" />
+                <LayoutItem Id="Owner" Removed="True" />
+                <LayoutItem Id="Thunderstorm" RelativeSize="3.489640130861505" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="Item1" ShowCaption="True" Caption="1. Taşıma Türü" CaptionLocation="Top" Index="1" RelativeSize="6.765432098765432" IsNewNode="True">
+            <LayoutItem Id="IsRail" ViewItem="IsRail" Index="0" RelativeSize="28.571428571428573" IsNewNode="True" />
+            <LayoutItem Id="WagonNumber" ViewItem="WagonNumber" Index="1" RelativeSize="21.428571428571427" IsNewNode="True" />
+            <LayoutItem Id="IsRoad" ViewItem="IsRoad" Index="2" RelativeSize="21.428571428571427" IsNewNode="True" />
+            <LayoutItem Id="VehicleRegistration" ViewItem="VehicleRegistration" Index="3" RelativeSize="28.571428571428573" IsNewNode="True" />
+          </LayoutGroup>
+          <LayoutGroup Id="Item2" ShowCaption="True" Caption="2. Olayın Tarihi ve Yeri" CaptionLocation="Top" Index="2" RelativeSize="13.82716049382716" IsNewNode="True">
+            <LayoutItem Id="DateAndLocationOfOccurrence" ViewItem="DateAndLocationOfOccurrence" Index="0" RelativeSize="12.549019607843137" IsNewNode="True" />
+            <LayoutItem Id="TimeAndLocationOfOccurrence" ViewItem="TimeAndLocationOfOccurrence" Index="1" RelativeSize="9.411764705882353" IsNewNode="True" />
+            <LayoutGroup Id="Autofac06514-1ae2-499f-bb50-3fbe9f27cbf8" ShowCaption="False" Caption="" Direction="Horizontal" Index="2" RelativeSize="78.03921568627452" IsNewNode="True">
+              <LayoutGroup Id="Item3" ShowCaption="True" Caption="Rail" CaptionLocation="Top" Index="0" RelativeSize="49.858889934148635" IsNewNode="True">
+                <LayoutItem Id="Station" ViewItem="Station" Index="0" RelativeSize="20" IsNewNode="True" />
+                <LayoutItem Id="ShuntingMarshallingYard" ViewItem="ShuntingMarshallingYard" Index="1" RelativeSize="15" IsNewNode="True" />
+                <LayoutItem Id="RailLoadingUnloadingTranshipmentSite" ViewItem="RailLoadingUnloadingTranshipmentSite" Index="2" RelativeSize="15" IsNewNode="True" />
+                <LayoutItem Id="RailLocationCountry" ViewItem="RailLocationCountry" Index="3" RelativeSize="15" IsNewNode="True" />
+                <LayoutItem Id="OpenLine" ViewItem="OpenLine" Index="4" RelativeSize="15" IsNewNode="True" />
+                <LayoutItem Id="DescriptionOfLineKilometers" ViewItem="DescriptionOfLineKilometers" Index="5" RelativeSize="20" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Item4" ShowCaption="True" Caption="Road" CaptionLocation="Top" Index="1" RelativeSize="50.141110065851365" IsNewNode="True">
+                <LayoutItem Id="BuiltUpArea" ViewItem="BuiltUpArea" Index="0" RelativeSize="20" IsNewNode="True" />
+                <LayoutItem Id="OpenRoad" ViewItem="OpenRoad" Index="1" RelativeSize="15" IsNewNode="True" />
+                <LayoutItem Id="RoadLoadingUnloadingTranshipmentSite" ViewItem="RoadLoadingUnloadingTranshipmentSite" Index="2" RelativeSize="15" IsNewNode="True" />
+                <LayoutItem Id="RoadLocationCountry" ViewItem="RoadLocationCountry" Index="3" RelativeSize="50" IsNewNode="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="Item5" ShowCaption="True" Caption="3. Topografya" CaptionLocation="Top" Index="3" RelativeSize="6.765432098765432" IsNewNode="True">
+            <LayoutItem Id="GradientIncline" ViewItem="GradientIncline" Index="0" RelativeSize="28.571428571428573" IsNewNode="True" />
+            <LayoutItem Id="Tunnel" ViewItem="Tunnel" Index="1" RelativeSize="21.428571428571427" IsNewNode="True" />
+            <LayoutItem Id="BridgeUnderpass" ViewItem="BridgeUnderpass" Index="2" RelativeSize="21.428571428571427" IsNewNode="True" />
+            <LayoutItem Id="Crossing" ViewItem="Crossing" Index="3" RelativeSize="28.571428571428573" IsNewNode="True" />
+          </LayoutGroup>
+          <LayoutGroup Id="Item6" ShowCaption="True" Caption="4. Özel Hava Koşulları" CaptionLocation="Top" Index="4" RelativeSize="10.320987654320987" IsNewNode="True">
+            <LayoutItem Id="Rain" ViewItem="Rain" Index="0" RelativeSize="17.391304347826086" IsNewNode="True" />
+            <LayoutItem Id="Snow" ViewItem="Snow" Index="1" RelativeSize="13.043478260869565" IsNewNode="True" />
+            <LayoutItem Id="Ice" ViewItem="Ice" Index="2" RelativeSize="13.043478260869565" IsNewNode="True" />
+            <LayoutItem Id="Fog" ViewItem="Fog" Index="3" RelativeSize="13.043478260869565" IsNewNode="True" />
+            <LayoutItem Id="Thunderstorm" ViewItem="Thunderstorm" Index="4" RelativeSize="13.043478260869565" IsNewNode="True" />
+            <LayoutItem Id="Storm" ViewItem="Storm" Index="5" RelativeSize="13.043478260869565" IsNewNode="True" />
+            <LayoutItem Id="Temperature" ViewItem="Temperature" Index="6" RelativeSize="17.391304347826086" IsNewNode="True" />
+          </LayoutGroup>
+          <LayoutGroup Id="Item7" ShowCaption="True" Caption="5. Olayın Tanımı" CaptionLocation="Top" Index="5" RelativeSize="11.506172839506172" IsNewNode="True">
+            <LayoutItem Id="DerailmentLeavingTheRoad" ViewItem="DerailmentLeavingTheRoad" Index="0" RelativeSize="15.384615384615385" IsNewNode="True" />
+            <LayoutItem Id="Collision" ViewItem="Collision" Index="1" RelativeSize="11.538461538461538" IsNewNode="True" />
+            <LayoutItem Id="OverturningRollingOver" ViewItem="OverturningRollingOver" Index="2" RelativeSize="11.538461538461538" IsNewNode="True" />
+            <LayoutItem Id="Fire" ViewItem="Fire" Index="3" RelativeSize="11.538461538461538" IsNewNode="True" />
+            <LayoutItem Id="Explosion" ViewItem="Explosion" Index="4" RelativeSize="11.538461538461538" IsNewNode="True" />
+            <LayoutItem Id="Loss" ViewItem="Loss" Index="5" RelativeSize="11.538461538461538" IsNewNode="True" />
+            <LayoutItem Id="TechnicalFault" ViewItem="TechnicalFault" Index="6" RelativeSize="11.538461538461538" IsNewNode="True" />
+            <LayoutItem Id="AdditionalDescription" ViewItem="AdditionalDescription" Index="7" RelativeSize="15.384615384615385" IsNewNode="True" />
+          </LayoutGroup>
+          <LayoutGroup Id="DangerousGoodInvolveds_Group" Direction="Vertical" RelativeSize="5.925925925925926" Caption="6. Olaya Dahil Olan Tehlikeli Mallar" Index="6">
+            <LayoutItem Id="DangerousGoodInvolveds" RelativeSize="100" />
+          </LayoutGroup>
+          <LayoutGroup Id="Item8" ShowCaption="True" Caption="7. Olayın Nedeni (Net Olarak Biliniyorsa)" CaptionLocation="Top" Index="7" RelativeSize="7.950617283950617" IsNewNode="True">
+            <LayoutItem Id="CauseOfOccurrenceTechnicalFault" ViewItem="CauseOfOccurrenceTechnicalFault" Index="0" RelativeSize="23.529411764705884" IsNewNode="True" />
+            <LayoutItem Id="FaultLoadSecuring" ViewItem="FaultLoadSecuring" Index="1" RelativeSize="17.647058823529413" IsNewNode="True" />
+            <LayoutItem Id="OperationalCause" ViewItem="OperationalCause" Index="2" RelativeSize="17.647058823529413" IsNewNode="True" />
+            <LayoutItem Id="OtherCauseOfOccurrence" ViewItem="OtherCauseOfOccurrence" Index="3" RelativeSize="17.647058823529413" IsNewNode="True" />
+            <LayoutItem Id="OtherCauseOfOccurrenceDescription" ViewItem="OtherCauseOfOccurrenceDescription" Index="4" RelativeSize="23.529411764705884" IsNewNode="True" />
+          </LayoutGroup>
+          <LayoutGroup Id="Item9" ShowCaption="True" CaptionLocation="Top" Index="8" RelativeSize="23.555555555555557" Caption="8. Olayın Sonuçları" IsNewNode="True">
+            <LayoutGroup Id="Item10" ShowCaption="True" CaptionLocation="Top" Direction="Horizontal" Index="0" RelativeSize="21.846846846846848" Caption="Tehlikeli Mallar ile Temastan Kaynaklanan Kişisel Yaralanma" IsNewNode="True">
+              <LayoutGroup Id="Autod6f27349-aa25-4d16-b5c6-85e51a681a67" ShowCaption="False" Caption="" Index="0" RelativeSize="49.85590778097983" IsNewNode="True">
+                <LayoutItem Id="Death" ViewItem="Death" Index="0" RelativeSize="50" IsNewNode="True" />
+                <LayoutItem Id="Injured" ViewItem="Injured" Index="1" RelativeSize="50" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Auto28b20ac3-0900-463c-afbc-6c305716b2c7" ShowCaption="False" Caption="" Index="1" RelativeSize="50.14409221902017" IsNewNode="True">
+                <LayoutItem Id="DeathsNumber" ViewItem="DeathsNumber" Index="0" RelativeSize="50" IsNewNode="True" />
+                <LayoutItem Id="InjuredNumber" ViewItem="InjuredNumber" Index="1" RelativeSize="50" IsNewNode="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Item11" ShowCaption="True" CaptionLocation="Top" Index="1" RelativeSize="25.45045045045045" Caption="Ürün Kaybı" IsNewNode="True">
+              <LayoutItem Id="LossOfProductYes" ViewItem="LossOfProductYes" Index="0" RelativeSize="36.36363636363637" IsNewNode="True" />
+              <LayoutItem Id="LossOfProductNo" ViewItem="LossOfProductNo" Index="1" RelativeSize="27.272727272727273" IsNewNode="True" />
+              <LayoutItem Id="ImminentRiskOfLossOfProduct" ViewItem="ImminentRiskOfLossOfProduct" Index="2" RelativeSize="36.36363636363637" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="Item12" ShowCaption="True" CaptionLocation="Top" Index="2" RelativeSize="20.045045045045047" Caption="Malzeme Zarar / Çevresel Zarar" IsNewNode="True">
+              <LayoutItem Id="EstimatedLevelOfDamageLess" ViewItem="EstimatedLevelOfDamageLess" Index="0" RelativeSize="50" IsNewNode="True" />
+              <LayoutItem Id="EstimatedLevelOfDamageGreater" ViewItem="EstimatedLevelOfDamageGreater" Index="1" RelativeSize="50" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="Item13" ShowCaption="True" CaptionLocation="Top" Index="3" RelativeSize="32.65765765765766" Caption="Kurumların Dahil Olmaları" IsNewNode="True">
+              <LayoutItem Id="InvolvementOfAuthoritiesYes" ViewItem="InvolvementOfAuthoritiesYes" Index="0" RelativeSize="28.571428571428573" IsNewNode="True" />
+              <LayoutItem Id="EvacuationOfPerson" ViewItem="EvacuationOfPerson" Index="1" RelativeSize="21.428571428571427" IsNewNode="True" />
+              <LayoutItem Id="InvolvementOfAuthoritiesNo" ViewItem="InvolvementOfAuthoritiesNo" Index="2" RelativeSize="21.428571428571427" IsNewNode="True" />
+              <LayoutItem Id="ClosureOfPublic" ViewItem="ClosureOfPublic" Index="3" RelativeSize="28.571428571428573" IsNewNode="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
     <ListView Id="ReportOnOccurrence_ListView">
       <Columns>
         <ColumnInfo Id="AdditionalDescription" Width="138" Index="-1" />
@@ -358,6 +1019,112 @@
         <ColumnInfo Id="CarrierRailwayInsfrastructureOperator" Width="227" />
       </Columns>
     </ListView>
+    <DetailView Id="TransportDocument_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100" Direction="Horizontal">
+            <LayoutGroup Id="Auto43dcf656-9a66-46ae-9c6c-e3400328ddb4" ShowCaption="False" Caption="Auto43dcf656-9a66-46ae-9c6c-e3400328ddb4(3)" Index="0" RelativeSize="50.544464609800364" IsNewNode="True">
+              <TabbedGroup Id="Item2" CaptionLocation="Top" Index="0" RelativeSize="26.113861386138613" IsNewNode="True">
+                <LayoutGroup Id="TransportDocument" ShowCaption="True" Caption="Transport Document" Index="0" RelativeSize="100" IsNewNode="True">
+                  <LayoutGroup Id="TransportDocument_col1" ShowCaption="False" Index="0" RelativeSize="100" IsNewNode="True">
+                    <LayoutItem Id="Owner" ViewItem="Owner" Index="0" RelativeSize="18.6046511627907" IsNewNode="True" />
+                    <LayoutItem Id="Code" ViewItem="Code" Index="1" RelativeSize="13.953488372093023" IsNewNode="True" />
+                    <LayoutGroup Id="Auto04ab6cb1-d752-4285-8095-8f66c7987f51" ShowCaption="False" Caption="Auto04ab6cb1-d752-4285-8095-8f66c7987f51(9)" Direction="Vertical" Index="2" RelativeSize="34.883720930232556" IsNewNode="True">
+                      <LayoutItem Id="CreatedDate" ViewItem="CreatedDate" Index="0" RelativeSize="50" IsNewNode="True" />
+                      <LayoutItem Id="CreatedTime" ViewItem="CreatedTime" Index="1" RelativeSize="50" IsNewNode="True" />
+                    </LayoutGroup>
+                    <LayoutItem Id="TransportDocumentType" ViewItem="TransportDocumentType" Index="3" RelativeSize="13.953488372093023" IsNewNode="True" />
+                    <LayoutItem Id="Status" ViewItem="Status" Index="4" RelativeSize="18.6046511627907" IsNewNode="True" />
+                  </LayoutGroup>
+                </LayoutGroup>
+                <LayoutGroup Id="Item1" ShowCaption="True" Caption="Açıklama" CaptionLocation="Top" Index="1" RelativeSize="100" IsNewNode="True">
+                  <LayoutGroup Id="Descriptions" ShowCaption="False" Index="0" RelativeSize="100" IsNewNode="True">
+                    <LayoutItem Id="Descriptions" ViewItem="Descriptions" Index="0" RelativeSize="100" IsNewNode="True" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </TabbedGroup>
+              <LayoutGroup Id="Item3" ShowCaption="True" Caption="Gönderici Bilgileri" CaptionLocation="Top" Index="1" RelativeSize="16.955445544554454" IsNewNode="True">
+                <LayoutItem Id="Consigner" ViewItem="Consigner" Index="0" RelativeSize="28.571428571428573" IsNewNode="True" />
+                <LayoutItem Id="ConsignerTaxOffice" ViewItem="ConsignerTaxOffice" Index="1" RelativeSize="21.428571428571427" IsNewNode="True" />
+                <LayoutItem Id="ConsignerTaxNumber" ViewItem="ConsignerTaxNumber" Index="2" RelativeSize="21.428571428571427" IsNewNode="True" />
+                <LayoutItem Id="ConsignerAddress" ViewItem="ConsignerAddress" Index="3" RelativeSize="28.571428571428573" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Item4" ShowCaption="True" Caption="Alıcı Bilgileri" CaptionLocation="Top" Index="2" RelativeSize="16.955445544554454" IsNewNode="True">
+                <LayoutItem Id="Consignee" ViewItem="Consignee" Index="0" RelativeSize="28.571428571428573" IsNewNode="True" />
+                <LayoutItem Id="ConsigneeTaxOffice" ViewItem="ConsigneeTaxOffice" Index="1" RelativeSize="21.428571428571427" IsNewNode="True" />
+                <LayoutItem Id="ConsigneeTaxNumber" ViewItem="ConsigneeTaxNumber" Index="2" RelativeSize="21.428571428571427" IsNewNode="True" />
+                <LayoutItem Id="ConsigneeAddress" ViewItem="ConsigneeAddress" Index="3" RelativeSize="28.571428571428573" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Item5" ShowCaption="True" Caption="Taşıyıcı Bilgileri" CaptionLocation="Top" Index="3" RelativeSize="39.975247524752476" IsNewNode="True">
+                <LayoutItem Id="IsSpecial" ViewItem="IsSpecial" Index="0" RelativeSize="11.03448275862069" IsNewNode="True" />
+                <LayoutItem Id="Shipper" ViewItem="Shipper" Index="1" RelativeSize="8.275862068965518" IsNewNode="True" />
+                <LayoutItem Id="SpecialShipper" ViewItem="SpecialShipper" Index="2" RelativeSize="8.275862068965518" IsNewNode="True" />
+                <LayoutItem Id="Vehicle" ViewItem="Vehicle" Index="3" RelativeSize="8.275862068965518" IsNewNode="True" />
+                <LayoutItem Id="OtherVehicle" ViewItem="OtherVehicle" Index="4" RelativeSize="8.275862068965518" IsNewNode="True" />
+                <LayoutItem Id="Driver" ViewItem="Driver" Index="5" RelativeSize="8.275862068965518" IsNewNode="True" />
+                <LayoutItem Id="TransportCategory" ViewItem="TransportCategory" Index="6" RelativeSize="8.275862068965518" IsNewNode="True" />
+                <LayoutItem Id="TunnelCode" ViewItem="TunnelCode" Index="7" RelativeSize="8.275862068965518" IsNewNode="True" />
+                <LayoutItem Id="ScoreQuantity" ViewItem="ScoreQuantity" Index="8" RelativeSize="8.275862068965518" IsNewNode="True" />
+                <LayoutItem Id="StatusMessage" ShowCaption="False" ViewItem="StatusMessage" Index="9" RelativeSize="22.75862068965517" IsNewNode="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Autoe6c0c0b9-0c46-491f-a385-a5fca3468e27" ShowCaption="False" Caption="Autoe6c0c0b9-0c46-491f-a385-a5fca3468e27(36)" Index="1" RelativeSize="49.455535390199636" IsNewNode="True">
+              <LayoutGroup Id="Transactions" ShowCaption="True" Index="0" RelativeSize="20.792079207920793" IsNewNode="True">
+                <LayoutItem Id="Transactions" ViewItem="Transactions" Index="0" RelativeSize="100" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Autob895ec72-90ad-49a8-b3e4-9739a3c2210a" ShowCaption="False" Caption="Autob895ec72-90ad-49a8-b3e4-9739a3c2210a(39)" Direction="Vertical" Index="1" RelativeSize="79.20792079207921" IsNewNode="True">
+                <LayoutGroup Id="OtherTransactions" ShowCaption="True" Caption="Other Transactions" Index="0" RelativeSize="100" IsNewNode="True">
+                  <LayoutItem Id="OtherTransactions" ViewItem="OtherTransactions" Index="0" RelativeSize="100" IsNewNode="True" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="TransportDocument" RelativeSize="100" Removed="True">
+              <LayoutGroup Id="TransportDocument_col1" RelativeSize="50">
+                <LayoutItem Id="Code" RelativeSize="7.894736842105263" />
+                <LayoutItem Id="Consignee" RelativeSize="7.894736842105263" />
+                <LayoutItem Id="ConsigneeTaxNumber" RelativeSize="10.526315789473685" />
+                <LayoutItem Id="ConsigneeTaxOffice" RelativeSize="7.894736842105263" />
+                <LayoutItem Id="Consigner" RelativeSize="7.894736842105263" />
+                <LayoutItem Id="ConsignerAddress" RelativeSize="7.894736842105263" />
+                <LayoutItem Id="ConsignerTaxNumber" RelativeSize="7.894736842105263" />
+                <LayoutItem Id="ConsignerTaxOffice" RelativeSize="7.894736842105263" />
+                <LayoutItem Id="CreatedDate" RelativeSize="7.894736842105263" />
+                <LayoutItem Id="CreatedTime" RelativeSize="7.894736842105263" />
+                <LayoutItem Id="Owner" RelativeSize="7.894736842105263" />
+                <LayoutItem Id="Status" RelativeSize="10.526315789473685" />
+              </LayoutGroup>
+              <LayoutGroup Id="TransportDocument_col2" RelativeSize="50">
+                <LayoutItem Id="ConsigneeAddress" RelativeSize="10.526315789473685" />
+                <LayoutItem Id="Driver" RelativeSize="7.894736842105263" />
+                <LayoutItem Id="IsSpecial" RelativeSize="7.894736842105263" />
+                <LayoutItem Id="OtherVehicle" RelativeSize="7.894736842105263" />
+                <LayoutItem Id="ScoreQuantity" RelativeSize="7.894736842105263" />
+                <LayoutItem Id="Shipper" RelativeSize="7.894736842105263" />
+                <LayoutItem Id="SpecialShipper" RelativeSize="18.42105263157895" />
+                <LayoutItem Id="TransportCategory" RelativeSize="7.894736842105263" />
+                <LayoutItem Id="TransportDocumentType" RelativeSize="7.894736842105263" />
+                <LayoutItem Id="TunnelCode" RelativeSize="7.894736842105263" />
+                <LayoutItem Id="Vehicle" RelativeSize="7.894736842105263" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="27.103960396039604" Index="1" Removed="True">
+            <LayoutGroup Id="Descriptions" ShowCaption="True" Index="0" RelativeSize="100" Removed="True">
+              <LayoutItem Id="Descriptions" ViewItem="Descriptions" Index="0" RelativeSize="100" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="OtherTransactions" RelativeSize="100" Index="0" Removed="True">
+              <LayoutItem Id="OtherTransactions" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="Transactions" RelativeSize="100" Removed="True">
+              <LayoutItem Id="Transactions" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="Status Message" RelativeSize="28.34158415841584" Removed="True">
+            <LayoutItem Id="StatusMessage" Removed="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
     <ListView Id="TransportDocument_ListView">
       <Columns>
         <ColumnInfo Id="Code" Width="48" Index="-1" />
@@ -386,6 +1153,59 @@
         <ColumnInfo Id="Driver" Width="51" Index="5" />
       </Columns>
     </ListView>
+    <DetailView Id="VehicleControlDocument_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="47.524752475247524">
+            <LayoutGroup Id="VehicleControlDocument" RelativeSize="56.510416666666664" Direction="Vertical">
+              <LayoutGroup Id="VehicleControlDocument_col1" RelativeSize="100">
+                <LayoutItem Id="Code" RelativeSize="17.391304347826086" />
+                <LayoutItem Id="CreatedOn" RelativeSize="13.043478260869565" />
+                <LayoutItem Id="Owner" RelativeSize="13.043478260869565" />
+                <LayoutItem Id="VControlOption" RelativeSize="13.043478260869565" />
+                <LayoutItem Id="Consignee" RelativeSize="13.043478260869565" />
+                <LayoutItem Id="DeliveryCompany" RelativeSize="13.043478260869565" />
+                <LayoutItem Id="Description" ViewItem="Description" Index="6" RelativeSize="17.391304347826086" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="VehicleControlDocument_col2" Caption="VehicleControlDocument_col2" RelativeSize="50" Removed="True">
+                <LayoutItem Id="Description" Index="0" RelativeSize="100" Removed="True" />
+                <LayoutItem Id="InsurancePolicy" Removed="True" />
+                <LayoutItem Id="MaxWeight" Removed="True" />
+                <LayoutItem Id="SRCDateOfValidity" Removed="True" />
+                <LayoutItem Id="Vehicle" Removed="True" />
+                <LayoutItem Id="VehicleDriver" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Autocd350a37-cd35-4831-a7aa-68235eef5f01" ShowCaption="False" Caption="" Direction="Horizontal" Index="1" RelativeSize="43.489583333333336" IsNewNode="True">
+              <LayoutGroup Id="Item1" ShowCaption="True" Caption="Araç Bilgileri" CaptionLocation="Top" Index="0" RelativeSize="33.48457350272232" IsNewNode="True">
+                <LayoutItem Id="Vehicle" ViewItem="Vehicle" Index="0" RelativeSize="23.529411764705884" IsNewNode="True" />
+                <LayoutItem Id="VehicleDriver" ViewItem="VehicleDriver" Index="1" RelativeSize="17.647058823529413" IsNewNode="True" />
+                <LayoutItem Id="SRCDateOfValidity" ViewItem="SRCDateOfValidity" Index="2" RelativeSize="17.647058823529413" IsNewNode="True" />
+                <LayoutItem Id="InsurancePolicy" ViewItem="InsurancePolicy" Index="3" RelativeSize="17.647058823529413" IsNewNode="True" />
+                <LayoutItem Id="MaxWeight" ViewItem="MaxWeight" Index="4" RelativeSize="23.529411764705884" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="HazardousGoods" ShowCaption="True" Caption="Hazardous Goods" Index="1" RelativeSize="34.21052631578947" IsNewNode="True">
+                <LayoutItem Id="HazardousGoods" ViewItem="HazardousGoods" Index="0" RelativeSize="100" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Labels" ShowCaption="True" Index="2" RelativeSize="32.3049001814882" IsNewNode="True">
+                <LayoutItem Id="Labels" ViewItem="Labels" Index="0" RelativeSize="100" IsNewNode="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="52.475247524752476">
+            <LayoutGroup Id="Transactions" RelativeSize="100">
+              <LayoutItem Id="Transactions" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="HazardousGoods" RelativeSize="100" Removed="True">
+              <LayoutItem Id="HazardousGoods" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="Labels" RelativeSize="100" Removed="True">
+              <LayoutItem Id="Labels" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
     <ListView Id="VehicleControlDocument_ListView">
       <Columns>
         <ColumnInfo Id="Description" Index="-1" Width="93" SortIndex="-1" SortOrder="None" />
@@ -403,6 +1223,64 @@
         <ColumnInfo Id="VehicleDriver" Width="92" Index="6" />
       </Columns>
     </ListView>
+    <DetailView Id="VoyageNotification_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="30.56930693069307">
+            <LayoutGroup Id="VoyageNotification" RelativeSize="100">
+              <LayoutGroup Id="VoyageNotification_col1" RelativeSize="50">
+                <LayoutItem Id="UpdatedDate" Index="0" RelativeSize="15.384615384615385" />
+                <LayoutItem Id="ActivatedDate" RelativeSize="11.538461538461538" Index="1" />
+                <LayoutItem Id="Status" RelativeSize="11.538461538461538" Index="2" />
+                <LayoutItem Id="FirmVoyageNumber" ViewItem="FirmVoyageNumber" Index="3" RelativeSize="11.538461538461538" IsNewNode="True" />
+                <LayoutGroup Id="Autoc3bb5e48-933c-4b27-acf7-6755ffd43649" ShowCaption="False" Caption="" Direction="Horizontal" Index="4" RelativeSize="50" IsNewNode="True">
+                  <LayoutGroup Id="Auto56d5e5ab-238b-4927-89ae-036c71703b83" ShowCaption="False" Caption="" Index="0" RelativeSize="50" IsNewNode="True">
+                    <LayoutItem Id="StartDate" ViewItem="StartDate" Index="0" RelativeSize="23.076923076923077" IsNewNode="True" />
+                    <LayoutItem Id="EndDate" ViewItem="EndDate" Index="1" RelativeSize="23.076923076923077" IsNewNode="True" />
+                    <LayoutItem Id="Plate1" ViewItem="Plate1" Index="2" RelativeSize="23.076923076923077" IsNewNode="True" />
+                    <LayoutItem Id="Driver1TCKN" ViewItem="Driver1TCKN" Index="3" RelativeSize="30.76923076923077" IsNewNode="True" />
+                  </LayoutGroup>
+                  <LayoutGroup Id="Auto500e2075-e4b3-4502-8af3-5965baf15f4e" ShowCaption="False" Caption="" Index="1" RelativeSize="50" IsNewNode="True">
+                    <LayoutItem Id="StartTime" ViewItem="StartTime" Index="0" RelativeSize="23.076923076923077" IsNewNode="True" />
+                    <LayoutItem Id="EndTime" ViewItem="EndTime" Index="1" RelativeSize="23.076923076923077" IsNewNode="True" />
+                    <LayoutItem Id="Plate2" ViewItem="Plate2" Index="2" RelativeSize="23.076923076923077" IsNewNode="True" />
+                    <LayoutItem Id="Driver2TCKN" ViewItem="Driver2TCKN" Index="3" RelativeSize="30.76923076923077" IsNewNode="True" />
+                  </LayoutGroup>
+                </LayoutGroup>
+                <LayoutItem Id="StartDate" RelativeSize="10.344827586206897" Index="4" Removed="True" />
+                <LayoutItem Id="EndDate" RelativeSize="11.538461538461538" Index="5" Removed="True" />
+                <LayoutItem Id="Owner" Index="5" RelativeSize="13.793103448275861" Removed="True" />
+                <LayoutItem Id="StartTime" RelativeSize="10.344827586206897" Index="6" Removed="True" />
+                <LayoutItem Id="EndTime" RelativeSize="15.384615384615385" Index="7" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="VoyageNotification_col2" RelativeSize="50">
+                <LayoutItem Id="CancelledType" RelativeSize="15.384615384615385" Index="0" Removed="True" />
+                <LayoutItem Id="Driver1TCKN" RelativeSize="15.384615384615385" Index="0" Removed="True" />
+                <LayoutItem Id="Driver2TCKN" RelativeSize="13.793103448275861" Index="0" Removed="True" />
+                <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Index="0" RelativeSize="100" Caption="İptal Durumu" IsNewNode="True">
+                  <LayoutItem Id="CancelledType" ViewItem="CancelledType" Index="0" RelativeSize="19.161676646706585" IsNewNode="True" />
+                  <LayoutItem Id="CancelledDescription" ViewItem="CancelledDescription" Index="1" RelativeSize="14.37125748502994" IsNewNode="True" />
+                  <LayoutItem Id="CancelledDate" ViewItem="CancelledDate" Index="2" RelativeSize="66.46706586826348" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutItem Id="Plate1" RelativeSize="17.391304347826086" Index="0" Removed="True" />
+                <LayoutItem Id="Plate2" RelativeSize="15.384615384615385" Index="0" Removed="True" />
+                <LayoutItem Id="CancelledDescription" RelativeSize="11.538461538461538" Index="1" Removed="True" />
+                <LayoutItem Id="CancelledDate" RelativeSize="73.07692307692308" Index="2" Removed="True" />
+                <LayoutItem Id="FirmVoyageNumber" RelativeSize="15.384615384615385" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="69.43069306930693">
+            <LayoutGroup Id="Transactions" RelativeSize="100">
+              <LayoutItem Id="Transactions" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="Histories" RelativeSize="100">
+              <LayoutItem Id="Histories" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
     <ListView Id="VoyageNotification_ListView">
       <Columns>
         <ColumnInfo Id="ActivatedDate" Width="97" Index="-1" />
@@ -424,5 +1302,168 @@
         <ColumnInfo Id="Driver1TCKN" Width="93" Index="5" />
       </Columns>
     </ListView>
+    <ListView Id="VoyageNotification_Transactions_ListView">
+      <Columns>
+        <ColumnInfo Id="ConsignerTitle" Width="104" />
+        <ColumnInfo Id="Status" Width="51" />
+        <ColumnInfo Id="TransportTypeCode" Width="122" />
+        <ColumnInfo Id="ConsignerVKN" Width="90" />
+        <ColumnInfo Id="ConsigneeVKN" Width="92" />
+        <ColumnInfo Id="ConsigneeTitle" Width="93" />
+        <ColumnInfo Id="ConsignerCountryCode" Width="138" />
+        <ColumnInfo Id="ConsignerCityMernisCode" Width="152" />
+        <ColumnInfo Id="ConsignerCountyMernisCode" Width="168" />
+        <ColumnInfo Id="ConsigneeCountryCode" Width="140" />
+        <ColumnInfo Id="ConsigneeCityMernisCode" Width="154" />
+        <ColumnInfo Id="ConsigneeCountyMernisCode" Width="170" />
+        <ColumnInfo Id="LadingDate" Width="77" />
+        <ColumnInfo Id="LadingTime" Width="76" />
+        <ColumnInfo Id="PouringDate" Width="82" />
+        <ColumnInfo Id="PouringTime" Width="81" />
+        <ColumnInfo Id="LoadOtherDescription" Width="130" />
+        <ColumnInfo Id="HazardousUnit" Width="93" />
+        <ColumnInfo Id="LoadQuantity" Width="88" />
+        <ColumnInfo Id="FirmLoadNumber" Width="106" />
+        <ColumnInfo Id="HazardousTransportType" Width="148" />
+        <ColumnInfo Id="UnId" Width="46" />
+        <ColumnInfo Id="HazardousExemptionType" Width="151" />
+        <ColumnInfo Id="CancelledType" Width="93" />
+        <ColumnInfo Id="CancelledDescription" Width="122" />
+        <ColumnInfo Id="CancelledDate" Width="92" />
+        <ColumnInfo Id="ActivatedDate" Width="92" />
+        <ColumnInfo Id="UpdatedDate" Width="87" />
+      </Columns>
+    </ListView>
+    <DetailView Id="VoyageNotificationTransaction_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <TabbedGroup Id="Item5" CaptionLocation="Top" Index="0" RelativeSize="100" IsNewNode="True">
+              <LayoutGroup Id="VoyageNotificationTransaction" ShowCaption="True" Caption="Voyage Notification Transaction" Direction="Vertical" Index="0" RelativeSize="100" IsNewNode="True">
+                <LayoutGroup Id="VoyageNotificationTransaction_col1" ShowCaption="False" Index="0" RelativeSize="100" IsNewNode="True">
+                  <LayoutItem Id="Status" ViewItem="Status" Index="0" RelativeSize="4.204993429697766" IsNewNode="True" />
+                  <LayoutItem Id="TransportTypeCode" ViewItem="TransportTypeCode" Index="1" RelativeSize="3.1537450722733245" IsNewNode="True" />
+                  <LayoutItem Id="FirmLoadNumber" ViewItem="FirmLoadNumber" Index="2" RelativeSize="3.1537450722733245" IsNewNode="True" />
+                  <LayoutGroup Id="Item2" ShowCaption="True" Caption="Alıcı Bilgileri" CaptionLocation="Top" Index="3" RelativeSize="24.31011826544021" IsNewNode="True">
+                    <LayoutItem Id="ConsigneeVKN" ViewItem="ConsigneeVKN" Index="0" RelativeSize="20" IsNewNode="True" />
+                    <LayoutItem Id="ConsigneeCountryCode" ViewItem="ConsigneeCountryCode" Index="1" RelativeSize="15" IsNewNode="True" />
+                    <LayoutItem Id="ConsigneeTitle" ViewItem="ConsigneeTitle" Index="2" RelativeSize="15" IsNewNode="True" />
+                    <LayoutItem Id="ConsigneeCityMernisCode" ViewItem="ConsigneeCityMernisCode" Index="3" RelativeSize="15" IsNewNode="True" />
+                    <LayoutItem Id="ConsigneeCountyMernisCode" ViewItem="ConsigneeCountyMernisCode" Index="4" RelativeSize="15" IsNewNode="True" />
+                    <LayoutGroup Id="Auto54f1b85e-5a92-48bc-8609-c9e8a8954426" ShowCaption="False" Caption="" Direction="Horizontal" Index="5" RelativeSize="20" IsNewNode="True">
+                      <LayoutItem Id="PouringDate" ViewItem="PouringDate" Index="0" RelativeSize="49.9054820415879" IsNewNode="True" />
+                      <LayoutItem Id="PouringTime" ViewItem="PouringTime" Index="1" RelativeSize="50.0945179584121" IsNewNode="True" />
+                    </LayoutGroup>
+                  </LayoutGroup>
+                  <LayoutGroup Id="Item1" ShowCaption="True" Caption="Gönderici Bilgileri" CaptionLocation="Top" Index="4" RelativeSize="24.31011826544021" IsNewNode="True">
+                    <LayoutItem Id="ConsignerVKN" ViewItem="ConsignerVKN" Index="0" RelativeSize="20" IsNewNode="True" />
+                    <LayoutItem Id="ConsignerTitle" ViewItem="ConsignerTitle" Index="1" RelativeSize="15" IsNewNode="True" />
+                    <LayoutItem Id="ConsignerCountryCode" ViewItem="ConsignerCountryCode" Index="2" RelativeSize="15" IsNewNode="True" />
+                    <LayoutItem Id="ConsignerCityMernisCode" ViewItem="ConsignerCityMernisCode" Index="3" RelativeSize="15" IsNewNode="True" />
+                    <LayoutItem Id="ConsignerCountyMernisCode" ViewItem="ConsignerCountyMernisCode" Index="4" RelativeSize="15" IsNewNode="True" />
+                    <LayoutGroup Id="Auto016b1ceb-deb7-4303-8c2a-76f7069aff47" ShowCaption="False" Caption="" Direction="Horizontal" Index="5" RelativeSize="20" IsNewNode="True">
+                      <LayoutItem Id="LadingDate" ViewItem="LadingDate" Index="0" RelativeSize="49.9054820415879" IsNewNode="True" />
+                      <LayoutItem Id="LadingTime" ViewItem="LadingTime" Index="1" RelativeSize="50.0945179584121" IsNewNode="True" />
+                    </LayoutGroup>
+                  </LayoutGroup>
+                  <LayoutGroup Id="Item3" ShowCaption="True" Caption="Yük Bilgileri" CaptionLocation="Top" Index="5" RelativeSize="40.86727989487517" IsNewNode="True">
+                    <LayoutItem Id="LoadType" ViewItem="LoadType" Index="0" RelativeSize="11.510791366906474" IsNewNode="True" />
+                    <LayoutItem Id="UnId" ViewItem="UnId" Index="1" RelativeSize="8.633093525179856" IsNewNode="True" />
+                    <LayoutItem Id="LoadOtherDescription" ViewItem="LoadOtherDescription" Index="2" RelativeSize="8.633093525179856" IsNewNode="True" />
+                    <LayoutGroup Id="Autoe7510180-37fc-4834-b0e5-77dd6c1d4c05" ShowCaption="False" Caption="" Direction="Horizontal" Index="3" RelativeSize="8.633093525179856" IsNewNode="True">
+                      <LayoutItem Id="LoadQuantity" ViewItem="LoadQuantity" Index="0" RelativeSize="50" IsNewNode="True" />
+                      <LayoutItem Id="HazardousUnit" ViewItem="HazardousUnit" Index="1" RelativeSize="50" IsNewNode="True" />
+                    </LayoutGroup>
+                    <LayoutItem Id="HazardousTransportType" ViewItem="HazardousTransportType" Index="4" RelativeSize="8.633093525179856" IsNewNode="True" />
+                    <LayoutItem Id="HazardousExemptionType" ViewItem="HazardousExemptionType" Index="5" RelativeSize="53.9568345323741" IsNewNode="True" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="Item4" ShowCaption="True" Caption="Durum" CaptionLocation="Top" Index="1" RelativeSize="100" IsNewNode="True">
+                <LayoutItem Id="CancelledType" ViewItem="CancelledType" Index="0" RelativeSize="4.204993429697766" IsNewNode="True" />
+                <LayoutItem Id="CancelledDescription" ViewItem="CancelledDescription" Index="1" RelativeSize="3.1537450722733245" IsNewNode="True" />
+                <LayoutItem Id="CancelledDate" ViewItem="CancelledDate" Index="2" RelativeSize="3.1537450722733245" IsNewNode="True" />
+                <LayoutItem Id="ActivatedDate" ViewItem="ActivatedDate" Index="3" RelativeSize="3.1537450722733245" IsNewNode="True" />
+                <LayoutItem Id="UpdatedDate" ViewItem="UpdatedDate" Index="4" RelativeSize="86.33377135348226" IsNewNode="True" />
+              </LayoutGroup>
+            </TabbedGroup>
+            <LayoutGroup Id="VoyageNotificationTransaction" RelativeSize="100" Removed="True">
+              <LayoutGroup Id="VoyageNotificationTransaction_col1" RelativeSize="50">
+                <LayoutItem Id="FirmLoadNumber" ViewItem="FirmLoadNumber" Index="2" RelativeSize="3.1290743155149934" IsNewNode="True" />
+                <LayoutItem Id="ConsignerVKN" Index="3" RelativeSize="3.1290743155149934" Removed="True" />
+                <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Index="3" RelativeSize="24.11994784876141" Caption="Gönderici Bilgileri" IsNewNode="True">
+                  <LayoutItem Id="ConsignerVKN" ViewItem="ConsignerVKN" Index="0" RelativeSize="20" IsNewNode="True" />
+                  <LayoutItem Id="ConsignerTitle" ViewItem="ConsignerTitle" Index="1" RelativeSize="15" IsNewNode="True" />
+                  <LayoutItem Id="ConsignerCountryCode" ViewItem="ConsignerCountryCode" Index="2" RelativeSize="15" IsNewNode="True" />
+                  <LayoutItem Id="ConsignerCityMernisCode" ViewItem="ConsignerCityMernisCode" Index="3" RelativeSize="15" IsNewNode="True" />
+                  <LayoutItem Id="ConsignerCountyMernisCode" ViewItem="ConsignerCountyMernisCode" Index="4" RelativeSize="15" IsNewNode="True" />
+                  <LayoutGroup Id="Auto671d2530-8f9f-45ca-875b-d135b9c20e57" ShowCaption="False" Caption="" Direction="Horizontal" Index="5" RelativeSize="20" IsNewNode="True">
+                    <LayoutItem Id="LadingDate" ViewItem="LadingDate" Index="0" RelativeSize="49.90439770554493" IsNewNode="True" />
+                    <LayoutItem Id="LadingTime" ViewItem="LadingTime" Index="1" RelativeSize="50.09560229445507" IsNewNode="True" />
+                  </LayoutGroup>
+                </LayoutGroup>
+                <LayoutItem Id="ConsigneeVKN" Index="4" RelativeSize="3.1290743155149934" Removed="True" />
+                <LayoutItem Id="ConsignerTitle" Index="4" RelativeSize="3.1290743155149934" Removed="True" />
+                <LayoutGroup Id="Item2" ShowCaption="True" CaptionLocation="Top" Index="4" RelativeSize="65.44980443285527" Caption="Alıcı Bilgileri" IsNewNode="True">
+                  <LayoutItem Id="ConsigneeVKN" ViewItem="ConsigneeVKN" Index="0" RelativeSize="6.823027718550106" IsNewNode="True" />
+                  <LayoutItem Id="ConsigneeCountryCode" ViewItem="ConsigneeCountryCode" Index="1" RelativeSize="5.11727078891258" IsNewNode="True" />
+                  <LayoutItem Id="ConsigneeTitle" ViewItem="ConsigneeTitle" Index="2" RelativeSize="5.11727078891258" IsNewNode="True" />
+                  <LayoutItem Id="ConsigneeCityMernisCode" ViewItem="ConsigneeCityMernisCode" Index="3" RelativeSize="5.11727078891258" IsNewNode="True" />
+                  <LayoutItem Id="ConsigneeCountyMernisCode" ViewItem="ConsigneeCountyMernisCode" Index="4" RelativeSize="77.82515991471216" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutItem Id="ConsigneeCountryCode" ViewItem="ConsigneeCountryCode" Index="5" RelativeSize="3.1290743155149934" Removed="True" />
+                <LayoutItem Id="PouringDate" Index="5" RelativeSize="44.458930899608866" Removed="True" />
+                <LayoutItem Id="ConsigneeTitle" Index="6" RelativeSize="3.1290743155149934" Removed="True" />
+                <LayoutItem Id="ConsignerCityMernisCode" Index="6" RelativeSize="3.1290743155149934" Removed="True" />
+                <LayoutItem Id="ConsignerCountryCode" Index="6" RelativeSize="3.1290743155149934" Removed="True" />
+                <LayoutItem Id="ConsignerCountyMernisCode" Index="6" RelativeSize="3.1290743155149934" Removed="True" />
+                <LayoutItem Id="ConsigneeCityMernisCode" Index="7" RelativeSize="3.1290743155149934" Removed="True" />
+                <LayoutItem Id="ConsigneeCountyMernisCode" Index="8" RelativeSize="3.1290743155149934" Removed="True" />
+                <LayoutItem Id="LadingDate" Index="9" RelativeSize="3.1290743155149934" Removed="True" />
+                <LayoutItem Id="LadingTime" Index="9" RelativeSize="3.1290743155149934" Removed="True" />
+                <LayoutItem Id="Status" RelativeSize="4.172099087353325" />
+                <LayoutItem Id="TransportTypeCode" RelativeSize="3.1290743155149934" />
+              </LayoutGroup>
+              <LayoutGroup Id="VoyageNotificationTransaction_col2" RelativeSize="50">
+                <LayoutGroup Id="Item3" ShowCaption="True" CaptionLocation="Top" Index="0" RelativeSize="37.67926988265971" IsNewNode="True">
+                  <LayoutItem Id="PouringDate" ViewItem="PouringDate" Index="0" RelativeSize="12.5" IsNewNode="True" />
+                  <LayoutItem Id="PouringTime" ViewItem="PouringTime" Index="1" RelativeSize="9.375" IsNewNode="True" />
+                  <LayoutItem Id="LoadType" ViewItem="LoadType" Index="2" RelativeSize="9.375" IsNewNode="True" />
+                  <LayoutItem Id="LoadOtherDescription" ViewItem="LoadOtherDescription" Index="3" RelativeSize="9.375" IsNewNode="True" />
+                  <LayoutItem Id="HazardousUnit" ViewItem="HazardousUnit" Index="4" RelativeSize="9.375" IsNewNode="True" />
+                  <LayoutItem Id="OtherUnit" ViewItem="OtherUnit" Index="5" RelativeSize="9.375" IsNewNode="True" />
+                  <LayoutItem Id="LoadQuantity" ViewItem="LoadQuantity" Index="6" RelativeSize="9.375" IsNewNode="True" />
+                  <LayoutItem Id="HazardousTransportType" ViewItem="HazardousTransportType" Index="7" RelativeSize="9.375" IsNewNode="True" />
+                  <LayoutItem Id="UnId" ViewItem="UnId" Index="8" RelativeSize="9.375" IsNewNode="True" />
+                  <LayoutItem Id="HazardousExemptionType" ViewItem="HazardousExemptionType" Index="9" RelativeSize="12.5" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutItem Id="CancelledType" Index="1" RelativeSize="3.1290743155149934" Removed="True" />
+                <LayoutGroup Id="Item4" ShowCaption="True" CaptionLocation="Top" Index="1" RelativeSize="62.32073011734029" Caption="Durum" IsNewNode="True">
+                  <LayoutItem Id="CancelledType" ViewItem="CancelledType" Index="0" RelativeSize="7.191011235955056" IsNewNode="True" />
+                  <LayoutItem Id="CancelledDescription" ViewItem="CancelledDescription" Index="1" RelativeSize="5.393258426966292" IsNewNode="True" />
+                  <LayoutItem Id="CancelledDate" ViewItem="CancelledDate" Index="2" RelativeSize="5.393258426966292" IsNewNode="True" />
+                  <LayoutItem Id="ActivatedDate" ViewItem="ActivatedDate" Index="3" RelativeSize="5.393258426966292" IsNewNode="True" />
+                  <LayoutItem Id="UpdatedDate" ViewItem="UpdatedDate" Index="4" RelativeSize="76.62921348314607" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutItem Id="PouringTime" RelativeSize="3.1290743155149934" Index="1" Removed="True" />
+                <LayoutItem Id="CancelledDescription" Index="2" RelativeSize="3.1290743155149934" Removed="True" />
+                <LayoutItem Id="LoadType" RelativeSize="3.1290743155149934" Index="2" Removed="True" />
+                <LayoutItem Id="CancelledDate" Index="3" RelativeSize="3.1290743155149934" Removed="True" />
+                <LayoutItem Id="LoadOtherDescription" RelativeSize="3.1290743155149934" Index="3" Removed="True" />
+                <LayoutItem Id="ActivatedDate" Index="4" RelativeSize="3.1290743155149934" Removed="True" />
+                <LayoutItem Id="HazardousUnit" RelativeSize="3.1290743155149934" Index="4" Removed="True" />
+                <LayoutItem Id="OtherUnit" RelativeSize="3.1290743155149934" Index="5" Removed="True" />
+                <LayoutItem Id="UpdatedDate" Index="5" RelativeSize="49.80443285528031" Removed="True" />
+                <LayoutItem Id="LoadQuantity" RelativeSize="3.1290743155149934" Index="6" Removed="True" />
+                <LayoutItem Id="HazardousTransportType" Index="7" RelativeSize="3.1290743155149934" Removed="True" />
+                <LayoutItem Id="UnId" Index="8" RelativeSize="3.1290743155149934" Removed="True" />
+                <LayoutItem Id="HazardousExemptionType" Index="9" RelativeSize="3.1290743155149934" Removed="True" />
+                <LayoutItem Id="FirmLoadNumber" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
   </Views>
 </Application>

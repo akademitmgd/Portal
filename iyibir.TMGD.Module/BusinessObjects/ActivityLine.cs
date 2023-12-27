@@ -84,9 +84,9 @@ namespace iyibir.TMGD.Module.BusinessObjects
         [RuleRequiredField("RuleRequiredField for ActivityLine.Subject", DefaultContexts.Save)]
         public ActivitySubject Subject { get=> _subject; set=> SetPropertyValue(nameof(Subject),ref _subject,value); }
 
-        [Browsable(false)]
+        
         [DataSourceProperty("Subject.Descriptions")]
-        //[RuleRequiredField("RuleRequiredField for ActivityLine.SubjectDescription", DefaultContexts.Save)]
+        [RuleRequiredField("RuleRequiredField for ActivityLine.SubjectDescription", DefaultContexts.Save)]
         public ActivitySubjectDesc SubjectDescription { get=> _subjectDescription; set=> SetPropertyValue(nameof(Subject),ref _subjectDescription,value); }
 
         [Browsable(false)]
