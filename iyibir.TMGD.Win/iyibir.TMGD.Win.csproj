@@ -78,7 +78,7 @@
     <ProjectReference Include="..\iyibir.TMGD.Module\iyibir.TMGD.Module.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.2" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="DevExpress.Win.BonusSkins" Version="22.2.*-*" />
     <PackageReference Include="DevExpress.ExpressApp.AuditTrail.Xpo" Version="22.2.*-*" />

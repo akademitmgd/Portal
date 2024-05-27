@@ -87,8 +87,8 @@
     <PackageReference Include="DevExpress.Win" Version="22.2.*-*" />
     <PackageReference Include="DevExpress.CodeParser" Version="22.2.*-*" />
     <PackageReference Include="DevExpress.Win.Design" Version="22.2.*-*" />
-    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.2" />
-    <PackageReference Include="Microsoft.Data.SqlClient.SNI.runtime" Version="5.1.1" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.0" />
+    <PackageReference Include="Microsoft.Data.SqlClient.SNI.runtime" Version="5.2.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
   <ItemGroup>

@@ -903,7 +903,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.2" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.0" />
     <PackageReference Include="RestSharp" Version="110.2.0" />
     <PackageReference Include="DevExpress.ExpressApp.Scheduler" Version="22.2.*-*" />
     <PackageReference Include="DevExpress.ExpressApp.AuditTrail.Xpo" Version="22.2.*-*" />

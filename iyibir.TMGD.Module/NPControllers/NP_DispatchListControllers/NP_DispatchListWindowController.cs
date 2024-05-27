@@ -11,6 +11,7 @@ using DevExpress.Persistent.Base;
 using DevExpress.Persistent.Validation;
 using iyibir.TMGD.Module.ApiModel;
 using iyibir.TMGD.Module.BusinessObjects;
+using iyibir.TMGD.Module.KersiaHelper.Model;
 using iyibir.TMGD.Module.NonPersistentObjects;
 using IyibirDLL;
 using Newtonsoft.Json.Linq;
@@ -18,6 +19,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 
 namespace iyibir.TMGD.Module.NPControllers.NP_DispatchListControllers
@@ -48,58 +50,132 @@ namespace iyibir.TMGD.Module.NPControllers.NP_DispatchListControllers
 
         private void ObjectSpace_ObjectsGetting(Object sender, ObjectsGettingEventArgs e)
         {
-            IObjectSpace os = Application.CreateObjectSpace();
-            LOGOParameter parameter = os.FindObject<LOGOParameter>(CriteriaOperator.Parse("IsActive = ? and Employee.Oid = ?", true,SecuritySystem.CurrentUserId));
-            if (parameter != null)
+            Employee employee = os.GetObjectByKey<Employee>(SecuritySystem.CurrentUserId);
+
+            if (employee.Customer is not null && employee.Customer.Code == "000982")
             {
-               string token = new Helpers.WebApiHelper().GetToken(parameter.Uri,parameter.Username,parameter.Password);
-                DBResult result = new Helpers.WebApiHelper().GetDispatchList(token, parameter.FirmNumber, parameter.PeriodNumber,parameter.Uri);
-                if (result.Status)
+                BindingList<NP_DispatchList> datasource = new BindingList<NP_DispatchList>();
+
+                HttpClient httpClient = new HttpClient();
+                httpClient.BaseAddress = new Uri("https://brmdepo.kersia-group.com:7474");
+                var customData = new KersiaHelper.DataStore.FicheDataStore().GetObjectsAsync(httpClient, 7);
+                foreach (Fiche item in customData)
                 {
-                    var dataResult = (JArray)result.Data;
-                    BindingList<LG_STFICHE> dispatchList = dataResult.ToObject<BindingList<LG_STFICHE>>();
-                    BindingList<NP_DispatchList> datasource = new BindingList<NP_DispatchList>();
-                    foreach (LG_STFICHE item in dispatchList)
+                    NP_DispatchList dispatch = new NP_DispatchList();
+                    dispatch.ClientCode = item.ClientCode;
+                    dispatch.ClientName = item.AccountName ?? string.Empty;//yok
+                    dispatch.CreatedOn = (DateTime)item.FicheDate;
+                    dispatch.Docode = item.Ficheno;//yok
+                    dispatch.FicheNo = item.Ficheno;
+                    dispatch.ReferenceId = item.Logicalref;
+                    dispatch.ShipperCode = item.ShipAgnDef ?? string.Empty;
+                    dispatch.VehiclePlate1 = string.Empty;//yok
+                    dispatch.VehiclePlate2 = string.Empty; //yok
+                    dispatch.DriverTCKN1 = item.DriverTckNo1 ?? string.Empty;
+                    dispatch.DriverTCKN2 = string.Empty;//yok
+
+                    foreach (Transaction line in item.Transactions)
                     {
-                        NP_DispatchList dispatch = new NP_DispatchList();
-                        dispatch.ClientCode = item.CLIENTCODE;
-                        dispatch.ClientName = item.CLIENTNAME;
-                        dispatch.CreatedOn = (DateTime)item.DATE_;
-                        dispatch.Docode = item.DOCODE;
-                        dispatch.FicheNo = item.FICHENO;
-                        dispatch.ReferenceId = item.LOGICALREF;
-                        dispatch.ShipperCode = item.SHPAGNCOD;
-                        dispatch.VehiclePlate1 = item.PLATENUM1;
-                        dispatch.VehiclePlate2 = item.PLATENUM2;
-                        dispatch.DriverTCKN1 = item.DRIVERTCKNO1;
-                        dispatch.DriverTCKN2 = item.DRIVERTCKNO2;
+                        NP_DispatchLine dispatchLine = new NP_DispatchLine();
+                        dispatchLine.ReferenceId = line.Logicalref;
+                        dispatchLine.ItemCode = line.ItemCode;
+                        dispatchLine.ItemName = line.ItemName;
+                        dispatchLine.Quantity = (double)line.Amount;
 
-                        foreach (LG_STLINE line in item.Lines)
-                        {
-                            NP_DispatchLine dispatchLine = new NP_DispatchLine();
-                            dispatchLine.ReferenceId = line.LOGICALREF;
-                            dispatchLine.ItemCode = line.STOCKCODE;
-                            dispatchLine.ItemName = line.STOCKNAME;
-                            dispatchLine.Quantity = (double)line.AMOUNT;
-
-                            dispatch.Lines.Add(dispatchLine);
-                        }
-
-                        datasource.Add(dispatch);
+                        dispatch.Lines.Add(dispatchLine);
                     }
-                    e.Objects = datasource;
+
+                    datasource.Add(dispatch);
                 }
-                else
-                    throw new UserFriendlyException(result.ErrorMessage);
+
+                var customDataOther = new KersiaHelper.DataStore.FicheDataStore().GetObjectsAsync(httpClient, 8);
+                foreach (Fiche item in customDataOther)
+                {
+                    NP_DispatchList dispatch = new NP_DispatchList();
+                    dispatch.ClientCode = item.ClientCode;
+                    dispatch.ClientName = item.AccountName ?? string.Empty;//yok
+                    dispatch.CreatedOn = (DateTime)item.FicheDate;
+                    dispatch.Docode = item.Ficheno;//yok
+                    dispatch.FicheNo = item.Ficheno;
+                    dispatch.ReferenceId = item.Logicalref;
+                    dispatch.ShipperCode = item.ShipAgnDef ?? string.Empty;
+                    dispatch.VehiclePlate1 = string.Empty;//yok
+                    dispatch.VehiclePlate2 = string.Empty; //yok
+                    dispatch.DriverTCKN1 = item.DriverTckNo1 ?? string.Empty;
+                    dispatch.DriverTCKN2 = string.Empty;//yok
+
+                    foreach (Transaction line in item.Transactions)
+                    {
+                        NP_DispatchLine dispatchLine = new NP_DispatchLine();
+                        dispatchLine.ReferenceId = line.Logicalref;
+                        dispatchLine.ItemCode = line.ItemCode;
+                        dispatchLine.ItemName = line.ItemName;
+                        dispatchLine.Quantity = (double)line.Amount;
+
+                        dispatch.Lines.Add(dispatchLine);
+                    }
+
+                    datasource.Add(dispatch);
+                }
+
+                e.Objects = datasource;
             }
             else
             {
-                throw new UserFriendlyException("LOGO Bağlantı Parametreleri Bulunamadı.. Lütfen Kontrol Ediniz..");
+                IObjectSpace os = Application.CreateObjectSpace();
+                LOGOParameter parameter = os.FindObject<LOGOParameter>(CriteriaOperator.Parse("IsActive = ? and Employee.Oid = ?", true, SecuritySystem.CurrentUserId));
+                if (parameter != null)
+                {
+                    string token = new Helpers.WebApiHelper().GetToken(parameter.Uri, parameter.Username, parameter.Password);
+                    DBResult result = new Helpers.WebApiHelper().GetDispatchList(token, parameter.FirmNumber, parameter.PeriodNumber, parameter.Uri);
+                    if (result.Status)
+                    {
+                        var dataResult = (JArray)result.Data;
+                        BindingList<LG_STFICHE> dispatchList = dataResult.ToObject<BindingList<LG_STFICHE>>();
+                        BindingList<NP_DispatchList> datasource = new BindingList<NP_DispatchList>();
+                        foreach (LG_STFICHE item in dispatchList)
+                        {
+                            NP_DispatchList dispatch = new NP_DispatchList();
+                            dispatch.ClientCode = item.CLIENTCODE;
+                            dispatch.ClientName = item.CLIENTNAME;
+                            dispatch.CreatedOn = (DateTime)item.DATE_;
+                            dispatch.Docode = item.DOCODE;
+                            dispatch.FicheNo = item.FICHENO;
+                            dispatch.ReferenceId = item.LOGICALREF;
+                            dispatch.ShipperCode = item.SHPAGNCOD ?? string.Empty;
+                            dispatch.VehiclePlate1 = item.PLATENUM1 ?? string.Empty;
+                            dispatch.VehiclePlate2 = item.PLATENUM2 ?? string.Empty;
+                            dispatch.DriverTCKN1 = item.DRIVERTCKNO1 ?? string.Empty;
+                            dispatch.DriverTCKN2 = item.DRIVERTCKNO2 ?? string.Empty;
+
+                            foreach (LG_STLINE line in item.Lines)
+                            {
+                                NP_DispatchLine dispatchLine = new NP_DispatchLine();
+                                dispatchLine.ReferenceId = line.LOGICALREF;
+                                dispatchLine.ItemCode = line.STOCKCODE;
+                                dispatchLine.ItemName = line.STOCKNAME;
+                                dispatchLine.Quantity = (double)line.AMOUNT;
+
+                                dispatch.Lines.Add(dispatchLine);
+                            }
+
+                            datasource.Add(dispatch);
+                        }
+                        e.Objects = datasource;
+                    }
+                    else
+                        throw new UserFriendlyException(result.ErrorMessage);
+                }
+                else
+                {
+                    throw new UserFriendlyException("LOGO Bağlantı Parametreleri Bulunamadı.. Lütfen Kontrol Ediniz..");
+                }
             }
+
         }
 
         protected override void OnDeactivated()
-        {            
+        {
             base.OnDeactivated();
             Application.ListViewCreating -= Application_ListViewCreating;
         }

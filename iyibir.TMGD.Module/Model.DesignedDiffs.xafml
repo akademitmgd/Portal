@@ -133,10 +133,11 @@
     <ListView Id="Activity_Lines_ListView">
       <Columns>
         <ColumnInfo Id="DueDate" Width="89" Index="-1" />
-        <ColumnInfo Id="LineNumber" Width="84" Index="0" SortIndex="0" SortOrder="Ascending" />
-        <ColumnInfo Id="Subject" Width="57" Index="1" SortIndex="-1" SortOrder="None" />
-        <ColumnInfo Id="Description" Index="2" Width="78" />
-        <ColumnInfo Id="Owner" Width="72" Index="3" />
+        <ColumnInfo Id="LineNumber" Width="74" Index="0" SortIndex="0" SortOrder="Ascending" />
+        <ColumnInfo Id="Subject" Width="54" Index="1" SortIndex="-1" SortOrder="None" />
+        <ColumnInfo Id="Description" Index="2" Width="71" />
+        <ColumnInfo Id="SubjectDescription" Width="107" />
+        <ColumnInfo Id="Owner" Width="56" Index="3" />
       </Columns>
     </ListView>
     <ListView Id="Activity_ListView">
