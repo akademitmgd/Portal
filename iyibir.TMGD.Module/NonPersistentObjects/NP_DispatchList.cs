@@ -33,6 +33,7 @@ namespace iyibir.TMGD.Module.NonPersistentObjects
         private string _vehiclePlate2;
         private string _driverTCKN1;
         private string _driverTCKN2;
+        private string _driverPlate;
         private BindingList<NP_DispatchLine> _lines;
 
         private void OnPropertyChanged([CallerMemberName] string propertyName = null)
@@ -200,6 +201,20 @@ namespace iyibir.TMGD.Module.NonPersistentObjects
                 {
                     _driverTCKN2 = value;
                     OnPropertyChanged(nameof(DriverTCKN2));
+                }
+            }
+        }
+
+        [ModelDefault("AllowEdit", "False")]
+        public string DriverPlate
+        {
+            get { return _driverPlate; }
+            set
+            {
+                if (_driverPlate != value)
+                {
+                    _driverPlate = value;
+                    OnPropertyChanged(nameof(DriverPlate));
                 }
             }
         }

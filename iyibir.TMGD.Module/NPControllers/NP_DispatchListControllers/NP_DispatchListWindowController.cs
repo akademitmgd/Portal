@@ -69,7 +69,7 @@ namespace iyibir.TMGD.Module.NPControllers.NP_DispatchListControllers
                     dispatch.FicheNo = item.Ficheno;
                     dispatch.ReferenceId = item.Logicalref;
                     dispatch.ShipperCode = item.ShipAgnDef ?? string.Empty;
-                    dispatch.VehiclePlate1 = string.Empty;//yok
+                    dispatch.VehiclePlate1 = item.DriverPlate ?? string.Empty;
                     dispatch.VehiclePlate2 = string.Empty; //yok
                     dispatch.DriverTCKN1 = item.DriverTckNo1 ?? string.Empty;
                     dispatch.DriverTCKN2 = string.Empty;//yok
@@ -99,9 +99,9 @@ namespace iyibir.TMGD.Module.NPControllers.NP_DispatchListControllers
                     dispatch.FicheNo = item.Ficheno;
                     dispatch.ReferenceId = item.Logicalref;
                     dispatch.ShipperCode = item.ShipAgnDef ?? string.Empty;
-                    dispatch.VehiclePlate1 = string.Empty;//yok
+                    dispatch.VehiclePlate1 = item.DriverPlate ?? string.Empty;//yok
                     dispatch.VehiclePlate2 = string.Empty; //yok
-                    dispatch.DriverTCKN1 = item.DriverTckNo1 ?? string.Empty;
+                    dispatch.DriverTCKN1 = item.DriverTckNo1 ?? string.Empty;                    
                     dispatch.DriverTCKN2 = string.Empty;//yok
 
                     foreach (Transaction line in item.Transactions)
@@ -110,7 +110,7 @@ namespace iyibir.TMGD.Module.NPControllers.NP_DispatchListControllers
                         dispatchLine.ReferenceId = line.Logicalref;
                         dispatchLine.ItemCode = line.ItemCode;
                         dispatchLine.ItemName = line.ItemName;
-                        dispatchLine.Quantity = (double)line.Amount;
+                        dispatchLine.Quantity = (double)line.Amount;                        
 
                         dispatch.Lines.Add(dispatchLine);
                     }

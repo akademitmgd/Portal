@@ -440,6 +440,7 @@ public partial class TransportDocumentDetailViewController : ViewController
             transportDocument.CreatedDate = dispatch.CreatedOn;
             transportDocument.Code = dispatch.FicheNo;
             transportDocument.Shipper = View.ObjectSpace.FindObject<Consignee>(CriteriaOperator.Parse("Customer.Oid = ? and Code = ? and ConsigneeType = ?", transportDocument.Consigner.Oid, dispatch.ShipperCode,3));
+            transportDocument.Shipper = View.ObjectSpace.FindObject<Consignee>(CriteriaOperator.Parse("Customer.Oid = ? and Title = ? and ConsigneeType = ?", transportDocument.Consigner.Oid, dispatch.ShipperCode, 3));
             transportDocument.Vehicle = View.ObjectSpace.FindObject<Vehicle>(CriteriaOperator.Parse("Customer.Oid = ? and Plate = ?", transportDocument.Consigner.Oid, dispatch.VehiclePlate1));
             transportDocument.OtherVehicle = View.ObjectSpace.FindObject<Vehicle>(CriteriaOperator.Parse("Customer.Oid = ? and Plate = ?", transportDocument.Consigner.Oid, dispatch.VehiclePlate2));
             transportDocument.Driver = View.ObjectSpace.FindObject<VehicleDriver>(CriteriaOperator.Parse("Customer.Oid = ? and TCKN = ?", transportDocument.Consigner.Oid, dispatch.DriverTCKN1));
@@ -460,12 +461,14 @@ public partial class TransportDocumentDetailViewController : ViewController
                                 transportDocumentTransaction.Quantity = item.Quantity;
                                 transportDocumentTransaction.InventoryCode = item.ItemCode;
                                 transportDocumentTransaction.InventoryName = item.ItemName;
+                                transportDocumentTransaction.Unitset = product.Unitset;
+                                transportDocumentTransaction.NetWeigth = item.Quantity;
                                 transportDocumentTransaction.HazardousGoods = View.ObjectSpace.GetObjectByKey<HazardousGoods>(product.HazardousGoods.Oid);
                                 transportDocumentTransaction.PackagingTypes = product.PackagingTypes != null ? View.ObjectSpace.GetObjectByKey<PackagingTypes>(product.PackagingTypes.Oid) : null;
-                                transportDocumentTransaction.PackingGroup = View.ObjectSpace.GetObjectByKey<PackingGroup>(transportDocumentTransaction.HazardousGoods.PackingGroups.FirstOrDefault().Oid);
-                                transportDocumentTransaction.TunnelCode = View.ObjectSpace.GetObjectByKey<HazardousGoodsTunnelCode>(transportDocumentTransaction.HazardousGoods.TunnelCodes.FirstOrDefault().Oid);
-                                transportDocumentTransaction.TransportCategory = View.ObjectSpace.GetObjectByKey<HazardousGoodsTransportCategory>(transportDocumentTransaction.HazardousGoods.TransportCategory.FirstOrDefault().Oid);
-                                transportDocumentTransaction.HazardousGoodsLabel = View.ObjectSpace.GetObjectByKey<HazardousGoodsLabel>(transportDocumentTransaction.HazardousGoods.Labels.OrderBy(x => x.LineNumber).FirstOrDefault().HazardousGoodsLabel.Oid);
+                                transportDocumentTransaction.PackingGroup = transportDocumentTransaction.HazardousGoods?.PackingGroups?.FirstOrDefault();
+                                transportDocumentTransaction.TunnelCode = transportDocumentTransaction.HazardousGoods?.TunnelCodes?.FirstOrDefault();
+                                transportDocumentTransaction.TransportCategory = transportDocumentTransaction.HazardousGoods?.TransportCategory?.FirstOrDefault();
+                                transportDocumentTransaction.HazardousGoodsLabel = transportDocumentTransaction.HazardousGoods.Labels?.OrderBy(x => x.LineNumber).FirstOrDefault()?.HazardousGoodsLabel; //View.ObjectSpace.GetObjectByKey<HazardousGoodsLabel>(transportDocumentTransaction.HazardousGoods.Labels.OrderBy(x => x.LineNumber).FirstOrDefault().HazardousGoodsLabel.Oid);
 
                                 transportDocument.Transactions.Add(transportDocumentTransaction);
                             }
@@ -480,6 +483,8 @@ public partial class TransportDocumentDetailViewController : ViewController
                                 TransportDocumentOtherTransaction transportDocumentOtherTransaction = View.ObjectSpace.CreateObject<TransportDocumentOtherTransaction>();
                                 transportDocumentOtherTransaction.TransportDocument = transportDocument;
                                 transportDocumentOtherTransaction.Quantity = item.Quantity;
+                                transportDocumentOtherTransaction.Unitset = product.Unitset;
+                                transportDocumentOtherTransaction.NetWeigth = item.Quantity;
                                 //transportDocumentOtherTransaction.InventoryCode = item.ItemCode;
                                 //transportDocumentOtherTransaction.InventoryName = item.ItemName;
                                 transportDocumentOtherTransaction.HazardousGoods = View.ObjectSpace.GetObjectByKey<HazardousGoods>(product.HazardousGoods.Oid);

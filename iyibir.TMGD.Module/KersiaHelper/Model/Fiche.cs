@@ -31,6 +31,7 @@ public class Fiche
     public string DriverName1 { get; set; } = string.Empty;
     public string DriverSurname1 { get; set; } = string.Empty;
     public string DriverTckNo1 { get; set; } = string.Empty;
+    public string DriverPlate { get; set; } = string.Empty;
     public string FicheTime { get; set; } = string.Empty;
     public string DocTime { get; set; } = string.Empty;
     public string ShipTime { get; set; } = string.Empty;
