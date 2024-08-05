@@ -14,7 +14,7 @@ public class FicheDataStore
     public IEnumerable<Fiche> GetObjectsAsync(HttpClient httpClient,int ficheType)
     {
         DateTime startDate = DateTime.Now;
-        DateTime endDate = DateTime.Now.AddDays(-7);
+        DateTime endDate = DateTime.Now.AddDays(-3);
         string url = $"{RequestUrl}&begDate={endDate.Year}-{endDate.Month.ToString().PadLeft(2,'0')}-{endDate.Day.ToString().PadLeft(2,'0')}&endDate={startDate.Year.ToString()}-{startDate.Month.ToString().PadLeft(2,'0')}-{startDate.Day.ToString().PadLeft(2,'0')}&ficheType={ficheType}";
         var response = httpClient.GetAsync(url).Result;
         if (response.IsSuccessStatusCode)

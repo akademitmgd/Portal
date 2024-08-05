@@ -27,9 +27,6 @@
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
-    <Reference Include="IyibirDLL">
-      <HintPath>..\..\..\iyibir Yazılım\iyibirDLL\IyibirDLL\bin\Debug\IyibirDLL.dll</HintPath>
-    </Reference>
     <Reference Update="System.Xml.Linq">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
@@ -933,5 +930,10 @@
     <EmbeddedResource Include="Model.DesignedDiffs.Localization.tr.xafml">
       <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="IyibirDLL">
+      <HintPath>..\..\..\iyibir Yazılım\iyibirDLL\IyibirDLL\bin\Debug\net7.0\IyibirDLL.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>
