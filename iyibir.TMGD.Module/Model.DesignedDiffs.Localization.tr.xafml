@@ -1906,7 +1906,14 @@
       <Layout>
         <LayoutGroup Id="Main">
           <LayoutGroup Id="SimpleEditors">
-            <LayoutGroup Id="VoyageNotification" Caption="U-ETDS Raporları" />
+            <LayoutGroup Id="VoyageNotification" Caption="U-ETDS Raporları">
+              <LayoutGroup Id="VoyageNotification_col1">
+                <LayoutGroup Id="Autoc3bb5e48-933c-4b27-acf7-6755ffd43649" Caption="Autoc3bb5e48-933c-4b27-acf7-6755ffd43649(9)">
+                  <LayoutGroup Id="Auto56d5e5ab-238b-4927-89ae-036c71703b83" Caption="Auto56d5e5ab-238b-4927-89ae-036c71703b83(10)" />
+                  <LayoutGroup Id="Auto500e2075-e4b3-4502-8af3-5965baf15f4e" Caption="Auto500e2075-e4b3-4502-8af3-5965baf15f4e(15)" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
           </LayoutGroup>
         </LayoutGroup>
       </Layout>

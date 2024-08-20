@@ -1227,51 +1227,52 @@
     <DetailView Id="VoyageNotification_DetailView">
       <Layout>
         <LayoutGroup Id="Main" RelativeSize="100">
-          <LayoutGroup Id="SimpleEditors" RelativeSize="30.56930693069307">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="34.15536374845869">
             <LayoutGroup Id="VoyageNotification" RelativeSize="100">
-              <LayoutGroup Id="VoyageNotification_col1" RelativeSize="50">
-                <LayoutItem Id="UpdatedDate" Index="0" RelativeSize="15.384615384615385" />
-                <LayoutItem Id="ActivatedDate" RelativeSize="11.538461538461538" Index="1" />
-                <LayoutItem Id="Status" RelativeSize="11.538461538461538" Index="2" />
-                <LayoutItem Id="FirmVoyageNumber" ViewItem="FirmVoyageNumber" Index="3" RelativeSize="11.538461538461538" IsNewNode="True" />
-                <LayoutGroup Id="Autoc3bb5e48-933c-4b27-acf7-6755ffd43649" ShowCaption="False" Caption="" Direction="Horizontal" Index="4" RelativeSize="50" IsNewNode="True">
-                  <LayoutGroup Id="Auto56d5e5ab-238b-4927-89ae-036c71703b83" ShowCaption="False" Caption="" Index="0" RelativeSize="50" IsNewNode="True">
-                    <LayoutItem Id="StartDate" ViewItem="StartDate" Index="0" RelativeSize="23.076923076923077" IsNewNode="True" />
-                    <LayoutItem Id="EndDate" ViewItem="EndDate" Index="1" RelativeSize="23.076923076923077" IsNewNode="True" />
-                    <LayoutItem Id="Plate1" ViewItem="Plate1" Index="2" RelativeSize="23.076923076923077" IsNewNode="True" />
-                    <LayoutItem Id="Driver1TCKN" ViewItem="Driver1TCKN" Index="3" RelativeSize="30.76923076923077" IsNewNode="True" />
+              <LayoutGroup Id="VoyageNotification_col1" RelativeSize="49.95579133510168">
+                <LayoutItem Id="TransportReferenceId" ViewItem="TransportReferenceId" Index="0" RelativeSize="13.445378151260504" IsNewNode="True" />
+                <LayoutItem Id="UpdatedDate" Index="1" RelativeSize="10.084033613445378" />
+                <LayoutItem Id="ActivatedDate" RelativeSize="10.084033613445378" Index="2" />
+                <LayoutItem Id="Status" RelativeSize="10.084033613445378" Index="3" />
+                <LayoutItem Id="FirmVoyageNumber" Index="4" RelativeSize="10.084033613445378" ViewItem="FirmVoyageNumber" IsNewNode="True" />
+                <LayoutItem Id="StartDate" RelativeSize="10.344827586206897" Index="4" Removed="True" />
+                <LayoutGroup Id="Autoc3bb5e48-933c-4b27-acf7-6755ffd43649" ShowCaption="False" Caption="" Direction="Horizontal" Index="5" RelativeSize="46.21848739495798" IsNewNode="True">
+                  <LayoutGroup Id="Auto56d5e5ab-238b-4927-89ae-036c71703b83" ShowCaption="False" Caption="" Index="0" RelativeSize="49.91150442477876" IsNewNode="True">
+                    <LayoutItem Id="StartDate" ViewItem="StartDate" Index="0" RelativeSize="27.272727272727273" IsNewNode="True" />
+                    <LayoutItem Id="EndDate" ViewItem="EndDate" Index="1" RelativeSize="21.818181818181817" IsNewNode="True" />
+                    <LayoutItem Id="Plate1" ViewItem="Plate1" Index="2" RelativeSize="21.818181818181817" IsNewNode="True" />
+                    <LayoutItem Id="Driver1TCKN" ViewItem="Driver1TCKN" Index="3" RelativeSize="29.09090909090909" IsNewNode="True" />
                   </LayoutGroup>
-                  <LayoutGroup Id="Auto500e2075-e4b3-4502-8af3-5965baf15f4e" ShowCaption="False" Caption="" Index="1" RelativeSize="50" IsNewNode="True">
-                    <LayoutItem Id="StartTime" ViewItem="StartTime" Index="0" RelativeSize="23.076923076923077" IsNewNode="True" />
-                    <LayoutItem Id="EndTime" ViewItem="EndTime" Index="1" RelativeSize="23.076923076923077" IsNewNode="True" />
-                    <LayoutItem Id="Plate2" ViewItem="Plate2" Index="2" RelativeSize="23.076923076923077" IsNewNode="True" />
-                    <LayoutItem Id="Driver2TCKN" ViewItem="Driver2TCKN" Index="3" RelativeSize="30.76923076923077" IsNewNode="True" />
+                  <LayoutGroup Id="Auto500e2075-e4b3-4502-8af3-5965baf15f4e" ShowCaption="False" Caption="" Index="1" RelativeSize="50.08849557522124" IsNewNode="True">
+                    <LayoutItem Id="StartTime" ViewItem="StartTime" Index="0" RelativeSize="27.272727272727273" IsNewNode="True" />
+                    <LayoutItem Id="EndTime" ViewItem="EndTime" Index="1" RelativeSize="21.818181818181817" IsNewNode="True" />
+                    <LayoutItem Id="Plate2" ViewItem="Plate2" Index="2" RelativeSize="21.818181818181817" IsNewNode="True" />
+                    <LayoutItem Id="Driver2TCKN" ViewItem="Driver2TCKN" Index="3" RelativeSize="29.09090909090909" IsNewNode="True" />
                   </LayoutGroup>
                 </LayoutGroup>
-                <LayoutItem Id="StartDate" RelativeSize="10.344827586206897" Index="4" Removed="True" />
                 <LayoutItem Id="EndDate" RelativeSize="11.538461538461538" Index="5" Removed="True" />
                 <LayoutItem Id="Owner" Index="5" RelativeSize="13.793103448275861" Removed="True" />
                 <LayoutItem Id="StartTime" RelativeSize="10.344827586206897" Index="6" Removed="True" />
                 <LayoutItem Id="EndTime" RelativeSize="15.384615384615385" Index="7" Removed="True" />
               </LayoutGroup>
-              <LayoutGroup Id="VoyageNotification_col2" RelativeSize="50">
+              <LayoutGroup Id="VoyageNotification_col2" RelativeSize="50.04420866489832">
                 <LayoutItem Id="CancelledType" RelativeSize="15.384615384615385" Index="0" Removed="True" />
                 <LayoutItem Id="Driver1TCKN" RelativeSize="15.384615384615385" Index="0" Removed="True" />
                 <LayoutItem Id="Driver2TCKN" RelativeSize="13.793103448275861" Index="0" Removed="True" />
                 <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Index="0" RelativeSize="100" Caption="İptal Durumu" IsNewNode="True">
-                  <LayoutItem Id="CancelledType" ViewItem="CancelledType" Index="0" RelativeSize="19.161676646706585" IsNewNode="True" />
-                  <LayoutItem Id="CancelledDescription" ViewItem="CancelledDescription" Index="1" RelativeSize="14.37125748502994" IsNewNode="True" />
-                  <LayoutItem Id="CancelledDate" ViewItem="CancelledDate" Index="2" RelativeSize="66.46706586826348" IsNewNode="True" />
+                  <LayoutItem Id="CancelledType" ViewItem="CancelledType" Index="0" RelativeSize="16.243654822335024" IsNewNode="True" />
+                  <LayoutItem Id="CancelledDescription" ViewItem="CancelledDescription" Index="1" RelativeSize="12.182741116751268" IsNewNode="True" />
+                  <LayoutItem Id="CancelledDate" ViewItem="CancelledDate" Index="2" RelativeSize="71.57360406091371" IsNewNode="True" />
                 </LayoutGroup>
                 <LayoutItem Id="Plate1" RelativeSize="17.391304347826086" Index="0" Removed="True" />
                 <LayoutItem Id="Plate2" RelativeSize="15.384615384615385" Index="0" Removed="True" />
                 <LayoutItem Id="CancelledDescription" RelativeSize="11.538461538461538" Index="1" Removed="True" />
                 <LayoutItem Id="CancelledDate" RelativeSize="73.07692307692308" Index="2" Removed="True" />
-                <LayoutItem Id="FirmVoyageNumber" RelativeSize="15.384615384615385" Removed="True" />
+                <LayoutItem Id="TransportReferenceId" Removed="True" />
               </LayoutGroup>
             </LayoutGroup>
           </LayoutGroup>
-          <TabbedGroup Id="Tabs" RelativeSize="69.43069306930693">
+          <TabbedGroup Id="Tabs" RelativeSize="65.8446362515413">
             <LayoutGroup Id="Transactions" RelativeSize="100">
               <LayoutItem Id="Transactions" RelativeSize="100" />
             </LayoutGroup>
@@ -1295,12 +1296,13 @@
         <ColumnInfo Id="Plate2" Width="55" Index="-1" />
         <ColumnInfo Id="StartTime" Width="73" Index="-1" />
         <ColumnInfo Id="UpdatedDate" Width="92" Index="-1" />
-        <ColumnInfo Id="Status" Width="52" Index="0" />
-        <ColumnInfo Id="Owner" Width="55" Index="1" />
-        <ColumnInfo Id="Consignee" Width="76" Index="2" />
-        <ColumnInfo Id="StartDate" Width="71" Index="3" SortIndex="0" SortOrder="Descending" />
-        <ColumnInfo Id="Plate1" Width="55" Index="4" />
-        <ColumnInfo Id="Driver1TCKN" Width="93" Index="5" />
+        <ColumnInfo Id="Status" Width="64" Index="0" />
+        <ColumnInfo Id="Owner" Width="72" Index="1" />
+        <ColumnInfo Id="Consignee" Width="74" Index="2" />
+        <ColumnInfo Id="StartDate" Width="115" Index="3" SortIndex="0" SortOrder="Descending" />
+        <ColumnInfo Id="Plate1" Width="57" Index="4" />
+        <ColumnInfo Id="Driver1TCKN" Width="126" Index="5" />
+        <ColumnInfo Id="TransportReferenceId" Width="59" />
       </Columns>
     </ListView>
     <ListView Id="VoyageNotification_Transactions_ListView">

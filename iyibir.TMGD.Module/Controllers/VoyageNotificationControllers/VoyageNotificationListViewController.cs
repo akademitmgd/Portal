@@ -765,6 +765,7 @@ namespace iyibir.TMGD.Module.Controllers.VoyageNotificationControllers
                                         voyageNotification.ReferenceId = sonuc.seferId;
                                         voyageNotification.Status = VoyageNotificationStatus.Sent;
                                         voyageNotification.TransportDocument.Status = TransportDocumentStatus.Send;
+                                        voyageNotification.TransportReferenceId = sonuc.seferId;
 
                                         history = View.ObjectSpace.CreateObject<VoyageNotificationHistory>();
                                         history.CreatedOn = DateTime.Now;

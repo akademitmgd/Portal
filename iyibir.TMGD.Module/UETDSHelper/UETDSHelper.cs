@@ -97,6 +97,7 @@ namespace iyibir.TMGD.Module.UETDSHelper
                 UetdsService.UdhbUetdsEsyaWsServiceClient client = GetClient();
 
                 UetdsService.uetdsEsyaSeferEkleSonucV3 sonuc = client.yeniSeferEkleV3(wsuser, seferBilgileriInput);
+                
 
                 return sonuc;
             }
@@ -105,6 +106,18 @@ namespace iyibir.TMGD.Module.UETDSHelper
                 throw new Exception(ex.Message);
             }
         }
+
+        public UetdsService.uetdsGenelPdfSonuc SeferRaporu(long seferId)
+        {
+            UetdsService.uetdsYtsUser wsuser = SettingYtsUser();
+
+            UetdsService.UdhbUetdsEsyaWsServiceClient client = GetClient();
+
+            UetdsService.uetdsGenelPdfSonuc sonuc = client.seferRaporuV3(wsuser, seferId);
+
+            return sonuc;
+        }
+
         public UetdsService.uetdsEsyaYeniYukEkleSonucV3 SefereYukEkle(long seferId, string aliciUnvan, string aliciVergiNo, string bosaltmaIlceMernisKodu, string bosaltmaIlMernisKodu, string bosaltmaSaati, string bosaltmaTarihi, string bosaltmaUlkeKodu, string firmaYukNo, string gonderenUnvan, string gonderenVergiNo, string muafiyetTuru, string tasimaTuruKodu, string tehlikeliMaddeTasimaSekli, string unId, string yukCinsDigerAciklama, string yukCinsId, string yuklemeIlceMernisKodu, string yuklemeIlMernisKodu, string yuklemeSaati, string yuklemeTarihi, string yuklemeUlkeKodu, string yukMiktari, string yukMiktariBirimi)
         {
             UetdsService.UdhbUetdsEsyaWsServiceClient client = GetClient();
