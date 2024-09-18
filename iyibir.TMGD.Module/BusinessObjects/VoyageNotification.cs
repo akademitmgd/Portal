@@ -73,7 +73,7 @@ namespace iyibir.TMGD.Module.BusinessObjects
         public string Consignee { get {
 
                 if (!IsLoading && !IsSaving)
-                    return this.Transactions.FirstOrDefault().ConsigneeTitle;
+                    return this.Transactions?.FirstOrDefault()?.ConsigneeTitle ?? string.Empty;
                 else
                     return string.Empty;
             } }
