@@ -265,9 +265,9 @@ namespace iyibir.TMGD.Module.Controllers.TransportDocumentControllers
                     transaction.ConsignerCountyMernisCode = item.TransportDocument.Consigner != null && item.TransportDocument.Consigner.County != null ? item.TransportDocument.Consigner.County.MernisCode : string.Empty;
                     transaction.ConsigneeVKN = item.TransportDocument.ConsigneeTaxNumber;
                     transaction.ConsigneeTitle = item.TransportDocument.Consignee != null ? item.TransportDocument.Consignee.Title : string.Empty;
-                    transaction.ConsigneeCountryCode = item.TransportDocument.Consignee != null && item.TransportDocument.Consignee.Country != null ? item.TransportDocument.Consignee.Country.Code : string.Empty;
-                    transaction.ConsigneeCityMernisCode = item.TransportDocument.Consignee != null && item.TransportDocument.Consignee.City != null ? item.TransportDocument.Consignee.City.MernisCode : string.Empty;
-                    transaction.ConsigneeCountyMernisCode = item.TransportDocument.Consignee != null && item.TransportDocument.Consignee.County != null ? item.TransportDocument.Consignee.County.MernisCode : string.Empty;
+                    transaction.ConsigneeCountryCode = item.TransportDocument.Consignee != null && item.TransportDocument.Consignee.Country != null ? item.TransportDocument.Consignee.Country.Code : item.TransportDocument.Consigner.Country.Code;
+                    transaction.ConsigneeCityMernisCode = item.TransportDocument.Consignee != null && item.TransportDocument.Consignee.City != null ? item.TransportDocument.Consignee.City.MernisCode : item.TransportDocument.Consigner.City.MernisCode;
+                    transaction.ConsigneeCountyMernisCode = item.TransportDocument.Consignee != null && item.TransportDocument.Consignee.County != null ? item.TransportDocument.Consignee.County.MernisCode : item.TransportDocument.Consigner.County.MernisCode;
                     transaction.LoadQuantity = item.Quantity;
                     transaction.UnId = item.HazardousGoods != null ? item.HazardousGoods.UNID : string.Empty;
                     transaction.OtherTransaction = os.GetObjectByKey<TransportDocumentOtherTransaction>(item.Oid);
@@ -298,8 +298,8 @@ namespace iyibir.TMGD.Module.Controllers.TransportDocumentControllers
                     transaction.ConsigneeVKN = item.TransportDocument.ConsigneeTaxNumber;
                     transaction.ConsigneeTitle = item.TransportDocument.Consignee != null ? item.TransportDocument.Consignee.Title : string.Empty;
                     transaction.ConsigneeCountryCode = item.TransportDocument.Consignee != null && item.TransportDocument.Consignee.Country != null ? item.TransportDocument.Consignee.Country.Code : "TR";
-                    transaction.ConsigneeCityMernisCode = item.TransportDocument.Consignee != null && item.TransportDocument.Consignee.City != null ? item.TransportDocument.Consignee.City.MernisCode : string.Empty;
-                    transaction.ConsigneeCountyMernisCode = item.TransportDocument.Consignee != null && item.TransportDocument.Consignee.County != null ? item.TransportDocument.Consignee.County.MernisCode : string.Empty;
+                    transaction.ConsigneeCityMernisCode = item.TransportDocument.Consignee != null && item.TransportDocument.Consignee.City != null ? item.TransportDocument.Consignee.City.MernisCode : item.TransportDocument.Consigner.City.MernisCode;
+                    transaction.ConsigneeCountyMernisCode = item.TransportDocument.Consignee != null && item.TransportDocument.Consignee.County != null ? item.TransportDocument.Consignee.County.MernisCode : item.TransportDocument.Consigner.County.MernisCode;
                     transaction.LoadQuantity = item.Quantity;
                     transaction.UnId = item.HazardousGoods != null ? item.HazardousGoods.UNID : string.Empty;
                     transaction.Transaction = os.GetObjectByKey<TransportDocumentTransaction>(item.Oid); 
