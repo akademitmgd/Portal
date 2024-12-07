@@ -15,7 +15,7 @@ namespace iyibir.TMGD.Module.BusinessObjects
     [NavigationItem("Workspace")]
     [ImageName("BO_Note")]
     [DefaultProperty("Topic")]
-    [Appearance("Appearance Note Strikeout", Criteria = "IsActive = 0", Context = "ListView", TargetItems = "*", Enabled = false, FontStyle = DevExpress.Drawing.DXFontStyle.Strikeout)]
+    [Appearance("Appearance Note Strikeout", Criteria = "IsActive = 0", Context = "ListView", TargetItems = "*", Enabled = false, FontStyle = System.Drawing.FontStyle.Strikeout)]
     [ListViewFilter("MyNoteList", "Owner.Oid = CurrentUserId()", "Benim Notlarım", Index = 0)]
     [ListViewFilter("ActiveNoteList", "IsActive = 1", "Aktif Notlar", Index = 0)]
     [ListViewFilter("DeactiveNoteList", "IsActive = 0", "Kapanan Notlar", Index = 1)]

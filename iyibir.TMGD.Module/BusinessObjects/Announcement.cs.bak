@@ -16,7 +16,7 @@ namespace iyibir.TMGD.Module.BusinessObjects
     [NavigationItem("Workspace")]
     [ImageName("BO_Scheduler")]
     [DefaultProperty("Title")]
-    [Appearance("Announcement Closed", Criteria = "Users[Employee.Oid = CurrentUserId() and IsRead = True]", Context = "ListView", TargetItems = "*", FontStyle = DevExpress.Drawing.DXFontStyle.Strikeout)]
+    [Appearance("Announcement Closed", Criteria = "Users[Employee.Oid = CurrentUserId() and IsRead = True]", Context = "ListView", TargetItems = "*", FontStyle = System.Drawing.FontStyle.Strikeout)]
     public class Announcement : BaseObject
     {
         private string _title;

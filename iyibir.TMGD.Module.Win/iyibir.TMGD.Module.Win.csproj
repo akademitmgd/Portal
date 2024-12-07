@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net7.0-windows7.0</TargetFramework>
+    <TargetFramework>net8.0-windows7.0</TargetFramework>
     <OutputType>Library</OutputType>
     <SccProjectName>SAK</SccProjectName>
     <SccLocalPath>SAK</SccLocalPath>
@@ -17,6 +17,13 @@
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Model.DesignedDiffs.Localization.tr.xafml" />
+    <PackageReference Include="Azure.Core" Version="1.44.1" />
+    <PackageReference Include="Azure.Identity" Version="1.13.1" />
+  
+    <PackageReference Include="DevExpress.ExpressApp.CodeAnalysis" Version="24.1.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Model.DesignedDiffs.Localization.tr.xafml">
@@ -69,26 +76,64 @@
     <ProjectReference Include="..\iyibir.TMGD.Module\iyibir.TMGD.Module.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="DevExpress.CodeParser" Version="22.2.4" />
-    <PackageReference Include="DevExpress.ExpressApp.AuditTrail.Xpo" Version="22.2.*-*" />
-    <PackageReference Include="DevExpress.ExpressApp.Chart.Win" Version="22.2.*-*" />
-    <PackageReference Include="DevExpress.ExpressApp.CloneObject.Xpo" Version="22.2.*-*" />
-    <PackageReference Include="DevExpress.ExpressApp.ConditionalAppearance" Version="22.2.*-*" />
-    <PackageReference Include="DevExpress.ExpressApp.Dashboards.Win" Version="22.2.*-*" />
-    <PackageReference Include="DevExpress.ExpressApp.FileAttachment.Win" Version="22.2.*-*" />
-    <PackageReference Include="DevExpress.ExpressApp.Notifications.Win" Version="22.2.*-*" />
-    <PackageReference Include="DevExpress.ExpressApp.Objects" Version="22.2.4" />
-    <PackageReference Include="DevExpress.ExpressApp.PivotChart.Win" Version="22.2.*-*" />
-    <PackageReference Include="DevExpress.ExpressApp.PivotGrid.Win" Version="22.2.*-*" />
-    <PackageReference Include="DevExpress.ExpressApp.ReportsV2.Win" Version="22.2.*-*" />
-    <PackageReference Include="DevExpress.ExpressApp.Scheduler.Win" Version="22.2.*-*" />
-    <PackageReference Include="DevExpress.ExpressApp.ScriptRecorder.Win" Version="22.2.*-*" />
-    <PackageReference Include="DevExpress.ExpressApp.TreeListEditors.Win" Version="22.2.*-*" />
-    <PackageReference Include="DevExpress.ExpressApp.Validation.Win" Version="22.2.*-*" />
-    <PackageReference Include="DevExpress.Win" Version="22.2.*-*" />
-    <PackageReference Include="DevExpress.Win.Design" Version="22.2.*-*" />
+    <PackageReference Include="DevExpress.CodeParser" Version="24.1.3" />
+    <PackageReference Include="DevExpress.ExpressApp.AuditTrail.Xpo" Version="24.1.*-*" />
+    <PackageReference Include="DevExpress.ExpressApp.Chart.Win" Version="24.1.*-*" />
+    <PackageReference Include="DevExpress.ExpressApp.CloneObject.Xpo" Version="24.1.*-*" />
+    <PackageReference Include="DevExpress.ExpressApp.ConditionalAppearance" Version="24.1.*-*" />
+    <PackageReference Include="DevExpress.ExpressApp.Dashboards.Win" Version="24.1.*-*" />
+    <PackageReference Include="DevExpress.ExpressApp.FileAttachment.Win" Version="24.1.*-*" />
+    <PackageReference Include="DevExpress.ExpressApp.Notifications.Win" Version="24.1.*-*" />
+    <PackageReference Include="DevExpress.ExpressApp.Objects" Version="24.1.3" />
+    <PackageReference Include="DevExpress.ExpressApp.PivotChart.Win" Version="24.1.*-*" />
+    <PackageReference Include="DevExpress.ExpressApp.PivotGrid.Win" Version="24.1.*-*" />
+    <PackageReference Include="DevExpress.ExpressApp.ReportsV2.Win" Version="24.1.*-*" />
+    <PackageReference Include="DevExpress.ExpressApp.Scheduler.Win" Version="24.1.*-*" />
+    <PackageReference Include="DevExpress.ExpressApp.ScriptRecorder.Win" Version="24.1.*-*" />
+    <PackageReference Include="DevExpress.ExpressApp.TreeListEditors.Win" Version="24.1.*-*" />
+    <PackageReference Include="DevExpress.ExpressApp.Validation.Win" Version="24.1.*-*" />
+    <PackageReference Include="DevExpress.Win" Version="24.1.*-*" />
+    <PackageReference Include="DevExpress.Win.Design" Version="24.1.*-*" />
+    <PackageReference Include="MessagePack" Version="2.5.187" />
+    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="8.0.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.11.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.12.0" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
     <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.1" />
+    <PackageReference Include="Microsoft.Extensions.ObjectPool" Version="8.0.11" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="8.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Identity.Client" Version="4.66.2" />
+    <PackageReference Include="Microsoft.Identity.Client.Broker" Version="4.66.2" />
+    <PackageReference Include="Microsoft.Identity.Client.Desktop" Version="4.66.2" />
+    <PackageReference Include="Microsoft.Identity.Client.NativeInterop" Version="0.17.2" />
+    <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="8.3.0" />
+    <PackageReference Include="Microsoft.IdentityModel.Protocols" Version="8.3.0" />
+    <PackageReference Include="Microsoft.NET.StringTools" Version="17.12.6" />
+    <PackageReference Include="Microsoft.NETCore.Platforms" Version="7.0.4" />
+    <PackageReference Include="Microsoft.Win32.SystemEvents" Version="8.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="runtime.native.System.Data.SqlClient.sni" Version="4.7.0" />
+    <PackageReference Include="System.CodeDom" Version="8.0.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
+    <PackageReference Include="System.Diagnostics.DiagnosticSource" Version="8.0.1" />
+    <PackageReference Include="System.Drawing.Common" Version="8.0.11" />
+    <PackageReference Include="System.Formats.Asn1" Version="8.0.1" />
+    <PackageReference Include="System.Memory" Version="4.6.0" />
+    <PackageReference Include="System.Memory.Data" Version="8.0.1" />
+    <PackageReference Include="System.Resources.Extensions" Version="8.0.0" />
+    <PackageReference Include="System.Security.AccessControl" Version="6.0.1" />
+    <PackageReference Include="System.Security.Cryptography.Pkcs" Version="8.0.1" />
+    <PackageReference Include="System.Security.Cryptography.Xml" Version="8.0.2" />
+    <PackageReference Include="System.Security.Permissions" Version="8.0.0" />
+    <PackageReference Include="System.ServiceModel.Http" Version="8.1.0" />
+    <PackageReference Include="System.ServiceModel.NetTcp" Version="8.0.0" />
+    <PackageReference Include="System.Text.Json" Version="8.0.5" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
