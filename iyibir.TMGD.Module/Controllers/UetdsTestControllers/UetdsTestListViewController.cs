@@ -55,36 +55,36 @@ namespace iyibir.TMGD.Module.Controllers.UetdsTestControllers
 
             string uri = "https://servis.turkiye.gov.tr/services/g2g/kdgm/test/uetdsesya";
 
-            UEDTSTestService.UdhbUetdsEsyaWsServiceClient client = new UEDTSTestService.UdhbUetdsEsyaWsServiceClient(binding, new EndpointAddress(uri));
+            //UEDTSTestService.UdhbUetdsEsyaWsServiceClient client = new UEDTSTestService.UdhbUetdsEsyaWsServiceClient(binding, new EndpointAddress(uri));
 
 
-            client.ClientCredentials.UserName.UserName = "859272";
-            client.ClientCredentials.UserName.Password = "FREPP1B73K";
+            //client.ClientCredentials.UserName.UserName = "859272";
+            //client.ClientCredentials.UserName.Password = "FREPP1B73K";
 
             //client.Open();
 
-            UEDTSTestService.uetdsYtsUser wsuser = SettingYtsUser();
+            //UEDTSTestService.uetdsYtsUser wsuser = SettingYtsUser();
 
             UetdsService.uetdsEsyaParamEsyaTurSonuc sonuc = new UETDSHelper.UETDSHelper("859272", "FREPP1B73K").GetYukTuru(1.ToString());
         }
 
-        private static UEDTSTestService.uetdsYtsUser SettingYtsUser()
-        {
-            UEDTSTestService.uetdsYtsUser wsuser = new UEDTSTestService.uetdsYtsUser();
-            wsuser.kullaniciAdi = "859272";
-            wsuser.sifre = "FREPP1B73K";
+        //private static UEDTSTestService.uetdsYtsUser SettingYtsUser()
+        //{
+        //    UEDTSTestService.uetdsYtsUser wsuser = new UEDTSTestService.uetdsYtsUser();
+        //    wsuser.kullaniciAdi = "859272";
+        //    wsuser.sifre = "FREPP1B73K";
 
-            return wsuser;
-        }
+        //    return wsuser;
+        //}
 
-        private static UEDTSTestService.uetdsEsyaSeferBilgileriInputV3 SettingSeferBilgileri()
-        {
-            UEDTSTestService.uetdsEsyaSeferBilgileriInputV3 seferBilgileriInput = new UEDTSTestService.uetdsEsyaSeferBilgileriInputV3();
-            seferBilgileriInput.baslangicSaati = "";
-            seferBilgileriInput.baslangicTarihi = DateTime.Now.ToString();
-            seferBilgileriInput.sofor2TCNo = "11111111111";
+        //private static UEDTSTestService.uetdsEsyaSeferBilgileriInputV3 SettingSeferBilgileri()
+        //{
+        //    UEDTSTestService.uetdsEsyaSeferBilgileriInputV3 seferBilgileriInput = new UEDTSTestService.uetdsEsyaSeferBilgileriInputV3();
+        //    seferBilgileriInput.baslangicSaati = "";
+        //    seferBilgileriInput.baslangicTarihi = DateTime.Now.ToString();
+        //    seferBilgileriInput.sofor2TCNo = "11111111111";
 
-            return seferBilgileriInput;
-        }
+        //    return seferBilgileriInput;
+        //}
     }
 }

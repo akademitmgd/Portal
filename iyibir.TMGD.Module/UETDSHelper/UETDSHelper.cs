@@ -107,15 +107,19 @@ namespace iyibir.TMGD.Module.UETDSHelper
             }
         }
 
-        public UetdsService.uetdsGenelPdfSonuc SeferRaporu(long seferId)
+        public async UetdsService.uetdsGenelPdfSonuc SeferRaporu(long seferId)
         {
             UetdsService.uetdsYtsUser wsuser = SettingYtsUser();
 
             UetdsService.UdhbUetdsEsyaWsServiceClient client = GetClient();
 
-            UetdsService.uetdsGenelPdfSonuc sonuc = client.seferRaporuV3(wsuser, seferId);
+			
+            
+			UetdsService.uetdsGenelPdfSonuc sonuc = client.seferRaporuV3(wsuser, seferId); // eski hali
 
-            return sonuc;
+			var response = client.seferRaporuV3Async(wsuser, seferId).Result;
+			UetdsService.uetdsGenelPdfSonuc sonuc1 = response.@return;                    // yeni hali
+			return sonuc;
         }
 
         public UetdsService.uetdsEsyaYeniYukEkleSonucV3 SefereYukEkle(long seferId, string aliciUnvan, string aliciVergiNo, string bosaltmaIlceMernisKodu, string bosaltmaIlMernisKodu, string bosaltmaSaati, string bosaltmaTarihi, string bosaltmaUlkeKodu, string firmaYukNo, string gonderenUnvan, string gonderenVergiNo, string muafiyetTuru, string tasimaTuruKodu, string tehlikeliMaddeTasimaSekli, string unId, string yukCinsDigerAciklama, string yukCinsId, string yuklemeIlceMernisKodu, string yuklemeIlMernisKodu, string yuklemeSaati, string yuklemeTarihi, string yuklemeUlkeKodu, string yukMiktari, string yukMiktariBirimi)
