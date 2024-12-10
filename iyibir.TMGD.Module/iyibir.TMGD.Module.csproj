@@ -1,63 +1,15 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
-  <PropertyGroup>
-    <OutputType>Library</OutputType>
-    <SccProjectName>SAK</SccProjectName>
-    <SccLocalPath>SAK</SccLocalPath>
-    <SccAuxPath>SAK</SccAuxPath>
-    <SccProvider>SAK</SccProvider>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'EasyTest|AnyCPU' ">
-    <OutputPath>bin\EasyTest\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;EASYTEST</DefineConstants>
-  </PropertyGroup>
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <CheckEolTargetFramework>false</CheckEolTargetFramework>
+    <Deterministic>false</Deterministic>
+    <AssemblyVersion>1.0.*</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <Configurations>Debug;Release;EasyTest</Configurations>
+    <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
+  
   <ItemGroup>
-    <Reference Update="System">
-      <SpecificVersion>False</SpecificVersion>
-      <Private>True</Private>
-    </Reference>
-    <Reference Update="System.Core">
-      <SpecificVersion>False</SpecificVersion>
-      <Private>True</Private>
-    </Reference>
-    <Reference Update="System.Data">
-      <SpecificVersion>False</SpecificVersion>
-      <Private>True</Private>
-    </Reference>
-    <Reference Update="System.Xml.Linq">
-      <SpecificVersion>False</SpecificVersion>
-      <Private>True</Private>
-    </Reference>
-    <Reference Update="System">
-      <Name>System</Name>
-    </Reference>
-    <Reference Update="System.Data">
-      <Name>System.Data</Name>
-    </Reference>
-    <Reference Update="System.Xml">
-      <Name>System.XML</Name>
-      <Private>True</Private>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Update="Connected Services\NewService\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Update="Connected Services\UEDTSTestService\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Update="Connected Services\UetdsService\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <Compile Update="Controllers\ActivityControllers\ActivityListViewController.cs" />
     <Compile Update="Controllers\ActivityControllers\ActivityListViewController.Designer.cs">
       <DependentUpon>ActivityListViewController.cs</DependentUpon>
@@ -338,507 +290,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Update="Connected Services\NewService\esyaservisi.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.aracMuayeneSorgulaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.firmaCezaSorgulaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.firmaUyarmaSorgulaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.ipListeleResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.ipSilResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.iptalTurleriResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.ipTanimlaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.meslekiYeterlilikSorgulaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.paramTasimaTurleriResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.paramTehlikeliMaddeTasimaSekliResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.paramTehlikeMaddeMuafiyetTurleriResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.paramYukBirimiResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.paramYukTuruBozulabilirGidaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.paramYukTuruResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.seferAktifEtV3Response.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.seferDetayiV3Response.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.seferDuzenleV3Response.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.sefereYukEkleV3Response.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.seferIptalEtV3Response.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.seferIptalTurleriResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.seferListesiV3Response.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.seferRaporuV3Response.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.servisTestResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsEsyaIPListeleSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsEsyaParamBozulabilirGidaTurSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsEsyaParamEsyaTurSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsEsyaParamIptalTuruSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsEsyaParamMuafiyetTuruSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsEsyaParamTasimaTuruSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsEsyaParamTehlikeliMaddeTasimaSekliSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsEsyaParamYukBirimiSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsEsyaSeferDetayiSonucV3.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsEsyaSeferEkleSonucV3.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsEsyaSeferListesiSonucV3.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsEsyaYeniYukEkleSonucV3.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsEsyaYukDetayiSonucV3.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsFirmaCezaListeSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsFirmaSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsFirmaUyarmaListeSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsGenelIslemSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsGenelPdfSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsMesSorguSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsMuayeneSorguSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsSurucuVizeBasvuruSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsVizeBasvuruDetaySonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsVizeBasvuruListeSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsVizeSurucuEkleSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.uetdsWSVersiyonSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.vizeOnBasvuruDetayResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.vizeOnBasvuruIptalResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.vizeOnBasvuruListeleResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.vizeOnBasvuruResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.vizeOnBasvuruSurucuEkleResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.webServisVersiyonResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.yeniSeferEkleV3Response.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.yetkiBelgesiKontrolResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.yukAktifEtV3Response.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.yukDetayiV3Response.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.yukDuzenleV3Response.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\NewService\iyibir.TMGD.Module.NewService.yukIptalEtV3Response.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.aracMuayeneSorgulaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.ipListeleResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.ipSilResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.iptalTurleriResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.ipTanimlaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.meslekiYeterlilikSorgulaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.paramTasimaTurleriResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.paramTehlikeliMaddeTasimaSekliResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.paramTehlikeMaddeMuafiyetTurleriResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.paramYukBirimiResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.paramYukTuruResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.seferAktifEtV3Response.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.seferDetayiV3Response.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.seferDuzenleV3Response.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.sefereYukEkleV3Response.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.seferIptalEtV3Response.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.seferIptalTurleriResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.seferListesiV3Response.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.seferRaporuV3Response.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.servisTestResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.uetdsEsyaIPListeleSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.uetdsEsyaParamEsyaTurSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.uetdsEsyaParamIptalTuruSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.uetdsEsyaParamMuafiyetTuruSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.uetdsEsyaParamTasimaTuruSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.uetdsEsyaParamTehlikeliMaddeTasimaSekliSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.uetdsEsyaParamYukBirimiSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.uetdsEsyaSeferDetayiSonucV3.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.uetdsEsyaSeferEkleSonucV3.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.uetdsEsyaSeferListesiSonucV3.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.uetdsEsyaYeniYukEkleSonucV3.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.uetdsEsyaYukDetayiSonucV3.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.uetdsFirmaSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.uetdsGenelIslemSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.uetdsGenelPdfSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.uetdsMesSorguSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.uetdsMuayeneSorguSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.uetdsSurucuVizeBasvuruSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.uetdsVizeBasvuruDetaySonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.uetdsVizeBasvuruListeSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.uetdsVizeSurucuEkleSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.vizeOnBasvuruDetayResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.vizeOnBasvuruIptalResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.vizeOnBasvuruListeleResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.vizeOnBasvuruResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.vizeOnBasvuruSurucuEkleResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.yeniSeferEkleV3Response.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.yetkiBelgesiKontrolResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.yukAktifEtV3Response.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.yukDetayiV3Response.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.yukDuzenleV3Response.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\iyibir.TMGD.Module.UEDTSTestService.yukIptalEtV3Response.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UEDTSTestService\testesyaservisi.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Update="Connected Services\UetdsService\esyaservisi.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.aracMuayeneSorgulaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.ipListeleResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.ipSilResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.iptalTurleriResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.ipTanimlaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.meslekiYeterlilikSorgulaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.paramTasimaTurleriResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.paramTehlikeliMaddeTasimaSekliResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.paramTehlikeMaddeMuafiyetTurleriResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.paramYukBirimiResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.paramYukTuruResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.seferAktifEtV3Response.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.seferDetayiV3Response.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.seferDuzenleV3Response.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.sefereYukEkleV3Response.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.seferIptalEtV3Response.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.seferIptalTurleriResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.seferListesiV3Response.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.seferRaporuV3Response.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.servisTestResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.uetdsEsyaIPListeleSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.uetdsEsyaParamEsyaTurSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.uetdsEsyaParamIptalTuruSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.uetdsEsyaParamMuafiyetTuruSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.uetdsEsyaParamTasimaTuruSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.uetdsEsyaParamTehlikeliMaddeTasimaSekliSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.uetdsEsyaParamYukBirimiSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.uetdsEsyaSeferDetayiSonucV3.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.uetdsEsyaSeferEkleSonucV3.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.uetdsEsyaSeferListesiSonucV3.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.uetdsEsyaYeniYukEkleSonucV3.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.uetdsEsyaYukDetayiSonucV3.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.uetdsFirmaSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.uetdsGenelIslemSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.uetdsGenelPdfSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.uetdsMesSorguSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.uetdsMuayeneSorguSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.uetdsSurucuVizeBasvuruSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.uetdsVizeBasvuruDetaySonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.uetdsVizeBasvuruListeSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.uetdsVizeSurucuEkleSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.vizeOnBasvuruDetayResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.vizeOnBasvuruIptalResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.vizeOnBasvuruListeleResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.vizeOnBasvuruResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.vizeOnBasvuruSurucuEkleResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.yeniSeferEkleV3Response.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.yetkiBelgesiKontrolResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.yukAktifEtV3Response.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.yukDetayiV3Response.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.yukDuzenleV3Response.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Update="Connected Services\UetdsService\iyibir.TMGD.Module.UetdsService.yukIptalEtV3Response.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <EmbeddedResource Include="Model.DesignedDiffs.xafml" />
     <None Update="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -849,29 +300,13 @@
     <EmbeddedResource Include="Images\tmgd_logo.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Connected Services\" />
     <Folder Include="Controllers\ActivityLineControllers\" />
     <Folder Include="Controllers\TransportDocumentTransactionControllers\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\NewService\" />
-    <WCFMetadataStorage Include="Connected Services\UEDTSTestService\" />
-    <WCFMetadataStorage Include="Connected Services\UetdsService\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Update="Connected Services\UEDTSTestService\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Update="Connected Services\UetdsService\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
+  </ItemGroup> 
   <ItemGroup>
     <EmbeddedResource Include="Images\e_tmgd.png" />
   </ItemGroup>
@@ -894,12 +329,6 @@
     <None Update="UnusableNodes5.xml">
       <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
       <SubType>Designer</SubType>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Update="Connected Services\NewService\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -926,19 +355,17 @@
     <PackageReference Include="Microsoft.NETCore.Platforms" Version="7.0.4" />
     <PackageReference Include="Microsoft.Win32.SystemEvents" Version="8.0.0" />
     <PackageReference Include="RestSharp" Version="112.0.0" />
-    <PackageReference Include="DevExpress.ExpressApp.Scheduler" Version="24.1.*-*" />
-    <PackageReference Include="DevExpress.ExpressApp.AuditTrail.Xpo" Version="24.1.*-*" />
-    <PackageReference Include="DevExpress.ExpressApp.Chart" Version="24.1.*-*" />
-    <PackageReference Include="DevExpress.ExpressApp.CloneObject.Xpo" Version="24.1.*-*" />
-    <PackageReference Include="DevExpress.ExpressApp.ConditionalAppearance" Version="24.1.*-*" />
-    <PackageReference Include="DevExpress.ExpressApp.Dashboards" Version="24.1.*-*" />
-    <PackageReference Include="DevExpress.ExpressApp.Notifications" Version="24.1.*-*" />
-    <PackageReference Include="DevExpress.ExpressApp.PivotChart" Version="24.1.*-*" />
-    <PackageReference Include="DevExpress.ExpressApp.PivotGrid" Version="24.1.*-*" />
-    <PackageReference Include="DevExpress.ExpressApp.ReportsV2" Version="24.1.*-*" />
-    <PackageReference Include="DevExpress.ExpressApp.ScriptRecorder" Version="24.1.*-*" />
-    <PackageReference Include="DevExpress.ExpressApp.TreeListEditors" Version="24.1.*-*" />
-    <PackageReference Include="DevExpress.ExpressApp.Validation" Version="24.1.*-*" />
+    <PackageReference Include="DevExpress.ExpressApp.Scheduler" Version="24.1.3" />
+    <PackageReference Include="DevExpress.ExpressApp.AuditTrail.Xpo" Version="24.1.3" />
+    <PackageReference Include="DevExpress.ExpressApp.Chart" Version="24.1.3" />
+    <PackageReference Include="DevExpress.ExpressApp.CloneObject.Xpo" Version="24.1.3" />
+    <PackageReference Include="DevExpress.ExpressApp.ConditionalAppearance" Version="24.1.3" />
+    <PackageReference Include="DevExpress.ExpressApp.Dashboards" Version="24.1.3" />
+    <PackageReference Include="DevExpress.ExpressApp.Notifications" Version="24.1.3" />
+    <PackageReference Include="DevExpress.ExpressApp.ReportsV2" Version="24.1.3" />
+    <PackageReference Include="DevExpress.ExpressApp.ScriptRecorder" Version="24.1.3" />
+    <PackageReference Include="DevExpress.ExpressApp.TreeListEditors" Version="24.1.3" />
+    <PackageReference Include="DevExpress.ExpressApp.Validation" Version="24.1.3" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="runtime.native.System.Data.SqlClient.sni" Version="4.7.0" />
     <PackageReference Include="System.CodeDom" Version="8.0.0" />
@@ -953,12 +380,12 @@
     <PackageReference Include="System.Security.Cryptography.Pkcs" Version="8.0.1" />
     <PackageReference Include="System.Security.Cryptography.Xml" Version="8.0.2" />
     <PackageReference Include="System.Security.Permissions" Version="8.0.0" />
+    <PackageReference Include="System.ServiceModel.Duplex" Version="6.0.*" />
+    <PackageReference Include="System.ServiceModel.Federation" Version="6.0.*" />
     <PackageReference Include="System.ServiceModel.Http" Version="8.1.0" />
     <PackageReference Include="System.ServiceModel.NetTcp" Version="8.0.0" />
+    <PackageReference Include="System.ServiceModel.Security" Version="6.0.*" />
     <PackageReference Include="System.Text.Json" Version="8.0.5" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Remove="Connected Services\NewUetdsService\Reference.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Model.DesignedDiffs.Localization.tr.xafml" />
@@ -971,6 +398,9 @@
   <ItemGroup>
     <Reference Include="IyibirDLL">
       <HintPath>..\..\..\iyibir Yazılım\iyibirDLL\IyibirDLL\bin\Debug\net7.0\IyibirDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="UETDS.Module">
+      <HintPath>..\..\..\..\..\..\source\repos\UETDS.Module\bin\Debug\net8.0\UETDS.Module.dll</HintPath>
     </Reference>
   </ItemGroup>
 </Project>

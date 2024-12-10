@@ -86,19 +86,19 @@ namespace iyibir.TMGD.Module.Controllers.TransportDocumentControllers
         private void sendToUetdsSystem_Execute(object sender, SimpleActionExecuteEventArgs e)
         {
             #region OldCode
-            UetdsService.uetdsEsyaParamIptalTuruSonuc sonuc = new UETDSHelper.UETDSHelper("", "").IptalTurleri();
-            if (sonuc != null)
-            {
-                if (sonuc.sonucKodu == 0)
-                {
-                    List<UetdsService.paramIptalTurListesi> list = new List<UetdsService.paramIptalTurListesi>();
+            //UetdsService.uetdsEsyaParamIptalTuruSonuc sonuc = new UETDSHelper.UETDSHelper("", "").IptalTurleri();
+            //if (sonuc != null)
+            //{
+            //    if (sonuc.sonucKodu == 0)
+            //    {
+            //        List<UetdsService.paramIptalTurListesi> list = new List<UetdsService.paramIptalTurListesi>();
 
-                    UetdsService.paramIptalTurListesi[] array = sonuc.iptalTuruListesi;
+            //        UetdsService.paramIptalTurListesi[] array = sonuc.iptalTuruListesi;
 
-                    list = array.ToList();
+            //        list = array.ToList();
 
-                }
-            }
+            //    }
+            //}
             #endregion
         }
 

@@ -1,32 +1,25 @@
-﻿using System;
-using System.Linq;
-using System.Text;
-using DevExpress.Xpo;
-using DevExpress.ExpressApp;
-using System.ComponentModel;
-using DevExpress.ExpressApp.DC;
-using DevExpress.Data.Filtering;
-using DevExpress.Persistent.Base;
-using System.Collections.Generic;
+﻿using DevExpress.ExpressApp.ConditionalAppearance;
+using DevExpress.ExpressApp.Editors;
 using DevExpress.ExpressApp.Model;
+using DevExpress.ExpressApp.Security;
+using DevExpress.Persistent.Base;
+using DevExpress.Persistent.Base.General;
+using DevExpress.Persistent.Base.Security;
 using DevExpress.Persistent.BaseImpl;
 using DevExpress.Persistent.Validation;
-using DevExpress.ExpressApp.Security;
-using DevExpress.Persistent.Base.Security;
-using DevExpress.Persistent.Base.General;
+using DevExpress.Xpo;
+using System.ComponentModel;
 using System.Drawing;
-using DevExpress.ExpressApp.ConditionalAppearance;
-using DevExpress.ExpressApp.Editors;
 
 namespace iyibir.TMGD.Module.BusinessObjects
 {
-    [DefaultClassOptions]
+	[DefaultClassOptions]
     [ImageName("BO_Employee")]
     [DefaultProperty("FullName")]
     [CurrentUserDisplayImage(nameof(Image))]
     [NavigationItem("Settings")]
-    public class Employee : BaseObject, ISecurityUser, IAuthenticationStandardUser, ISecurityUserWithRoles, IPermissionPolicyUser, IResource
-    {
+    public class Employee : BaseObject, ISecurityUser, IAuthenticationStandardUser, ISecurityUserWithRoles, IPermissionPolicyUser, IResource, ISecurityUserLockout
+	{
         private Position _position;
         private Department _department;
         private string _address;
@@ -51,7 +44,9 @@ namespace iyibir.TMGD.Module.BusinessObjects
         private string _tmgdCertificate;
         private EmployeeType _employeeType;
         private Customer _customer;
-        public Employee(Session session)
+		private int accessFailedCount;
+		private DateTime lockoutEnd;
+		public Employee(Session session)
             : base(session)
         {
         }
@@ -322,6 +317,20 @@ namespace iyibir.TMGD.Module.BusinessObjects
             get { return Color.FromArgb(_color); }
             set { SetPropertyValue("Color", ref _color, value.ToArgb()); }
         }
-        #endregion
-    }
+		#endregion
+
+		[Browsable(false)]
+		public int AccessFailedCount
+		{
+			get { return accessFailedCount; }
+			set { SetPropertyValue(nameof(AccessFailedCount), ref accessFailedCount, value); }
+		}
+
+		[Browsable(false)]
+		public DateTime LockoutEnd
+		{
+			get { return lockoutEnd; }
+			set { SetPropertyValue(nameof(LockoutEnd), ref lockoutEnd, value); }
+		}
+	}
 }

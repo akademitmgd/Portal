@@ -1,0 +1,10 @@
+﻿@using DevExpress.ExpressApp.Blazor.Components
+<SplashScreenComponent>
+    <LoadingIndicator>
+        <img class="rounded text-white p-1" src="@ImagePath" height="300px" width="300px" />
+    </LoadingIndicator>
+</SplashScreenComponent>
+@code {
+    [CascadingParameter(Name = "ImagePath")]
+    protected string ImagePath { get; set; }
+}
