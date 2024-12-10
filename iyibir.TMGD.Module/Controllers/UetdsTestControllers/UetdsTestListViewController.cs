@@ -65,7 +65,7 @@ namespace iyibir.TMGD.Module.Controllers.UetdsTestControllers
 
             //UEDTSTestService.uetdsYtsUser wsuser = SettingYtsUser();
 
-            UetdsService.uetdsEsyaParamEsyaTurSonuc sonuc = new UETDSHelper.UETDSHelper("859272", "FREPP1B73K").GetYukTuru(1.ToString());
+            //UetdsService.uetdsEsyaParamEsyaTurSonuc sonuc = new UETDSHelper.UETDSHelper("859272", "FREPP1B73K").GetYukTuru(1.ToString());
         }
 
         //private static UEDTSTestService.uetdsYtsUser SettingYtsUser()

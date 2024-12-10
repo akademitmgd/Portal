@@ -1,46 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using DevExpress.Data.Filtering;
-using DevExpress.ExpressApp;
+﻿using DevExpress.ExpressApp;
 using DevExpress.ExpressApp.Actions;
 using DevExpress.ExpressApp.Editors;
-using DevExpress.ExpressApp.Layout;
-using DevExpress.ExpressApp.Model.NodeGenerators;
-using DevExpress.ExpressApp.SystemModule;
-using DevExpress.ExpressApp.Templates;
-using DevExpress.ExpressApp.Utils;
-using DevExpress.Persistent.Base;
-using DevExpress.Persistent.Validation;
 using iyibir.TMGD.Module.BusinessObjects;
 using iyibir.TMGD.Module.NonPersistentObjects;
+using UETDS.Module;
+using UETDSClient;
 
 namespace iyibir.TMGD.Module.Controllers.VoyageNotificationTransactionControllers
 {
-    // For more typical usage scenarios, be sure to check out https://documentation.devexpress.com/eXpressAppFramework/clsDevExpressExpressAppViewControllertopic.aspx.
-    public partial class VoyageNotificationTransactionListViewController : ViewController
+	public partial class VoyageNotificationTransactionListViewController : ViewController
     {
         public VoyageNotificationTransactionListViewController()
         {
             InitializeComponent();
-            // Target required Views (via the TargetXXX properties) and create their Actions.
-        }
-        protected override void OnActivated()
-        {
-            base.OnActivated();
-            // Perform various tasks depending on the target View.
-        }
-        protected override void OnViewControlsCreated()
-        {
-            base.OnViewControlsCreated();
-            // Access and customize the target View control.
-        }
-        protected override void OnDeactivated()
-        {
-            // Unsubscribe from previously subscribed events and release other references and resources.
-            base.OnDeactivated();
-        }
+        }        
 
         private void cancelledTransaction_CustomizePopupWindowParams(object sender, CustomizePopupWindowParamsEventArgs e)
         {
@@ -84,7 +57,17 @@ namespace iyibir.TMGD.Module.Controllers.VoyageNotificationTransactionController
                             {
                                 if (!string.IsNullOrEmpty(customer.UETDSUsername) && !string.IsNullOrEmpty(customer.UETDSPassword))
                                 {
-                                    UetdsService.uetdsGenelIslemSonuc sonuc = new UETDSHelper.UETDSHelper(customer.UETDSUsername,customer.UETDSPassword).YukIptalEt(transaction.ReferenceId, cancelled.CancelledType == VoyageNotificationTransactionCancelledType.ArizaNedeniIleIptal ? "2" : "1", cancelled.CancelledDescription);
+                                    var client = UETDSProvider.GetClient(customer.UETDSUsername, customer.UETDSPassword);
+
+                                    yukIptalEtV3Request request = new yukIptalEtV3Request();
+                                    request.wsuser = UETDSProvider.GetWsUser(customer.UETDSUsername, customer.UETDSPassword);
+                                    request.yukIptalTurKodu = cancelled.CancelledType == VoyageNotificationTransactionCancelledType.ArizaNedeniIleIptal ? "2" : "1";
+									request.yukIptalAciklama = cancelled.CancelledDescription;
+                                    request.yukId = transaction.ReferenceId;
+
+									uetdsGenelIslemSonuc sonuc = UETDSProvider.yukIptalEtV3(client, request);
+
+									//UetdsService.uetdsGenelIslemSonuc sonuc = new UETDSHelper.UETDSHelper(customer.UETDSUsername,customer.UETDSPassword).YukIptalEt(transaction.ReferenceId, cancelled.CancelledType == VoyageNotificationTransactionCancelledType.ArizaNedeniIleIptal ? "2" : "1", cancelled.CancelledDescription);
                                     if (sonuc != null)
                                     {
                                         if (sonuc.sonucKodu == 0)
@@ -159,7 +142,15 @@ namespace iyibir.TMGD.Module.Controllers.VoyageNotificationTransactionController
                         {
                             if (!string.IsNullOrEmpty(customer.UETDSUsername) && !string.IsNullOrEmpty(customer.UETDSPassword))
                             {
-                                UetdsService.uetdsGenelIslemSonuc sonuc = new UETDSHelper.UETDSHelper(customer.UETDSUsername,customer.UETDSPassword).YukAktifEt(transaction.ReferenceId);
+								var client = UETDSProvider.GetClient(customer.UETDSUsername, customer.UETDSPassword);
+
+								yukAktifEtV3Request request = new yukAktifEtV3Request();
+								request.wsuser = UETDSProvider.GetWsUser(customer.UETDSUsername, customer.UETDSPassword);
+								request.yukId = transaction.ReferenceId;                                
+
+								uetdsGenelIslemSonuc sonuc = UETDSProvider.yukAktifEtV3(client, request);
+
+								//UetdsService.uetdsGenelIslemSonuc sonuc = new UETDSHelper.UETDSHelper(customer.UETDSUsername,customer.UETDSPassword).YukAktifEt(transaction.ReferenceId);
                                 if (sonuc != null)
                                 {
                                     if (sonuc.sonucKodu == 0)
@@ -398,7 +389,43 @@ namespace iyibir.TMGD.Module.Controllers.VoyageNotificationTransactionController
                                     }
                                     #endregion
 
-                                    UetdsService.uetdsGenelIslemSonuc sonucYuk = new UETDSHelper.UETDSHelper(customer.UETDSUsername,customer.UETDSPassword).YukDuzenle(nP_VoyageNotification.ReferenceId, nP_VoyageNotification.ConsigneeTitle, nP_VoyageNotification.ConsigneeVKN, nP_VoyageNotification.ConsigneeCountyMernisCode, nP_VoyageNotification.ConsigneeCityMernisCode, bosaltmaSaati, bosaltmaTarihi, nP_VoyageNotification.ConsigneeCountryCode, nP_VoyageNotification.FirmLoadNumber, nP_VoyageNotification.ConsignerTitle, nP_VoyageNotification.ConsignerVKN, muafiyetTuru, tasimaTuruKodu, tehlikeliMaddeTasimaSekli, nP_VoyageNotification.UNId, nP_VoyageNotification.LoadOtherDescription, nP_VoyageNotification.LoadType.Code, nP_VoyageNotification.ConsignerCountyMernisCode, nP_VoyageNotification.ConsignerCityMernisCode, yuklemeSaati, yuklemeTarihi, nP_VoyageNotification.ConsignerCountryCode, yukMiktari, yukMiktariBirimi);
+
+                                    var client = UETDSProvider.GetClient(customer.UETDSUsername, customer.UETDSPassword);
+
+									yukDuzenleV3Request request = new yukDuzenleV3Request();
+									request.wsuser = UETDSProvider.GetWsUser(customer.UETDSUsername, customer.UETDSPassword);
+									request.yukId = transaction.ReferenceId;
+                                    request.yukBilgileriInput = new uetdsEsyaYukBilgileriInputV3 {
+
+										aliciUnvan = nP_VoyageNotification.ConsigneeTitle,
+										aliciVergiNo = nP_VoyageNotification.ConsigneeVKN,
+										bosaltmaIlceMernisKodu = nP_VoyageNotification.ConsigneeCountyMernisCode,
+										bosaltmaIlMernisKodu = nP_VoyageNotification.ConsigneeCityMernisCode,
+										bosaltmaSaati = bosaltmaSaati,
+										bosaltmaTarihi = bosaltmaTarihi,
+                                        bosaltmaUlkeKodu = nP_VoyageNotification.ConsigneeCountryCode,
+										bozulabilirGidaYukCinsId = string.Empty,
+										firmaYukNo = nP_VoyageNotification.FirmLoadNumber,
+                                        gonderenUnvan = nP_VoyageNotification.ConsignerTitle,
+										gonderenVergiNo = nP_VoyageNotification.ConsignerVKN,
+										muafiyetTuru = muafiyetTuru,
+										tasimaTuruKodu = tasimaTuruKodu,
+										tehlikeliMaddeTasimaSekli = tehlikeliMaddeTasimaSekli,
+										unId = nP_VoyageNotification.UNId,
+										yukCinsId = nP_VoyageNotification.LoadType.Code,
+										yukCinsDigerAciklama = nP_VoyageNotification.LoadOtherDescription,
+										yuklemeIlceMernisKodu = nP_VoyageNotification.ConsignerCountyMernisCode,
+										yuklemeIlMernisKodu = nP_VoyageNotification.ConsignerCityMernisCode,
+										yuklemeSaati = yuklemeSaati,
+										yuklemeTarihi = yuklemeTarihi,
+										yuklemeUlkeKodu = nP_VoyageNotification.ConsignerCountryCode,
+										yukMiktari = yukMiktari,
+                                        yukMiktariBirimi = yukMiktariBirimi
+									};
+
+									uetdsGenelIslemSonuc sonucYuk = UETDSProvider.yukDuzenleV3(client, request);
+
+									//UetdsService.uetdsGenelIslemSonuc sonucYuk = new UETDSHelper.UETDSHelper(customer.UETDSUsername,customer.UETDSPassword).YukDuzenle(nP_VoyageNotification.ReferenceId, nP_VoyageNotification.ConsigneeTitle, nP_VoyageNotification.ConsigneeVKN, nP_VoyageNotification.ConsigneeCountyMernisCode, nP_VoyageNotification.ConsigneeCityMernisCode, bosaltmaSaati, bosaltmaTarihi, nP_VoyageNotification.ConsigneeCountryCode, nP_VoyageNotification.FirmLoadNumber, nP_VoyageNotification.ConsignerTitle, nP_VoyageNotification.ConsignerVKN, muafiyetTuru, tasimaTuruKodu, tehlikeliMaddeTasimaSekli, nP_VoyageNotification.UNId, nP_VoyageNotification.LoadOtherDescription, nP_VoyageNotification.LoadType.Code, nP_VoyageNotification.ConsignerCountyMernisCode, nP_VoyageNotification.ConsignerCityMernisCode, yuklemeSaati, yuklemeTarihi, nP_VoyageNotification.ConsignerCountryCode, yukMiktari, yukMiktariBirimi);
                                     if (sonucYuk != null)
                                     {
                                         if (sonucYuk.sonucKodu == 0)
