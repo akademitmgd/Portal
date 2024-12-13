@@ -37,7 +37,7 @@
             // 
             this.cancelledTransaction.AcceptButtonCaption = null;
             this.cancelledTransaction.CancelButtonCaption = null;
-            this.cancelledTransaction.Caption = "cancelled Transaction";
+            this.cancelledTransaction.Caption = "Yük İptal et";
             this.cancelledTransaction.Category = "View";
             this.cancelledTransaction.ConfirmationMessage = null;
             this.cancelledTransaction.Id = "cancelledTransaction";
@@ -51,7 +51,7 @@
             // 
             // aktivatedTransaction
             // 
-            this.aktivatedTransaction.Caption = "aktivated Transaction";
+            this.aktivatedTransaction.Caption = "Yük Aktif Et";
             this.aktivatedTransaction.Category = "View";
             this.aktivatedTransaction.ConfirmationMessage = "Yük Aktif Edilecektir. Devam Etmek İstiyor Musunuz ?";
             this.aktivatedTransaction.Id = "aktivatedTransaction";
@@ -67,7 +67,7 @@
             // 
             this.updatedTransaction.AcceptButtonCaption = null;
             this.updatedTransaction.CancelButtonCaption = null;
-            this.updatedTransaction.Caption = "updated Transaction";
+            this.updatedTransaction.Caption = "Yük Güncelle";
             this.updatedTransaction.Category = "View";
             this.updatedTransaction.ConfirmationMessage = "Seçili yük düzenlenecektir. Devam etmek istiyor musunuz ?";
             this.updatedTransaction.Id = "updatedTransaction";

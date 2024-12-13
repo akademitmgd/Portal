@@ -62,10 +62,12 @@ namespace iyibir.TMGD.Module.BusinessObjects
                     {
                         Val = HazardousGoods.TunnelCodes.FirstOrDefault() != null ? HazardousGoods.TunnelCodes.FirstOrDefault().Val : 0;
                         ConvFactor = HazardousGoods.ConvFactor;
+						TunnelCode = HazardousGoods.TunnelCodes.FirstOrDefault();
 
-                        this.RaisePropertyChangedEvent("Val");
+						this.RaisePropertyChangedEvent("Val");
                         this.RaisePropertyChangedEvent("ConvFactor");
-                    }
+						this.RaisePropertyChangedEvent("TunnelCode");
+					}
                     break;
                 case "ConvFactor":
                 case "NetWeigth":

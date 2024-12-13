@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Localization Id="Localization">
+    <LocalizationGroup Name="Controls">
+      <LocalizationGroup Name="DevExpress.XtraCharts">
+        <LocalizationItem Name="CloseValueMember" Value="Kapat" />
+        <LocalizationItem Name="MenuItemDelete" Value="Sil" />
+        <LocalizationItem Name="WizValueLevelClose" Value="Kapat" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.XtraPivotGrid">
+        <LocalizationItem Name="PrintDesignerCategoryLines" Value="Satırlar" />
+      </LocalizationGroup>
+    </LocalizationGroup>
+  </Localization>
+</Application>

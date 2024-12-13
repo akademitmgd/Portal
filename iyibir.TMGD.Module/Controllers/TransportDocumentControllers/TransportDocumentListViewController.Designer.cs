@@ -82,7 +82,7 @@
             // 
             this.createNewVoyage.AcceptButtonCaption = null;
             this.createNewVoyage.CancelButtonCaption = null;
-            this.createNewVoyage.Caption = "create New Voyage";
+            this.createNewVoyage.Caption = "Yeni Sefer Ekle";
             this.createNewVoyage.Category = "View";
             this.createNewVoyage.ConfirmationMessage = "Yeni Sefer Bildirmi Yapılacaktır. Devam Etmek İstiyor Musunuz ?";
             this.createNewVoyage.Id = "createNewVoyage";

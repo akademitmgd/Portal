@@ -42,6 +42,7 @@ namespace iyibir.TMGD.Module.BusinessObjects
         private DateTime _cancelledDate;
         private Employee _owner;
         private long _transportReferenceId;
+        private FileData _pdfResult;
 
         public VoyageNotification(Session session)
             : base(session)
@@ -130,7 +131,11 @@ namespace iyibir.TMGD.Module.BusinessObjects
         [ModelDefault("AllowEdit", "False"),XafDisplayName("Sefer Id")]
         public long TransportReferenceId { get => _transportReferenceId; set => SetPropertyValue(nameof(TransportReferenceId), ref _transportReferenceId, value); }
 
-        [Association("VoyageNotification-Transactions"), DevExpress.Xpo.Aggregated]
+		[ModelDefault("AllowEdit", "False")]
+        [ExpandObjectMembers(ExpandObjectMembers.Never),XafDisplayName("Sefer Sonucu")]
+		public FileData PdfResult { get => _pdfResult; set => SetPropertyValue(nameof(PdfResult), ref _pdfResult, value); }
+
+		[Association("VoyageNotification-Transactions"), DevExpress.Xpo.Aggregated,XafDisplayName("Yük Bilgileri")]
         public XPCollection<VoyageNotificationTransaction> Transactions { get => GetCollection<VoyageNotificationTransaction>(nameof(Transactions)); }
 
         [Association("VoyageNotification-Histories"), DevExpress.Xpo.Aggregated]

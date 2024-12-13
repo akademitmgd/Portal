@@ -1,6 +1,8 @@
 ﻿using DevExpress.ExpressApp;
 using DevExpress.ExpressApp.Actions;
 using DevExpress.ExpressApp.Editors;
+using DevExpress.Persistent.BaseImpl;
+using DevExpress.XtraReports;
 using iyibir.TMGD.Module.BusinessObjects;
 using iyibir.TMGD.Module.NonPersistentObjects;
 using UETDS.Module;
@@ -11,11 +13,64 @@ namespace iyibir.TMGD.Module.Controllers.VoyageNotificationControllers
 	// For more typical usage scenarios, be sure to check out https://documentation.devexpress.com/eXpressAppFramework/clsDevExpressExpressAppViewControllertopic.aspx.
 	public partial class VoyageNotificationListViewController : ViewController
 	{
+		private SimpleAction SyncPdfResult;
 		public VoyageNotificationListViewController()
 		{
 			InitializeComponent();
-			// Target required Views (via the TargetXXX properties) and create their Actions.
+
+			SyncPdfResult = new SimpleAction(this, "SyncPdfResult", DevExpress.Persistent.Base.PredefinedCategory.Edit);
+			SyncPdfResult.Caption = "Sonuç Sorgula";
+			SyncPdfResult.SelectionDependencyType = SelectionDependencyType.RequireSingleObject;
+			SyncPdfResult.TargetObjectType = typeof(VoyageNotification);
+			SyncPdfResult.ImageName = "Action_Export_ToPDF";
+			SyncPdfResult.ConfirmationMessage = "Sefer Sonuç Raporu Bakanlık üzerinden sorgulanacaktır. Devam etmek istiyor musunuz ?";
+			SyncPdfResult.TargetObjectsCriteria = "[Status] = 1";
+			SyncPdfResult.Execute += SyncPdfResult_Execute;
 		}
+
+		private void SyncPdfResult_Execute(object sender, SimpleActionExecuteEventArgs e)
+		{
+			try
+			{
+				VoyageNotification voyageNotification = View.CurrentObject as VoyageNotification;
+
+				if (voyageNotification is not null)
+				{
+					Employee employee = SecuritySystem.CurrentUser as Employee;
+					Customer customer = employee?.Customer;
+
+					var client = UETDSProvider.GetClient(customer.UETDSUsername, customer.UETDSPassword);
+
+					seferRaporuV3Request seferRaporuV3Request = new seferRaporuV3Request();
+					seferRaporuV3Request.wsuser = UETDSProvider.GetWsUser(customer.UETDSUsername, customer.UETDSPassword);
+					seferRaporuV3Request.seferId = voyageNotification.TransportReferenceId;
+
+					uetdsGenelPdfSonuc sonucRapor = UETDSProvider.seferRaporuV3(client, seferRaporuV3Request);
+					if (sonucRapor.sonucKodu == 0)
+					{
+						voyageNotification.PdfResult = View.ObjectSpace.CreateObject<FileData>();
+						voyageNotification.PdfResult.FileName = string.Format("{0}.pdf", voyageNotification.TransportReferenceId);
+						voyageNotification.PdfResult.LoadFromStream(string.Format("{0}.pdf", voyageNotification.TransportReferenceId), new MemoryStream(sonucRapor.sonucPdf));
+
+						View.ObjectSpace.SetModified(voyageNotification);
+						View.ObjectSpace.CommitChanges();
+						View.Refresh();
+
+						Application.ShowViewStrategy.ShowMessage("Sonuç Raporu Başarıyla Alındı..", InformationType.Success, 6000);
+					}
+					else
+					{
+						Application.ShowViewStrategy.ShowMessage("Sorgulama Başarısız.. Lütfen tekrar deneyiniz..", InformationType.Warning, 6000);
+					}
+
+				}
+			}
+			catch (Exception ex)
+			{
+				Application.ShowViewStrategy.ShowMessage($"İşlem anında bir hata oluştu:\n{ex.Message}", InformationType.Error, 6000);
+			}
+		}
+
 		protected override void OnActivated()
 		{
 			base.OnActivated();
@@ -432,6 +487,8 @@ namespace iyibir.TMGD.Module.Controllers.VoyageNotificationControllers
 										voyageNotification.Status = VoyageNotificationStatus.Activated;
 										voyageNotification.ActivatedDate = DateTime.Now;
 
+										
+
 										//foreach (VoyageNotificationTransaction transaction in voyageNotification.Transactions)
 										//{
 										//    transaction.Status = VoyageNotificationTransactionStatus.Activated;
@@ -641,6 +698,22 @@ namespace iyibir.TMGD.Module.Controllers.VoyageNotificationControllers
 										voyageNotification.Status = VoyageNotificationStatus.Sent;
 										voyageNotification.TransportDocument.Status = TransportDocumentStatus.Send;
 										voyageNotification.TransportReferenceId = sonuc.seferId;
+
+										seferRaporuV3Request seferRaporuV3Request = new seferRaporuV3Request();
+										seferRaporuV3Request.wsuser = UETDSProvider.GetWsUser(customer.UETDSUsername, customer.UETDSPassword);
+										seferRaporuV3Request.seferId = sonuc.seferId;
+
+										uetdsGenelPdfSonuc sonucRapor = UETDSProvider.seferRaporuV3(client, seferRaporuV3Request);
+										if (sonucRapor.sonucKodu == 0)
+										{
+											voyageNotification.PdfResult = View.ObjectSpace.CreateObject<FileData>();
+											voyageNotification.PdfResult.FileName = string.Format("{0}.pdf", sonuc.seferId);
+
+											MemoryStream stream = new MemoryStream(sonucRapor.sonucPdf);
+											stream.Position = 0;
+											voyageNotification.PdfResult.LoadFromStream(string.Format("{0}.pdf", sonuc.seferId), stream);
+
+										}
 
 										history = View.ObjectSpace.CreateObject<VoyageNotificationHistory>();
 										history.CreatedOn = DateTime.Now;

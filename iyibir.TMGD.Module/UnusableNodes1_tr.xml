@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="DocumentManagement">
+        <Items Id="Items">
+          <Item Id="AnnualWorkPlan_ListView" Caption="Yıllık Çalışma Planı" />
+          <Item Id="DrillForm_ListView" Caption="Tatbikat Değerlendirme" />
+          <Item Id="VehicleControlDocument_ListView" Caption="Araç Kontrol Formu" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

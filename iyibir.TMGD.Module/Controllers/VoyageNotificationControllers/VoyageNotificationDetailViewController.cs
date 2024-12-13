@@ -104,10 +104,10 @@ public partial class VoyageNotificationDetailViewController : ViewController
                             #endregion
 
                             #region SettingYukMiktari
-                            string yukMiktari = item.LoadQuantity.ToString();
+                            string yukMiktari = item.LoadQuantity.ToString();//25,5
                             if (yukMiktari.Contains(','))
                             {
-                                yukMiktari.Replace(',', '.');
+                               yukMiktari = yukMiktari.Replace(',', '.');
                             }
 
                             #endregion
