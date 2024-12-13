@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Application>
+<Application Title="Powered by @iyibiryazilim | Akademi TMGD">
   <ActionDesign>
     <Actions>
       <Action Id="aktivatedVoyageNotification" Caption="Sefer Aktif Et" />
@@ -15,6 +15,7 @@
       <Action Id="Save" Caption="Kaydet" />
       <Action Id="SaveAndClose" Caption="Kaydet ve Kapat" />
       <Action Id="SaveAndNew" Caption="Kaydet ve Yeni" />
+      <Action Id="ShowInReportV2" Caption="Yazdır" />
       <Action Id="updatedVoyageNotification" Caption="Sefer Güncelle" />
     </Actions>
   </ActionDesign>
@@ -1506,14 +1507,6 @@
         <LocalizationItem Name="RibbonPreview_Save_Caption" Value="Kaydet" />
         <LocalizationItem Name="SaveDlg_Title" Value="Farklı Kaydet" />
       </LocalizationGroup>
-      <LocalizationGroup Name="DevExpress.XtraCharts">
-        <LocalizationItem Name="CloseValueMember" Value="Kapat" />
-        <LocalizationItem Name="MenuItemDelete" Value="Sil" />
-        <LocalizationItem Name="WizValueLevelClose" Value="Kapat" />
-      </LocalizationGroup>
-      <LocalizationGroup Name="DevExpress.XtraPivotGrid">
-        <LocalizationItem Name="PrintDesignerCategoryLines" Value="Satırlar" />
-      </LocalizationGroup>
     </LocalizationGroup>
     <LocalizationGroup Name="DialogButtons">
       <LocalizationItem Name="Close" Value="Kapat" />
@@ -1603,13 +1596,10 @@
         <Items>
           <Item Id="Activity_ListView" Caption="Tesis Ziyaret Formu" />
           <Item Id="ActivityReport_ListView" Caption="Yıllık Faaliyet Raporu" />
-          <Item Id="AnnualWorkPlan_ListView" Caption="Yıllık Çalışma Planı" />
           <Item Id="AuditDeterminationForm_ListView" Caption="ADR Denetim Tespit" />
           <Item Id="DistributionOfTask_ListView" Caption="Görev Dağılım Formu" />
-          <Item Id="DrillForm_ListView" Caption="Tatbikat Değerlendirme" />
           <Item Id="ReportOnOccurrence_ListView" Caption="Kaza Raporu" />
           <Item Id="TransportDocument_ListView" Caption="Taşıma Evrakı" />
-          <Item Id="VehicleControlDocument_ListView" Caption="Araç Kontrol Formu" />
           <Item Id="VoyageNotification_ListView" Caption="U-ETDS Raporları" />
         </Items>
       </Item>
@@ -1627,8 +1617,11 @@
       <Layout>
         <LayoutGroup Id="Main">
           <LayoutGroup Id="SimpleEditors">
-            <LayoutGroup Id="Event" Caption="Ajanda" />
+            <LayoutGroup Id="Event" Caption="Ajanda">
+              <LayoutGroup Id="Event_col2" Caption="Event_col2" />
+            </LayoutGroup>
           </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="SizeableEditors" />
         </LayoutGroup>
       </Layout>
     </DetailView>

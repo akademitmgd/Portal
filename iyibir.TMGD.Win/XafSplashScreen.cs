@@ -17,7 +17,7 @@ namespace iyibir.TMGD.Win {
             if(svgStream != null) {
                 svgStream.Position = 0;
                 peLogo.SvgImage = SvgImage.FromStream(svgStream);
-            }
+			}
         }
         protected override void DrawContent(GraphicsCache graphicsCache, Skin skin) {
             Rectangle bounds = ClientRectangle;
@@ -34,6 +34,7 @@ namespace iyibir.TMGD.Win {
         }
         public XafSplashScreen() {
             InitializeComponent();
+            this.Size = new Size(300, 300);
 			LoadBlankLogo();
             this.labelCopyright.Text = "Copyright © " + DateTime.Now.Year.ToString() + " Company Name" +  System.Environment.NewLine + "All rights reserved.";
             UpdateLabelsPosition();

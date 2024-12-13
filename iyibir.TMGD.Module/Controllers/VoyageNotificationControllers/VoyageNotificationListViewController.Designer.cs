@@ -38,7 +38,7 @@
             // 
             this.updatedVoyageNotification.AcceptButtonCaption = null;
             this.updatedVoyageNotification.CancelButtonCaption = null;
-            this.updatedVoyageNotification.Caption = "updated Voyage Notification";
+            this.updatedVoyageNotification.Caption = "Sefer Güncelle";
             this.updatedVoyageNotification.Category = "View";
             this.updatedVoyageNotification.ConfirmationMessage = "Sefer Güncellenecektir. Devam Etmek İstiyor musunuz ?";
             this.updatedVoyageNotification.Id = "updatedVoyageNotification";
@@ -51,7 +51,7 @@
             // 
             // aktivatedVoyageNotification
             // 
-            this.aktivatedVoyageNotification.Caption = "aktivated Voyage Notification";
+            this.aktivatedVoyageNotification.Caption = "Seferi Aktif Et";
             this.aktivatedVoyageNotification.Category = "View";
             this.aktivatedVoyageNotification.ConfirmationMessage = null;
             this.aktivatedVoyageNotification.Id = "aktivatedVoyageNotification";
@@ -67,7 +67,7 @@
             // 
             this.cancelledVoyageNotification.AcceptButtonCaption = null;
             this.cancelledVoyageNotification.CancelButtonCaption = null;
-            this.cancelledVoyageNotification.Caption = "cancelled Voyage Notification";
+            this.cancelledVoyageNotification.Caption = "Seferi İptal Et";
             this.cancelledVoyageNotification.Category = "View";
             this.cancelledVoyageNotification.ConfirmationMessage = "Seçili sefer iptal edilecektir. Devam etmek istiyor musunuz ?";
             this.cancelledVoyageNotification.Id = "cancelledVoyageNotification";

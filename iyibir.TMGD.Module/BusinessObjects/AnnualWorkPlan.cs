@@ -16,11 +16,8 @@ namespace iyibir.TMGD.Module.BusinessObjects
 {
     [DefaultClassOptions]
     [ImageName("BO_Scheduler")]
-    [NavigationItem("DocumentManagement")]
-    //[DefaultProperty("DisplayMemberNameForLookupEditorsOfThisType")]
-    //[DefaultListViewOptions(MasterDetailMode.ListViewOnly, false, NewItemRowPosition.None)]
-    //[Persistent("DatabaseTableName")]
-    // Specify more UI options using a declarative approach (https://documentation.devexpress.com/#eXpressAppFramework/CustomDocument112701).
+    //[NavigationItem("DocumentManagement")]
+    [NavigationItem(false)]
     public class AnnualWorkPlan : BaseObject
     {
         private Customer _customer;

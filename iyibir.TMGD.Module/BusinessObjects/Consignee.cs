@@ -101,7 +101,7 @@ namespace iyibir.TMGD.Module.BusinessObjects
 
         [ModelDefault("EditMaskType", "Simple")]
         [ModelDefault("EditMask", "(999) 000-0000")]
-        public string Telephone { get => _telephone; set => SetPropertyValue("", ref _telephone, value); }
+        public string Telephone { get => _telephone; set => SetPropertyValue("Telephone", ref _telephone, value); }
 
 
         [ModelDefault("EditMaskType", "Simple")]

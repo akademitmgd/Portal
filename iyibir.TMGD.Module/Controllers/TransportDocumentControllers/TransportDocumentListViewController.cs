@@ -30,7 +30,8 @@ namespace iyibir.TMGD.Module.Controllers.TransportDocumentControllers
 
             #region Delete Substitution Vehicle
             CalcPoint = new SimpleAction(this, "CalcPoint", PredefinedCategory.View);
-            CalcPoint.TypeOfView = typeof(TransportDocument);
+            CalcPoint.Caption = "1.1.3.6 Muafiyet Kontrolü";
+			CalcPoint.TypeOfView = typeof(TransportDocument);
             CalcPoint.TargetViewType = ViewType.ListView;
             CalcPoint.TargetObjectsCriteriaMode = TargetObjectsCriteriaMode.TrueForAll;
             CalcPoint.ImageName = "BO_Transition";
