@@ -14,6 +14,7 @@ namespace iyibir.TMGD.WebApi.Reports;
 
 [Authorize]
 [Route("api/[controller]")]
+[Microsoft.AspNetCore.Mvc.ValidateAntiForgeryToken]
 // This is a WebApi Reports controller sample.
 public class ReportController : ControllerBase {
     private readonly IReportExportService service;
