@@ -1,205 +1,62 @@
 <Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>net8.0-windows10.0.22621.0</TargetFramework>
-    <OutputType>WinExe</OutputType>
-    <ApplicationIcon>favicon.ico</ApplicationIcon>
-    <SccProjectName>SAK</SccProjectName>
-    <SccLocalPath>SAK</SccLocalPath>
-    <SccAuxPath>SAK</SccAuxPath>
-    <SccProvider>SAK</SccProvider>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <UseWindowsForms>true</UseWindowsForms>
-    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'EasyTest|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\EasyTest\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;EASYTEST</DefineConstants>
-  </PropertyGroup>
-  <ItemGroup>
-    <None Remove="Images\ReadMe.txt" />
-    <None Remove="Model_tr.xafml" />
-    <PackageReference Include="Azure.Core" Version="1.44.1" />
-    <PackageReference Include="Azure.Identity" Version="1.13.1" />
-  
-    <PackageReference Include="DevExpress.ExpressApp.CodeAnalysis" Version="24.1.3">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
-    </PackageReference>
-  
-    <PackageReference Include="MessagePack" Version="2.5.187" />
-  
-    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="8.0.0" />
-  
-    <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.11.0">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-  
-    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.12.0" />
-  
-    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
-  
-    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
-  
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.1" />
-  
-    <PackageReference Include="Microsoft.Extensions.ObjectPool" Version="8.0.11" />
-  
-    <PackageReference Include="Microsoft.Extensions.Options" Version="8.0.2" />
-  
-    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="8.0.0" />
-  
-    <PackageReference Include="Microsoft.Identity.Client" Version="4.66.2" />
-  
-    <PackageReference Include="Microsoft.Identity.Client.Broker" Version="4.66.2" />
-  
-    <PackageReference Include="Microsoft.Identity.Client.Desktop" Version="4.66.2" />
-  
-    <PackageReference Include="Microsoft.Identity.Client.NativeInterop" Version="0.17.2" />
-  
-    <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="8.3.0" />
-  
-    <PackageReference Include="Microsoft.IdentityModel.Protocols" Version="8.3.0" />
-  
-    <PackageReference Include="Microsoft.NET.StringTools" Version="17.12.6" />
-  
-    <PackageReference Include="Microsoft.NETCore.Platforms" Version="7.0.4" />
-  
-    <PackageReference Include="Microsoft.NETCore.Targets" Version="5.0.0" />
-  
-    <PackageReference Include="Microsoft.Win32.SystemEvents" Version="8.0.0" />
-  
-    <PackageReference Include="runtime.native.System.Data.SqlClient.sni" Version="4.7.0" />
-  
-    <PackageReference Include="System.CodeDom" Version="8.0.0" />
-  
-    <PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
-  
-    <PackageReference Include="System.Diagnostics.DiagnosticSource" Version="8.0.1" />
-  
-    <PackageReference Include="System.Drawing.Common" Version="8.0.11" />
-  
-    <PackageReference Include="System.Formats.Asn1" Version="8.0.1" />
-  
-    <PackageReference Include="System.Memory" Version="4.6.0" />
-  
-    <PackageReference Include="System.Memory.Data" Version="8.0.1" />
-  
-    <PackageReference Include="System.Resources.Extensions" Version="8.0.0" />
-  
-    <PackageReference Include="System.Security.AccessControl" Version="6.0.1" />
-  
-    <PackageReference Include="System.Security.Cryptography.Pkcs" Version="8.0.1" />
-  
-    <PackageReference Include="System.Security.Cryptography.Xml" Version="8.0.2" />
-  
-    <PackageReference Include="System.Security.Permissions" Version="8.0.0" />
-  
-    <PackageReference Include="System.ServiceModel.Http" Version="8.1.0" />
-  
-    <PackageReference Include="System.ServiceModel.NetTcp" Version="8.0.0" />
-  
-    <PackageReference Include="System.Text.Json" Version="8.0.5" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Update="System">
-      <SpecificVersion>False</SpecificVersion>
-      <Private>True</Private>
-    </Reference>
-    <Reference Update="System.Core">
-      <SpecificVersion>False</SpecificVersion>
-      <Private>True</Private>
-    </Reference>
-    <Reference Update="System.Data">
-      <SpecificVersion>False</SpecificVersion>
-      <Private>True</Private>
-    </Reference>
-    <Reference Update="System.Drawing">
-      <SpecificVersion>False</SpecificVersion>
-      <Private>True</Private>
-    </Reference>
-    <Reference Update="System.Xml.Linq">
-      <SpecificVersion>False</SpecificVersion>
-      <Private>True</Private>
-    </Reference>
-    <Reference Update="System">
-      <Name>System</Name>
-      <Private>False</Private>
-    </Reference>
-    <Reference Update="System.Data">
-      <Name>System.Data</Name>
-      <Private>False</Private>
-    </Reference>
-    <Reference Update="System.Drawing">
-      <Name>System.Drawing</Name>
-      <Private>False</Private>
-    </Reference>
-    <Reference Update="System.Xml">
-      <Name>System.XML</Name>
-      <Private>True</Private>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Images\Logo.svg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="favicon.ico">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <EmbeddedResource Include="Images\ReadMe.txt" />
-    <EmbeddedResource Include="Images\SplashScreen.svg">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </EmbeddedResource>
-    <Content Include="Model.xafml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Model_tr.xafml">
-      <DependentUpon>Model.xafml</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Update="Properties\Resources.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Update="WinApplication.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\iyibir.TMGD.Module.Win\iyibir.TMGD.Module.Win.csproj" />
-    <ProjectReference Include="..\iyibir.TMGD.Module\iyibir.TMGD.Module.csproj" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="DevExpress.Images" Version="24.1.3" />
-    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.2" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    <PackageReference Include="DevExpress.Win.BonusSkins" Version="24.1.*-*" />
-    <PackageReference Include="DevExpress.ExpressApp.AuditTrail.Xpo" Version="24.1.*-*" />
-    <PackageReference Include="DevExpress.ExpressApp.Chart.Win" Version="24.1.*-*" />
-    <PackageReference Include="DevExpress.ExpressApp.CloneObject.Xpo" Version="24.1.*-*" />
-    <PackageReference Include="DevExpress.ExpressApp.ConditionalAppearance" Version="24.1.*-*" />
-    <PackageReference Include="DevExpress.ExpressApp.Dashboards.Win" Version="24.1.*-*" />
-    <PackageReference Include="DevExpress.ExpressApp.FileAttachment.Win" Version="24.1.*-*" />
-    <PackageReference Include="DevExpress.ExpressApp.Notifications.Win" Version="24.1.*-*" />
-    <PackageReference Include="DevExpress.ExpressApp.PivotChart.Win" Version="24.1.*-*" />
-    <PackageReference Include="DevExpress.ExpressApp.PivotGrid.Win" Version="24.1.*-*" />
-    <PackageReference Include="DevExpress.ExpressApp.ReportsV2.Win" Version="24.1.*-*" />
-    <PackageReference Include="DevExpress.ExpressApp.Scheduler.Win" Version="24.1.*-*" />
-    <PackageReference Include="DevExpress.ExpressApp.ScriptRecorder.Win" Version="24.1.*-*" />
-    <PackageReference Include="DevExpress.ExpressApp.TreeListEditors.Win" Version="24.1.*-*" />
-    <PackageReference Include="DevExpress.ExpressApp.Validation.Win" Version="24.1.*-*" />
-    <PackageReference Include="DevExpress.Win" Version="24.1.*-*" />
-    <PackageReference Include="DevExpress.Win.Design" Version="24.1.*-*" />
-    <PackageReference Include="System.ComponentModel.Primitives" Version="4.3.0" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Update="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-  </ItemGroup>
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net10.0-windows</TargetFramework>
+		<CheckEolTargetFramework>false</CheckEolTargetFramework>
+		<UseWindowsForms>true</UseWindowsForms>
+		<ApplicationIcon>ExpressApp.ico</ApplicationIcon>
+		<Deterministic>false</Deterministic>
+		<AssemblyVersion>1.0.*</AssemblyVersion>
+		<FileVersion>1.0.0.0</FileVersion>
+		<Configurations>Debug;Release;EasyTest</Configurations>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Include="Images\Logo.svg" />
+	</ItemGroup>
+	<ItemGroup>
+		<Content Include="favicon.ico">
+			<ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+			<CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+		</Content>
+		<EmbeddedResource Include="Images\ReadMe.txt" />
+		<EmbeddedResource Include="Images\SplashScreen.svg">
+			<ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+			<CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+		</EmbeddedResource>
+		<Content Include="Model.xafml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Model_tr.xafml">
+			<DependentUpon>Model.xafml</DependentUpon>
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+
+		<PackageReference Include="DevExpress.ExpressApp" Version="25.2.3" />
+		<PackageReference Include="DevExpress.ExpressApp.Chart.Win" Version="25.2.3" />
+		<PackageReference Include="DevExpress.ExpressApp.CodeAnalysis" Version="25.2.3" />
+		<PackageReference Include="DevExpress.ExpressApp.Dashboards.Win" Version="25.2.3" />
+		<PackageReference Include="DevExpress.ExpressApp.FileAttachment.Win" Version="25.2.3" />
+		<PackageReference Include="DevExpress.ExpressApp.Security.Xpo" Version="25.2.3" />
+		<PackageReference Include="DevExpress.ExpressApp.Validation.Win" Version="25.2.3" />
+		<PackageReference Include="DevExpress.ExpressApp.Win" Version="25.2.3" />
+		<PackageReference Include="DevExpress.ExpressApp.Win.Design" Version="25.2.3" />
+		<PackageReference Include="DevExpress.ExpressApp.Xpo" Version="25.2.3" />
+		<PackageReference Include="DevExpress.Persistent.Base" Version="25.2.3" />
+		<PackageReference Include="DevExpress.Persistent.BaseImpl.Xpo" Version="25.2.3" />
+		<PackageReference Include="DevExpress.RichEdit.Export" Version="25.2.3" />
+		<PackageReference Include="DevExpress.Win.Design" Version="25.2.3" />
+		<PackageReference Include="DevExpress.ExpressApp.Scheduler.Win" Version="25.2.3" />
+		<PackageReference Include="DevExpress.ExpressApp.ReportsV2.Win" Version="25.2.3" />
+		<PackageReference Include="DevExpress.ExpressApp.TreeListEditors.Win" Version="25.2.3" />
+
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\iyibir.TMGD.Module\iyibir.TMGD.Module.csproj" />
+	</ItemGroup>
+
 </Project>

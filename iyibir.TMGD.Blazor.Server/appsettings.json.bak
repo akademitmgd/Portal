@@ -16,10 +16,6 @@
     "ExpressApp": {
       "Languages": "tr;en-US;",
       "ShowLanguageSwitcher": false,
-      "Security": {
-        // The debug secret key. You should store sensitive settings in dedicated secret storage. For more information, refer to the following topic: https://learn.microsoft.com/en-us/aspnet/core/security/app-secrets?view=aspnetcore-7.0&tabs=windows.
-        "UrlSigningKey": "929A8DC2BFC24FA6AF74137B804F3C1F"
-      },
       "ThemeSwitcher": {
         "DefaultItemName": "Office White",
         "ShowSizeModeSwitcher": true,

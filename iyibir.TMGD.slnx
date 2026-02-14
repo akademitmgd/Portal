@@ -1,0 +1,11 @@
+<Solution>
+  <Configurations>
+    <BuildType Name="Debug" />
+    <BuildType Name="EasyTest" />
+    <BuildType Name="Release" />
+  </Configurations>
+  <Project Path="iyibir.TMGD.Blazor.Server/iyibir.TMGD.Blazor.Server.csproj" />
+  <Project Path="iyibir.TMGD.Module/iyibir.TMGD.Module.csproj" />
+  <Project Path="iyibir.TMGD.WebApi/iyibir.TMGD.WebApi.csproj" />
+  <Project Path="iyibir.TMGD.Win/iyibir.TMGD.Win.csproj" />
+</Solution>

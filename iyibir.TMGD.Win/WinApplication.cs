@@ -12,8 +12,8 @@ namespace iyibir.TMGD.Win {
     public partial class TMGDWindowsFormsApplication : WinApplication {
         #region Default XAF configuration options (https://www.devexpress.com/kb=T501418)
         static TMGDWindowsFormsApplication() {
-            DevExpress.Persistent.Base.PasswordCryptographer.EnableRfc2898 = true;
-            DevExpress.Persistent.Base.PasswordCryptographer.SupportLegacySha512 = false;
+            //DevExpress.Persistent.Base.PasswordCryptographer.EnableRfc2898 = true; //https://devexpress.com/kb=T1312589
+            //DevExpress.Persistent.Base.PasswordCryptographer.SupportLegacySha512 = false; //https://devexpress.com/kb=T1312589
 			DevExpress.ExpressApp.Utils.ImageLoader.Instance.UseSvgImages = true;
         }
         private void InitializeDefaults() {
