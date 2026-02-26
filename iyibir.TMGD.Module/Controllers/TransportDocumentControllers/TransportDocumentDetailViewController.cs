@@ -32,6 +32,24 @@ public partial class TransportDocumentDetailViewController : ViewController
         kersiaGetERP.CustomizePopupWindowParams += KersiaGetERP_CustomizePopupWindowParams;
 
         this.Actions["kersiaGetERP"].Active.SetItemValue("Hide", false);
+        this.Actions["getErpData"].Active.SetItemValue("Hide", false);
+
+        PopupWindowShowAction getDispatch = new PopupWindowShowAction(this, "getDispatch", PredefinedCategory.View);
+        getDispatch.CustomizePopupWindowParams += getDispatch_CustomizePopupWindowParams;
+        getDispatch.Caption = "İrsaliyeler";
+        getDispatch.ImageName = "BO_Order";
+    }
+
+
+
+    private void getDispatch_CustomizePopupWindowParams(object sender, CustomizePopupWindowParamsEventArgs e)
+    {
+        IObjectSpace os = Application.CreateObjectSpace<Dispatch>();
+        string listViewId = Application.FindListViewId(typeof(Dispatch));
+
+        CollectionSourceBase cs = Application.CreateCollectionSource(os, typeof(Dispatch), listViewId);
+        e.View = Application.CreateListView(listViewId, cs, true);
+        e.DialogController.AcceptAction.Execute += getERPData_AcceptAction_Execute;
     }
 
     private void KersiaGetERP_CustomizePopupWindowParams(object sender, CustomizePopupWindowParamsEventArgs e)
@@ -433,7 +451,7 @@ public partial class TransportDocumentDetailViewController : ViewController
         }
         else
         {
-            NP_DispatchList dispatch = e.CurrentObject as NP_DispatchList;
+            Dispatch dispatch = e.CurrentObject as Dispatch;
             TransportDocument transportDocument = View.CurrentObject as TransportDocument;
 
             transportDocument.Consignee = View.ObjectSpace.FindObject<Consignee>(CriteriaOperator.Parse("Customer.Oid = ? and Code = ?", transportDocument.Consigner.Oid, dispatch.ClientCode));
